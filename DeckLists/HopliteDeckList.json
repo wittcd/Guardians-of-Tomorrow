@@ -1,0 +1,322 @@
+﻿{
+  "name": "Hoplite",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "HopliteCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "HopliteCharacter",
+      "count": 1,
+      "title": "Hoplite",
+      "body": "Project Shield",
+      "backgroundColor": "39a0d4",
+      "foilBackgroundColor": "FEFEFE",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Select a target. Reduce damage dealt to and by that target by 2 untl the end of your next turn."
+      ],
+      "icons": [
+        "HasPower",
+        "ReduceDamageTaken",
+        "ReduceDamageDealt"
+      ],
+      "hitpoints": 29,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Hoplite"
+      ],
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One player  may play a card.",
+        "Select a target. Reduce the next damage dealt by that target by 2."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "PlayCardNow",
+        "ReduceDamageDealt"
+      ],
+      "openingLines": {
+        "default": "If you stand behind me, I can take the brunt of this.",
+        "LegionCharacter": "You know, I don't think that quote was originally about nanomachines.",
+        "OblivAeonFrontPageCharacter": "I'm coming back with my shield or on it for this one."
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "HardlightHoplon",
+      "count": 3,
+      "title": "Hardlight Hoplon",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "DealDamageMelee"
+      ],
+      "body": "Reduce damage dealt to {Hoplite} by 1. Whenever damage would be dealt to {Hoplite}, but is reduced or prevented such that he takes no damage, {Hoplite} may deal 1 target 3 melee damage.",
+      "flavorText": "It would be so much easier to protect all of you if you also had shields!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #19"
+    },
+    {
+      "identifier": "LuminousLance",
+      "count": 3,
+      "title": "Luminous Lance",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageEnergy",
+        "DealDamageMelee"
+      ],
+      "powers": [ "{Hoplite} deals 1 target 3 energy damage. That target deals {Hoplite} 1 melee damage." ],
+      "flavorText": "Fine. It's techncally not a lance. But it sounds better this way.",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #4"
+    },
+    {
+      "identifier": "RocketBoots",
+      "count": 3,
+      "title": "Rocket Boots",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "DrawCardNow"
+      ],
+      "body": "The first time each turn Hoplite would be dealt damage, reduce it by 1 or draw a card.",
+      "flavorText": "The only way to travel is atop the flaming exhaust of unstable experimental gadgets.",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #13"
+    },
+    {
+      "identifier": "ReinforcedWeave",
+      "count": 3,
+      "title": "Reinforced Weave",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "ReduceDamageTakenMelee",
+        "ReduceDamageTakenProjectile",
+        "CancelledDamageGreen",
+        "DestroySelf"
+      ],
+      "body": "Reduce melee and projectile damage dealt to {Hoplite} by 1. When {Hoplite} would take 4 or more damage from a single source, prevent that damage and destroy this card.",
+      "flavorQuotes": [
+        {
+          "identifier": "Ludramor",
+          "text": "Primitive body armor and close quarters weapons? Is this a joke?"
+        },
+        {
+          "identifier": "Hoplite",
+          "text": "Like all good jokes, my armor has layers."
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "ShieldBubble",
+      "count": 3,
+      "title": "Shield Bubble",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "CancelledDamageGreen",
+        "DestroySelf"
+      ],
+      "body": "Play this card next to a target. When that target would deal or be dealt damage, prevent it and destroy this card. If that target leaves play, destroy this card.",
+      "flavorText": "Can you just stay there for a moment? Perfect.",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #1"
+    },
+    {
+      "identifier": "ExplosiveBolts",
+      "count": 2,
+      "title": "Explosive Bolts",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageFire"
+      ],
+      "powers": [ "{Hoplite} deals up to 5 targets 2 fire damage each, then deals himself fire damage equal to the number of targets dealt damage this way minus 1." ],
+      "flavorQuotes": [
+        {
+          "identifier": "Argus",
+          "text": "Normally, you don't bring so much heavy weaponry along."
+        },
+        {
+          "identifier": "Hoplite",
+          "text": "Normally, my sister isn't the one in danger."
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow Annual #5"
+    },
+    {
+      "identifier": "BreachingCharge",
+      "count": 3,
+      "title": "Breaching Charge",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyEnvironment",
+        "DealDamageFire"
+      ],
+      "body": "Destroy a non-target environment card. If no card is destroyed this way, {Hoplite} deals himself and each non-hero target 2 fire damage.",
+      "flavorText": "Making a hole in 3... 2... 1...",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #20"
+    },
+    {
+      "identifier": "DaringRescue",
+      "count": 3,
+      "title": "Daring Rescue",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "DealDamageMelee"
+      ],
+      "body": "Select a hero character card. Reduce the next damage dealt to that hero by 2. Reduce the next damage dealt to {Hoplite} by 1. {Hoplite} deals 1 target 3 melee damage.",
+      "flavorText": "Hang on sis, I've got you!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #5"
+    },
+    {
+      "identifier": "ShieldWall",
+      "count": 3,
+      "title": "Shield Wall",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "ReduceDamageTaken"
+      ],
+      "body": "The villain target with the highest HP deals {Hoplite} 2 melee damage. Until the start of your next turn, reduce damage dealt to all hero targets other than {Hoplite} by 2.",
+      "flavorText": "You spend so much time shielding others, you forget to shield yourself.",
+      "flavorReference": "Trickster Fox, Guardians of Tomorrow Annual #5"
+    },
+    {
+      "identifier": "Burnout",
+      "count": 3,
+      "title": "Burnout",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageFire"
+      ],
+      "body": "{Hoplite} deals 1 target 3 fire damage, then 1 target 2 fire damage, then 1 target 1 fire damage. Then {Hoplitee} deals himself fire damage equal to 4 minus the number of targets dealt damage this way.",
+      "flavorText": "We're in a theater, should I shout 'FIRE!?'",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #14"
+    },
+    {
+      "identifier": "Encase",
+      "count": 3,
+      "title": "Encase",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageEnergy",
+        "Manipulate"
+      ],
+      "body": "{Hoplite} deals 1 target 4 energy damage. Search your deck or trash for a copy of Shield Bubble and put it into play. If you searched your deck, shuffle it.",
+      "flavorText": "How pathetic. The great inventor is reduced to blowing bubbles at me.",
+      "flavorReference": "Legion, Guardians of Tomorrow #25"
+    },
+    {
+      "identifier": "ArmUp",
+      "count": 3,
+      "title": "Arm Up",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Manipulate",
+        "UsePowerNow"
+      ],
+      "body": "Search your deck for an equipment card and put it into play. Shuffle your deck. You may use a power.",
+      "flavorText": "I'm no boy scout, but I'm still always prepared.",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #41"
+    },
+    {
+      "identifier": "ImpenetrableRefuge",
+      "count": 2,
+      "title": "Impenatrable Refuge",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "CancelledDamageGreen"
+      ],
+      "body": "All targets are immune to damage. All cards other than this one are indestructible. At the start of your turn, remove this card from the game.",
+      "flavorText": "Phew, we've got a breather. Everyone get ready, this large a shield won't last long.",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "HardlightGear",
+      "count": 3,
+      "title": "Hardlight Gear",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "PlayCardNow",
+        "DealDamageEnergy"
+      ],
+      "body": "One player may play an Ongoing or Equipment card now. {Hoplite} deals 1 target 2 energy damage.",
+      "flavorText": "Lucky for us, I brought boarding party favors.",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #7"
+    }
+  ],
+  "promoCards": [
+    {
+      "identifier": "HopliteCharacter",
+      "promoIdentifier": "GuardiansOfTomorrowHopliteCharacter",
+      "count": 1,
+      "title": "Hoplite",
+      "promoTitle": "Guardians of Tomorrow Hoplite",
+      "body": "Interposition",
+      "icons": [
+        "HasPower",
+        "RedirectDamage"
+      ],
+      "backgroundColor": "06bcc9",
+      "foilBackgroundColor": "86BB71",
+      "hitpointsColor": "F6AD41",
+      "character": true,
+      "powers": [
+        "Select a hero target. Redirect the next 2 instances of damage dealt to that target to {Hoplite}."
+      ],
+      "hitpoints": 30,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Hoplite"
+      ],
+      "incapacitatedAbilities": [
+        "One player may play a card.",
+        "One hero may use a power.",
+        "Select two hero targets. Redirect the next damage dealt to the first target to the second."
+      ],
+      "flippedIcons": [
+        "PlayCardNow",
+        "UsePowerNow",
+        "RedirectDamage"
+      ],
+      "complexity": 2,
+      "openingLines": {
+        "default": "Shields up, red alert! ... I just wanted an excuse to say that.",
+        "LegionCharacter": "We've done this song and dance plenty of times. Want me to remind you how it goes?",
+        "OblivAeonFrontPageCharacter": "Even a titan like you can be felled!"
+      }
+    }
+  ]
+}

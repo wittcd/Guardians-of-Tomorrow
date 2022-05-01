@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44F8C838-553C-482C-B389-2B375B8590C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuardiansOfTomorrow</RootNamespace>
+    <AssemblyName>GuardiansOfTomorrow</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="EngineCommon">
+      <HintPath>E:\Steam\steamapps\common\Sentinels of the Multiverse\Sentinels_Data\Managed\EngineCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="SentinelsEngine">
+      <HintPath>E:\Steam\steamapps\common\Sentinels of the Multiverse\Sentinels_Data\Managed\SentinelsEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Argus\ArgusCharacterCardController.cs" />
+    <Compile Include="Argus\CamdroneCardController.cs" />
+    <Compile Include="Argus\CommandDroneCardController.cs" />
+    <Compile Include="Argus\ConfigureDroneCardController.cs" />
+    <Compile Include="Argus\DroneBombardmentCardController.cs" />
+    <Compile Include="Argus\DroneScanCardController.cs" />
+    <Compile Include="Argus\GuardiansOfTomorrowArgusCharacterCardController.cs" />
+    <Compile Include="Argus\HastyFormationCardController.cs" />
+    <Compile Include="Argus\HundredEyesCardController.cs" />
+    <Compile Include="Argus\OcculusDroneCardController.cs" />
+    <Compile Include="Argus\RebuildAndReuseCardController.cs" />
+    <Compile Include="Argus\RepairDroneCardController.cs" />
+    <Compile Include="Argus\SabotageDroneCardController.cs" />
+    <Compile Include="Argus\ScoutAheadCardController.cs" />
+    <Compile Include="Argus\SecurityDroneCardController.cs" />
+    <Compile Include="Argus\SemiAutonomousProtocols.cs" />
+    <Compile Include="Argus\ShockTacticsCardController.cs" />
+    <Compile Include="Argus\TacticalDeploymentCardController.cs" />
+    <Compile Include="Hoplite\GuardiansOfTomorrowHopliteCharacterCardController.cs" />
+    <Compile Include="Hoplite\HardlightHoplonCardController.cs" />
+    <Compile Include="Hoplite\HopliteCharacterCardController.cs" />
+    <Compile Include="Hoplite\LuminousLanceCardController.cs" />
+    <Compile Include="Hoplite\ReinforcedWeaveCardController.cs" />
+    <Compile Include="Hoplite\RocketBootsCardController.cs" />
+    <Compile Include="Hoplite\ShieldBubbleCardController.cs" />
+    <Compile Include="Ninetails\AChangeOfFaceCardController.cs" />
+    <Compile Include="Ninetails\AssertHumanityCardController.cs" />
+    <Compile Include="Ninetails\BookSmartsStreetSmartsCardController.cs" />
+    <Compile Include="Ninetails\BurningWhisperCardController.cs" />
+    <Compile Include="Ninetails\DancingFlameCardController.cs" />
+    <Compile Include="Ninetails\FoxEchoCardController.cs" />
+    <Compile Include="Ninetails\FoxfireBurstCardController.cs" />
+    <Compile Include="Ninetails\FoxMarbleCardController.cs" />
+    <Compile Include="Ninetails\FoxShapeCardController.cs" />
+    <Compile Include="Ninetails\GuardiansOfTomorrowNinetailsCharacterCardController.cs" />
+    <Compile Include="Ninetails\JadesCollarCardController.cs" />
+    <Compile Include="Ninetails\NinetailsCharacterCardController.cs" />
+    <Compile Include="Ninetails\PredatoryNatureCardController.cs" />
+    <Compile Include="Ninetails\ScientificApproachToMagicCardController.cs" />
+    <Compile Include="Ninetails\SpiritOfDeceptionCardController.cs" />
+    <Compile Include="Ninetails\SpiritVisionsCardController.cs" />
+    <Compile Include="Ninetails\StalkedByGhostsCardController.cs" />
+    <Compile Include="Ninetails\TwistingCinderCardController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\AttuneCardController.cs" />
+    <Compile Include="Scale\BlackHoleCardController.cs" />
+    <Compile Include="Scale\BlindJusticeCardController.cs" />
+    <Compile Include="Scale\CometCardController.cs" />
+    <Compile Include="Scale\ConvincingWordsCardController.cs" />
+    <Compile Include="Scale\CosmicScalesCardController.cs" />
+    <Compile Include="Scale\DesperateRiftCardController.cs" />
+    <Compile Include="Scale\EmptyPowerCardController.cs" />
+    <Compile Include="Scale\FoldSpaceCardController.cs" />
+    <Compile Include="Scale\GraviticStrikeCardController.cs" />
+    <Compile Include="Scale\GuardiansOfTomorrowScaleCharacterCardController.cs" />
+    <Compile Include="Scale\MeteorCardController.cs" />
+    <Compile Include="Scale\ParticleCardController.cs" />
+    <Compile Include="Scale\MoonsCardController.cs" />
+    <Compile Include="Scale\ScaleCharacterCardController.cs" />
+    <Compile Include="Scale\ShiftBalanceCardController.cs" />
+    <Compile Include="Scale\StarCardController.cs" />
+    <Compile Include="Scale\StarfireBeamCardController.cs" />
+    <Compile Include="Scale\WeighOptionsCardController.cs" />
+    <Compile Include="Starstone\CrushingStonesCardController.cs" />
+    <Compile Include="Starstone\DrawMaterialCardController.cs" />
+    <Compile Include="Starstone\FragmentStormCardController.cs" />
+    <Compile Include="Starstone\GraniteFistsCardController.cs" />
+    <Compile Include="Starstone\GuardiansOfTomorrowStarstoneCharacterCardController.cs" />
+    <Compile Include="Starstone\HammerBlowCardController.cs" />
+    <Compile Include="Starstone\IgneousShieldCardController.cs" />
+    <Compile Include="Starstone\MetamorphicArmorCardController.cs" />
+    <Compile Include="Starstone\ReabsorbCardController.cs" />
+    <Compile Include="Starstone\RockAndRollCardController.cs" />
+    <Compile Include="Starstone\SentryPillarCardController.cs" />
+    <Compile Include="Starstone\ShardStormCardController.cs" />
+    <Compile Include="Starstone\ShatterCardController.cs" />
+    <Compile Include="Starstone\StarstoneCharacterCardController.cs" />
+    <Compile Include="Starstone\StoneshapeCardController.cs" />
+    <Compile Include="Starstone\SwarmingSplintersCardController.cs" />
+    <Compile Include="Starstone\ViolentDetonationCardController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeckLists\ArgusDeckList.json" />
+    <EmbeddedResource Include="DeckLists\NinetailsDeckList.json" />
+    <EmbeddedResource Include="DeckLists\StarstoneDeckList.json" />
+    <EmbeddedResource Include="DeckLists\ScaleDeckList.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeckLists\HopliteDeckList.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

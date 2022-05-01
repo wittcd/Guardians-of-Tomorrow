@@ -1,0 +1,218 @@
+{
+  "name": "The Paths Behind the Mirror",
+  "kind": "Environment",
+  "backgroundColor": "e58ff2",
+  "difficulty": 3,
+  "cards": [
+    {
+      "identifier": "StrayedFromThePath",
+      "count": 1,
+      "title": "Strayed from the Path",
+      "body": [
+        "Each hero may draw an extra card during their draw phase. Whenever a hero draws a card, this card deals them 1 psychic damage."
+      ],
+      "icons": [
+        "DrawCardExtra",
+        "DealDamagePsychic"
+      ],
+      "keywords": [
+        "enchantment"
+      ],
+      "flavorText": "The heroes pursued the nymph, only to realize that they'd gotten completely turned around in the mists. The path was nowhere to be seen."
+    },
+    {
+      "identifier": "FaceThief",
+      "count": 1,
+      "title": "Face Thief",
+      "body": [
+        "When this card would be dealt damage by a hero, they may discard a card. If they do not, redirect the damage to the hero target with the second highest HP and increase it by 1. The first time each turn a hero card is destroyed, this card deals its owner 2 Infernal damage."
+      ],
+      "icons": [
+        "RedirectDamage",
+        "IncreaseDamageDealt",
+        "DealDamageInfernal"
+      ],
+      "keywords": [
+        "ghost"
+      ],
+      "flavorText": "The creature drifted towards Argus, two of its spindly hands clutching a frightfully lifelike mask, the others reaching for his face. He didn't need to guess about what would happen if it caught him.'",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "LostExplorer",
+      "count": 1,
+      "title": "Lost Explorer",
+      "body": "At the end of the environment turn, you may destroy a non-character hero card. If you do, this card deals the villain target with the highest HP 3 melee damage and 1 cold damage. Otherwise, it deals the target other than itself with the second highest HP 3 melee damage and 1 cold damage.",
+      "icons": [
+        "EndOfTurnAction",
+        "DestroyHero",
+        "DealDamageMelee",
+        "DealDamageCold"
+      ],
+      "keywords": [
+        "ghost"
+      ],
+      "flavorText": "The bloodless face looked up in expectation at the assembled heroes. “Iron... To defend myself...“ It rasped.",
+      "hitpoints": 8
+    },
+    {
+      "identifier": "UnseenWhisperer",
+      "count": 1,
+      "title": "Unseen Whisperer",
+      "body": "At the start of the environment turn, this card deals the hero with the most cards in play X sonic damage and that hero's player discards X cards, where X is 4 minus this card's current HP.",
+      "icons": [
+        "StartOfTurnAction",
+        "DealDamageSonic",
+        "Discard"
+      ],
+      "keywords": [
+        "ghost"
+      ],
+      "flavorText": "As the heroes became aware of its presence, its rage towards them only grew until its utterances were both silent and deafening at the same time.",
+      "hitpoints": 3
+    },
+    {
+      "identifier": "FaerieFoodstuffs",
+      "count": 1,
+      "title": "Faerie Foodstuffs",
+      "body": [
+        "At the end of the environment turn, each hero may choose to gain 2 HP. Reduce damage dealt by any hero who does so by 1 until the start of the environment turn. Increase damage dealt by faeries by 1."
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "GainHP",
+        "ReduceDamageDealt",
+        "IncreaseDamageDealt"
+      ],
+      "keywords": [
+        "enchantment"
+      ],
+      "flavorText": "“Are you sure you should be eating that?“ Argus asked. “What's the worst that could happen?“ Ninetails replied as she took a bite."
+    },
+    {
+      "identifier": "DessicatedBones",
+      "count": 2,
+      "title": "Dessicated Bones",
+      "body": "At the end of the environment turn, this card deals the non-ghost target with the second lowest HP 2 melee damage. Then destroy a copy of Weeping Shadow.",
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "Destroy"
+      ],
+      "keywords": [
+        "ghost"
+      ],
+      "flavorText": "The skeletal creature reached out with clawed hands, and the heroes felt their skin grow parched and cracked in its presence.",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "WeepingShadow",
+      "count": 2,
+      "title": "Weeping Shadow",
+      "body": "At the end of the environment turn, each ghost gains 2 HP.",
+      "icons": [
+        "EndOfTurnAction",
+        "GainHP"
+      ],
+      "keywords": [
+        "ghost"
+      ],
+      "flavorText": "“Lost forever in the dark!“ the specter wailed. The other spirits around edged closer to it, its misery seeming to empower them.",
+      "hitpoints": 2
+    },
+    {
+      "identifier": "DriedWishingFountain",
+      "count": 1,
+      "title": "Dried Wishing Fountain",
+      "body": [
+        "At the end of the environment turn, if Weeping Shadow is in play, each hero target gains 1 HP. Otherwise, search the environment trash for a copy of Dessicated Bones and put it into play."
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "Manipulate",
+        "PlayCardNow",
+        "GainHP"
+      ],
+      "keywords": [
+        "enchantment",
+        "relic"
+      ],
+      "flavorText": "The fountain was filled with nothing but sand and bones, but as the tears found their way into the basin, it began to sputter to life again."
+    },
+    {
+      "identifier": "WitheredDryad",
+      "count": 1,
+      "title": "Withered Dryad",
+      "body": "At the start of the environment turn, one hero may allow this card to deal them 1 toxic and 1 infernal damage. If any damage is taken this way, restore this card to its max HP, reveal cards from the top of the environment deck until an enchantment is revealed and put it into play, discarding the other revealed cards, and this card deals 1 villain target 5 toxic damage.",
+      "icons": [
+        "StartOfTurnAction",
+        "DealDamageToxic",
+        "DealDamageInfernal",
+        "GainHP",
+        "Manipulate",
+        "PlayCardNow",
+        "DealDamageToxic"
+      ],
+      "keywords": [
+        "ghost",
+        "faerie"
+      ],
+      "flavorText": "“I am dying.“ The leaves in her hair were dead and rotting, her frame emaciated. “Could you spare me some of your life force? I could help you.“ An unmistakable look of desperate hunger crossed her face.",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "CapriciousNymph",
+      "count": 2,
+      "title": "Capricious Nymph",
+      "body": "At the end of the environment turn, each player reveals the top card of their deck. If an ongoing or equipment card is revealed this way, that player may play or draw it. Otherwise, this card deals that hero 2 toxic damage and discards the revealed card.",
+      "icons": [
+        "EndOfTurnAction",
+        "Manipulate",
+        "PlayCardNow",
+        "DrawCardNow",
+        "DealDamageToxic",
+        "Discard"
+      ],
+      "keywords": [
+        "faerie"
+      ],
+      "flavorText": "She claimed to have gifts to help the heroes, but many of them were deadly traps in disguise as useful tools.",
+      "hitpoints": 4
+    },
+    {
+      "identifier": "ThisPlaceHasPower",
+      "count": 1,
+      "title": "This Place has Power",
+      "body": [
+        "Reduce damage dealt by non-environment targets by 1. Reduce damage dealt to environment targets by 1."
+      ],
+      "icons": [
+        "ReduceDamageDealt",
+        "ReduceDamageTaken"
+      ],
+      "keywords": [
+        "enchantment"
+      ],
+      "flavorText": "In their own domain, the faeries and ghosts of the Paths were terrifying and powerful titans, even if outside they were little more than wisps of shadow and cobweb."
+    },
+    {
+      "identifier": "LockedInADream",
+      "count": 1,
+      "title": "Locked in a Dream",
+      "body": [
+        "When this card enters play, put it next to the hero with the fewest cards in play. That hero is immune from damage to non-environment targets and may not deal damage to non-environment targets. At the end of that hero's turn, they may discard their hand and draw 2 cards. If they do, destroy this card.'"
+      ],
+      "icons": [
+        "ImmuneToDamage",
+        "CannotDealDamage",
+        "EndOfTurnAction",
+        "Discard",
+        "DrawCardNow"
+      ],
+      "keywords": [
+        "enchantment"
+      ],
+      "flavorText": "To the other heroes, it seemed that Starstone vanished into thin air. To her, they appeared to have done the same."
+    }
+  ]
+}

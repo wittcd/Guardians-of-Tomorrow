@@ -1,0 +1,236 @@
+{
+  "name": "Legion",
+  "kind": "Villain",
+  "initialCardIdentifiers": [
+    "LegionCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "LegionCharacter",
+      "count": 1,
+      "title": "Legion",
+      "keywords": [
+        "villain",
+        "device"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "DestroyEquipment",
+        "WinTheGame"
+      ],
+      "advancedIcons": [
+        "IncreaseDamageDealt"
+      ],
+      "body": "Nanotech Master Criminal",
+      "foilBackgroundColor": "CD96C0",
+      "character": true,
+      "hitpoints": 30,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Hoplite"
+      ],
+      "setup": [
+        "At the start of the game, {Legion} enters play “Nanotech Master Criminal“ side up.",
+        "Put 3 “Nanite Swarm“ cards under this card. Shuffle the other 2 into the villain deck."
+      ],
+      "gameplay": [
+        "At the end of the villain turn, {Legion} deals the hero with the most equipment cards in play {H}-2 melee damage and destroys one of their equipment cards.",
+        "When a Nanite Swarm would enter play, place it under this card. Nanite Swarms under this card are indestructible.",
+        "When {Legion} flips to this side, restore him to an amount of health equal to the number of cards under this card times 10.",
+        "When {Legion} would be destroyed, flip this card.",
+        "If there are no Nanite Swarms under this card, the heroes win the game."
+      ],
+      "advanced": "Increase damage dealt by villain targets by 1.",
+      "flippedBody": "Runaway Nanite Swarms",
+      "flippedGameplay": [
+        "When {Legion} flips to this side, put all Nanite Swarms under {Legion} into play.",
+        "{Legion} is indestructible and immune to all damage.",
+        "When a Nanite Swarm is destroyed, put all Nanite Swarms from play under this card, then {Legion} flips."
+      ],
+      "flippedAdvanced": "Reduce damage dealt to villain targets by 1.",
+      "flippedIcons": [
+        "PlayCardNow",
+        "Indestructible",
+        "ImmuneToDamage",
+        "Manipulate"
+      ],
+      "flippedAdvancedIcons": [
+        "ReduceDamageTaken"
+      ],
+      "challengeTitle": "Might of the Many",
+      "challengeText": ["{Legion}'s max HP is 50. All 5 Nanite Swarms begin play beneath this card."],
+      "difficulty": 2,
+      "openingLines": {
+        "default": "I am Legion, for we are many!"
+      }
+    },
+    {
+      "identifier": "NaniteSwarm",
+      "count": 5,
+      "title": "Nanite Swarm",
+      "keywords": [
+        "nanite swarm"
+      ],
+      "body": "At the end of the villain turn, this card deals the hero target with the highest HP 2 melee damage and gains 2 HP.",
+      "hitpoints": "10",
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "GainHP"
+      ],
+      "flavorText": "There's too many of them! We have to cut them off at the source!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #2"
+    },
+    {
+      "identifier": "ConstructedPlasmaTurret",
+      "count": 2,
+      "title": "Constructed Plasma Turret",
+      "hitpoints": 6,
+      "keywords": [
+        "device"
+      ],
+      "body": [
+        "At the end of the villain turn, this card deals the hero target with the second lowest HP {H}-1 energy damage."
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageEnergy"
+      ],
+      "flavorText": "",
+      "flavorReference": ""
+    },
+    {
+      "identifier": "NaniteTrap",
+      "count": 2,
+      "title": "Nanite Trap",
+      "hitpoints": 5,
+      "keywords": [
+        "device"
+      ],
+      "icons": [
+        "CounterDamage",
+        "DealDamageMelee",
+        "CannotDealDamage"
+      ],
+      "body": "The first time each turn this card takes damage, it deals the source of that damage 2 melee damage. Targets dealt damage this way cannot deal damage until the start of the villain turn.",
+      "flavorText": "Eeurgh, it's all sticky!",
+      "flavorReference": "Ninetails, Guardians of Tomorrow #56"
+    },
+    {
+      "identifier": "HackedVaultDoor",
+      "count": 3,
+      "title": "Hacked Vault Door",
+      "hitpoints": 10,
+      "keywords": [
+        "device"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "RedirectDamage",
+        "Discard"
+      ],
+      "body": "Reduce damage taken by this card by 1. Redirect all damage dealt to villain targets to this card. When this card is dealt damage, one player may discard 2 cards. If they do, destroy this card.",
+      "flavorText": "Sealed so tightly not even I could get in or out. Enjoy yourselves, heroes, until your air runs out!",
+      "flavorReference": "Legion, Guardians of Tomorrow Annual #2"
+    },
+    {
+      "identifier": "LethalAmbush",
+      "count": 2,
+      "title": "Lethal Ambush",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageEnergy",
+        "IncreaseDamageDealt"
+      ],
+      "body": "{Legion} deals the hero target with the lowest HP H-2 energy damage. If they have 10 or less HP remaining, increase this damage by 2.",
+      "flavorText": "What're you doing over here all alone?",
+      "flavorReference": "Legion, Guardians of Tomorrow Annual #2"
+    },
+    {
+      "identifier": "DevourTech",
+      "count": 2,
+      "title": "Devour Tech",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyEquipment",
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "body": "Destroy a hero equipment card. Search the villain deck for a Nanite Swarm and put it into play. Shuffle the villain deck.",
+      "flavorText": "Any metal he touches, he can turn into more of himself! We need to stop this before it gets out of control!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #2"
+    },
+    {
+      "identifier": "CreeepingAssault",
+      "count": 3,
+      "title": "Creeping Assault",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageProjectile",
+        "Discard"
+      ],
+      "body": "{Legion} deals the hero with the highest HP {H} projectile damage. That hero's player discards a card.",
+      "flavorQuotes": [
+        {
+          "identifier": "Scale",
+          "text": "I see you're behind me now."
+        },
+        {
+          "identifier": "Legion",
+          "text": "How do you see anything with that blindfold on?"
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow Annual #2"
+    },
+    {
+      "identifier": "HungryNanoblades",
+      "count": 2,
+      "title": "Hungry Nanoblades",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "IncreaseDamageTaken"
+      ],
+      "body": "{Legion} deals the {H}-1 hero targets with the highest HP 2 melee damage each. Increase damage dealt to those targets by 1 until the start of the villain turn.",
+      "flavorText": "Those blades can chew through any metal! Watch out!",
+      "flavorReference": "Argus, Guardians of Tomorrow Annual #2"
+    },
+    {
+      "identifier": "PreyOnWeakness",
+      "count": 2,
+      "title": "Prey on Weakness",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyOngoing",
+        "DealDamageEnergy"
+      ],
+      "body": "Destroy H-2 ongoing cards. {Legion} deals each hero without any ongoing cards in play {H}-1 energy damage.",
+      "flavorText": "I am mechanical perfection! You are just flawed organics!",
+      "flavorReference": "Legion, Guardians of Tomorrow Annual #2"
+    },
+    {
+      "identifier": "NaniteBarrage",
+      "count": 2,
+      "title": "Nanite Barrage",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageProjectile"
+      ],
+      "body": "{Legion} deals the hero target with the second highest HP X projectile damage, where X is the number of devices in play.",
+      "flavorText": "His firepower really adds up!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #2"
+    }
+  ]
+}

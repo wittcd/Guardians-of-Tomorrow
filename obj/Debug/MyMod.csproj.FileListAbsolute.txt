@@ -1,0 +1,11 @@
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\obj\Debug\MyMod.csproj.AssemblyReference.cache
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\obj\Debug\MyMod.csproj.CoreCompileInputs.cache
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\bin\Debug\GuardiansOfTomorrow.dll
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\bin\Debug\GuardiansOfTomorrow.pdb
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\bin\Debug\EngineCommon.dll
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\bin\Debug\SentinelsEngine.dll
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\bin\Debug\EngineCommon.xml
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\bin\Debug\SentinelsEngine.xml
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\obj\Debug\GuardiansOfTomorrow.dll
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\obj\Debug\GuardiansOfTomorrow.pdb
+E:\Programs\SotM_Mods\GuardiansOfTomorrow\obj\Debug\MyMod.csproj.CopyComplete

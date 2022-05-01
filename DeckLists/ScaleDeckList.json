@@ -1,0 +1,364 @@
+﻿{
+  "name": "Scale",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "ScaleCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "ScaleCharacter",
+      "count": 1,
+      "title": "Scale",
+      "body": "Restore Balance",
+      "backgroundColor": "ffe70d",
+      "foilBackgroundColor": "FEFEFE",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Destroy a balance card. Draw a card."
+      ],
+      "icons": [
+        "HasPower",
+        "Destroy",
+        "DrawCardnow"
+      ],
+      "hitpoints": 32,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Scale"
+      ],
+      "incapacitatedAbilities": [
+        "One hero may use a power",
+        "One target regains 2 HP",
+        "Increase or reduce all damage by 1 until the start of your next turn."
+      ],
+      "flippedIcons": [
+        "UsePowerNow",
+        "GainHP",
+        "IncreaseDamageDealt",
+        "ReduceDamageDealt"
+      ],
+      "openingLines": {
+        "default": "You are causing imbalance. You will stop, now.",
+        "EidolonCharacter": "Corrupter. You bring darkness to the temple of the scales. You will be destroyed.",
+        "OblivAeonFrontPageCharacter": "Nothingness may be a form of balance, but there's a better way."
+      },
+      "complexity": 3
+    },
+    {
+      "identifier": "Star",
+      "count": 1,
+      "title": "Star",
+      "keywords": [
+        "balance"
+      ],
+      "body": "All damage is irreducible.",
+      "icons": [
+        "MakeDamageIrreducible"
+      ],
+      "flavorText": "This starlight penetrates even the darkest clouds.",
+      "flavorReference": "Scale, Guardians of Tomorrow #14"
+    },
+    {
+      "identifier": "BlackHole",
+      "count": 1,
+      "title": "Black Hole",
+      "keywords": [
+        "balance"
+      ],
+      "body": "Whenever a character card takes damage, discard the top card of its owner's deck",
+      "icons": [
+        "Discard"
+      ],
+      "flavorText": "The pull of gravity is an undeniable force of destruction.",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "Moons",
+      "count": 1,
+      "title": "Moons",
+      "keywords": [
+        "balance"
+      ],
+      "body": "All damage dealt to villain targets is redirected to the villain target with the highest HP. All damage dealt to hero targets is redirected to the hero target with the highest HP. All damage dealt to environment targets is redirected to the environment target with the highest HP.",
+      "icons": [
+        "RedirectDamage"
+      ],
+      "flavorText": "Many people orbit around a strong leader.",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "Particle",
+      "count": 1,
+      "title": "Particle",
+      "keywords": [
+        "balance"
+      ],
+      "body": "Increase damage dealt by the hero target with the lowest HP, villain target with the lowest HP, and environment target with the lowest HP by 2.",
+      "icons": [
+        "IncreaseDamageDealt"
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Eidolon",
+          "text": "I will devour you all! You are specks before me!"
+        },
+        {
+          "identifier": "Scale",
+          "text": "The smallest grain of dust can still be dangerous."
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "Meteor",
+      "count": 1,
+      "title": "Meteor",
+      "keywords": [
+        "balance"
+      ],
+      "body": "At the start of your turn, {Scale} deals each target 2 energy damage.",
+      "icons": [
+        "StartOfTurnAction",
+        "DealDamageEnergy"
+      ],
+      "flavorText": "A meteor burns brightly, until it burns up.",
+      "flavorReference": "Scale, Sage and Sinner #6"
+    },
+    {
+      "identifier": "Comet",
+      "count": 1,
+      "title": "Comet",
+      "keywords": [
+        "balance"
+      ],
+      "body": "All damage is reduced by 1",
+      "icons": [
+        "ReduceDamageDealt"
+      ],
+      "flavorText": "Hold up. Freeze.",
+      "flavorReference": "Scale, Guardians of Tomorrow #4"
+    },
+    {
+      "identifier": "CosmicScales",
+      "count": 3,
+      "title": "Cosmic Scales",
+      "keywords": [
+        "equipment",
+        "relic",
+        "limited"
+      ],
+      "body": "At the end of your turn, either put a balance card from your hand into play, destroy a balance card, or draw a card.",
+      "icons": [
+        "EndOfTurnAction",
+        "Destroy",
+        "PlayCardNow",
+        "DrawCardNow"
+      ],
+      "flavorText": "The tools of the balancer's trade. Don't touch them.",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #1"
+    },
+    {
+      "identifier": "StarfireBeam",
+      "count": 3,
+      "title": "Starfire Beam",
+      "keywords": [
+        "ongoing"
+      ],
+      "powers": [
+        "{Scale} deals 1 target 2 fire damage. You may play a balance card or destroy a balance card."
+      ],
+      "icons": [
+        "DealDamageFire",
+        "PlayCardNow",
+        "Destroy"
+      ],
+      "flavorText": "By the light of the sun, be purged, vampire!",
+      "flavorReference": "Scale, Guardians of Tomorrow #33"
+    },
+    {
+      "identifier": "ShiftBalance",
+      "count": 4,
+      "title": "Shift Balance",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Destroy a balance card. Search your deck for a balance card and put it into play, then shuffle it. {Scale} deals each non-hero target 1 infernal damage.",
+      "icons": [
+        "Destroy",
+        "PlayCardNow",
+        "DealDamageInfernal"
+      ],
+      "flavorText": "You are not the only one with a hand on the scales, corrupter.",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "EmptyPower",
+      "count": 2,
+      "title": "Empty Power",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Destroy all balance cards. {Scale} deals 1 target X irreducible energy damage, where X is the number of cards destroyed this way.",
+      "icons": [
+        "Destroy",
+        "DealDamageEnergy"
+      ],
+      "flavorText": "Don't worry! Everything will return to normal momentarily!",
+      "flavorReference": "Scale, Guardians of Tomorrow #9"
+    },
+    {
+      "identifier": "Attune",
+      "count": 4,
+      "title": "Attune",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Move any number of balance cards from your trash to your hand. {Scale} deals 1 target 3 energy damage",
+      "icons": [
+        "Manipulate",
+        "DealDamageEnergy"
+      ],
+      "flavorText": "...",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #1"
+    },
+    {
+      "identifier": "GraviticStrike",
+      "count": 3,
+      "title": "Gravitic Strike",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "{Scale} deals 1 target 3 melee damage and up to 2 other targets 1 energy damage each. Destroy an environment card.",
+      "icons": [
+        "DealDamageMelee",
+        "DealDamageEnergy",
+        "DestroyEnvironment"
+      ],
+      "flavorText": "Down, evildoer!",
+      "flavorReference": "Scale, Guardians of Tomorrow #40"
+    },
+    {
+      "identifier": "DesperateRift",
+      "count": 3,
+      "title": "Desperate Rift",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Play a balance card. {Scale} deals 3 targets 3 infernal damage each. Discard the top card of each deck.",
+      "icons": [
+        "Destroy",
+        "DealDamageInfernal",
+        "Discard"
+      ],
+      "flavorText": "Error: Negative energy drain exceeds generator output.",
+      "flavorReference": "Omnitron II, Guardians of Tomorrow #85"
+    },
+    {
+      "identifier": "FoldSpace",
+      "count": 3,
+      "title": "Fold Space",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Reduce the next damage dealt to Scale by 2. {Scale} deals 1 target 1 melee and 1 energy damage.",
+      "icons": [
+        "ReduceDamageTaken",
+        "DealDamageMelee",
+        "DealDamageEnergy"
+      ],
+      "flavorText": "Where did you go? Get back here, old man!",
+      "flavorReference": "Starstone, Sage and Sinner #2"
+    },
+    {
+      "identifier": "BlindJustice",
+      "count": 2,
+      "title": "Blind Justice",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Until the end of your next turn, reduce damage dealt by {Scale} by 2. Draw 4 cards.",
+      "icons": [
+        "ReduceDamageDealt",
+        "DrawCardNow"
+      ],
+      "flavorText": "Are you serious about fighting blindfolded?",
+      "flavorReference": "Argus, Guardians of Tomorrow Annual #1"
+    },
+    {
+      "identifier": "ConvincingWords",
+      "count": 3,
+      "title": "Convincing Words",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "One villain target deals itself 2 psychic damage. If no damage is dealt this wy, it deals 1 other villain target 4 melee damage.",
+      "icons": [
+        "DealDamagePsychic",
+        "DealDamageMelee"
+      ],
+      "flavorText": "Look at what you're doing, Ludramor. Is this what your people would want?",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "WeighOptions",
+      "count": 4,
+      "title": "Weigh Options",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Choose 2. You may choose the same option twice: Draw a card, {Scale} deals 1 target 2 energy damage, Destroy an ongoing or environment card, or {Scale} regains 2 HP.",
+      "icons": [
+        "DrawCardNow",
+        "DealDamageEnergy",
+        "DestroyOngoing",
+        "DestroyEnvironment",
+        "GainHP"
+      ],
+      "flavorText": "There are many possibilities.",
+      "flavorReference": "Scale, Guardians of Tomorrow #25"
+    }
+  ],
+  "promoCards": [
+    {
+      "identifier": "ScaleCharacter",
+      "promoIdentifier": "GuardiansOfTomorrowScaleCharacter",
+      "count": 1,
+      "title": "Scale",
+      "promoTitle": "Guardians of Tomorrow Scale",
+      "body": "Tip the Scales",
+      "icons": [
+        "HasPower",
+        "PlayCardNow",
+        "DealDamageInfernal"
+      ],
+      "backgroundColor": "851031",
+      "foilBackgroundColor": "86BB71",
+      "hitpointsColor": "F6AD41",
+      "character": true,
+      "powers": [
+        "Put a Cosmic Balance card from your hand into play. If you do, {Scale} deals 1 target 2 infernal damage."
+      ],
+      "hitpoints": 28,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Scale"
+      ],
+      "incapacitatedAbilities": [
+        "One hero may draw a card",
+        "One player may play a card",
+        "One hero may use a power. If that power would deal damage, increase it by 1."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "PlayCardNow",
+        "UsePowerNow",
+        "IncreaseDamageDealt"
+      ],
+      "complexity": 3,
+      "openingLines": {
+        "default": "You are an affront to balance!",
+        "EidolonCharacter": "I've had enough. Die.",
+        "OblivAeonFrontPageCharacter": "It brings balance... The absolute balance of nothingness."
+      }
+    }
+  ]
+}
