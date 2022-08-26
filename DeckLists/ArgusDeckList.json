@@ -15,7 +15,7 @@
       "hitpointsColor": "C94742",
       "character": true,
       "powers": [
-        "Activate an operate text. Draw a card."
+        "Draw a card. Activate an Operate text."
       ],
       "icons": [
         "HasPower",
@@ -38,7 +38,7 @@
       ],
       "openingLines": {
         "default": "Positions, everyone! I have overwatch on the situation!",
-        "HatterCharacter": "I'm watching your every move.",
+        "GuardiansOfTomorrow.TheHatterCharacter": "Lots of tech in that headgear for just an “ordinary” hatmaker.",
         "OblivAeonFrontPageCharacter": "I can coordinate, but we'll need everyone together to win this one!"
       },
       "complexity": 2
@@ -64,7 +64,7 @@
           "text": "one player may draw a card"
         }
       ],
-      "flavorText": "Long range, low profile, high-definition camera. Perfect.",
+      "flavorText": "Long range, low profile, high-definition{br}camera. Perfect.",
       "flavorReference": "Argus, The Hundred Eyes #1"
     },
     {
@@ -113,7 +113,7 @@
           "text": "{Argus} deals 1 target 1 fire damage"
         }
       ],
-      "flavorText": "Normally I clean up the messes. This will be an interesting change of pace.",
+      "flavorText": "Normally I clean up the messes. This will{br}be an interesting change of pace.",
       "flavorReference": "Argus, Guardians of Tomorrow #46",
       "powers": [
         "Destroy an ongoing or environment card."
@@ -129,6 +129,7 @@
       ],
       "icons": [
         "HasPower",
+        "GainHP",
         "Manipulate"
       ],
       "activatableAbilities": [
@@ -137,7 +138,7 @@
           "text": "Move an equipment card from a player's trash to their hand"
         }
       ],
-      "flavorText": "You're taking a blowtorch to my shield? I need that intact!",
+      "flavorText": "You're taking a blowtorch to my shield?{br}I need that intact!",
       "flavorReference": "Hoplite, Guardians of Tomorrow Annual #1",
       "powers": [
         "Up to 2 hero targets regain 1 HP each."
@@ -163,7 +164,7 @@
           "text": "one hero other than {Argus} may use a power now."
         }
       ],
-      "flavorText": "I'll just relax here and let the computer do the hard work.",
+      "flavorText": "I'll just relax here and let the computer{br}do the hard work.",
       "flavorReference": "Hoplite, Guardians of Tomorrow #29",
       "powers": [
         "Activate up to 3 Operate texts."
@@ -188,7 +189,7 @@
         },
         {
           "identifier": "Argus",
-          "rext": "I always have my toys."
+          "text": "I always have my toys."
         }
       ],
       "flavorReference": "Guardians of Tomorrow Annual #2",
@@ -207,7 +208,7 @@
       "icons": [
         "GuardiansOfTomorrow.HasOperate"
       ],
-      "flavorText": "Hang tight, backup is just around the corner!",
+      "flavorText": "Hang tight, backup is just around{br}the corner!",
       "flavorReference": "Argus, Guardians of Tomorrow Annual #1",
       "body": "Whenever a camdrone enters play, you may activate its operate text"
     },
@@ -223,7 +224,7 @@
         "PlayCardNow",
         "GuardiansOfTomorrow.HasOperate"
       ],
-      "flavorText": "Smash those robots! Where do they keep coming from!",
+      "flavorText": "Smash those robots! Where do they{br}keep coming from!",
       "flavorReference": "The Hatter, The Hundred Eyes #6",
       "body": "Draw 2 cards. Play up to 2 camdrone cards. Activate up to 2 operate texts."
     },
@@ -239,7 +240,7 @@
         "UsePowerNow",
         "GuardiansOfTomorrow.HasOperate"
       ],
-      "flavorText": "Hold on a second. This one just needs a little modification.",
+      "flavorText": "Hold on a second. This one just needs a{br}little modification.",
       "flavorReference": "Argus, Guardians of Tomorrow #18",
       "body": "Search your deck for a Camdrone card and put it into play. Shuffle your deck. You may use a power and activate an Operate text."
     },
@@ -296,7 +297,7 @@
         "Manipulate",
         "GuardiansOfTomorrow.HasOperate"
       ],
-      "flavorText": "Before you all charge in, let me take a peek first.",
+      "flavorText": "Before you all charge in, let me take{br}a peek first.",
       "flavorReference": "Argus, Guardians of Tomorrow Annual #2.",
       "body": "Draw a card. Reveal the top 2 cards of the environment deck. Put one on top and the other on the bottom. Activate an operate text."
     },
@@ -327,7 +328,7 @@
         "EndOfTurnAction",
         "GuardiansOfTomorrow.HasOperate"
       ],
-      "flavorText": "That's one upgrade that was sorely needed.",
+      "flavorText": "That's one upgrade that was{br}sorely needed.",
       "flavorReference": "Argus, Guardians of Tomorrow #25",
       "body": "At the end of your turn, you may activate an operate text."
     },
@@ -341,7 +342,7 @@
       "icons": [
         "DrawCardNow"
       ],
-      "flavorText": "Watch out, got a wrecked tanker ahead and to your left, and a pair of muggers stalking a civilian to the south.",
+      "flavorText": "Watch out, got a wrecked tanker ahead{br}and a pair of muggers stalking a civilian{br}to the south.",
       "flavorReference": "Argus, Guardians of Tomorrow #3",
       "body": "Draw 2 cards. If you have at least 3 camdrones in play, draw 2 more."
     }
@@ -387,7 +388,7 @@
       "complexity": 2,
       "openingLines": {
         "default": "Okay team! I'll hit them from above, you take them from below!",
-        "HatterCharacter": "You won't control anyone again. I'll stop you here and now!",
+        "GuardiansOfTomorrow.TheHatterCharacter": "You won't control anyone again. I'll stop you here and now!",
         "OblivAeonFrontPageCharacter": "My drones don't stand a chance agaisnt something so powerful. I'll need to pull out all the stops here."
       }
     }

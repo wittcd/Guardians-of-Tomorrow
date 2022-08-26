@@ -37,7 +37,7 @@ namespace GuardiansOfTomorrow.Hoplite
 			}
 			if (targets.FirstOrDefault() != null)
 			{
-				int x = targets.Count() - reduction;
+				int x = targets.Count() - reduction - 1;
 				if (x > 0) {
 					coroutine = DealDamage(base.CharacterCard, base.CharacterCard, x, DamageType.Fire, cardSource: GetCardSource());
 					if (base.UseUnityCoroutines)

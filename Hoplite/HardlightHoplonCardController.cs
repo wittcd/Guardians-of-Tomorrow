@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.Hoplite
 		public override void AddTriggers()
 		{
 			AddReduceDamageTrigger((Card c) => c == base.CharacterCard, 1);
-			AddTrigger((DealDamageAction dd) => CheckDamageCriteria(dd), (DealDamageAction dd) => GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), 3, DamageType.Melee, 1, false, 0, cardSource: GetCardSource()), TriggerType.DealDamage, TriggerTiming.After);
+			AddTrigger((DealDamageAction dd) => CheckDamageCriteria(dd), (DealDamageAction dd) => GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), 2, DamageType.Melee, 1, false, 0, cardSource: GetCardSource()), TriggerType.DealDamage, TriggerTiming.After);
 		}
 
 

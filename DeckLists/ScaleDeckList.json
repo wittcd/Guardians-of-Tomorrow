@@ -20,7 +20,7 @@
       "icons": [
         "HasPower",
         "Destroy",
-        "DrawCardnow"
+        "DrawCardNow"
       ],
       "hitpoints": 32,
       "nemesisIdentifiers": [
@@ -39,7 +39,7 @@
       ],
       "openingLines": {
         "default": "You are causing imbalance. You will stop, now.",
-        "EidolonCharacter": "Corrupter. You bring darkness to the temple of the scales. You will be destroyed.",
+        "GuardiansOfTomorrow.EidolonCharacter": "Corrupter. You bring darkness to the temple of the scales. You will be destroyed.",
         "OblivAeonFrontPageCharacter": "Nothingness may be a form of balance, but there's a better way."
       },
       "complexity": 3
@@ -55,7 +55,7 @@
       "icons": [
         "MakeDamageIrreducible"
       ],
-      "flavorText": "This starlight penetrates even the darkest clouds.",
+      "flavorText": "This starlight penetrates even the darkest{br}clouds.",
       "flavorReference": "Scale, Guardians of Tomorrow #14"
     },
     {
@@ -69,7 +69,7 @@
       "icons": [
         "Discard"
       ],
-      "flavorText": "The pull of gravity is an undeniable force of destruction.",
+      "flavorText": "The pull of gravity is an undeniable force{br}of destruction.",
       "flavorReference": "Scale, Guardians of Tomorrow Annual #3"
     },
     {
@@ -83,7 +83,7 @@
       "icons": [
         "RedirectDamage"
       ],
-      "flavorText": "Many people orbit around a strong leader.",
+      "flavorText": "Many people orbit around a strong{br}leader.",
       "flavorReference": "Scale, Guardians of Tomorrow Annual #3"
     },
     {
@@ -104,7 +104,7 @@
         },
         {
           "identifier": "Scale",
-          "text": "The smallest grain of dust can still be dangerous."
+          "text": "The smallest grain of dust can still{br}be dangerous."
         }
       ],
       "flavorReference": "Guardians of Tomorrow Annual #3"
@@ -121,7 +121,7 @@
         "StartOfTurnAction",
         "DealDamageEnergy"
       ],
-      "flavorText": "A meteor burns brightly, until it burns up.",
+      "flavorText": "A meteor burns brightly until it burns up.",
       "flavorReference": "Scale, Sage and Sinner #6"
     },
     {
@@ -154,7 +154,7 @@
         "PlayCardNow",
         "DrawCardNow"
       ],
-      "flavorText": "The tools of the balancer's trade. Don't touch them.",
+      "flavorText": "The tools of the balancer's trade.{br}Don't touch.",
       "flavorReference": "Scale, Guardians of Tomorrow Annual #1"
     },
     {
@@ -172,7 +172,7 @@
         "PlayCardNow",
         "Destroy"
       ],
-      "flavorText": "By the light of the sun, be purged, vampire!",
+      "flavorText": "By the light of the sun, be purged,{br}vampire!",
       "flavorReference": "Scale, Guardians of Tomorrow #33"
     },
     {
@@ -188,7 +188,7 @@
         "PlayCardNow",
         "DealDamageInfernal"
       ],
-      "flavorText": "You are not the only one with a hand on the scales, corrupter.",
+      "flavorText": "You are not the only one with a hand on{br}the scales, corrupter.",
       "flavorReference": "Scale, Guardians of Tomorrow Annual #3"
     },
     {
@@ -198,12 +198,12 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "Destroy all balance cards. {Scale} deals 1 target X irreducible energy damage, where X is the number of cards destroyed this way.",
+      "body": "Destroy all balance cards. {Scale} deals 1 target X irreducible energy damage, where X is the number of cards destroyed this way times 3.",
       "icons": [
         "Destroy",
         "DealDamageEnergy"
       ],
-      "flavorText": "Don't worry! Everything will return to normal momentarily!",
+      "flavorText": "Don't worry! Everything will return to{br}normal momentarily!",
       "flavorReference": "Scale, Guardians of Tomorrow #9"
     },
     {
@@ -246,11 +246,11 @@
       ],
       "body": "Play a balance card. {Scale} deals 3 targets 3 infernal damage each. Discard the top card of each deck.",
       "icons": [
-        "Destroy",
+        "PlayCardNow",
         "DealDamageInfernal",
         "Discard"
       ],
-      "flavorText": "Error: Negative energy drain exceeds generator output.",
+      "flavorText": "Error: Negative energy drain exceeds{br}generator output.",
       "flavorReference": "Omnitron II, Guardians of Tomorrow #85"
     },
     {
@@ -266,7 +266,7 @@
         "DealDamageMelee",
         "DealDamageEnergy"
       ],
-      "flavorText": "Where did you go? Get back here, old man!",
+      "flavorText": "Where did you go? Get back here,{br}old man!",
       "flavorReference": "Starstone, Sage and Sinner #2"
     },
     {
@@ -281,8 +281,8 @@
         "ReduceDamageDealt",
         "DrawCardNow"
       ],
-      "flavorText": "Are you serious about fighting blindfolded?",
-      "flavorReference": "Argus, Guardians of Tomorrow Annual #1"
+      "flavorText": "Are you serious about fighting{br}blindfolded?",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #1"
     },
     {
       "identifier": "ConvincingWords",
@@ -291,12 +291,12 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "One villain target deals itself 2 psychic damage. If no damage is dealt this wy, it deals 1 other villain target 4 melee damage.",
+      "body": "One villain target deals itself 2 psychic damage. If no damage is dealt this way, it deals 1 other villain target 4 melee damage.",
       "icons": [
         "DealDamagePsychic",
         "DealDamageMelee"
       ],
-      "flavorText": "Look at what you're doing, Ludramor. Is this what your people would want?",
+      "flavorText": "Look at what you're doing, Ludramor. Is{br}this what your people would want?",
       "flavorReference": "Scale, Guardians of Tomorrow Annual #7"
     },
     {
@@ -336,7 +336,7 @@
       "hitpointsColor": "F6AD41",
       "character": true,
       "powers": [
-        "Put a Cosmic Balance card from your hand into play. If you do, {Scale} deals 1 target 2 infernal damage."
+        "Put a Balance card from your hand into play. If you do, {Scale} deals 1 target 3 infernal damage."
       ],
       "hitpoints": 28,
       "nemesisIdentifiers": [
@@ -356,7 +356,7 @@
       "complexity": 3,
       "openingLines": {
         "default": "You are an affront to balance!",
-        "EidolonCharacter": "I've had enough. Die.",
+        "GuardiansOfTomorrow.EidolonCharacter": "I've had enough. Die.",
         "OblivAeonFrontPageCharacter": "It brings balance... The absolute balance of nothingness."
       }
     }

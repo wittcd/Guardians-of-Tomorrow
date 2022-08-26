@@ -1,0 +1,317 @@
+﻿{
+  "name": "The Hatter",
+  "kind": "Villain",
+  "initialCardIdentifiers": [
+    "TheHatterCharacter"
+  ],
+  "sortName": "Hatter",
+  "cards": [
+    {
+      "identifier": "TheHatterCharacter",
+      "count": 1,
+      "title": "The Hatter",
+      "keywords": [
+        "villain"
+      ],
+      "icons": [
+        "Discard",
+        "EndOfTurnAction",
+        "Search",
+        "PlayCardNow",
+        "DealDamageProjectile",
+        "StartOfTurnAction"
+      ],
+      "advancedIcons": [
+        "IncreaseDamageTaken"
+      ],
+      "body": "Malicious Milliner",
+      "backgroundColor": "6E4200",
+      "foilBackgroundColor": "6E4200",
+      "character": true,
+      "hitpoints": 80,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Argus"
+      ],
+      "setup": [
+        "At the start of the game, {TheHatter} enters play “Malicious Milliner“ side up.",
+        "Cards are revealed from the top of the villain deck until {H - 1} Thralls are revealed and put into play. Other revealed cards are shuffled back into the villain deck."
+      ],
+      "gameplay": [
+        "Whenever a Thrall is destroyed, each hero discards a card.",
+        "At the start of the villain turn, if there are 1 or fewer Thralls in play, {TheHatter} flips."
+      ],
+      "advanced": "Increase damage dealt to hero targets by 1.",
+      "flippedBody": "Hostile Haberdasher",
+      "flippedGameplay": [
+        "Whenever a Thrall is destroyed, each hero discards a card.",
+        "At the end of the villain turn, {TheHatter} deals the 2 heroes with the lowest HP {H - 2} psychic damage each. Each hero dealt damage this way must destroy one of their ongoing or equipment cards",
+        "At the start of the villain turn, if there are 2 or more Thralls in play, {TheHatter} flips."
+      ],
+      "flippedAdvanced": "At the end of the villain turn, play the top card of the villain deck.",
+      "flippedIcons": [
+        "Discard",
+        "EndOfTurnAction",
+        "DealDamagePsychic",
+        "DestroyOngoing"
+      ],
+      "flippedAdvancedIcons": [
+        "PlayCardNow"
+      ],
+      "challengeTitle": "Sacrificial Thralls",
+      "challengeText": "The first time each turn {TheHatter} would be dealt damage, redirect that damage to a Thrall.",
+      "challengeIcons": [
+        "RedirectDamage"
+      ],
+      "difficulty": 3,
+      "openingLines": {
+        "default": "Want a hat? They're half price, today only!",
+        "GuardiansOfTomorrow.ArgusCharacter": "I'm just an ordinary hatmaker. Don't mind me.",
+        "GuardiansOfTomorrow.GuardiansOfTomorrowArgusCharacter": "You're acting irrational! A nice hat would help."
+      }
+    },
+    {
+      "identifier": "QueenofHearts",
+      "count": 1,
+      "title": "The Queen of Hearts",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "At the end of the villain turn, destroy {H - 2} hero ongoing cards and this card deals the hero with the most cards in play 2 sonic damage.",
+      "icons": [
+        "EndOfTurnAction",
+        "DestroyOngoing",
+        "DealDamageSonic"
+      ],
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Starstone"
+      ],
+      "flavorText": "This just in, the Guardians have been seen{br}aiding and abetting the known criminal Lauren Kirk.",
+      "flavorReference": "The Queen of Hearts, Guardians of Tomorrow #23",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "MarchHare",
+      "count": 1,
+      "title": "The March Hare",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "At the end of the villain turn, this card deals the 2 hero targets with the highest HP {H} melee damage each",
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee"
+      ],
+      "flavorText": "Excuse me, but did you say a big guy in a{br}bunny suit was robbing the bank?",
+      "flavorReference": "Argus, Guardians of Tomorrow Annual #1",
+      "hitpoints": 9
+    },
+    {
+      "identifier": "CheshireCat",
+      "count": 1,
+      "title": "The Cheshire Cat",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "At the end of the villain turn, destroy {H - 2} equipment cards and this card deals the hero target with the lowest HP 2 melee damage.",
+      "icons": [
+        "EndOfTurnAction",
+        "DestroyEquipment",
+        "DealDamageMelee"
+      ],
+      "flavorText": "The hat makes her invisible? That's not fair!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #39",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "Caterpillar",
+      "count": 1,
+      "title": "The Caterpillar",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "Reduce damage dealt to this card by 1. At the end of the villain turn, destroy an environment card. If a non-target card was destroyed this way, this card deals each hero target 2 projectile damage.",
+      "icons": [
+        "ReduceDamageTaken",
+        "EndOfTurnAction",
+        "DestroyEnvironment",
+        "DealDamageProjectile"
+      ],
+      "flavorText": "Rumblerumblerumble... CRASH!",
+      "flavorReference": "The Caterpillar, Guardians of Tomorrow #12",
+      "hitpoints": 12
+    },
+    {
+      "identifier": "Dodo",
+      "count": 1,
+      "title": "The Dodo",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "At the end of the villain turn, each Thrall regains 1 HP and this card deals the hero target with the second lowest HP 2 sonic damage.",
+      "icons": [
+        "EndOfTurnAction",
+        "GainHP",
+        "DealDamageSonic"
+      ],
+      "flavorText": "I do-do-don't suppose we could talk{br}about this?",
+      "flavorReference": "The Dodo, Guardians of Tomorrow #12",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "CardSoldiers",
+      "count": 4,
+      "title": "The Card Soldiers",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "At the end of the villain turn, this card deals the 3 hero targets with the highest HP 1 irreducible melee damage each.",
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee"
+      ],
+      "flavorText": "They're just civilians! We can't hurt them!",
+      "flavorReference": "Argus, Guardians of Tomorrow Annual #1",
+      "hitpoints": 3
+    },
+    {
+      "identifier": "WatchyourHeads",
+      "count": 3,
+      "title": "Watch Your Heads!",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "{TheHatter} deals each hero target 1 projectile damage. He deals each target dealt damage this way {H} psychic damage.",
+      "icons": [
+        "DealDamageProjectile",
+        "DealDamagePsychic"
+      ],
+      "flavorText": "Look out for those hats! Don't let them get on your heads!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #12"
+    },
+    {
+      "identifier": "BoomingSales",
+      "count": 1,
+      "title": "Booming Sales",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": "At the start of the villain turn, reveal cards from the villain deck until a Thrall is revealed. Put the revealed card into play and discard the remaining cards.",
+      "icons": [
+        "StartOfTurnAction",
+        "Search",
+        "PlayCardNow"
+      ],
+      "flavorText": "ALL HATS HALF OFF, TODAY ONLY!",
+      "flavorReference": "Guardians of Tomorrow Annual #1"
+    },
+    {
+      "identifier": "DeadlyTie",
+      "count": 2,
+      "title": "Deadly Tie",
+      "keywords": [
+        "device"  
+      ],
+      "body": "At the end of the villain turn, {TheHatter} deals the hero target with the second highest HP {H} lightning damage.",
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageLightning"
+      ],
+      "hitpoints": 4,
+      "flavorText": "Actually, haberdashery refers to all{br}menswear, not just hats.",
+      "flavorReference": "The Hatter, Guardians of Tomorrow #39"
+    },
+    {
+      "identifier": "InspiringHat",
+      "count": 2,
+      "title": "Inspiring Hat",
+      "keywords": [
+        "device"
+      ],
+      "body": "Increase damage dealt by Thralls by 1",
+      "icons": [
+        "IncreaseDamageDealt"
+      ],
+      "hitpoints": 3,
+      "flavorText": "Two hats? Why does he need two hats?",
+      "flavorReference": "Argus, Guardians of Tomorrow Annual #1"
+    },
+    {
+      "identifier": "WhiteRabbit",
+      "count": 1,
+      "title": "The White Rabbit",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "At the end of the villain turn, the hero with the most cards in hand must discard 2 cards. Then this card deals each other Thrall 1 sonic damage.",
+      "icons": [
+        "EndOfTurnAction",
+        "Discard",
+        "DealDamageSonic"
+      ],
+      "flavorText": "Hurry up! You'll be {late}!",
+      "flavorReference": "The White Rabbit, Guardians of Tomorrow Annual #1",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "Duck",
+      "count": 1,
+      "title": "The Duck",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "Whenever this card is damaged by a hero target, it deals the source of the damage 2 psychic damage.",
+      "icons": [
+        "CounterDamage",
+        "DealDamagePsychic"
+      ],
+      "flavorText": "Sorry about this, Father.",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #1",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "Executioner",
+      "count": 1,
+      "title": "The Executioner",
+      "keywords": [
+        "thrall"
+      ],
+      "body": "At the start of the villain turn, this card deals the thrall or non-villain target other than itself with the lowest HP {H} melee damage.",
+      "icons": [
+        "StartOfTurnAction",
+        "DealDamageMelee"
+      ],
+      "flavorText": "Off with his head!",
+      "flavorReference": "The Queen of Hearts, Guardians of Tomorrow #12",
+      "hitpoints": 8
+    },
+    {
+      "identifier": "PlayingWithLives",
+      "count": 3,
+      "title": "Playing with Lives",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "{TheHatter} deals each Thrall 5 sonic damage. If any thralls are destroyed this way, he then deals each hero target {H} psychic damage.",
+      "icons": [
+        "DealDamageSonic",
+        "DealDamagePsychic"
+      ],
+      "flavorText": "You monster! Those are people, not{br}playthings!",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #1"
+    },
+    {
+      "identifier": "GetThemAll",
+      "count": 3,
+      "title": "Get Them! Get Them All!",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Each Thrall deals each hero target 1 melee damage. If there are no thralls in play, play the top card of the villain deck.",
+      "icons": [
+        "DealDamageMelee"
+      ],
+      "flavorText": "Fall back! There's too many of them!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow #39"
+    }
+  ]
+}

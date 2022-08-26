@@ -41,7 +41,7 @@ namespace GuardiansOfTomorrow.Scale
 
 		private IEnumerator DealXDamage(int d) 
 		{
-			IEnumerator coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), d, DamageType.Energy, 1, false, 1, true, cardSource: GetCardSource());
+			IEnumerator coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), d * 3, DamageType.Energy, 1, false, 1, true, cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

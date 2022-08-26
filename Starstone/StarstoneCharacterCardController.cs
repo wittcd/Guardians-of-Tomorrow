@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.Starstone
         {
             //reduce damage taken by Starstone by 1 until the start of your next turn.
             ReduceDamageStatusEffect rdse = new ReduceDamageStatusEffect(GetPowerNumeral(0, 1));
-            rdse.TargetCriteria.IsSpecificCard = base.CharacterCard;
+            rdse.TargetCriteria.IsPlayAreaOf = base.TurnTaker;
             rdse.UntilStartOfNextTurn(base.TurnTaker);
             IEnumerator coroutine = AddStatusEffect(rdse);
             if (base.UseUnityCoroutines)

@@ -31,6 +31,15 @@ namespace GuardiansOfTomorrow.Ninetails
 			{
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
+			coroutine = base.GameController.SelectAndDiscardCard(base.TurnTakerController.ToHero(), true, cardSource: GetCardSource());
+			if (base.UseUnityCoroutines)
+			{
+				yield return base.GameController.StartCoroutine(coroutine);
+			}
+			else
+			{
+				base.GameController.ExhaustCoroutine(coroutine);
+			}
 		}
 	}
 }

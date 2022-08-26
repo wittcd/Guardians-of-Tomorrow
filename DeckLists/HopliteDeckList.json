@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Hoplite",
   "kind": "Hero",
   "initialCardIdentifiers": [
@@ -37,8 +37,8 @@
         "ReduceDamageDealt"
       ],
       "openingLines": {
-        "default": "If you stand behind me, I can take the brunt of this.",
-        "LegionCharacter": "You know, I don't think that quote was originally about nanomachines.",
+        "default": "If you guys stand behind me, I can take the brunt of this!",
+        "GuardiansOfTomorrow.LegionCharacter": "You know, I don't think that quote was originally about nanomachines.",
         "OblivAeonFrontPageCharacter": "I'm coming back with my shield or on it for this one."
       },
       "complexity": 2
@@ -55,8 +55,8 @@
         "ReduceDamageTaken",
         "DealDamageMelee"
       ],
-      "body": "Reduce damage dealt to {Hoplite} by 1. Whenever damage would be dealt to {Hoplite}, but is reduced or prevented such that he takes no damage, {Hoplite} may deal 1 target 3 melee damage.",
-      "flavorText": "It would be so much easier to protect all of you if you also had shields!",
+      "body": "Reduce damage dealt to {Hoplite} by 1. Whenever damage would be dealt to {Hoplite}, but is reduced or prevented such that he takes no damage, {Hoplite} may deal 1 target 2 melee damage.",
+      "flavorText": "It would be so much easier to protect{br}all of you if you also had shields!",
       "flavorReference": "Hoplite, Guardians of Tomorrow #19"
     },
     {
@@ -73,7 +73,7 @@
         "DealDamageMelee"
       ],
       "powers": [ "{Hoplite} deals 1 target 3 energy damage. That target deals {Hoplite} 1 melee damage." ],
-      "flavorText": "Fine. It's techncally not a lance. But it sounds better this way.",
+      "flavorText": "Fine. It's techncally not a lance. But it{br}sounds better this way.",
       "flavorReference": "Hoplite, Guardians of Tomorrow #4"
     },
     {
@@ -85,11 +85,13 @@
         "limited"
       ],
       "icons": [
+        "HasPower",
         "ReduceDamageTaken",
         "DrawCardNow"
       ],
-      "body": "The first time each turn Hoplite would be dealt damage, reduce it by 1 or draw a card.",
-      "flavorText": "The only way to travel is atop the flaming exhaust of unstable experimental gadgets.",
+      "body": "Whenever {Hoplite} deals himself damage, draw a card.",
+      "powers": ["Reduce the next 3 instances of damage dealt to {Hoplite} by 1."],
+      "flavorText": "The only way to travel is atop the flaming{br}exhaust of unstable experimental gadgets.",
       "flavorReference": "Hoplite, Guardians of Tomorrow #13"
     },
     {
@@ -110,11 +112,11 @@
       "flavorQuotes": [
         {
           "identifier": "Ludramor",
-          "text": "Primitive body armor and close quarters weapons? Is this a joke?"
+          "text": "Primitive armor and close quarters weapons? Is this a joke?"
         },
         {
           "identifier": "Hoplite",
-          "text": "Like all good jokes, my armor has layers."
+          "text": "Like all good jokes, my armor has{br}layers."
         }
       ],
       "flavorReference": "Guardians of Tomorrow Annual #7"
@@ -131,7 +133,7 @@
         "DestroySelf"
       ],
       "body": "Play this card next to a target. When that target would deal or be dealt damage, prevent it and destroy this card. If that target leaves play, destroy this card.",
-      "flavorText": "Can you just stay there for a moment? Perfect.",
+      "flavorText": "Can you just stay there for a moment?{br}Perfect.",
       "flavorReference": "Hoplite, Guardians of Tomorrow Annual #1"
     },
     {
@@ -149,11 +151,11 @@
       "flavorQuotes": [
         {
           "identifier": "Argus",
-          "text": "Normally, you don't bring so much heavy weaponry along."
+          "text": "Normally, you don't bring heavy weaponry along."
         },
         {
           "identifier": "Hoplite",
-          "text": "Normally, my sister isn't the one in danger."
+          "text": "Normally, my sister isn't in danger."
         }
       ],
       "flavorReference": "Guardians of Tomorrow Annual #5"
@@ -184,7 +186,7 @@
         "ReduceDamageTaken",
         "DealDamageMelee"
       ],
-      "body": "Select a hero character card. Reduce the next damage dealt to that hero by 2. Reduce the next damage dealt to {Hoplite} by 1. {Hoplite} deals 1 target 3 melee damage.",
+      "body": "Select a hero character card other than {Hoplite}. Reduce the next damage dealt to that hero by 2. Reduce the next damage dealt to {Hoplite} by 1. {Hoplite} may deal 1 target 3 melee damage.",
       "flavorText": "Hang on sis, I've got you!",
       "flavorReference": "Hoplite, Guardians of Tomorrow Annual #5"
     },
@@ -200,8 +202,8 @@
         "ReduceDamageTaken"
       ],
       "body": "The villain target with the highest HP deals {Hoplite} 2 melee damage. Until the start of your next turn, reduce damage dealt to all hero targets other than {Hoplite} by 2.",
-      "flavorText": "You spend so much time shielding others, you forget to shield yourself.",
-      "flavorReference": "Trickster Fox, Guardians of Tomorrow Annual #5"
+      "flavorText": "You spend so much time shielding others,{br}you forget to shield yourself.",
+      "flavorReference": "Kumiho, Guardians of Tomorrow Annual #5"
     },
     {
       "identifier": "Burnout",
@@ -213,7 +215,7 @@
       "icons": [
         "DealDamageFire"
       ],
-      "body": "{Hoplite} deals 1 target 3 fire damage, then 1 target 2 fire damage, then 1 target 1 fire damage. Then {Hoplitee} deals himself fire damage equal to 4 minus the number of targets dealt damage this way.",
+      "body": "{Hoplite} deals 1 target 3 fire damage, then 1 target 2 fire damage, then 1 target 1 fire damage. Then {Hoplite} deals himself 2 fire damage.",
       "flavorText": "We're in a theater, should I shout 'FIRE!?'",
       "flavorReference": "Hoplite, Guardians of Tomorrow #14"
     },
@@ -228,8 +230,8 @@
         "DealDamageEnergy",
         "Manipulate"
       ],
-      "body": "{Hoplite} deals 1 target 4 energy damage. Search your deck or trash for a copy of Shield Bubble and put it into play. If you searched your deck, shuffle it.",
-      "flavorText": "How pathetic. The great inventor is reduced to blowing bubbles at me.",
+      "body": "{Hoplite} deals 1 target 4 energy damage. Search your deck or trash for a copy of Shield Bubble and put it into play. Shuffle your deck.",
+      "flavorText": "How pathetic. The great inventor is{br}reduced to blowing bubbles at me.",
       "flavorReference": "Legion, Guardians of Tomorrow #25"
     },
     {
@@ -244,7 +246,7 @@
         "UsePowerNow"
       ],
       "body": "Search your deck for an equipment card and put it into play. Shuffle your deck. You may use a power.",
-      "flavorText": "I'm no boy scout, but I'm still always prepared.",
+      "flavorText": "I'm no boy scout, but I'm always prepared.",
       "flavorReference": "Hoplite, Guardians of Tomorrow #41"
     },
     {
@@ -259,7 +261,7 @@
         "CancelledDamageGreen"
       ],
       "body": "All targets are immune to damage. All cards other than this one are indestructible. At the start of your turn, remove this card from the game.",
-      "flavorText": "Phew, we've got a breather. Everyone get ready, this large a shield won't last long.",
+      "flavorText": "Phew, we've got a breather. Everyone get{br}ready, this large a shield won't last long.",
       "flavorReference": "Hoplite, Guardians of Tomorrow Annual #3"
     },
     {
@@ -273,8 +275,8 @@
         "PlayCardNow",
         "DealDamageEnergy"
       ],
-      "body": "One player may play an Ongoing or Equipment card now. {Hoplite} deals 1 target 2 energy damage.",
-      "flavorText": "Lucky for us, I brought boarding party favors.",
+      "body": "One player may play a card. {Hoplite} deals 1 target 2 energy damage.",
+      "flavorText": "Lucky for us, I brought boarding{br}party favors.",
       "flavorReference": "Hoplite, Guardians of Tomorrow Annual #7"
     }
   ],
@@ -314,7 +316,7 @@
       "complexity": 2,
       "openingLines": {
         "default": "Shields up, red alert! ... I just wanted an excuse to say that.",
-        "LegionCharacter": "We've done this song and dance plenty of times. Want me to remind you how it goes?",
+        "GuardiansOfTomorrow.LegionCharacter": "We've done this song and dance plenty of times. Want me to remind you how it goes?",
         "OblivAeonFrontPageCharacter": "Even a titan like you can be felled!"
       }
     }

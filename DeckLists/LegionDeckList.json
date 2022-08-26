@@ -34,7 +34,7 @@
         "Put 3 “Nanite Swarm“ cards under this card. Shuffle the other 2 into the villain deck."
       ],
       "gameplay": [
-        "At the end of the villain turn, {Legion} deals the hero with the most equipment cards in play {H}-2 melee damage and destroys one of their equipment cards.",
+        "At the end of the villain turn, {Legion} deals the hero with the most equipment cards in play {H-2} melee damage and destroys one of their equipment cards.",
         "When a Nanite Swarm would enter play, place it under this card. Nanite Swarms under this card are indestructible.",
         "When {Legion} flips to this side, restore him to an amount of health equal to the number of cards under this card times 10.",
         "When {Legion} would be destroyed, flip this card.",
@@ -90,7 +90,7 @@
         "device"
       ],
       "body": [
-        "At the end of the villain turn, this card deals the hero target with the second lowest HP {H}-1 energy damage."
+        "At the end of the villain turn, this card deals the hero target with the second lowest HP {H-1} energy damage."
       ],
       "icons": [
         "EndOfTurnAction",
@@ -144,7 +144,7 @@
         "DealDamageEnergy",
         "IncreaseDamageDealt"
       ],
-      "body": "{Legion} deals the hero target with the lowest HP H-2 energy damage. If they have 10 or less HP remaining, increase this damage by 2.",
+      "body": "{Legion} deals the hero target with the lowest HP {H-2} energy damage. If they have 10 or less HP remaining, increase this damage by 2.",
       "flavorText": "What're you doing over here all alone?",
       "flavorReference": "Legion, Guardians of Tomorrow Annual #2"
     },
@@ -199,7 +199,7 @@
         "DealDamageMelee",
         "IncreaseDamageTaken"
       ],
-      "body": "{Legion} deals the {H}-1 hero targets with the highest HP 2 melee damage each. Increase damage dealt to those targets by 1 until the start of the villain turn.",
+      "body": "{Legion} deals the {H-1} hero targets with the highest HP 2 melee damage each. Increase damage dealt to those targets by 1 until the start of the villain turn.",
       "flavorText": "Those blades can chew through any metal! Watch out!",
       "flavorReference": "Argus, Guardians of Tomorrow Annual #2"
     },
@@ -214,7 +214,7 @@
         "DestroyOngoing",
         "DealDamageEnergy"
       ],
-      "body": "Destroy H-2 ongoing cards. {Legion} deals each hero without any ongoing cards in play {H}-1 energy damage.",
+      "body": "Destroy {H-2} ongoing cards. {Legion} deals each hero without any ongoing cards in play {H-1} energy damage.",
       "flavorText": "I am mechanical perfection! You are just flawed organics!",
       "flavorReference": "Legion, Guardians of Tomorrow Annual #2"
     },

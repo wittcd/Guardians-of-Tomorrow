@@ -15,7 +15,7 @@
       "hitpointsColor": "C94742",
       "character": true,
       "powers": [
-        "Reduce damage dealt to {Starstone} by 1 until the start of your turn."
+        "Reduce damage dealt to targets in your play area by 1 until the start of your turn."
       ],
       "icons": [
         "HasPower",
@@ -37,7 +37,7 @@
       ],
       "openingLines": {
         "default": "I've changed my ways, you'll see!",
-        "DelugeCharacter": "We'll see about that, you watery witch!",
+        "GuardiansOfTomorrow.DelugeCharacter": "We'll see about that, you watery witch!",
         "OblivAeonFrontPageCharacter": "I guess running away isn't an option? Then you're going down hard, big guy."
       },
       "complexity": 2
@@ -54,7 +54,7 @@
       "icons": [
         "RedirectDamage"
       ],
-      "flavorText": "You guys don't really expect me to come up with rock puns for all these, do you? Guys? Guys?",
+      "flavorText": "You guys don't really expect me to come{br}up with rock puns for all these, do you?",
       "flavorReference": "Starstone, Guardians of Tomorrow Annual #2"
     },
     {
@@ -97,7 +97,7 @@
         "Destroy",
         "DrawCardNow"
       ],
-      "flavorText": "You shouldn't be standing there if you don't want to get punched!",
+      "flavorText": "You shouldn't be standing there if you{br}don't want to get punched!",
       "flavorReference": "Starstone, Guardians of Tomorrow #15"
     },
     {
@@ -151,7 +151,7 @@
         "CounterDamage",
         "DealDamageProjectile"
       ],
-      "flavorText": "They may not be autonomous, but at least my drones aren't constantly taking chunks out of the sidewalk!",
+      "flavorText": "Stop taking chunks out of the sidewalk!",
       "flavorReference": "Argus, Guardians of Tomorrow Annual #2"
     },
     {
@@ -168,7 +168,7 @@
         "DrawCardNow"
       ],
       "flavorText": "Now that's what I call recycling!",
-      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5"
+      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #6"
     },
     {
       "identifier": "Shatter",
@@ -198,7 +198,7 @@
         "DestroyEnvironment",
         "Manipulate"
       ],
-      "flavorText": "On Earth or on Mars, stone still bends to my will.",
+      "flavorText": "On Earth or on Mars, stone still bends{br}to my will.",
       "flavorReference": "Starstone, Guardians of Tomorrow #58"
     },
     {
@@ -214,7 +214,7 @@
         "PlayCardNow",
         "DealDamageMelee"
       ],
-      "flavorText": "Don't think I can't see you over there, trying to get one over one me.",
+      "flavorText": "Don't think I can't see you over there,{br}trying to get one over one me.",
       "flavorReference": "Starstone, Sage and Sinner #1"
     },
     {
@@ -228,7 +228,7 @@
       "icons": [
         "DealDamageMelee"
       ],
-      "flavorText": "What are you going to do, throw pebbles at me?",
+      "flavorText": "What are you going to do, throw pebbles{br}at me?",
       "flavorReference": "Legion, Guardians of Tomorrow Annual #2"
     },
     {
@@ -242,7 +242,7 @@
       "icons": [
         "DealDamageMelee"
       ],
-      "flavorText": "Somebody get this rock off of my foot! Now!",
+      "flavorText": "Somebody get this rock off of my foot!{br}Now!",
       "flavorReference": "The Hatter, Guardians of Tomorrow #23"
     },
     {
@@ -274,7 +274,7 @@
         "StartOfTurnAction",
         "DestroySelf"
       ],
-      "flavorText": "Was that an insult? Lucky for you, I have thick skin.",
+      "flavorText": "Was that an insult? Lucky for you, I have{br}thick skin.",
       "flavorReference": "Starstone, Guardians of Tomorrow Annual #4"
     },
     {
@@ -289,7 +289,7 @@
         "DealDamageMelee",
         "Manipulate"
       ],
-      "flavorText": "Any property damage is gravity's fault, not mine.",
+      "flavorText": "Any property damage is gravity's fault,{br}not mine.",
       "flavorReference": "Starstone, Guardians of Tomorrow #31"
     }
   ],
@@ -330,7 +330,7 @@
       "complexity": 2,
       "openingLines": {
         "default": "I won't take this second chance for granite!",
-        "DelugeCharacter": "The only way out is through! Follow me!",
+        "GuardiansOfTomorrow.DelugeCharacter": "The only way out is through! Follow me!",
         "OblivAeonFrontPageCharacter": "Looks like we're stuck between a rock and a hard place!"
       }
     }

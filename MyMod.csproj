@@ -54,13 +54,24 @@
     <Compile Include="Argus\SemiAutonomousProtocols.cs" />
     <Compile Include="Argus\ShockTacticsCardController.cs" />
     <Compile Include="Argus\TacticalDeploymentCardController.cs" />
+    <Compile Include="Hoplite\ArmUpCardController.cs" />
+    <Compile Include="Hoplite\BreachingChargeCardController.cs" />
+    <Compile Include="Hoplite\BurnoutCardController.cs" />
+    <Compile Include="Hoplite\DaringRescueCardController.cs" />
+    <Compile Include="Hoplite\EncaseCardController.cs" />
+    <Compile Include="Hoplite\ExplosiveBoltsCardController.cs" />
     <Compile Include="Hoplite\GuardiansOfTomorrowHopliteCharacterCardController.cs" />
+    <Compile Include="Hoplite\HardlightGearCardController.cs" />
     <Compile Include="Hoplite\HardlightHoplonCardController.cs" />
     <Compile Include="Hoplite\HopliteCharacterCardController.cs" />
+    <Compile Include="Hoplite\ImpenetrableRefugeCardController.cs" />
     <Compile Include="Hoplite\LuminousLanceCardController.cs" />
     <Compile Include="Hoplite\ReinforcedWeaveCardController.cs" />
     <Compile Include="Hoplite\RocketBootsCardController.cs" />
     <Compile Include="Hoplite\ShieldBubbleCardController.cs" />
+    <Compile Include="Hoplite\ShieldWallCardController.cs" />
+    <Compile Include="Legion\LegionCharacterCardController.cs" />
+    <Compile Include="Legion\LegionTurnTakerController.cs" />
     <Compile Include="Ninetails\AChangeOfFaceCardController.cs" />
     <Compile Include="Ninetails\AssertHumanityCardController.cs" />
     <Compile Include="Ninetails\BookSmartsStreetSmartsCardController.cs" />
@@ -116,6 +127,23 @@
     <Compile Include="Starstone\StoneshapeCardController.cs" />
     <Compile Include="Starstone\SwarmingSplintersCardController.cs" />
     <Compile Include="Starstone\ViolentDetonationCardController.cs" />
+    <Compile Include="TheHatter\BoomingSalesCardController.cs" />
+    <Compile Include="TheHatter\CardSoldiersCardController.cs" />
+    <Compile Include="TheHatter\CaterpillarCardController.cs" />
+    <Compile Include="TheHatter\CheshireCatCardController.cs" />
+    <Compile Include="TheHatter\DeadlyTieCardController.cs" />
+    <Compile Include="TheHatter\DodoCardController.cs" />
+    <Compile Include="TheHatter\DuckCardController.cs" />
+    <Compile Include="TheHatter\ExecutionerCardController.cs" />
+    <Compile Include="TheHatter\GetThemAllCardController.cs" />
+    <Compile Include="TheHatter\InspiringHatCardController.cs" />
+    <Compile Include="TheHatter\MarchHareCardController.cs" />
+    <Compile Include="TheHatter\PlayingWithLivesCardController.cs" />
+    <Compile Include="TheHatter\QueenofHeartsCardController.cs" />
+    <Compile Include="TheHatter\TheHatterCharacterCardController.cs" />
+    <Compile Include="TheHatter\TheHatterTurnTakerController.cs" />
+    <Compile Include="TheHatter\WatchyourHeadsCardController.cs" />
+    <Compile Include="TheHatter\WhiteRabbitCardController.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DeckLists\ArgusDeckList.json" />
@@ -124,7 +152,11 @@
     <EmbeddedResource Include="DeckLists\ScaleDeckList.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DeckLists\HopliteDeckList.json" />
+    <EmbeddedResource Include="DeckLists\HopliteDeckList.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeckLists\LegionDeckList.json" />
+    <EmbeddedResource Include="DeckLists\TheHatterDeckList.json" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

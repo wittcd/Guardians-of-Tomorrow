@@ -10,6 +10,8 @@ namespace GuardiansOfTomorrow.Hoplite
 
 	public class RocketBootsCardController : CardController
 	{
+		public override bool AllowFastCoroutinesDuringPretend => false;
+
 
 		public RocketBootsCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
@@ -18,18 +20,32 @@ namespace GuardiansOfTomorrow.Hoplite
 
 		public override void AddTriggers()
 		{
-			AddTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard, (DealDamageAction dd) => ReduceOrDrawResponse(dd), TriggerType.Other, TriggerTiming.Before);
+			AddTrigger((DealDamageAction dd) => dd.DidDealDamage && dd.Target == base.CharacterCard && dd.DamageSource.Card == base.CharacterCard, (DealDamageAction dd) => DrawResponse(), TriggerType.DrawCard, TriggerTiming.After);
 		}
 
-		public IEnumerator ReduceOrDrawResponse(DealDamageAction dd)
+		public IEnumerator DrawResponse()
 		{
-			List<Function> options = new List<Function>();
-			Function reduce = new Function(DecisionMaker, "Reduce Damage", SelectionType.ReduceDamageTaken, () => GameController.ReduceDamage(dd, 1, null));
-			options.Add(reduce);
-			Function draw = new Function(DecisionMaker, "Draw a card", SelectionType.DrawCard, () => GameController.DrawCard(TurnTaker.ToHero(), cardSource: GetCardSource()));
-			options.Add(draw);
-			SelectFunctionDecision selectFunction = new SelectFunctionDecision(base.GameController, DecisionMaker, options, optional: false, null, null, null, GetCardSource());
-			IEnumerator coroutine = base.GameController.SelectAndPerformFunction(selectFunction);
+			IEnumerator coroutine = base.GameController.DrawCard(TurnTaker.ToHero(), cardSource: GetCardSource());
+			if (base.UseUnityCoroutines)
+			{
+				yield return base.GameController.StartCoroutine(coroutine);
+			}
+			else
+			{
+				base.GameController.ExhaustCoroutine(coroutine);
+			}
+		}
+
+		public override IEnumerator UsePower(int index = 0)
+        {
+			int times = GetPowerNumeral(0, 3);
+			int amount = GetPowerNumeral(1, 1);
+
+			ReduceDamageStatusEffect rdse = new ReduceDamageStatusEffect(amount);
+			rdse.TargetCriteria.IsSpecificCard = base.CharacterCard;
+			rdse.NumberOfUses = times;
+
+			IEnumerator coroutine = GameController.AddStatusEffect(rdse, true, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

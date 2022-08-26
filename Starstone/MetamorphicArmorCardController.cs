@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Starstone
 		public override void AddTriggers()
 		{
 			AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.DestroyThisCardResponse, TriggerType.DestroySelf);
-			AddReduceDamageTrigger((Card c) => c == base.CharacterCard, FindCardsWhere((Card c) => c.IsInPlay && c.DoKeywordsContain("stone", false, false)).Count());
+			AddReduceDamageTrigger((Card c) => c == base.CharacterCard, FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && c.DoKeywordsContain("stone", false, false)).Count());
 		}
 
 		public override IEnumerator Play()

@@ -37,7 +37,7 @@
       ],
       "openingLines": {
         "default": "Just because I'm new to this doesn't mean I can't outfox you.",
-        "TricksterFoxCharacter": "What did you do to me? What am I?",
+        "GuardiansOfTomorrow.KumihoCharacter": "What did you do to me? What am I?",
         "OblivAeonFrontPageCharacter": "This is bad, this is bad, this is bad!"
       },
       "complexity": 2
@@ -79,7 +79,7 @@
       "flavorQuotes": [
         {
           "identifier": "Jason Fisher",
-          "text": "Jade, what do you have there?"
+          "text": "Jade, what do you{br}have there?"
         },
         {
           "identifier": "Jade Fisher",
@@ -101,7 +101,7 @@
         "IncreaseDamageDealt",
         "ReduceDamageDealt"
       ],
-      "flavorText": "It's weird how natural being a quadruped feels. I haven't tripped once! And how am I talking with this mouth?",
+      "flavorText": "It's weird how natural being a quadruped{br}feels. I haven't tripped once!{br}And how am I talking with this mouth?",
       "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5"
     },
     {
@@ -117,7 +117,7 @@
         "Discard",
         "RedirectDamage"
       ],
-      "flavorText": "I hate pretending to be someone's pet, but it has saved my life several times.",
+      "flavorText": "I hate pretending to be someone's pet,{br}but it has saved my life several times.",
       "flavorReference": "Ninetails, Guardians of Tomorrow #61"
     },
     {
@@ -175,7 +175,7 @@
       "keywords": [
         "ongoing"
       ],
-      "body": "When this card enters your hand, put it into play. Damage dealt by {Ninetails} cannot be redirected. At the end of your turn, Ninetails deals 1 other hero target 2 melee damage. If no damage is dealt this way, she deals herself 4 irreducible toxic damage.",
+      "body": "When this card enters your hand, put it into play. Damage dealt by {Ninetails} cannot be redirected. At the end of your turn, {Ninetails} deals 1 other hero target 2 melee damage. If no damage is dealt this way, she deals herself 4 irreducible toxic damage.",
       "icons": [
         "MakeDamageUnredirectable",
         "EndOfTurnAction",
@@ -232,7 +232,7 @@
         "DestroySelf",
         "DrawCardNow"
       ],
-      "flavorText": "I don't know what they are, they just keep following me around.",
+      "flavorText": "I don't know what they are, they just{br}keep following me around.",
       "flavorReference": "Ninetails, Guardians of Tomorrow #59",
       "hitpoints": 3
     },
@@ -250,7 +250,7 @@
         "DestroySelf",
         "PlayCardNow"
       ],
-      "flavorText": "They're the remnants of those who undertook this quest before... and failed.",
+      "flavorText": "They're the remnants of those who tried{br}this quest before... and failed.",
       "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5",
       "hitpoints": 3
     },
@@ -261,14 +261,14 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "{Ninetails} deals 1 target 1 fire damage and 1 melee damage. You may discard a card. If you do, redirect the next damage dealt to Ninetails to that target.",
+      "body": "{Ninetails} deals 1 target 1 fire damage and 1 melee damage. You may discard a card. If you do, redirect the next damage dealt to {Ninetails} to that target.",
       "icons": [
         "DealDamageFire",
         "DealDamageMelee",
         "Discard",
         "RedirectDamage"
       ],
-      "flavorText": "I'm glad to see you're putting those dance lessons to good use.",
+      "flavorText": "I'm glad to see you're putting those{br}dance lessons to good use.",
       "flavorReference": "Heartbeat, Bureau Arcanum #8"
     },
     {
@@ -283,7 +283,7 @@
         "DealDamageInfernal",
         "Manipulate"
       ],
-      "flavorText": "Once ghosts realize you can see them, they absolutely will not ever leave you alone.",
+      "flavorText": "Once ghosts realize you can see them,{br}they will never leave you alone.",
       "flavorReference": "Amos Forder, Bureau Arcanum #2"
     },
     {
@@ -321,7 +321,7 @@
         },
         {
           "identifier": "Duke Venburgh",
-          "text": "That, Miss Fisher, is precisely why we want you in the Bureau Arcanum."
+          "text": "That, Miss Fisher, is{br}precisely why we want you in the{br}Bureau Arcanum."
         }
       ],
       "flavorReference": "Bureau Arcanum #1"
@@ -379,7 +379,7 @@
       "complexity": 2,
       "openingLines": {
         "default": "I've learned, I'm ready to be a hero this time!",
-        "TricksterFoxCharacter": "I am not like you. I will never be like you.",
+        "GuardiansOfTomorrow.KumihoCharacter": "I am not like you. I will never be like you.",
         "OblivAeonFrontPageCharacter": "This is one fox who won't let your hounds get her!"
       }
     }
