@@ -18,20 +18,12 @@ namespace GuardiansOfTomorrow.Ninetails
 		public override void AddTriggers() 
 		{
 			AddTrigger((DiscardCardAction dc) => dc.ResponsibleTurnTaker == base.TurnTaker, (DiscardCardAction dc) => GainHPResponse(dc), TriggerType.GainHP, TriggerTiming.After);
+			AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => GameController.SelectAndDiscardCard(base.TurnTakerController.ToHero(), optional: true, cardSource: GetCardSource()), TriggerType.DiscardCard);
 		}
 
 		private IEnumerator GainHPResponse(DiscardCardAction dc)
 		{
 			IEnumerator coroutine = base.GameController.GainHP(base.CharacterCard, 1, null, null, GetCardSource());
-			if (base.UseUnityCoroutines)
-			{
-				yield return base.GameController.StartCoroutine(coroutine);
-			}
-			else
-			{
-				base.GameController.ExhaustCoroutine(coroutine);
-			}
-			coroutine = base.GameController.SelectAndDiscardCard(base.TurnTakerController.ToHero(), true, cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

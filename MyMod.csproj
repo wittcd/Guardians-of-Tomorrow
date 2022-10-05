@@ -54,6 +54,27 @@
     <Compile Include="Argus\SemiAutonomousProtocols.cs" />
     <Compile Include="Argus\ShockTacticsCardController.cs" />
     <Compile Include="Argus\TacticalDeploymentCardController.cs" />
+    <Compile Include="Eidolon\AlterationCardController.cs" />
+    <Compile Include="Eidolon\AlterationSurgeCardController.cs" />
+    <Compile Include="Eidolon\BlazingAuraCardController.cs" />
+    <Compile Include="Eidolon\BlindingGlowCardController.cs" />
+    <Compile Include="Eidolon\ChaosStormCardController.cs" />
+    <Compile Include="Eidolon\ChaoticNatureCardController.cs" />
+    <Compile Include="Eidolon\CorrosiveTouchCardController.cs" />
+    <Compile Include="Eidolon\CosmicRaysCardController.cs" />
+    <Compile Include="Eidolon\EidolonCharacterCardController.cs" />
+    <Compile Include="Eidolon\EidolonTurnTakerController.cs" />
+    <Compile Include="Eidolon\ElementalResonanceCardController.cs" />
+    <Compile Include="Eidolon\FrigidCarapaceCardController.cs" />
+    <Compile Include="Eidolon\KineticSpinesCardController.cs" />
+    <Compile Include="Eidolon\MentalBlockCardController.cs" />
+    <Compile Include="Eidolon\PowerAbsorptionCardController.cs" />
+    <Compile Include="Eidolon\ProgressiveAlterationsCardController.cs" />
+    <Compile Include="Eidolon\StaticCloudCardController.cs" />
+    <Compile Include="Eidolon\StrangePowersCardController.cs" />
+    <Compile Include="Eidolon\UnbalancingScreechCardController.cs" />
+    <Compile Include="Eidolon\UnholyEssenceCardController.cs" />
+    <Compile Include="Eidolon\UnrealLimbsCardController.cs" />
     <Compile Include="Hoplite\ArmUpCardController.cs" />
     <Compile Include="Hoplite\BreachingChargeCardController.cs" />
     <Compile Include="Hoplite\BurnoutCardController.cs" />
@@ -70,6 +91,18 @@
     <Compile Include="Hoplite\RocketBootsCardController.cs" />
     <Compile Include="Hoplite\ShieldBubbleCardController.cs" />
     <Compile Include="Hoplite\ShieldWallCardController.cs" />
+    <Compile Include="Kumiho\DarkDomainCardController.cs" />
+    <Compile Include="Kumiho\DuplicitousWispCardController.cs" />
+    <Compile Include="Kumiho\FearItselfCardController.cs" />
+    <Compile Include="Kumiho\FoxPupCardController.cs" />
+    <Compile Include="Kumiho\GhoulishHuntersCardController.cs" />
+    <Compile Include="Kumiho\IllusoryInfernoCardController.cs" />
+    <Compile Include="Kumiho\KumihoCharacterCardController.cs" />
+    <Compile Include="Kumiho\KumihoTurnTakerController.cs" />
+    <Compile Include="Kumiho\RaveningCardController.cs" />
+    <Compile Include="Kumiho\SeedsOfDoubtCardController.cs" />
+    <Compile Include="Kumiho\SoulEmbersCardController.cs" />
+    <Compile Include="Kumiho\StolenSoulCardController.cs" />
     <Compile Include="Legion\LegionCharacterCardController.cs" />
     <Compile Include="Legion\LegionTurnTakerController.cs" />
     <Compile Include="Ninetails\AChangeOfFaceCardController.cs" />
@@ -155,6 +188,9 @@
     <EmbeddedResource Include="DeckLists\HopliteDeckList.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DeckLists\EidolonDeckList.json" />
+    <EmbeddedResource Include="DeckLists\KumihoDeckList.json" />
+    <None Include="DeckLists\ChanceDeckList.json" />
     <None Include="DeckLists\LegionDeckList.json" />
     <EmbeddedResource Include="DeckLists\TheHatterDeckList.json" />
   </ItemGroup>

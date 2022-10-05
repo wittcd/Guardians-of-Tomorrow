@@ -1,0 +1,228 @@
+﻿{
+    "name": "Kumiho",
+    "kind": "Villain",
+    "initialCardIdentifiers": [
+      "KumihoCharacter"
+    ],
+    "cards": [
+      {
+        "identifier": "KumihoCharacter",
+        "count": 1,
+        "title": "Kumiho",
+        "keywords": [
+          "villain",
+          "fae"
+        ],
+        "icons": [
+          "Indestructible",
+          "IncreaseDamageDealt",
+          "RedirectDamage",
+          "StartOfTurnAction"
+        ],
+        "advancedIcons": [
+          "PlayCardNow"
+        ],
+        "body": "Soul Eater",
+        "backgroundColor": "ED8326",
+        "foilBackgroundColor": "ED8326",
+        "character": true,
+        "hitpoints": 65,
+        "nemesisIdentifiers": [
+          "GuardiansOfTomorrow.Ninetails"
+        ],
+        "setup": [
+          "At the start of the game, {Kumiho} enters play Soul Eater side up.",
+          "Stolen Soul is put into play."
+        ],
+        "gameplay": [
+          "{Kumiho} is indestructible",
+          "Increase damage dealt by the hero next to Stolen Soul by 1.",
+          "If the hero next to Stolen Soul would deal damage to {Kumiho}, redirect that damage to the other hero with the highest HP.",
+          "At the start of the villain turn, if Stolen Soul is not in play, {Kumiho} flips."
+        ],
+        "advanced": "At the end of the villain turn, play the top card of the villain deck.",
+        "flippedBody": "Spiritual Predator",
+        "flippedGameplay": [
+          "When {Kumiho} is flipped to this side, restore it to 25 HP, if it is not already higher.",
+          "Increase damage dealt by Kumiho and Ghosts by {H - 2}.",
+          "At the end of the villain turn, {Kumiho} deals each hero target 1 infernal damage. Then if there are no ghosts in play, play the top card of the villain deck."
+        ],
+        "flippedAdvanced": "Increase damage dealt by Kumiho and Ghosts by 1.",
+        "flippedIcons": [
+          "GainHP",
+          "IncreaseDamageDealt",
+          "EndOfTurnAction",
+          "DealDamageInfernal",
+          "PlayCardNow"
+        ],
+        "challengeTitle": "Unnatural Hunger",
+        "challengeText": "Put 20 cards under Stolen Soul initially, not 10",
+        "difficulty": 2,
+        "openingLines": {
+          "default": "Welcome to my domain, children. Enjoy your stay.",
+          "GuardiansOfTomorrow.NinetailsCharacter": "Come to me, my daughter. Your destiny awaits you.",
+          "GuardiansOfTomorrow.GuardiansOfTomorrowNinetailsCharacter": "Ah, the prodigal daughter returns. You have grown into a fine little fox, haven't you?"
+        }
+      },
+      {
+        "identifier": "StolenSoul",
+        "count": 1,
+        "title": "Stolen Soul",
+        "keywords": [],
+        "body": "This card is indestructible. Play this card next to the hero with the lowest HP. Put the top 10 cards of that hero's deck underneath this card. When the hero next to this card deals damage to a hero, move the top card from beneath this card to its owner's trash. Then, if there are no cards beneath this one, remove this card from the game. If the hero next to this card is incapacitated, their soul is devoured. Game Over.",
+        "icons": [
+          "Manipulate",
+          "Indestructible",
+          "RemoveFromGame",
+          "LoseTheGame"
+        ],
+        "challengeIcons": [
+          "EndOfTurnAction",
+          "MakeDamageIrreducible",
+          "DealDamageToxic"
+        ],
+        "flavorText": "I feel so... cold inside.",
+        "flavorReference": "Jade Fisher, Guardians of Tomorrow Annual #5"
+      },
+      {
+        "identifier": "DuplicitousWisp",
+        "count": 3,
+        "title": "Duplicitous Wisp",
+        "keywords": [ "ghost" ],
+        "body": "At the start of the villain turn, this card deals all targets in the play area of the hero with the most cards in play 3 radiant damage, then, if Stolen Soul is in play, this card puts itself under it. Otherwise, destroy {H} hero non-character cards.",
+        "icons": [
+          "StartOfTurnAction",
+          "DealDamageRadiant",
+          "Manipulate"
+        ],
+        "flavorText": "I knew we shouldn't have followed that{br}light!",
+        "flavorReference": "Starstone, Guardians of Tomorrow Annual #5",
+        "hitpoints": 3
+      },
+      {
+        "identifier": "FoxPup",
+        "count": 3,
+        "title": "Fox Pup",
+        "keywords": [ "ghost" ],
+        "body": "At the end of the villian turn, this card deals the hero target with the lowest HP 1 melee, 1 fire, and 1 infernal damage. Then, if Stolen Soul is in play, the hero next to it must discard a card.",
+        "icons": [
+          "EndOfTurnAction",
+          "DealDamageMelee",
+          "DealDamageFire",
+          "DealDamageInfernal",
+          "Discard"
+        ],
+        "flavorText": "If that's what happens if I join you, I{br}want none of it.",
+        "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5",
+        "hitpoints": 5
+      },
+      {
+        "identifier": "SoulEmbers",
+        "count": 3,
+        "title": "Soul Embers",
+        "keywords": [ "relic" ],
+        "body": "At the end of the villain turn, {Kumiho} deals the hero with the most cards in play 1 fire damage. If Stolen Soul is in play, put the top card of that hero's deck under it. Otherwise, {Kumiho} deals them an additional 2 fire damage.",
+        "icons": [
+          "EndOfTurnAction",
+          "DealDamageFire",
+          "Manipulate"
+        ],
+        "flavorText": "Delicious. And yours will be too, my dear.",
+        "flavorReference": "Kumiho, Guardians of Tomorrow Annual #5",
+        "hitpoints": 3
+      },
+      {
+        "identifier": "DarkDomain",
+        "count": 2,
+        "title": "Dark Domain",
+        "keywords": [ "ongoing" ],
+        "body": "Reduce damage dealt to villain targets by 1. Whenever a Ghost is destroyed, {Kumiho} gains 3 HP.",
+        "icons": [
+          "ReduceDamageTaken",
+          "GainHP"
+        ],
+        "flavorText": "All blood spilled here feeds me.",
+        "flavorReference": "Kumiho, Guardians of Tomorrow Annual #5"
+      },
+      {
+        "identifier": "SeedsOfDoubt",
+        "count": 3,
+        "title": "Seeds of Doubt",
+        "keywords": [ "one-shot" ],
+        "body": "{Kumiho} deals the hero with the fewest cards in play 1 toxic damage and 1 psychic damage. Then, if Stolen Soul is in play, this card puts itself under it. Otherwise, play the top card of the villain deck.",
+        "icons": [
+          "DealDamageToxic",
+          "DealDamagePsychic",
+          "Manipulate"
+        ],
+        "flavorText": "Do they really trust you? Do they not{br}remember what you've done?",
+        "flavorReference": "Kumiho, Guardians of Tomorrow Annual #5"
+      },
+      {
+        "identifier": "IllusoryInferno",
+        "count": 2,
+        "title": "Illusory Inferno",
+        "keywords": [ "one-shot" ],
+        "body": "Each hero may discard 2 cards. Each hero that does deals themself 1 psychic damage. {Kumiho} deals each hero that does not 2 fire damage.",
+        "icons": [
+          "Discard",
+          "DealDamagePsychic",
+          "DealDamageFire"
+        ],
+        "flavorQuotes": [
+          {
+            "identifier": "Ninetails",
+            "text": "It can't hurt you if you don't believe in it!"
+          },
+          {
+            "identifier": "Starstone",
+            "text": "You haven't been burned by it!"
+          }
+        ],
+        "flavorReference": "Guardians of Tomorrow Annual #5"
+      },
+      {
+        "identifier": "FearItself",
+        "count": 2,
+        "title": "Fear Itself",
+        "keywords": [ "one-shot" ],
+        "body": "Play the top cards of the villain and environment decks. {Kumiho} deals each hero target 1 irreducible psychic damage.",
+        "icons": [
+          "PlayCardNow",
+          "DealDamagePsychic"
+        ],
+        "flavorText": "It's just some dark woods. There's{br}nothing to fear here.",
+        "flavorReference": "Argus, Guardians of Tomorrow Annual #5"
+      },
+      {
+        "identifier": "GhoulishHunters",
+        "count": 3,
+        "title": "Ghoulish Hunters",
+        "keywords": [ "ghost" ],
+        "body": "At the end of the villain turn, this card deals the hero target with the lowest HP 1 melee and 1 cold damage. If that target is destroyed, restore this card to 5 HP, then play the top card of the villain deck.",
+        "hitpoints": 5,
+        "icons": [
+          "EndOfTurnAction",
+          "DealDamageMelee",
+          "DealDamageCold",
+          "GainHP",
+          "PlayCardNow"
+        ],
+        "flavorText": "My lesser devotees will devour anyone{br}foolish enough to enter my realm.",
+        "flavorReference": "Kumiho, Guardians of Tomorrow Annual #5"
+      },
+      {
+        "identifier": "Ravening",
+        "count": 3,
+        "title": "Ravening",
+        "keywords": [ "one-shot" ],
+        "body": "Until the start of the villain turn, increase all damage dealt by villain targets and the hero next to Stolen Soul by 1. The hero next to Stolen Soul deals themself 1 irreducible toxic damage.",
+        "icons": [
+          "IncreaseDamageDealt",
+          "DealDamageToxic"
+        ],
+        "flavorText": "Do you feel it? You must feed, or your{br}flame will be snuffed.",
+        "flavorReference": "Kumiho, Guardians of Tomorrow Annual #5"
+      }
+    ]
+}

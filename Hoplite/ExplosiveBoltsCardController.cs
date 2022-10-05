@@ -25,8 +25,8 @@ namespace GuardiansOfTomorrow.Hoplite
 			int damage = GetPowerNumeral(1, 2);
 			int reduction = GetPowerNumeral(2, 1);
 
-			List<SelectCardDecision> targets = new List<SelectCardDecision>();
-			IEnumerator coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), damage, DamageType.Fire, numTargets, false, 1, storedResultsDecisions: targets, cardSource: GetCardSource());
+			List<DealDamageAction> damages = new List<DealDamageAction>();
+			IEnumerator coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), damage, DamageType.Fire, numTargets, false, 1, storedResultsDamage: damages, cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -35,9 +35,17 @@ namespace GuardiansOfTomorrow.Hoplite
 			{
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
-			if (targets.FirstOrDefault() != null)
+			if (DidDealDamage(damages))
 			{
-				int x = targets.Count() - reduction - 1;
+				int x = 0;
+				foreach (DealDamageAction dd in damages)
+                {
+					if (dd.DidDealDamage)
+                    {
+						x++;
+                    }
+                }
+				x -= reduction;
 				if (x > 0) {
 					coroutine = DealDamage(base.CharacterCard, base.CharacterCard, x, DamageType.Fire, cardSource: GetCardSource());
 					if (base.UseUnityCoroutines)

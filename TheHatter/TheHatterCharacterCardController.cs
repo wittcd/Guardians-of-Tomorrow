@@ -139,14 +139,29 @@ namespace GuardiansOfTomorrow.TheHatter
         {
 			Card target = dd.Target;
 			LinqCardCriteria isOwnedByTarget = new LinqCardCriteria((Card c) => c.Owner.CharacterCard == target && (c.IsOngoing || IsEquipment(c)), "ongoing or equipment card");
-			IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, isOwnedByTarget, false, cardSource: GetCardSource());
-			if (base.UseUnityCoroutines)
+			if (dd.DidDealDamage)
 			{
-				yield return base.GameController.StartCoroutine(coroutine);
+				IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, isOwnedByTarget, false, cardSource: GetCardSource());
+				if (base.UseUnityCoroutines)
+				{
+					yield return base.GameController.StartCoroutine(coroutine);
+				}
+				else
+				{
+					base.GameController.ExhaustCoroutine(coroutine);
+				}
 			}
 			else
 			{
-				base.GameController.ExhaustCoroutine(coroutine);
+				IEnumerator coroutine = DoNothing();
+				if (base.UseUnityCoroutines)
+				{
+					yield return base.GameController.StartCoroutine(coroutine);
+				}
+				else
+				{
+					base.GameController.ExhaustCoroutine(coroutine);
+				}
 			}
 		}
 	}

@@ -23,7 +23,7 @@ namespace GuardiansOfTomorrow.TheHatter
             }
             else
             {
-                coroutine = GameController.PlayTopCard(DecisionMaker, base.TurnTakerController);
+                coroutine = PlayTheTopCardOfTheVillainDeckResponse(null);
             }
             if (base.UseUnityCoroutines)
             {

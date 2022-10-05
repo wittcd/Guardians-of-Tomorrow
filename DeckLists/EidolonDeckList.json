@@ -1,0 +1,353 @@
+{
+  "name": "Eidolon",
+  "kind": "Villain",
+  "initialCardIdentifiers": [
+    "EidolonCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "EidolonCharacter",
+      "count": 1,
+      "title": "Eidolon",
+      "keywords": [
+        "villain"
+      ],
+      "icons": [
+        "ImmuneToDamage",
+        "Indestructible",
+        "StartOfTurnAction",
+        "EndOfTurnAction",
+        "DealDamage"
+      ],
+      "advancedIcons": [
+        "ReduceDamageTaken"
+      ],
+      "body": "Absorbing Energy",
+      "backgroundColor": "ED47FF",
+      "foilBackgroundColor": "ED47FF",
+      "character": true,
+      "hitpoints": 100,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Scale"
+      ],
+      "setup": [
+        "At the start of the game, {Eidolon} enters play Absorbing Energy side up."
+      ],
+      "gameplay": [
+        "If {Eidolon} has not yet been dealt damage this game, effects which reference the most recent damage type dealt to it deal energy damage.",
+        "After {Eidolon} is dealt damage, it becomes immune to that damage type.",
+        "Whenever an alteration card would enter play, {Eidolon} first deals each hero target 1 damage of the type most recently dealt to {Eidolon}.",
+        "At the start of the villain turn, if {Eidolon} makes itself immune to {H} or more damage types, {Eidolon} flips.",
+        "At the end of the villain turn, {Eidolon} deals the hero target with the lowest HP {H - 1} damage of the type most recently dealt to {Eidolon}."
+      ],
+      "advanced": "Reduce damage taken by {Eidolon} by 1.",
+      "flippedBody": "Surging with Power",
+      "flippedGameplay": [
+        "{Eidolon} may not play cards.",
+        "At the start of the villain turn, if {Eidolon} did not flip this turn, {Eidolon} flips.",
+        "At the end of the villain turn, {Eidolon} ceases to make itself immune to any damage types. For each immunity removed this way, {Eidolon} deals the hero target with the highest HP 3 irreducible damage of that type."
+      ],
+      "flippedAdvanced": "Increase damage dealt by {Eidolon} by 1.",
+      "flippedIcons": [
+        "CannotPlayCards",
+        "StartOfTurnAction",
+        "EndOfTurnAction",
+        "DealDamage"
+      ],
+      "flippedAdvancedIcons": [
+        "PlayCardNow"
+      ],
+      "challengeTitle": "Supreme Alteration",
+      "challengeText": "Eidolon only flips to its Surging with Power side if it makes itself immune to {H + 2} or more damage types.",
+      "challengeIcons": [
+      ],
+      "difficulty": 2,
+      "openingLines": {
+        "default": "All obstacles shall be removed.",
+        "GuardiansOfTomorrow.ScaleCharacter": "Light in the void, you shall be snuffed.",
+        "GuardiansOfTomorrow.GuardiansOfTomorrowScaleCharacter": "Balance is weakness. Power is all."
+      }
+    },
+    {
+      "identifier": "ChaosStorm",
+      "count": 2,
+      "title": "Chaos Storm",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": "Increase damage dealt by {Eidolon} by 1. When a hero character card would deal damage, you may change that damage to any damage type.",
+      "icons": [
+        "IncreaseDamageDealt"
+      ],
+      "flavorText": "What the..? My projections are turning to{br}ice!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "ElementalResonance",
+      "count": 1,
+      "title": "Elemental Resonance",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": "The first time each turn a hero character card deals damage to {Eidolon}, {Eidolon} deals them 2 damage of the same type, then convert all damage they deal to the damage type used until the start of their next turn.",
+      "icons": [
+        "CounterDamage",
+        "DealDamage"
+      ],
+      "flavorText": "Flame to flame to flame to flame...",
+      "flavorReference": "Eidolon, Guardians of Tommorow Annual #3"
+    },
+    {
+      "identifier": "PowerAbsorption",
+      "count": 2,
+      "title": "Power Absorption",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": "When {Eidolon} is dealt damage, increase damage dealt by {Eidolon} by 1 until the end of the current turn.",
+      "icons": [
+        "IncreaseDamageDealt"
+      ],
+      "flavorText": "More! MORE!!",
+      "flavorReference": "Eidolon, Sage and Sinner #1"
+    },
+    {
+      "identifier": "FrigidCarapace",
+      "count": 1,
+      "title": "Frigid Carapace",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 cold damage. If it takes damage this way, each hero must discard a card, otherwise {Eidolon} deals each non-villain target 2 cold damage.",
+      "icons": [
+        "DealDamageCold",
+        "Discard"
+      ],
+      "flavorText": "I can't feel my fingers!",
+      "flavorReference": "Starstone, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "CosmicRays",
+      "count": 1,
+      "title": "Cosmic Rays",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 energy damage. If it takes damage this way, destroy {H - 1} hero ongoing cards, otherwise {Eidolon} deals each non-villain target 2 energy damage.",
+      "icons": [
+        "DealDamageEnergy",
+        "DestroyOngoing"
+      ],
+      "flavorText": "This power is a mirror of my own! I will{br}hold it off, you all run!",
+      "flavorReference": "High Balancer S-ri, Sage and Sinner #1"
+    },
+    {
+      "identifier": "BlazingAura",
+      "count": 1,
+      "title": "Blazing Aura",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 fire damage. If it takes damage this way, increase damage dealt by {Eidolon} by 1 until the end of the next villain turn, otherwise {Eidolon} deals each non-villain target 2 fire damage.",
+      "icons": [
+        "DealDamageFire",
+        "IncreaseDamageDealt"
+      ],
+      "flavorText": "It's fighting fire with fire now!",
+      "flavorReference": "Ninetails, Guardians of Tomorrow #70"
+    },
+    {
+      "identifier": "UnholyEssence",
+      "count": 1,
+      "title": "Unholy Essence",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 infernal damage. If it takes damage this way, each hero must shuffle their trash into their deck, otherwise {Eidolon} deals each non-villain target 2 infernal damage.",
+      "icons": [
+        "DealDamageInfernal",
+        "Manipulate"
+      ],
+      "flavorText": "The dark is the truth is the dark is the...",
+      "flavorReference": "Eidolon, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "StaticCloud",
+      "count": 1,
+      "title": "Static Cloud",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 lightning damage. If it takes damage this way, reduce damage dealt by hero targets by 1 until the start of the villain turn, otherwise {Eidolon} deals each non-villain target 2 lightning damage.",
+      "icons": [
+        "DealDamageLightning",
+        "ReduceDamageDealt"
+      ],
+      "flavorText": "Shocked yet? You will be.",
+      "flavorReference": "Eidolon, Guardians of Tomorrow #70"
+    },
+    {
+      "identifier": "UnrealLimbs",
+      "count": 1,
+      "title": "Unreal Limbs",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 melee damage. If it takes damage this way, the hero target with the lowest HP may not deal damage until the start of the villain turn, otherwise {Eidolon} deals each non-villain target 2 melee damage.",
+      "icons": [
+        "DealDamageMelee",
+        "CannotDealDamage"
+      ],
+      "flavorText": "Augh! Help me out of here!",
+      "flavorReference": "Cassandra, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "KineticSpines",
+      "count": 1,
+      "title": "Kinetic Spines",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 projectile damage. If it takes damage this way, destroy all environment cards, otherwise {Eidolon} deals each non-villain target 2 projectile damage.",
+      "icons": [
+        "DealDamageProjectile",
+        "DestroyEnvironment"
+      ],
+      "flavorText": "This wall won't hold forever!",
+      "flavorReference": "Starstone, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "MentalBlock",
+      "count": 1,
+      "title": "Mental Block",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 psychic damage. If it takes damage this way, heroes may not use powers until the start of the villain turn, otherwise {Eidolon} deals each non-villain target 2 psychic damage.",
+      "icons": [
+        "DealDamagePsychic",
+        "CannotUsePowers"
+      ],
+      "flavorText": "Caaaan't... thiiiink...",
+      "flavorReference": "Starstone, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "BlindingGlow",
+      "count": 1,
+      "title": "Blinding Glow",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 radiant damage. If it takes damage this way, the hero with the highest HP must discard 2 cards.",
+      "icons": [
+        "DealDamageRadiant",
+        "Discard"
+      ],
+      "flavorText": "Light is pain is light is pain is...",
+      "flavorReference": "Eidolon, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "UnbalancingScreech",
+      "count": 1,
+      "title": "Unbalancing Screech",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 sonic damage. If it takes damage this way, heroes may not play cards until the start of the villain turn, otherwise {Eidolon} deals each non-villain target 2 sonic damage.",
+      "icons": [
+        "DealDamageSonic",
+        "CannotPlayCards"
+      ],
+      "flavorText": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+      "flavorReference": "Eidolon, Guardians of Tomorrow #70"
+    },
+    {
+      "identifier": "CorrosiveTouch",
+      "count": 1,
+      "title": "Corrosive Touch",
+      "keywords": [
+        "one-shot",
+        "alteration"
+      ],
+      "body": "{Eidolon} deals itself 2 toxic damage. If it takes damage this way, destroy {H - 1} equipment cards, otherwise {Eidolon} deals each non-villain target 2 toxic damage.",
+      "icons": [
+        "DealDamageToxic",
+        "DestroyEquipment"
+      ],
+      "flavorText": "All matter is impermanent.",
+      "flavorReference": "Eidolon, Sage and Sinner #1"
+    },
+    {
+      "identifier": "ProgressiveAlterations",
+      "count": 3,
+      "title": "Progressive Alterations",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Shuffle all alteration cards from the villain trash into the villain deck. Play the top card of the villain deck.",
+      "icons": [
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "flavorText": "If we wait for the next time it pulses, we{br}can hurt it!",
+      "flavorReference": "Ninetails, Guardians of Tomorrow #70"
+    },
+    {
+      "identifier": "ChaoticNature",
+      "count": 2,
+      "title": "Chaotic Nature",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Reveal cards from the top of the villain deck until an Ongoing card is revealed. Put it into play and shuffle the other revealed cards into the villain deck. {Eidolon} deals each hero target {H - 2} damage of the type that was last dealt to it.",
+      "icons": [
+        "Manipulate",
+        "PlayCardNow",
+        "DealDamage"
+      ],
+      "flavorText": "You know, I feel a weird kinship with this{br}thing. Its powers are a lot like mine,{br}just... out of control.",
+      "flavorReference": "Chance, Bureau Arcanum #18"
+    },
+    {
+      "identifier": "AlterationSurge",
+      "count": 2,
+      "title": "Alteration Surge",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Reveal cards from the top of the villain deck until two Alteration cards are revealed. Put the revealed cards into play and shuffle the remaining cards into the villain deck.",
+      "icons": [
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "flavorText": "It doesn't just draw power from our{br}attacks! It seems like it can alter itself{br}on its own.",
+      "flavorReference": "Argus, Guardians of Tomorrow Annual #3"
+    },
+    {
+      "identifier": "StrangePowers",
+      "count": 2,
+      "title": "Strange Powers",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "{Eidolon} deals the 2 hero targets with the most cards in play {H - 2} damage of the last type dealt to {Eidolon} each. Each hero dealt damage this way must destroy 2 of their non-character cards.",
+      "icons": [
+        "DealDamage",
+        "DestroyHero"
+      ],
+      "flavorText": "I don't know where it comes from or{br}what it is. I do know that it wants to{br}kill me.",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #3"
+    }
+
+  ]
+}

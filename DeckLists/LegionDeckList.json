@@ -25,16 +25,16 @@
       "body": "Nanotech Master Criminal",
       "foilBackgroundColor": "CD96C0",
       "character": true,
-      "hitpoints": 30,
+      "hitpoints": 50,
       "nemesisIdentifiers": [
         "GuardiansOfTomorrow.Hoplite"
       ],
       "setup": [
         "At the start of the game, {Legion} enters play “Nanotech Master Criminal“ side up.",
-        "Put 3 “Nanite Swarm“ cards under this card. Shuffle the other 2 into the villain deck."
+        "Put 3 “Nanite Swarm“ cards under this card. Shuffle the other 2 into the villain deck. Set {Legion}'s HP to 30"
       ],
       "gameplay": [
-        "At the end of the villain turn, {Legion} deals the hero with the most equipment cards in play {H-2} melee damage and destroys one of their equipment cards.",
+        "At the end of the villain turn, {Legion} deals the hero with the most equipment cards in play {H - 2} melee damage and destroys one of their equipment cards.",
         "When a Nanite Swarm would enter play, place it under this card. Nanite Swarms under this card are indestructible.",
         "When {Legion} flips to this side, restore him to an amount of health equal to the number of cards under this card times 10.",
         "When {Legion} would be destroyed, flip this card.",
@@ -45,7 +45,7 @@
       "flippedGameplay": [
         "When {Legion} flips to this side, put all Nanite Swarms under {Legion} into play.",
         "{Legion} is indestructible and immune to all damage.",
-        "When a Nanite Swarm is destroyed, put all Nanite Swarms from play under this card, then {Legion} flips."
+        "After a Nanite Swarm is destroyed, put all Nanite Swarms from play under this card, then {Legion} flips."
       ],
       "flippedAdvanced": "Reduce damage dealt to villain targets by 1.",
       "flippedIcons": [
@@ -58,10 +58,12 @@
         "ReduceDamageTaken"
       ],
       "challengeTitle": "Might of the Many",
-      "challengeText": ["{Legion}'s max HP is 50. All 5 Nanite Swarms begin play beneath this card."],
+      "challengeText": ["All 5 Nanite Swarms begin play beneath this card. Legion starts with 50 HP, not 30."],
       "difficulty": 2,
       "openingLines": {
-        "default": "I am Legion, for we are many!"
+        "default": "That's some nice tech you've got there. It'd be a shame if it were to... disappear.",
+        "GuardiansOfTomorrow.HopliteCharacter": "I am Legion, for we are many!",
+        "GuardiansOfTomorrow.GuardiansOfTomorrowHopliteCharacter": "You've resisted for the last time! Your inventions will be MINE!"
       }
     },
     {
@@ -90,7 +92,7 @@
         "device"
       ],
       "body": [
-        "At the end of the villain turn, this card deals the hero target with the second lowest HP {H-1} energy damage."
+        "At the end of the villain turn, this card deals the hero target with the second lowest HP {H - 1} energy damage."
       ],
       "icons": [
         "EndOfTurnAction",
@@ -160,7 +162,7 @@
         "Manipulate",
         "PlayCardNow"
       ],
-      "body": "Destroy a hero equipment card. Search the villain deck for a Nanite Swarm and put it into play. Shuffle the villain deck.",
+      "body": "Destroy a hero equipment card. If a card is destroyed this way, search the villain deck for a Nanite Swarm and put it into play. Shuffle the villain deck.",
       "flavorText": "Any metal he touches, he can turn into more of himself! We need to stop this before it gets out of control!",
       "flavorReference": "Hoplite, Guardians of Tomorrow Annual #2"
     },
@@ -200,7 +202,7 @@
         "IncreaseDamageTaken"
       ],
       "body": "{Legion} deals the {H-1} hero targets with the highest HP 2 melee damage each. Increase damage dealt to those targets by 1 until the start of the villain turn.",
-      "flavorText": "Those blades can chew through any metal! Watch out!",
+      "flavorText": "Those blades can chew through any armor! Watch out!",
       "flavorReference": "Argus, Guardians of Tomorrow Annual #2"
     },
     {
