@@ -24,13 +24,15 @@ namespace GuardiansOfTomorrow.Kumiho
 
         private IEnumerator DealDamageAndDoExtraOnKillResponse(PhaseChangeAction pc)
         {
-            List<DealDamageAction> storedResultsA = new List<DealDamageAction>();
-            List<DealDamageAction> storedResultsB = new List<DealDamageAction>();
+            /*List<DealDamageAction> storedResultsA = new List<DealDamageAction>();
+            List<DealDamageAction> storedResultsB = new List<DealDamageAction>();*/
             List<DealDamageAction> damages = new List<DealDamageAction>();
-            damages.Add(new DealDamageAction(GetCardSource(), new DamageSource(GameController, base.Card), null, 1, DamageType.Melee, false, null, storedResultsA, null, false));
-            damages.Add(new DealDamageAction(GetCardSource(), new DamageSource(GameController, base.Card), null, 1, DamageType.Cold, false, null, storedResultsB, null, false));
+            List<DealDamageAction> damages2 = new List<DealDamageAction>();
+            /*damages.Add(new DealDamageAction(GetCardSource(), new DamageSource(GameController, base.Card), null, 1, DamageType.Melee, false, null, storedResultsA, null, false));
+            damages.Add(new DealDamageAction(GetCardSource(), new DamageSource(GameController, base.Card), null, 1, DamageType.Cold, false, null, storedResultsB, null, false));*/
 
-            IEnumerator coroutine = DealMultipleInstancesOfDamageToHighestLowestHP(damages, (Card c) => c.IsHero, HighestLowestHP.LowestHP, 1, 1);
+            //IEnumerator coroutine = DealMultipleInstancesOfDamageToHighestLowestHP(damages, (Card c) => IsHero(c), HighestLowestHP.LowestHP, 1, 1);
+            IEnumerator coroutine = DealDamageToLowestHP(Card, 1, (Card c) => IsHero(c), (Card c) => 1, DamageType.Melee, storedResults: damages);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -40,26 +42,96 @@ namespace GuardiansOfTomorrow.Kumiho
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            if ((DidDealDamage(storedResultsB) && storedResultsB.FirstOrDefault().DidDestroyTarget) || (DidDealDamage(storedResultsA) && storedResultsA.FirstOrDefault().DidDestroyTarget))
+            if (DidDealDamage(damages))
             {
-                coroutine = GameController.SetHP(base.Card, 5, GetCardSource());
-                if (base.UseUnityCoroutines)
+                int flag = 0;
+                foreach (DealDamageAction dd in damages)
                 {
-                    yield return base.GameController.StartCoroutine(coroutine);
+                    if (dd.DidDestroyTarget) 
+                    {
+                        flag = 1;
+                    }
                 }
-                else
+                if (flag == 1)
                 {
-                    base.GameController.ExhaustCoroutine(coroutine);
-                }
+                    coroutine = GameController.SendMessageAction("Ghoulish Hunters heals itself and plays the top card of the villain deck.", Priority.Medium, GetCardSource());
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(coroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(coroutine);
+                    }
+                    coroutine = GameController.SetHP(base.Card, 5, GetCardSource());
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(coroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(coroutine);
+                    }
 
-                coroutine = PlayTheTopCardOfTheVillainDeckResponse(null);
-                if (base.UseUnityCoroutines)
-                {
-                    yield return base.GameController.StartCoroutine(coroutine);
+                    coroutine = PlayTheTopCardOfTheVillainDeckResponse(null);
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(coroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(coroutine);
+                    }
                 }
-                else
+                else 
                 {
-                    base.GameController.ExhaustCoroutine(coroutine);
+                    coroutine = DealDamage(Card, damages.FirstOrDefault().OriginalTarget, 1, DamageType.Cold, storedResults: damages2, cardSource: GetCardSource());
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(coroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(coroutine);
+                    }
+                    foreach (DealDamageAction dd in damages2)
+                    {
+                        if (dd.DidDestroyTarget)
+                        {
+                            flag = 1;
+                        }
+                    }
+                    if (flag == 1)
+                    {
+                        /*coroutine = GameController.SendMessageAction("Ghoulish Hunters heals itself and plays the top card of the villain deck.", Priority.Medium, GetCardSource());
+                        if (base.UseUnityCoroutines)
+                        {
+                            yield return base.GameController.StartCoroutine(coroutine);
+                        }
+                        else
+                        {
+                            base.GameController.ExhaustCoroutine(coroutine);
+                        }*/
+                        coroutine = GameController.SetHP(base.Card, 5, GetCardSource());
+                        if (base.UseUnityCoroutines)
+                        {
+                            yield return base.GameController.StartCoroutine(coroutine);
+                        }
+                        else
+                        {
+                            base.GameController.ExhaustCoroutine(coroutine);
+                        }
+
+                        coroutine = PlayTheTopCardOfTheVillainDeckResponse(null);
+                        if (base.UseUnityCoroutines)
+                        {
+                            yield return base.GameController.StartCoroutine(coroutine);
+                        }
+                        else
+                        {
+                            base.GameController.ExhaustCoroutine(coroutine);
+                        }
+                    }
                 }
             }
             else

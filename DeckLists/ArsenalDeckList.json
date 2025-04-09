@@ -1,0 +1,425 @@
+﻿{
+    "name": "Arsenal",
+    "kind": "Hero",
+    "expansionIdentifier": "Guardians of Tomorrow",
+    "initialCardIdentifiers": [
+        "ArsenalCharacter"
+    ],
+  "cards": [
+    {
+      "identifier": "ArsenalCharacter",
+      "count": 1,
+      "title": "Arsenal",
+      "body": "Martial Prowess",
+      "backgroundColor": "adadad",
+      "foilBackgroundColor": "adadad",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "{Arsenal} deals 1 target 1 melee or projectile damage."
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageMelee",
+        "DealDamageProjectile"
+      ],
+      "hitpoints": 28,
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One hero may use a power.",
+        "Increase the next melee or projectile damage dealt by a hero by 2."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "UsePower",
+        "IncreaseDamageDealtMelee",
+        "IncreaseDamageDealtProjectile"
+      ],
+      "openingLines": {
+        "default": "Destiny has placed me here to stop you!",
+        "DrEchidnaCharacter": "Did you forget? I'm a monster hunter.",
+        "OblivAeonFrontPageCharacter": "This is it, the final battle! I'm ready!"
+      },
+      "complexity": 1,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Arsenal"
+      ],
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "ExpatrietteCharacter"
+      }
+    },
+    {
+      "identifier": "CallToArms",
+      "count": 4,
+      "title": "Call to Arms",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Search",
+        "PlayCardNow",
+        "DrawCardNow",
+        "DealDamage"
+      ],
+      "body": [
+        "Search your deck for a Relic and put it into play or your hand. Shuffle your deck. {Arsenal} deals 1 target 1 melee or 1 projectile damage."
+      ],
+      "flavorText": "Awaken! Fragarach!",
+      "flavorReference": "Arsenal, The Hunters #4"
+    },
+    {
+      "identifier": "Dismember",
+      "count": 2,
+      "title": "Dismember",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DestroyOngoing",
+        "DestroyTarget"
+      ],
+      "body": [
+        "{Arsenal} deals 1 target 1 melee damage. If a character card is dealt damage this way, destroy one of its Ongoing cards. If a non-character card is reduced to 4 or less HP this way, destroy it."
+      ],
+      "flavorText": "SHKLRRT!"
+    },
+    {
+      "identifier": "FastballSpecial",
+      "count": 3,
+      "title": "Fastball Special",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee"
+      ],
+      "body": [
+        "{Arsenal} deals 1 target 1 melee damage. That target deals up to 3 other targets 1 melee damage each."
+      ],
+      "flavorText": "Right over the plate!",
+      "flavorReference": "Arsenal, The Hunters #8"
+    },
+    {
+      "identifier": "FlawlessAim",
+      "count": 2,
+      "title": "Flawless Aim",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageProjectile"
+      ],
+      "body": [
+        "{Arsenal} deals 1 target 2 irreducible projectile damage."
+      ],
+      "flavorText": "I've got my shot lined up.",
+      "flavorReference": "Arsenal, The Hunters #1"
+    },
+    {
+      "identifier": "Fragarach",
+      "count": 1,
+      "title": "Fragarach",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "MakeDamageIrreducible",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase melee damage dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target melee damage, it is irreducible. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Dr. Echidna",
+          "text": "This is a problem you{br}can't solve!"
+        },
+        {
+          "identifier": "Arsenal",
+          "text": "I have an answer to that."
+        }
+      ],
+      "flavorReference": "The Hunters #39"
+    },
+    {
+      "identifier": "GaeBulg",
+      "count": 1,
+      "title": "Gae Bulg",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtProjectile",
+        "DealDamageToxic",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase projectile dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target projectile damage, that target deals itself 2 toxic damage. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorText": "This thing is awful, who made this!?",
+      "flavorReference": "Arsenal, The Hunters #4"
+    },
+    {
+      "identifier": "GiantSlayer",
+      "count": 1,
+      "title": "Giant Slayer",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealt"
+      ],
+      "body": [
+        "Increase damage dealt by {Arsenal} to non-hero targets with more HP than her by 1."
+      ],
+      "flavorText": "The bigger they are...",
+      "flavorReference": "Arsenal, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "ImpalingShot",
+      "count": 3,
+      "title": "Impaling Shot",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageProjectile",
+        "CancelledDamageGreen"
+      ],
+      "body": [
+        "{Arsenal} deals 1 target 1 projectile damage. Prevent the next damage dealt by that target."
+      ],
+      "flavorText": "I've got it pinned down. Literally.",
+      "flavorReference": "Arsenal, The Hunters #10"
+    },
+    {
+      "identifier": "Laevateinn",
+      "count": 1,
+      "title": "Laevateinn",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtProjectile",
+        "DestroyTarget",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase projectile damage dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target projectile damage, if that target has 2 or less HP remaining, destroy it. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Cathain",
+          "text": "Twig of destruction?"
+        },
+        {
+          "identifier": "Arsenal",
+          "text": "So you've heard of it?"
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow #107"
+    },
+    {
+      "identifier": "PerfectParry",
+      "count": 3,
+      "title": "Perfect Parry",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "CancelledDamageGreen",
+        "CounterDamage",
+        "DealDamageMelee",
+        "DestroySelf"
+      ],
+      "body": [
+        "When {Arsenal} would be dealt damage by a non-hero target, you may prevent that damage. If you do, {Arsenal} deals the source of that damage 1 melee damage, then destroy this card."
+      ],
+      "flavorText": "Nice try!",
+      "flavorReference": "Arsenal, The Hunters #30"
+    },
+    {
+      "identifier": "ReadyShot",
+      "count": 3,
+      "title": "Ready Shot",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "DealDamageProjectile",
+        "DestroySelf"
+      ],
+      "body": [
+        "When a non-hero target enters play, {Arsenal} may deal that target 2 projectile damage. If damage is dealt this way, destroy this card."
+      ],
+      "flavorText": "I'll watch the door.",
+      "flavorReference": "Arsenal, The Hunters #2"
+    },
+    {
+      "identifier": "RuyiJinguBang",
+      "count": 1,
+      "title": "Ruyi Jingu Bang",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "DealDamageMelee",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase melee damage dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target melee damage, she may deal 1 other target 1 melee damage. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorText": "It's big, but I can do big too.",
+      "flavorReference": "Arsenal, The Hunters #29"
+    },
+    {
+      "identifier": "SeismicStrike",
+      "count": 3,
+      "title": "Seismic Strike",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DestroyEnvironment"
+      ],
+      "body": [
+        "{Arsenal} deals 1 target 2 melee damage. Destroy an environment card."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Angler",
+          "text": "How hard can you hit?"
+        },
+        {
+          "identifier": "Arsenal",
+          "text": "Let's find out."
+        }
+      ],
+      "flavorReference": "The Hunters #6"
+    },
+    {
+      "identifier": "Sharur",
+      "count": 1,
+      "title": "Sharur",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtProjectile",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase projectile damage dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target projectile damage, reveal and replace the top card of a deck. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorText": "Do I need to give you a plan again?",
+      "flavorReference": "Sharur, The Hunters #43"
+    },
+    {
+      "identifier": "TamingSari",
+      "count": 1,
+      "title": "Taming Sari",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "ReduceDamageTaken",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase melee damage dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target melee damage, reduce damage dealt to {Arsenal} by 1 until the start of your next turn. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorText": "I will take that blade for myself",
+      "flavorReference": "Balor, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "UchideNoKozuchi",
+      "count": 1,
+      "title": "Uchide no Kozuchi",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "DrawCardNow",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase melee damage dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target melee damage, draw a card. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorText": "I wish for the key to these shackles!",
+      "flavorReference": "Arsenal, Bureau Arcanum #27"
+    },
+    {
+      "identifier": "Vijaya",
+      "count": 1,
+      "title": "Vijaya",
+      "keywords": [
+        "equipment",
+        "relic"
+      ],
+      "icons": [
+        "IncreaseDamageDealtProjectile",
+        "DealDamageSonic",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase projectile damage dealt by {Arsenal} by 1. The first time each turn {Arsenal} deals a target projectile damage, she deals each non-hero target 1 sonic damage. When this card enters play, return all but 2 of your relics from your play area to your hand."
+      ],
+      "flavorText": "Cover your ears!",
+      "flavorReference": "Arsenal, The Hunters #35"
+    },
+    {
+      "identifier": "VolleyFire",
+      "count": 3,
+      "title": "Volley Fire",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageProjectile"
+      ],
+      "body": [
+        "{Arsenal} deals each non-hero target 1 projectile damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Let's see them fight in the shade!"
+        }
+      ],
+      "flavorReference": "Arsenal, The Hunters #1"
+    },
+    {
+      "identifier": "CombatTraining",
+      "count": 4,
+      "title": "Combat Training",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "DealDamageMelee",
+        "DealDamageProjectile"
+      ],
+      "body": [
+        "Draw 2 cards. {Arsenal} deals 1 target 1 melee or projectile damage."
+      ],
+      "flavorText": "I need a replacement dummy, this one's broken.",
+      "flavorReference": "Arsenal, The Hunters #1"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -7,7 +7,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>GuardiansOfTomorrow</RootNamespace>
     <AssemblyName>GuardiansOfTomorrow</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -18,6 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -25,6 +27,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -36,6 +39,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Angler\AnglerCharacterCardController.cs" />
+    <Compile Include="Angler\ChargedLureCardController.cs" />
+    <Compile Include="Angler\ChumBucketCardController.cs" />
+    <Compile Include="Angler\DeepSirenAnglerCharacterCardController.cs" />
+    <Compile Include="Angler\DepthChargeCardController.cs" />
+    <Compile Include="Angler\DesignatedVictimCardController.cs" />
+    <Compile Include="Angler\ElectrofishingCardController.cs" />
+    <Compile Include="Angler\FishingTackleCardController.cs" />
+    <Compile Include="Angler\GoneFishinCardController.cs" />
+    <Compile Include="Angler\HookLineAndSinkerCardController.cs" />
+    <Compile Include="Angler\NoodleAroundCardController.cs" />
+    <Compile Include="Angler\SetLinesCardController.cs" />
+    <Compile Include="Angler\SSLangleyCardController.cs" />
+    <Compile Include="Angler\TauntingBeaconCardController.cs" />
+    <Compile Include="Angler\TrustyHarpoonCardController.cs" />
+    <Compile Include="Angler\WrigglingWormCardController.cs" />
     <Compile Include="Argus\ArgusCharacterCardController.cs" />
     <Compile Include="Argus\CamdroneCardController.cs" />
     <Compile Include="Argus\CommandDroneCardController.cs" />
@@ -54,6 +73,135 @@
     <Compile Include="Argus\SemiAutonomousProtocols.cs" />
     <Compile Include="Argus\ShockTacticsCardController.cs" />
     <Compile Include="Argus\TacticalDeploymentCardController.cs" />
+    <Compile Include="Arsenal\ArsenalCharacterCardController.cs" />
+    <Compile Include="Arsenal\ArsenalRelicCardController.cs" />
+    <Compile Include="Arsenal\CallToArmsCardController.cs" />
+    <Compile Include="Arsenal\DismemberCardController.cs" />
+    <Compile Include="Arsenal\FastballSpecialCardController.cs" />
+    <Compile Include="Arsenal\FlawlessAimCardController.cs" />
+    <Compile Include="Arsenal\FragarachCardController.cs" />
+    <Compile Include="Arsenal\GaeBulgCardController.cs" />
+    <Compile Include="Arsenal\GiantSlayerCardController.cs" />
+    <Compile Include="Arsenal\ImpalingShotCardController.cs" />
+    <Compile Include="Arsenal\LaevateinnCardController.cs" />
+    <Compile Include="Arsenal\PerfectParryCardController.cs" />
+    <Compile Include="Arsenal\ReadyShotCardController.cs" />
+    <Compile Include="Arsenal\RuyiJinguBangCardController.cs" />
+    <Compile Include="Arsenal\SeismicStrikeCardController.cs" />
+    <Compile Include="Arsenal\SharurCardController.cs" />
+    <Compile Include="Arsenal\TamingSariCardController.cs" />
+    <Compile Include="Arsenal\UchideNoKozuchiCardController.cs" />
+    <Compile Include="Arsenal\VijayaCardController.cs" />
+    <Compile Include="Arsenal\VolleyFireCardController.cs" />
+    <Compile Include="Arsenal\CombatTrainingCardController.cs" />
+    <Compile Include="Cathain\AethericLocusCardController.cs" />
+    <Compile Include="Cathain\AntipodeBlastCardController.cs" />
+    <Compile Include="Cathain\ArcaneShieldingCardController.cs" />
+    <Compile Include="Cathain\CathainCharacterCardController.cs" />
+    <Compile Include="Cathain\ChokingAshCardController.cs" />
+    <Compile Include="Cathain\DustStormCardController.cs" />
+    <Compile Include="Cathain\EarthCrackCardController.cs" />
+    <Compile Include="Cathain\ElementalAttunementCardController.cs" />
+    <Compile Include="Cathain\ElementalOutburstCardController.cs" />
+    <Compile Include="Cathain\FreezeBloodCardController.cs" />
+    <Compile Include="Cathain\HurricaneCardController.cs" />
+    <Compile Include="Cathain\LightningStrikeCardController.cs" />
+    <Compile Include="Cathain\MeltArmorCardController.cs" />
+    <Compile Include="Cathain\OceanicLocusCardController.cs" />
+    <Compile Include="Cathain\PyroclasmCardController.cs" />
+    <Compile Include="Cathain\SinkingMorassCardController.cs" />
+    <Compile Include="Cathain\SiphonElementsCardController.cs" />
+    <Compile Include="Cathain\TelluricLocusCardController.cs" />
+    <Compile Include="Cathain\VolcanicLocusCardController.cs" />
+    <Compile Include="Chance\ChanceBureauAgentCharacterCardController.cs" />
+    <Compile Include="Chance\ChanceCharacterCardController.cs" />
+    <Compile Include="Chance\ChanceCardController.cs" />
+    <Compile Include="Chance\ChanceEncounterCardController.cs" />
+    <Compile Include="Chance\ChanceHeroCharacterCardController.cs" />
+    <Compile Include="Chance\ChaosArcCardController.cs" />
+    <Compile Include="Chance\ChaosBoltCardController.cs" />
+    <Compile Include="Chance\ChaoticNimbusCardController.cs" />
+    <Compile Include="Chance\ControlledChaosCardController.cs" />
+    <Compile Include="Chance\EldritchConduitCardController.cs" />
+    <Compile Include="Chance\EntropicChainsCardController.cs" />
+    <Compile Include="Chance\LuckyFindCardController.cs" />
+    <Compile Include="Chance\LuckyPennyCardController.cs" />
+    <Compile Include="Chance\MirrorImageCardController.cs" />
+    <Compile Include="Chance\ObliviateCardController.cs" />
+    <Compile Include="Chance\ProbabilisticForesightCardController.cs" />
+    <Compile Include="TheSmiler\ArcaneTracesCardController.cs" />
+    <Compile Include="TheSmiler\BurnTheEvidenceCardController.cs" />
+    <Compile Include="TheSmiler\ColdCaseFilesCardController.cs" />
+    <Compile Include="TheSmiler\DangerousKnowledgeCardController.cs" />
+    <Compile Include="TheSmiler\FavoredHauntCardController.cs" />
+    <Compile Include="TheSmiler\FearmongeringCardController.cs" />
+    <Compile Include="TheSmiler\FoundFootageCardController.cs" />
+    <Compile Include="TheSmiler\FrameJobCardController.cs" />
+    <Compile Include="TheSmiler\KnifeInTheDarkCardController.cs" />
+    <Compile Include="TheSmiler\LabyrinthOfCluesCardController.cs" />
+    <Compile Include="TheSmiler\LingeringPoisonCardController.cs" />
+    <Compile Include="TheSmiler\ModusOperandiCardController.cs" />
+    <Compile Include="TheSmiler\PecksCardController.cs" />
+    <Compile Include="TheSmiler\PoxCardController.cs" />
+    <Compile Include="TheSmiler\RestlessSpiritCardController.cs" />
+    <Compile Include="TheSmiler\SacrificialVictimCardController.cs" />
+    <Compile Include="TheSmiler\TerrifiedWitnessCardController.cs" />
+    <Compile Include="TheSmiler\TheKnifeOfSilentScreamsCardController.cs" />
+    <Compile Include="TheSmiler\TheSmilerCharacterCardController.cs" />
+    <Compile Include="TheSmiler\TheSmilerTurnTakerController.cs" />
+    <EmbeddedResource Include="DeckLists\AnglerDeckList.json" />
+    <EmbeddedResource Include="DeckLists\ArsenalDeckList.json" />
+    <Compile Include="Heartbeat\HeartbeatBureauAgentCharacterCardController.cs" />
+    <Compile Include="Ludramor\AdvanceScoutCardController.cs" />
+    <Compile Include="Ludramor\BiomeHarvestingCardController.cs" />
+    <Compile Include="Ludramor\CarpetBombingCardController.cs" />
+    <Compile Include="Ludramor\ChiefEngineerKomacCardController.cs" />
+    <Compile Include="Ludramor\ColonelPrenakkaCardController.cs" />
+    <Compile Include="Ludramor\EngineeringTeamCardController.cs" />
+    <Compile Include="Ludramor\EradicatorGunshipCardController.cs" />
+    <Compile Include="Ludramor\ExterminatorSquadCardController.cs" />
+    <Compile Include="Ludramor\IntelligenceOfficerSalguulCardController.cs" />
+    <Compile Include="Ludramor\LudramorCharacterCardController.cs" />
+    <Compile Include="Ludramor\LudramorTurnTakerController.cs" />
+    <Compile Include="Ludramor\PlanetcrackerBargeCardController.cs" />
+    <Compile Include="Ludramor\ProspectingInitiativeCardController.cs" />
+    <Compile Include="Ludramor\QuashResistanceCardController.cs" />
+    <Compile Include="Ludramor\RushRepairsCardController.cs" />
+    <Compile Include="Ludramor\ShareholderMeetingCardController.cs" />
+    <Compile Include="Ludramor\SurveyDepartmentCardController.cs" />
+    <Compile Include="Nyctophobia\BackstabCardController.cs" />
+    <Compile Include="Nyctophobia\DeadlyMomentumCardController.cs" />
+    <Compile Include="Nyctophobia\HideInPlainSightCardController.cs" />
+    <Compile Include="Nyctophobia\MementoMoriCardController.cs" />
+    <Compile Include="Nyctophobia\NecrophobiaCharacterCardController.cs" />
+    <Compile Include="Nyctophobia\NyctophobiaCharacterCardController.cs" />
+    <Compile Include="Nyctophobia\OpportuneStrikeCardController.cs" />
+    <Compile Include="Nyctophobia\OutOfSightOutOfMindCardController.cs" />
+    <Compile Include="Nyctophobia\QuickStabCardController.cs" />
+    <Compile Include="Nyctophobia\SapCardController.cs" />
+    <Compile Include="Nyctophobia\ShadowStepCardController.cs" />
+    <Compile Include="Nyctophobia\SharpenCardController.cs" />
+    <Compile Include="Nyctophobia\StakeoutCardController.cs" />
+    <Compile Include="Nyctophobia\StalkPreyCardController.cs" />
+    <Compile Include="Nyctophobia\SwordOfEhudCardController.cs" />
+    <Compile Include="Price\TheErishedTabletsCardController.cs" />
+    <Compile Include="Chance\UnstableEnergyCardController.cs" />
+    <Compile Include="Chance\VorpalSwordCardController.cs" />
+    <Compile Include="Chance\WildRushCardController.cs" />
+    <Compile Include="Price\ReachIntoDarknessCardController.cs" />
+    <Compile Include="Deluge\BurstDamCardController.cs" />
+    <Compile Include="Deluge\CostlyReliefCardController.cs" />
+    <Compile Include="Deluge\DelugeCharacterCardController.cs" />
+    <Compile Include="Deluge\DelugeTurnTakerController.cs" />
+    <Compile Include="Deluge\LightningCloudCardController.cs" />
+    <Compile Include="Deluge\OverwhelmCardController.cs" />
+    <Compile Include="Deluge\SeaSerpentsCardController.cs" />
+    <Compile Include="Deluge\SplashDamageCardController.cs" />
+    <Compile Include="Deluge\SubmergedStreetsCardController.cs" />
+    <Compile Include="Deluge\TidalWavesCardController.cs" />
+    <Compile Include="Deluge\TorrentialDownpourCardController.cs" />
+    <Compile Include="Deluge\WaterloggedCardController.cs" />
+    <Compile Include="Deluge\WaterTowerCardController.cs" />
     <Compile Include="Eidolon\AlterationCardController.cs" />
     <Compile Include="Eidolon\AlterationSurgeCardController.cs" />
     <Compile Include="Eidolon\BlazingAuraCardController.cs" />
@@ -75,6 +223,27 @@
     <Compile Include="Eidolon\UnbalancingScreechCardController.cs" />
     <Compile Include="Eidolon\UnholyEssenceCardController.cs" />
     <Compile Include="Eidolon\UnrealLimbsCardController.cs" />
+    <Compile Include="GreenCreek\BloodTigerCardController.cs" />
+    <Compile Include="GreenCreek\BombThreatCardController.cs" />
+    <Compile Include="GreenCreek\EcoterroristCellCardController.cs" />
+    <Compile Include="GreenCreek\HostageTakingCardController.cs" />
+    <Compile Include="GreenCreek\MercenaryMuscleCardController.cs" />
+    <Compile Include="GreenCreek\TroyConglomerateCardController.cs" />
+    <Compile Include="Heartbeat\AntipatheticFieldCardController.cs" />
+    <Compile Include="Heartbeat\ArcaneChargeCardController.cs" />
+    <Compile Include="Heartbeat\ArcaneRepulsionCardController.cs" />
+    <Compile Include="Heartbeat\ArcaneRevivalCardController.cs" />
+    <Compile Include="Heartbeat\ClearTheFieldCardController.cs" />
+    <Compile Include="Heartbeat\DeadlyDanceCardController.cs" />
+    <Compile Include="Heartbeat\EnergyLeakageCardController.cs" />
+    <Compile Include="Heartbeat\ExplosiveReleaseCardController.cs" />
+    <Compile Include="Heartbeat\HeartbeatCharacterCardController.cs" />
+    <Compile Include="Heartbeat\IlluminateCardController.cs" />
+    <Compile Include="Heartbeat\PercussiveMaintenanceCardController.cs" />
+    <Compile Include="Heartbeat\PulseCardController.cs" />
+    <Compile Include="Heartbeat\RejuvenateCardController.cs" />
+    <Compile Include="Heartbeat\TotalDischargeCardController.cs" />
+    <Compile Include="Heartbeat\UnstablePSCardController.cs" />
     <Compile Include="Hoplite\ArmUpCardController.cs" />
     <Compile Include="Hoplite\BreachingChargeCardController.cs" />
     <Compile Include="Hoplite\BurnoutCardController.cs" />
@@ -103,9 +272,18 @@
     <Compile Include="Kumiho\SeedsOfDoubtCardController.cs" />
     <Compile Include="Kumiho\SoulEmbersCardController.cs" />
     <Compile Include="Kumiho\StolenSoulCardController.cs" />
+    <Compile Include="Legion\ConstructedPlasmaTurretCardController.cs" />
+    <Compile Include="Legion\CreepingAssaultCardController.cs" />
+    <Compile Include="Legion\DevourTechCardController.cs" />
+    <Compile Include="Legion\HackedVaultDoorCardController.cs" />
+    <Compile Include="Legion\HungryNanobladesCardController.cs" />
     <Compile Include="Legion\LegionCharacterCardController.cs" />
     <Compile Include="Legion\LegionTurnTakerController.cs" />
-    <Compile Include="Ninetails\AChangeOfFaceCardController.cs" />
+    <Compile Include="Legion\LethalAmbushCardController.cs" />
+    <Compile Include="Legion\NaniteBarrageCardController.cs" />
+    <Compile Include="Legion\NaniteSwarmCardController.cs" />
+    <Compile Include="Legion\NaniteTrapCardController.cs" />
+    <Compile Include="Legion\PreyOnWeaknessCardController.cs" />
     <Compile Include="Ninetails\AssertHumanityCardController.cs" />
     <Compile Include="Ninetails\BookSmartsStreetSmartsCardController.cs" />
     <Compile Include="Ninetails\BurningWhisperCardController.cs" />
@@ -116,13 +294,32 @@
     <Compile Include="Ninetails\FoxShapeCardController.cs" />
     <Compile Include="Ninetails\GuardiansOfTomorrowNinetailsCharacterCardController.cs" />
     <Compile Include="Ninetails\JadesCollarCardController.cs" />
+    <Compile Include="Ninetails\NinetailsBureauAgentCharacterCardController.cs" />
     <Compile Include="Ninetails\NinetailsCharacterCardController.cs" />
+    <Compile Include="Ninetails\NinetailsFlamePriestessCharacterCardController.cs" />
     <Compile Include="Ninetails\PredatoryNatureCardController.cs" />
     <Compile Include="Ninetails\ScientificApproachToMagicCardController.cs" />
     <Compile Include="Ninetails\SpiritOfDeceptionCardController.cs" />
     <Compile Include="Ninetails\SpiritVisionsCardController.cs" />
     <Compile Include="Ninetails\StalkedByGhostsCardController.cs" />
     <Compile Include="Ninetails\TwistingCinderCardController.cs" />
+    <Compile Include="Price\AppointedHourCardController.cs" />
+    <Compile Include="Price\BloodSacrificeCardController.cs" />
+    <Compile Include="Price\CarefulPlanCardController.cs" />
+    <Compile Include="Price\CautionToTheWindsCardController.cs" />
+    <Compile Include="Price\CreepingDoomCardController.cs" />
+    <Compile Include="Price\FamilyCurseCardController.cs" />
+    <Compile Include="Price\FavorsCalledDueCardController.cs" />
+    <Compile Include="Price\HoldOutHopeCardController.cs" />
+    <Compile Include="Price\LivingOnAPrayerCardController.cs" />
+    <Compile Include="Price\OnTheRunCardController.cs" />
+    <Compile Include="Price\PactBoonCardController.cs" />
+    <Compile Include="Price\PlayItSafeCardController.cs" />
+    <Compile Include="Price\PriceCharacterCardController.cs" />
+    <Compile Include="Price\PriceSavingGraceCharacterCardController.cs" />
+    <Compile Include="Price\PriceSinsOfTheFatherCharacterCardController.cs" />
+    <Compile Include="Price\TheWheelOfTheOphanimCardController.cs" />
+    <Compile Include="Price\UnwhollyUnholyCardController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scale\AttuneCardController.cs" />
     <Compile Include="Scale\BlackHoleCardController.cs" />
@@ -145,6 +342,7 @@
     <Compile Include="Scale\WeighOptionsCardController.cs" />
     <Compile Include="Starstone\CrushingStonesCardController.cs" />
     <Compile Include="Starstone\DrawMaterialCardController.cs" />
+    <Compile Include="Starstone\FlyingBoulderCardController.cs" />
     <Compile Include="Starstone\FragmentStormCardController.cs" />
     <Compile Include="Starstone\GraniteFistsCardController.cs" />
     <Compile Include="Starstone\GuardiansOfTomorrowStarstoneCharacterCardController.cs" />
@@ -153,9 +351,10 @@
     <Compile Include="Starstone\MetamorphicArmorCardController.cs" />
     <Compile Include="Starstone\ReabsorbCardController.cs" />
     <Compile Include="Starstone\RockAndRollCardController.cs" />
-    <Compile Include="Starstone\SentryPillarCardController.cs" />
+    <Compile Include="Starstone\CrystalSpinesCardController.cs" />
     <Compile Include="Starstone\ShardStormCardController.cs" />
     <Compile Include="Starstone\ShatterCardController.cs" />
+    <Compile Include="Starstone\StarstoneBasiliskSpawnCharacterCardController.cs" />
     <Compile Include="Starstone\StarstoneCharacterCardController.cs" />
     <Compile Include="Starstone\StoneshapeCardController.cs" />
     <Compile Include="Starstone\SwarmingSplintersCardController.cs" />
@@ -177,6 +376,38 @@
     <Compile Include="TheHatter\TheHatterTurnTakerController.cs" />
     <Compile Include="TheHatter\WatchyourHeadsCardController.cs" />
     <Compile Include="TheHatter\WhiteRabbitCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\AggressiveHeatBleedCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\ColossalChainsawCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\CrushingGripCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\EmergencyRepairsCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\FieldRefitCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\HeatSinkArrayCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\IncendiaryMissilesCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\LightningCannonCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\PointDefenseCannonsCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\PulsejetCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\SustainedBarrageCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\TechnologicallySuperiorCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\TheLastMonsterHunterCharacterCardController.cs" />
+    <Compile Include="TheLastMonsterHunter\TheLastMonsterHunterTurnTakerController.cs" />
+    <Compile Include="TheLastMonsterHunter\TLMHWeaponCardController.cs" />
+    <Compile Include="TheReverseEngineer\AggressiveSalvagingCardController.cs" />
+    <Compile Include="TheReverseEngineer\AlphaStrikeCardController.cs" />
+    <Compile Include="TheReverseEngineer\AugmentedChassisCardController.cs" />
+    <Compile Include="TheReverseEngineer\BacklashGeneratorCardController.cs" />
+    <Compile Include="TheReverseEngineer\CoolantPackCardController.cs" />
+    <Compile Include="TheReverseEngineer\EnergyConverterCardController.cs" />
+    <Compile Include="TheReverseEngineer\GearRecoveryCardController.cs" />
+    <Compile Include="TheReverseEngineer\NaniteSludgeSprayerCardController.cs" />
+    <Compile Include="TheReverseEngineer\ReengineerCardController.cs" />
+    <Compile Include="TheReverseEngineer\SurprisePayloadCardController.cs" />
+    <Compile Include="TheReverseEngineer\TheReverseEngineerCardController.cs" />
+    <Compile Include="TheReverseEngineer\TheReverseEngineerCharacterCardController.cs" />
+    <Compile Include="TheReverseEngineer\TheReverseEngineerExtensions.cs" />
+    <Compile Include="TheReverseEngineer\TransdimensionalBladeCardController.cs" />
+    <Compile Include="TheReverseEngineer\TweakedCalibrationCardController.cs" />
+    <Compile Include="TheReverseEngineer\UnstableAmplifierCardController.cs" />
+    <Compile Include="TheReverseEngineer\ZandatsuCardController.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DeckLists\ArgusDeckList.json" />
@@ -190,10 +421,32 @@
   <ItemGroup>
     <EmbeddedResource Include="DeckLists\EidolonDeckList.json" />
     <EmbeddedResource Include="DeckLists\KumihoDeckList.json" />
-    <None Include="DeckLists\ChanceDeckList.json" />
-    <None Include="DeckLists\LegionDeckList.json" />
+    <EmbeddedResource Include="DeckLists\ChanceDeckList.json" />
+    <EmbeddedResource Include="DeckLists\DelugeDeckList.json" />
+    <EmbeddedResource Include="DeckLists\CathainDeckList.json" />
+    <EmbeddedResource Include="DeckLists\CastleVenburgDeckList.json" />
+    <None Include="DeckLists\GreenCreekDeckList.json" />
+    <EmbeddedResource Include="DeckLists\HeartbeatDeckList.json" />
+    <EmbeddedResource Include="DeckLists\LegionDeckList.json" />
     <EmbeddedResource Include="DeckLists\TheHatterDeckList.json" />
+    <EmbeddedResource Include="DeckLists\TheReverseEngineerDeckList.json" />
+    <EmbeddedResource Include="DeckLists\LudramorDeckList.json" />
+    <EmbeddedResource Include="DeckLists\NyctophobiaDeckList.json" />
+    <EmbeddedResource Include="DeckLists\PriceDeckList.json" />
+    <None Include="DeckLists\SporeDeckList.json" />
+    <EmbeddedResource Include="DeckLists\TheLastMonsterHunterDeckList.json" />
+    <EmbeddedResource Include="DeckLists\TheSmilerDeckList.json" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Deluge\WashAwayCardController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CastleVenburg\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties decklists_4legiondecklist_1json__JsonSchema="https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

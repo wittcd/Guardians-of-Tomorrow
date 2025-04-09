@@ -1,0 +1,350 @@
+{
+  "name": "Nyctophobia",
+  "kind": "Hero",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "NyctophobiaCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "NyctophobiaCharacter",
+      "promoIdentifier": "NecrophobiaCharacter",
+      "count": 1,
+      "title": "Necrophobia",
+      "body": "Dread Summons",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        "{Nyctophobia} deals 1 target 1 infernal damage. If a target is destroyed this way, select a hero deck and reveal cards from that deck until a target or ongoing card is revealed. Put the revealed card into play and shuffle the remaining cards back into the deck."
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageInfernal",
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "hitpoints": 24,
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "Destroy an environment card.",
+        "One hero deals one target 1 infernal damage."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "DestroyEnvironment",
+        "DealDamageInfernal"
+      ],
+      "openingLines": {
+        "default": "So much death... I will turn it against you!",
+        "GuardiansOfTomorrow.TheSmilerCharacter": "Your victims' spirits cry out for your blood! I will oblige them!",
+        "OblivAeonFrontPageCharacter": "Their deaths become my power!"
+      },
+      "complexity": 2,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Nyctophobia"
+      ],
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "TheScholarCharacter"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "NyctophobiaCharacter",
+      "count": 1,
+      "title": "Nyctophobia",
+      "body": "Covert Preparation",
+      "backgroundColor": "7f2f8f",
+      "foilBackgroundColor": "7f2f8f",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Increase the next damage dealt by {Nyctophobia} by 1."
+      ],
+      "icons": [
+        "HasPower",
+        "IncreaseDamageDealt"
+      ],
+      "hitpoints": 24,
+      "incapacitatedAbilities": [
+        "One player may play a card.",
+        "One hero may use a power",
+        "Destroy a target with 2 or less HP."
+      ],
+      "flippedIcons": [
+        "PlayCardNow",
+        "UsePower",
+        "DestroyTarget"
+      ],
+      "openingLines": {
+        "default": "I am always behind you, like your shadow. Watching. Waiting.",
+        "GuardiansOfTomorrow.TheSmilerCharacter": "You're a monster of the worst kind! I will [b]END[/b] you!",
+        "OblivAeonFrontPageCharacter": "Yet you'll never see me coming."
+      },
+      "complexity": 2,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Nyctophobia"
+      ],
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "TheWraithCharacter"
+      }
+    },
+    {
+      "identifier": "Backstab",
+      "count": 3,
+      "title": "Backstab",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee"
+      ],
+      "body": [
+        "{Nyctophobia} deals 1 target 1 irreducible melee damage. If a target dealt damage this way has no more HP remaining than the damage dealt, destroy it."
+      ],
+      "flavorText": "Behind you.",
+      "flavorReference": "Nyctophobia, The Hunters #10"
+    },
+    {
+      "identifier": "DeadlyMomentum",
+      "count": 3,
+      "title": "Deadly Momentum",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "UsePowerNow"
+      ],
+      "body": [
+        "Increase the next damage dealt by {Nyctophobia} by the number of cards you played this turn. You may use a power."
+      ],
+      "flavorText": "Now you're thinking with portals!",
+      "flavorReference": "Hoplite, Chiaroscuro #3"
+    },
+    {
+      "identifier": "HideInPlainSight",
+      "count": 3,
+      "title": "Hide in Plain Sight",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Discard",
+        "ReduceDamageTaken",
+        "IncreaseDamageDealt"
+      ],
+      "body": [
+        "Discard up to 3 cards. For each card discarded this way, reduce damage dealt to {Nyctophobia} until the start of your turn by 1 and increase the next damage dealt by {Nyctophobia} by 1."
+      ],
+      "flavorText": "Would you like fries with that?",
+      "flavorReference": "Nyctophobia, Chiaroscuro #2"
+    },
+    {
+      "identifier": "MementoMori",
+      "count": 3,
+      "title": "Memento Mori",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "Increase damage dealt by {Nyctophobia} to non-hero targets with 5 or less HP by 1. Whenever {Nyctophobia} destroys a target, {Nyctophobia} may deal 1 target 1 psychic damage."
+      ],
+      "flavorText": "Even such an ancient vampire is mortal.",
+      "flavorReference": "Nyctophobia, The Hunters #3"
+    },
+    {
+      "identifier": "OpportuneStrike",
+      "count": 3,
+      "title": "Opportune Strike",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DrawCardNow"
+      ],
+      "body": [
+        "{Nyctophobia} deals 1 target 2 melee damage. Draw X cards where X is half the amount of damage dealt this way, rounded up."
+      ],
+      "flavorText": "On 3. 1... 2... 3!",
+      "flavorReference": "Nyctophobia, Chiaroscuro #8"
+    },
+    {
+      "identifier": "OutOfSightOutOfMind",
+      "count": 3,
+      "title": "Out of Sight, Out of Mind",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "ReduceDamageTaken",
+        "IncreaseDamageDealt"
+      ],
+      "body": [
+        "At the end of your turn, if {Nyctophobia} has not dealt damage this turn, reduce damage dealt to {Nyctophobia} by 1 until the start of your next turn and increase the next damage dealt by {Nyctophobia} by 1."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Ninetails",
+          "text": "So when are we going to meet{br}this girlfriend of yours?"
+        },
+        {
+          "identifier": "Hoplite",
+          "text": "She's shy. Give her time."
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow #73"
+    },
+    {
+      "identifier": "QuickStab",
+      "count": 4,
+      "title": "Quick Stab",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DrawCardNow",
+        "PlayCardNow"
+      ],
+      "body": [
+        "{Nyctophobia} deals 1 target 1 melee damage. If a target is destroyed this way, you may draw a card and play a card."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Abhartach",
+          "text": "You're not fast enough."
+        },
+        {
+          "identifier": "Nyctophobia",
+          "text": "I'm faster than you."
+        }
+      ],
+      "flavorReference": "The Hunters #5"
+    },
+    {
+      "identifier": "Sap",
+      "count": 2,
+      "title": "Sap",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Manipulate",
+        "PlayCardNow",
+        "DrawCardNow"
+      ],
+      "body": [
+        "Shuffle a non-character target with 3 or less HP into its owner's deck. You may draw a card or play a card."
+      ],
+      "flavorText": "It's not worth the mess to kill this one.",
+      "flavorReference": "Nyctophobia, Chiaroscuro #1"
+    },
+    {
+      "identifier": "ShadowStep",
+      "count": 3,
+      "title": "Shadow Step",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "HasPower",
+        "CancelledDamageGreen",
+        "DrawCardNow"
+      ],
+      "powers": [
+        "Prevent the next damage dealt to {Nyctophobia}. Draw a card."
+      ],
+      "flavorText": "Anywhere there's a shadow, there I am.",
+      "flavorReference": "Nyctophobia, The Hunters #15"
+    },
+    {
+      "identifier": "Sharpen",
+      "count": 4,
+      "title": "Sharpen",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "IncreaseDamageDealt"
+      ],
+      "body": [
+        "Draw a card. Increase the next damage dealt by {Nyctophobia} by 2."
+      ],
+      "flavorText": "Your blades can't possibly dull that fast.",
+      "flavorReference": "Angler, The Hunters #21"
+    },
+    {
+      "identifier": "Stakeout",
+      "count": 3,
+      "title": "Stakeout ",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "IncreaseDamageDealt",
+        "DestroySelf"
+      ],
+      "body": [
+        "When a non-hero target enters play, you may draw a card and increase damage dealt by {Nyctophobia} to that target by 2 until the end of your next turn. If you do, destroy this card."
+      ],
+      "flavorText": "He'll show. He has to.",
+      "flavorReference": "Nyctophobia, The Hunters #21"
+    },
+    {
+      "identifier": "StalkPrey",
+      "count": 3,
+      "title": "Stalk Prey",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "IncreaseDamageTaken",
+        "PlayCardNow"
+      ],
+      "body": [
+        "Select a target. Increase damage dealt to that target by {Nyctophobia} by 1 until the start of your turn. You may play a card."
+      ],
+      "flavorText": "Show me the way, little demon...",
+      "flavorReference": "Nyctophobia, The Hunters #23"
+    },
+    {
+      "identifier": "SwordOfEhud",
+      "count": 3,
+      "title": "The Sword of Ehud",
+      "keywords": [
+        "equipment",
+        "relic",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "HasPower",
+        "DealDamageMelee",
+        "PlayCardNow",
+        "DrawCardNow"
+      ],
+      "body": [
+        "Increase melee damage dealt by {Nyctophobia} by 1."
+      ],
+      "powers": [
+        "{Nyctophobia} deals 1 target 2 melee damage. If a target is destroyed this way, you may draw a card or play a card."
+      ],
+      "flavorText": "It's killed kings, tyrants, and monsters.{br}It will kill you too.",
+      "flavorReference": "Nyctophobia, The Hunters #18"
+    }
+  ]
+}

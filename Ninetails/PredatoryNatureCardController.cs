@@ -86,7 +86,7 @@ namespace GuardiansOfTomorrow.Ninetails
 		public IEnumerator DealDamageToHeroAndMaybeSelfResponse() 
 		{
 			DamageSource source = new DamageSource(base.GameController, base.CharacterCard);
-			Func<Card, bool> additionalCriteria = (Card c) => c.IsHero && c != base.CharacterCard;
+			Func<Card, bool> additionalCriteria = (Card c) => IsHero(c) && c != base.CharacterCard;
 			List<DealDamageAction> storedResultsDamage = new List<DealDamageAction>();
 			IEnumerator coroutine = base.GameController.SelectTargetsAndDealDamage(DecisionMaker, source, 2, DamageType.Melee, 1, optional: false, 1, isIrreducible: false, allowAutoDecide: false, autoDecide: false, additionalCriteria, null, storedResultsDamage, null, null, selectTargetsEvenIfCannotDealDamage: false, null, null, ignoreBattleZone: false, null, GetCardSource());
 			if (base.UseUnityCoroutines)

@@ -1,0 +1,336 @@
+{
+  "name": "Heartbeat",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "HeartbeatCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "HeartbeatCharacter",
+      "promoIdentifier": "HeartbeatBureauAgentCharacter",
+      "count": 1,
+      "title": "Heartbeat: Bureau Agent",
+      "body": "Shining Armor",
+      "backgroundColor": "9c9b98",
+      "foilBackgroundColor": "9c9b98",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Select a hero. Until the start of your next turn, whenever that hero is dealt damage, you may destroy one of your ongoing cards. If you do, prevent that damage."
+      ],
+      "icons": [
+        "HasPower",
+        "CancelledDamageGreen",
+        "Destroy"
+      ],
+      "hitpoints": 30,
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One player may play a card.",
+        "Reduce the next damage dealt to a hero target by 2."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "PlayCardNow",
+        "ReduceDamageTaken"
+      ],
+      "openingLines": {
+        "default": ""
+      },
+      "complexity": 2,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Heartbeat"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "HeartbeatCharacter",
+      "count": 1,
+      "title": "Heartbeat",
+      "body": "Gather Strength",
+      "backgroundColor": "fcfcf2",
+      "foilBackgroundColor": "fcfcf2",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Search your deck or trash for a copy of Arcane Charge and put it into play. If you searched your deck, shuffle it."
+      ],
+      "icons": [
+        "Search",
+        "PlayCardNow"
+      ],
+      "hitpoints": 28,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Heartbeat"
+      ],
+      "incapacitatedAbilities": [
+        "One player may play a card.",
+        "One player may use a power.",
+        "Choose a hero. The next damage dealt by that hero is increased by 2."
+      ],
+      "flippedIcons": [
+        "PlayCardNow",
+        "UsePowerNow",
+        "IncreaseDamageDealt"
+      ],
+      "openingLines": {
+        "default": "If we take you out, your plans will fall.",
+        "GuardiansOfTomorrow.MourningCodeCharacter": "This is outside my expertise, but I'll stop you anyway!",
+        "OblivAeonFrontPageCharacter": "As long as there is life in my chest, it's not over yet."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "OmnitronXCharacter"
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "ArcaneCharge",
+      "count": 3,
+      "title": "Arcane Charge",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "DestroySelf"
+      ],
+      "body": "When this card is destroyed, increase the next damage dealt by {Heartbeat} by 2. After {Heartbeat} takes damage, you may destroy this card.",
+      "flavorText": "This thing is literally keeping me alive.{br}But it can do more than just that.",
+      "flavorReference": "Heartbeat, Bureau Arcanum #1"
+    },
+    {
+      "identifier": "EnergyLeakage",
+      "count": 2,
+      "title": "Energy Leakage",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageRadiant"
+      ],
+      "body": "At the end of your turn, {Heartbeat} deals as many targets as there are Arcane Charges in play 1 radiant damage each.",
+      "flavorText": "Stay away! I'm... how do I explain this...{br}radioactive!",
+      "flavorReference": "Heartbeat, Bureau Arcanum #5"
+    },
+    {
+      "identifier": "ArcaneRepulsion",
+      "count": 3,
+      "title": "Arcane Repulsion",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "HasPower",
+        "Destroy",
+        "DrawCardNow",
+        "ReduceDamageTaken",
+        "DealDamageRadiant"
+      ],
+      "powers": [ "You may destroy an Arcane Charge. If you do, draw a card and reduce damage dealt to {Heartbeat} by 1 until the start of your turn. {Heartbeat} deals 1 target 1 radiant damage." ],
+      "flavorText": "Get... BACK!",
+      "flavorReference": "Heartbeat, Mysterious Miscellany #13"
+    },
+    {
+      "identifier": "UnstablePS",
+      "count": 3,
+      "title": "Unstable Power Source",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtRadiant",
+        "EndOfTurnAction",
+        "DealDamageRadiant",
+        "HasPower",
+        "DestroySelf"
+      ],
+      "body": "Increase radiant damage dealt by {Heartbeat} by 1. At the end of your turn, {Heartbeat} deals herself radiant damage equal to the number of Arcane Charges in play.",
+      "powers": [ "Destroy this card." ],
+      "flavorText": "AAAAH! What the heck is this thing?",
+      "flavorReference": "Heartbeat, Mysterious Miscellany #13"
+    },
+    {
+      "identifier": "ExplosiveRelease",
+      "count": 3,
+      "title": "Explosive Release",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Destroy",
+        "DealDamageFire"
+      ],
+      "body": "Destroy an Arcane Charge. If you do, {Heartbeat} deals each non-hero target irreducible fire damage equal to the number of Arcane Charges in play plus 1.",
+      "flavorText": "Detected: Anger. Eliminating.",
+      "flavorReference": "Mourning Code, Bureau Arcanum #26"
+    },
+    {
+      "identifier": "TotalDischarge",
+      "count": 2,
+      "title": "Total Discharge",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Destroy",
+        "DealDamageMelee",
+        "DealDamageRadiant"
+      ],
+      "body": "Destroy all Arcane Charges. {Heartbeat} deals 1 target X melee and X radiant damage, where X is the number of cards destroyed this way.",
+      "flavorText": "No more! NO! MORE!",
+      "flavorReference": "Heartbeat, Bureau Arcanum #30"
+    },
+    {
+      "identifier": "PercussiveMaintenance",
+      "count": 3,
+      "title": "Percussive Maintenance",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "PlayCardNow"
+      ],
+      "body": "{Heartbeat} deals herself 1 melee damage. If she takes damage this way, put a copy of Arcane Charge from your trash into play, then play a card.",
+      "flavorText": "{cough!} Hang on. Got something stuck in{br}my chest.",
+      "flavorReference": "Heartbeat, Bureau Arcanum #9"
+    },
+    {
+      "identifier": "Rejuvenate",
+      "count": 3,
+      "title": "Rejuvenate",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GainHP",
+        "Destroy",
+        "DealDamageRadiant"
+      ],
+      "body": "{Heartbeat} gains 2 HP. You may destroy a copy of Arcane Charge. If you do, {Heartbeat} gains an additional 1 HP and deals 1 target 1 radiant damage.",
+      "flavorText": "Whoof. Hah. I thought I was a goner{br}for sure.",
+      "flavorReference": "Heartbeat, Bureau Arcanum #14"
+    },
+    {
+      "identifier": "DeadlyDance",
+      "count": 3,
+      "title": "Deadly Dance",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "HasPower",
+        "DealDamageMelee"
+      ],
+      "body": "Increase melee damage dealt by {Heartbeat} by 1. Whenever an Arcane Charge enters play, {Heartbeat} deals 1 target 1 melee damage.",
+      "powers": [ "{Heartbeat} deals up to 3 targets 1 melee damage each." ],
+      "flavorQuotes": [
+        {
+          "identifier": "Ninetails",
+          "text": "How do you move like that?"
+        },
+        {
+          "identifier": "Heartbeat",
+          "text": "You want me to teach you?"
+        }
+      ],
+      "flavorReference": "Bureau Arcanum #7"
+    },
+    {
+      "identifier": "AntipatheticField",
+      "count": 3,
+      "title": "Antipathetic Field",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "HasPower",
+        "DealDamageRadiant"
+      ],
+      "body": "Whenever {Heartbeat} takes radiant damage, reduce the next damage dealt to {Heartbeat} by the damage dealt that way.",
+      "powers": [ "{Heartbeat} deals 1 target and herself 1 radiant damage each. Reduce the next damage dealt by non-hero targets dealt damage this way by 1." ],
+      "flavorText": "Error: Cannot penetrate barrier.{br}Result: Frustration.",
+      "flavorReference": "Mourning Code, Bureau Arcanum #26"
+    },
+    {
+      "identifier": "ArcaneRevival",
+      "count": 3,
+      "title": "Arcane Revival",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Search",
+        "PlayCardNow",
+        "GainHP"
+      ],
+      "body": "Search your deck for an ongoing card and put it into play. Shuffle your deck. {Heartbeat} regains 2 HP.",
+      "flavorText": "We can rebuild her. We have the magic.",
+      "flavorReference": "Unknown, Mysterious Miscellany #13"
+    },
+    {
+      "identifier": "ClearTheField",
+      "count": 3,
+      "title": "Clear the Field",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyOngoing",
+        "DrawCardNow",
+        "DealDamageRadiant"
+      ],
+      "body": "Destroy up to 3 ongoing cards. {Heartbeat} draws up to X cards and deals up to X targets 1 radiant damage each where X is the number of hero cards destroyed this way.",
+      "flavorText": "Pardon me, coming through!",
+      "flavorReference": "Heartbeat, Bureau Arcanum #2"
+    },
+    {
+      "identifier": "Pulse",
+      "count": 3,
+      "title": "Pulse",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageRadiant",
+        "DealDamageMelee",
+        "DrawCardNow"
+      ],
+      "body": "{Heartbeat} deals each non-hero target 1 radiant damage, then deals each non-hero target 1 melee damage. Draw a card.",
+      "flavorText": "Where did she... Augh!",
+      "flavorReference": "Vepar the Vicious, Bureau Arcanum #4"
+    },
+    {
+      "identifier": "Illuminate",
+      "count": 3,
+      "title": "Illuminate",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageRadiant",
+        "DrawCardNow"
+      ],
+      "body": "{Heartbeat} may deal up to 5 targets 2 radiant damage each. Each hero that takes damage this way draws 2 cards.",
+      "flavorQuotes": [
+        {
+          "identifier": "Chance",
+          "text": "It's dark in here."
+        },
+        {
+          "identifier": "Heartbeat",
+          "text": "Not for much longer."
+        }
+      ],
+      "flavorReference": "Bureau Arcanum #14"
+    }
+  ]
+}

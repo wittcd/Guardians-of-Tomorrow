@@ -47,10 +47,10 @@ namespace GuardiansOfTomorrow.TheHatter
             {
 				if(base.IsGameAdvanced)
                 {
-					AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => dd.Target.IsHero, 1));
+					AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => IsHero(dd.Target), 1));
                 }
 				//AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, BringThrallBackResponse, TriggerType.PutIntoPlay));
-				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction p) => DealDamageToHighestHP(base.CharacterCard, 1, (Card c) => c.IsHero, (Card c) => H - 1, DamageType.Projectile), TriggerType.DealDamage));
+				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction p) => DealDamageToHighestHP(base.CharacterCard, 1, (Card c) => IsHero(c), (Card c) => H - 1, DamageType.Projectile), TriggerType.DealDamage));
 				AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.FlipThisCharacterCardResponse, TriggerType.FlipCard, (PhaseChangeAction p) => FindCardsWhere((Card c) => c.DoKeywordsContain("thrall") && c.IsInPlayAndHasGameText).Count() <= 1));
             }
 			else
@@ -124,7 +124,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
 		private IEnumerator DamageThenDestroyResponse(PhaseChangeAction pc)
         {
-			IEnumerator coroutine = base.DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => c.IsHeroCharacterCard, (Card c) => H - 2, DamageType.Psychic, false, false, null, 2, null, DestroyAfterDamageResponse, false );
+			IEnumerator coroutine = base.DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => IsHeroCharacterCard(c), (Card c) => H - 2, DamageType.Psychic, false, false, null, 2, null, DestroyAfterDamageResponse, false );
 				if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -138,7 +138,7 @@ namespace GuardiansOfTomorrow.TheHatter
 		private IEnumerator DestroyAfterDamageResponse(DealDamageAction dd)
         {
 			Card target = dd.Target;
-			LinqCardCriteria isOwnedByTarget = new LinqCardCriteria((Card c) => c.Owner.CharacterCard == target && (c.IsOngoing || IsEquipment(c)), "ongoing or equipment card");
+			LinqCardCriteria isOwnedByTarget = new LinqCardCriteria((Card c) => c.Owner.CharacterCard == target && (IsOngoing(c) || IsEquipment(c)), "ongoing or equipment card");
 			if (dd.DidDealDamage)
 			{
 				IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, isOwnedByTarget, false, cardSource: GetCardSource());

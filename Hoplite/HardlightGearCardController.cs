@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.Hoplite
         //{Hoplite} deals 1 target 2 energy damage.
         public override IEnumerator Play()
         {
-            LinqCardCriteria criteria = new LinqCardCriteria((Card c) => c.IsOngoing || IsEquipment(c));
+            LinqCardCriteria criteria = new LinqCardCriteria((Card c) => IsOngoing(c) || IsEquipment(c));
             List<SelectTurnTakerDecision> selectedHero = new List<SelectTurnTakerDecision>();
             IEnumerator coroutine = GameController.SelectHeroToPlayCard(DecisionMaker, cardSource: GetCardSource());
             

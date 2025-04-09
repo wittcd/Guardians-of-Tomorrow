@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.Eidolon
         public override void AddTriggers()
         {
             AddIncreaseDamageTrigger((DealDamageAction dd) => dd.DamageSource.Card == base.CharacterCard, 1);
-            AddTrigger((DealDamageAction dd) => dd.DamageSource.Card.IsHeroCharacterCard, SelectDamageTypeForDealDamageAction, TriggerType.ChangeDamageType, TriggerTiming.Before);
+            AddTrigger((DealDamageAction dd) => IsHeroCharacterCard(dd.DamageSource.Card), SelectDamageTypeForDealDamageAction, TriggerType.ChangeDamageType, TriggerTiming.Before);
         }
 
         

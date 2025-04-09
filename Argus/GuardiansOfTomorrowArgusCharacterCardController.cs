@@ -18,9 +18,12 @@ namespace GuardiansOfTomorrow.Argus
 
         public override IEnumerator UsePower(int index = 0)
         {
+            int powerNumeralPsychic = GetPowerNumeral(0, 2);
+            int powerNumeralTargets = GetPowerNumeral(1, 1);
+            int powerNumeralProjectile = GetPowerNumeral(2, 2);
             //deal 2 self-psychic damage.
             List<DealDamageAction> storedDamage = new List<DealDamageAction>();
-            IEnumerator coroutine = DealDamage(base.CharacterCard, base.CharacterCard, 2, DamageType.Psychic, false, false, false, null, storedDamage, null, false, GetCardSource());
+            IEnumerator coroutine = DealDamage(base.CharacterCard, base.CharacterCard, powerNumeralPsychic, DamageType.Psychic, false, false, false, null, storedDamage, null, false, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -51,7 +54,7 @@ namespace GuardiansOfTomorrow.Argus
                 {
                     base.GameController.ExhaustCoroutine(coroutine);
                 }
-                coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), 2, DamageType.Projectile, 1, false, 1, cardSource: GetCardSource());
+                coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), powerNumeralProjectile, DamageType.Projectile, powerNumeralTargets, false, powerNumeralTargets, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(coroutine);
@@ -99,7 +102,7 @@ namespace GuardiansOfTomorrow.Argus
                     {
                         //one player deals 2 self psychic damage, if they do they may draw and one player may play
                         List<DealDamageAction> storedDamage = new List<DealDamageAction>();
-                        IEnumerator coroutine = GameController.SelectTargetsToDealDamageToSelf(DecisionMaker, 2, DamageType.Psychic, 1, false, 1, false, false, false, (Card c) => c.IsHeroCharacterCard, null, storedDamage, cardSource: GetCardSource());
+                        IEnumerator coroutine = GameController.SelectTargetsToDealDamageToSelf(DecisionMaker, 2, DamageType.Psychic, 1, false, 1, false, false, false, (Card c) => IsHeroCharacterCard(c), null, storedDamage, cardSource: GetCardSource());
                         if (base.UseUnityCoroutines)
                         {
                             yield return base.GameController.StartCoroutine(coroutine);

@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.Scale
         {
             //destroy balance
             LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance"));
-            IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker, isBalance, false, null, base.CharacterCard, GetCardSource());
+            IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker, isBalance, true, null, base.CharacterCard, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

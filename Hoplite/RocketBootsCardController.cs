@@ -38,12 +38,11 @@ namespace GuardiansOfTomorrow.Hoplite
 
 		public override IEnumerator UsePower(int index = 0)
         {
-			int times = GetPowerNumeral(0, 3);
-			int amount = GetPowerNumeral(1, 1);
+			int amount = GetPowerNumeral(0, 1);
 
 			ReduceDamageStatusEffect rdse = new ReduceDamageStatusEffect(amount);
 			rdse.TargetCriteria.IsSpecificCard = base.CharacterCard;
-			rdse.NumberOfUses = times;
+			rdse.UntilStartOfNextTurn(TurnTaker);
 
 			IEnumerator coroutine = GameController.AddStatusEffect(rdse, true, GetCardSource());
 			if (base.UseUnityCoroutines)

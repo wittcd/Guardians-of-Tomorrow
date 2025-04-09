@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
         public override void AddTriggers()
         {
-            AddCounterDamageTrigger((DealDamageAction dd) => dd.CardSource.Card.IsHero && dd.Target == base.Card, () => base.Card, () => base.Card, false, 2, DamageType.Psychic);
+            AddCounterDamageTrigger((DealDamageAction dd) => IsHero(dd.CardSource.Card) && dd.Target == base.Card, () => base.Card, () => base.Card, false, 2, DamageType.Psychic);
             base.AddTriggers();
         }
     }

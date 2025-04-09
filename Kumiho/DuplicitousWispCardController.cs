@@ -60,7 +60,7 @@ namespace GuardiansOfTomorrow.Kumiho
             }
             else
             {
-                LinqCardCriteria heroNonChar = new LinqCardCriteria((Card c) => !c.IsCharacter && c.IsHero);
+                LinqCardCriteria heroNonChar = new LinqCardCriteria((Card c) => !c.IsCharacter && IsHero(c));
                 coroutine = GameController.SelectAndDestroyCards(DecisionMaker, heroNonChar, H, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)
                 {

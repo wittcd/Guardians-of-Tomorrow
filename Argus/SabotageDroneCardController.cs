@@ -15,7 +15,7 @@ namespace GuardiansOfTomorrow.Argus {
 		public override IEnumerator UsePower(int index = 0)
 		{
 			//destroy an ong or env card
-			IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.IsOngoing || c.IsEnvironment, "ongoing or environment"), false, cardSource: GetCardSource());
+			IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => IsOngoing(c) || c.IsEnvironment, "ongoing or environment"), false, cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

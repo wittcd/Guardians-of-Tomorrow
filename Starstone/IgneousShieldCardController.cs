@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Starstone
 		
 		public override void AddTriggers()
 		{
-			AddRedirectDamageTrigger((DealDamageAction dealDamage) => dealDamage.Target.IsHero, () => base.Card, optional: true);
+			AddRedirectDamageTrigger((DealDamageAction dealDamage) => IsHero(dealDamage.Target), () => base.Card, optional: true);
 		}
 
 	}

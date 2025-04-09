@@ -44,7 +44,7 @@ namespace GuardiansOfTomorrow.Starstone
 			}
 			if (DidDealDamage(storedResults))
 			{
-				coroutine = SelectAndPlayCardsFromHand(DecisionMaker, 1, optional: false, cardCriteria: new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone", false, false), "stone"), requiredDecisions: 0);
+				coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(decisionMaker, Card.Owner.Deck, false, true, false, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone")), 1);
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine);

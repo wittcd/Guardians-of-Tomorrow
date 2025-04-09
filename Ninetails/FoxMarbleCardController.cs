@@ -35,7 +35,7 @@ namespace GuardiansOfTomorrow.Ninetails
 			List<Function> list = new List<Function>();
 			Function item = new Function(DecisionMaker, "Draw " + powerNumeralDraw + " card", SelectionType.DrawCard, () => DrawCards(DecisionMaker, powerNumeralDraw), null, null, "Draw 1 card");
 			list.Add(item);
-			Function item2 = new Function(DecisionMaker, "Play " + powerNumeralOng + " ongoing card", SelectionType.PlayCard, () => SelectAndPlayCardsFromHand(DecisionMaker, powerNumeralOng, optional: false, cardCriteria: new LinqCardCriteria((Card c) => c.IsOngoing, "ongoing"), requiredDecisions: 0), base.HeroTurnTaker.Hand.Cards.Where((Card c) => c.IsOngoing).Count() > 0, null, "Play 1 ongoing card");
+			Function item2 = new Function(DecisionMaker, "Play " + powerNumeralOng + " ongoing card", SelectionType.PlayCard, () => SelectAndPlayCardsFromHand(DecisionMaker, powerNumeralOng, optional: false, cardCriteria: new LinqCardCriteria((Card c) => IsOngoing(c), "ongoing"), requiredDecisions: 0), base.HeroTurnTaker.Hand.Cards.Where((Card c) => IsOngoing(c)).Count() > 0, null, "Play 1 ongoing card");
 			list.Add(item2);
 			SelectFunctionDecision selectFunction = new SelectFunctionDecision(base.GameController, DecisionMaker, list, optional: false, null, null, null, GetCardSource());
 			coroutine = base.GameController.SelectAndPerformFunction(selectFunction);

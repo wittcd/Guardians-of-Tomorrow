@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Starstone
 
 		public override IEnumerator Play()
 		{
-			IEnumerator coroutine = base.GameController.SelectAndDestroyCard(base.HeroTurnTakerController, new LinqCardCriteria((Card c) => c.IsOngoing || c.IsEnvironment, "ongoing or environment"), optional: false, null, null, GetCardSource());
+			IEnumerator coroutine = base.GameController.SelectAndDestroyCard(base.HeroTurnTakerController, new LinqCardCriteria((Card c) => IsOngoing(c) || c.IsEnvironment, "ongoing or environment"), optional: true, null, null, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

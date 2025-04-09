@@ -22,8 +22,6 @@ namespace GuardiansOfTomorrow.Ninetails
 		{
 			//increase fire damage by 1
 			AddIncreaseDamageTrigger((DealDamageAction dealDamage) => dealDamage.DamageType == DamageType.Fire, 1);
-			//start of turn destroy self
-			AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.DestroyThisCardResponse, TriggerType.DestroySelf);
 		}
 
 		public override IEnumerator Play()
@@ -44,5 +42,30 @@ namespace GuardiansOfTomorrow.Ninetails
 				base.GameController.ExhaustCoroutine(coroutine2);
 			}
 		}
-	}
+
+        public override IEnumerator UsePower(int index = 0)
+        {
+			int powerNumeralTargets = GetPowerNumeral(0, 1);
+			int powerNumeralDamage = GetPowerNumeral(1, 4);
+
+			IEnumerator coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), powerNumeralDamage, DamageType.Fire, powerNumeralTargets, false, powerNumeralTargets, cardSource: GetCardSource());
+			if (base.UseUnityCoroutines)
+			{
+				yield return base.GameController.StartCoroutine(coroutine);
+			}
+			else
+			{
+				base.GameController.ExhaustCoroutine(coroutine);
+			}
+			coroutine = DestroyThisCardResponse(null);
+			if (base.UseUnityCoroutines)
+			{
+				yield return base.GameController.StartCoroutine(coroutine);
+			}
+			else
+			{
+				base.GameController.ExhaustCoroutine(coroutine);
+			}
+		}
+    }
 }

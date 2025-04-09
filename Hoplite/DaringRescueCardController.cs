@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Hoplite
         public override IEnumerator Play()
         {
             List<SelectCardDecision> selectCards = new List<SelectCardDecision>();
-            IEnumerator coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.ReduceNextDamageTaken, new LinqCardCriteria((Card c) => c.IsHeroCharacterCard && c != base.CharacterCard, "Other hero character card"), selectCards, false, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.ReduceNextDamageTaken, new LinqCardCriteria((Card c) => IsHeroCharacterCard(c) && c != base.CharacterCard, "Other hero character card"), selectCards, false, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

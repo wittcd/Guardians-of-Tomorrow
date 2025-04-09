@@ -15,7 +15,7 @@
       "hitpointsColor": "C94742",
       "character": true,
       "powers": [
-        "Destroy a balance card. Draw a card."
+        "You may destroy a balance card. Draw a card."
       ],
       "icons": [
         "HasPower",
@@ -182,9 +182,10 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "Destroy a balance card. Search your deck for a balance card and put it into play, then shuffle it. {Scale} deals each non-hero target 1 infernal damage.",
+      "body": "You may destroy a balance card. Search your deck for a balance card and put it into play, then shuffle it. {Scale} deals each non-hero target 2 infernal damage.",
       "icons": [
         "Destroy",
+        "Search",
         "PlayCardNow",
         "DealDamageInfernal"
       ],
@@ -198,10 +199,12 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "Destroy all balance cards. {Scale} deals 1 target X irreducible energy damage, where X is the number of cards destroyed this way times 3.",
+      "body": "Destroy all balance cards. {Scale} deals 1 target X irreducible energy damage, where X is the number of cards destroyed this way times 3. If no cards are destroyed this way, reveal cards from your deck until 2 balance cards are revealed. Put the revealed cards into your hand, then shuffle your deck.",
       "icons": [
         "Destroy",
-        "DealDamageEnergy"
+        "DealDamageEnergy",
+        "Search",
+        "DrawCardNow"
       ],
       "flavorText": "Don't worry! Everything will return to{br}normal momentarily!",
       "flavorReference": "Scale, Guardians of Tomorrow #9"
@@ -251,7 +254,7 @@
         "Discard"
       ],
       "flavorText": "Error: Negative energy drain exceeds{br}generator output.",
-      "flavorReference": "Omnitron II, Guardians of Tomorrow #85"
+      "flavorReference": "Mourning Code, Guardians of Tomorrow #85"
     },
     {
       "identifier": "FoldSpace",
@@ -329,14 +332,15 @@
       "icons": [
         "HasPower",
         "PlayCardNow",
-        "DealDamageInfernal"
+        "DealDamageInfernal",
+        "DealDamageEnergy"
       ],
       "backgroundColor": "851031",
       "foilBackgroundColor": "86BB71",
       "hitpointsColor": "F6AD41",
       "character": true,
       "powers": [
-        "Put a Balance card from your hand into play. If you do, {Scale} deals 1 target 3 infernal damage."
+        "Put a Balance card from your hand into play. If you do, {Scale} deals 1 target 3 infernal damage. Otherwise, {Scale} deals 1 target 1 energy damage."
       ],
       "hitpoints": 28,
       "nemesisIdentifiers": [

@@ -39,6 +39,7 @@ namespace GuardiansOfTomorrow.Kumiho
 
                 IncreaseDamageStatusEffect idse2 = new IncreaseDamageStatusEffect(1);
                 idse2.SourceCriteria.IsSpecificCard = relevantHero;
+                idse2.UntilEndOfNextTurn(base.TurnTaker);
                 coroutine = AddStatusEffect(idse2, true);
                 if (base.UseUnityCoroutines)
                 {

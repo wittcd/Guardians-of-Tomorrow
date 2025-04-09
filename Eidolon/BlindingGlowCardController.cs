@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.Eidolon
         public override IEnumerator Play()
         {
             List<Card> highestHero = new List<Card>();
-            IEnumerator coroutine = GameController.FindTargetWithHighestHitPoints(1, (Card c) => c.IsHeroCharacterCard, highestHero, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.FindTargetWithHighestHitPoints(1, (Card c) => IsHeroCharacterCard(c), highestHero, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

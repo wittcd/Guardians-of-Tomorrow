@@ -1,0 +1,48 @@
+{
+  "name": "Spore",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "SporeCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "SporeCharacter",
+      "count": 1,
+      "title": "Spore",
+      "body": "Adaptive Synapse",
+      "backgroundColor": "e4f065",
+      "foilBackgroundColor": "e4f065",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Draw a card. [b]Beast:[/b] {Spore} deals 1 target 1 melee damage and 1 toxic damage. [b]Mind:[/b] Up to 2 other heroes may each draw a card."
+      ],
+      "icons": [
+        "HasPower",
+        "DrawCardNow",
+        "DealDamageMelee",
+        "DealDamageToxic"
+      ],
+      "hitpoints": 29,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Spore"
+      ],
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One player  may play a card.",
+        "One hero deals each non-hero target 1 psychic damage."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "PlayCardNow",
+        "DealDamagePsychic"
+      ],
+      "openingLines": {
+        "default": "",
+        "GuardiansOfTomorrow.LudramorCharacter": "",
+        "OblivAeonFrontPageCharacter": ""
+      },
+      "complexity": 2
+    }
+  ]
+}

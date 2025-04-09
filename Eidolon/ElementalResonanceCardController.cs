@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.Eidolon
 
         public override void AddTriggers()
         {
-            AddTrigger((DealDamageAction dd) => !HasBeenSetToTrueThisTurn(FirstDamageFromHeroThisTurn) && dd.DamageSource.Card.IsHeroCharacterCard && dd.DidDealDamage && dd.Target == base.CharacterCard, DealDamageThenForceConvertResponse, TriggerType.DealDamage, TriggerTiming.After);
+            AddTrigger((DealDamageAction dd) => !HasBeenSetToTrueThisTurn(FirstDamageFromHeroThisTurn) && IsHeroCharacterCard(dd.DamageSource.Card) && dd.DidDealDamage && dd.Target == base.CharacterCard, DealDamageThenForceConvertResponse, TriggerType.DealDamage, TriggerTiming.After);
         }
 
         private IEnumerator DealDamageThenForceConvertResponse(DealDamageAction dd)

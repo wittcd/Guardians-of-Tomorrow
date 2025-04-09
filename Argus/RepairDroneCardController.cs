@@ -56,7 +56,7 @@ namespace GuardiansOfTomorrow.Argus
 		{
 			int healAmount = GetPowerNumeral(0, 1);
 			int numTargets = GetPowerNumeral(1, 2);
-			IEnumerator coroutine = GameController.SelectAndGainHP(DecisionMaker, healAmount, false, (Card c) => c.IsHero, numTargets, 0, false, null, GetCardSource());
+			IEnumerator coroutine = GameController.SelectAndGainHP(DecisionMaker, healAmount, false, (Card c) => IsHero(c), numTargets, 0, false, null, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

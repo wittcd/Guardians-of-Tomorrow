@@ -16,6 +16,7 @@ namespace GuardiansOfTomorrow.Ninetails
 		public JadesCollarCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
+			AllowFastCoroutinesDuringPretend = false;
 		}
 
 		public override void AddTriggers()

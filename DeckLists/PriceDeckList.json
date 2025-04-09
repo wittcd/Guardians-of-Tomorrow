@@ -1,0 +1,516 @@
+{
+  "name": "Price",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "PriceCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "PriceCharacter",
+      "promoIdentifier": "PriceSinsOfTheFatherCharacter",
+      "count": 1,
+      "title": "Price: Sins of the Father",
+      "body": "Pure of Heart",
+      "backgroundColor": "faf9de",
+      "foilBackgroundColor": "faf9de",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "{Price} deals 1 target 1 radiant damage and gains 1 HP."
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageRadiant",
+        "GainHP"
+      ],
+      "hitpoints": 27,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Price"
+      ],
+      "incapacitatedAbilities": [
+        "One hero may use a power.",
+        "One player may draw a card.",
+        "One player may discard a card. If they do, their hero gains 3 HP. Otherwise, their hero gains 1 HP."
+      ],
+      "flippedIcons": [
+        "UsePowerNow",
+        "DrawCardNow",
+        "Discard",
+        "GainHP"
+      ],
+      "openingLines": {
+        "default": "You're just another shadow to overcome.",
+        "GuardiansOfTomorrow.TheShadowBrideCharacter": "Listen, I'm sure you're madly in love, but I'm not into murderers. Sorry.",
+        "OblivAeonFrontPageCharacter": "I've stared down the darkness and won. You don't scare me."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "MrFixerCharacter"
+      },
+      "complexity": 3
+    },
+    {
+      "identifier": "PriceCharacter",
+      "promoIdentifier": "PriceSavingGraceCharacter",
+      "count": 1,
+      "title": "Price: Saving Grace",
+      "body": "Born in Darkness",
+      "backgroundColor": "71278c",
+      "foilBackgroundColor": "71278c",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Until the end of your turn, when Price would take infernal damage, she gains that much HP instead. You may shuffle all Pact cards from your trash into your deck. You may draw up to 2 cards. If you drew cards this way, discard that many cards plus 1."
+      ],
+      "icons": [
+        "HasPower",
+        "CancelledDamageGreen",
+        "GainHP",
+        "Manipulate",
+        "DrawCardNow",
+        "Discard"
+      ],
+      "hitpoints": 23,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Price"
+      ],
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "Destroy an ongoing card.",
+        "One hero deals one other target 1 infernal damage."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "DestroyOngoing",
+        "DealDamageInfernal"
+      ],
+      "openingLines": {
+        "default": "Uh, hi everyone? Sorry about all the times I tried to kill you guys, but, uh, I'm here to help now!",
+        "GuardiansOfTomorrow.TheShadowBrideCharacter": "You're� Me? I, uh, don't know how it's possible, but I can't let you win!",
+        "OblivAeonFrontPageCharacter": "I, uh, don't suppose you'd see the value of love and family and, uh, renounce your murderous ways, uh, would you?"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "GuiseCharacter"
+      },
+      "complexity": 3
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "PriceCharacter",
+      "count": 1,
+      "title": "Price",
+      "body": "Delay the Inevitable",
+      "backgroundColor": "57180a",
+      "foilBackgroundColor": "57180a",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "You may make yourself unable to draw cards until the start of your turn. {Price} deals 1 target 2 infernal damage."
+      ],
+      "icons": [
+        "HasPower",
+        "CannotPlayCards",
+        "DealDamageInfernal"
+      ],
+      "hitpoints": 29,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Price"
+      ],
+      "incapacitatedAbilities": [
+        "One hero may use a power.",
+        "Destroy an environment card.",
+        "Discard the top card of a deck."
+      ],
+      "flippedIcons": [
+        "UsePowerNow",
+        "DestroyEnvironment",
+        "Manipulate",
+        "Discard"
+      ],
+      "openingLines": {
+        "default": "I need to run, but you're in my way.",
+        "GuardiansOfTomorrow.TheShadowBrideCharacter": "You can't have him! The deal is off!",
+        "OblivAeonFrontPageCharacter": "I'm done running."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "TheWraithCharacter"
+      },
+      "complexity": 3
+    },
+    {
+      "identifier": "AppointedHour",
+      "count": 2,
+      "title": "Appointed Hour",
+      "keywords": [
+        "one-shot",
+        "pact"
+      ],
+      "icons": [
+        "CannotPlayCards",
+        "DealDamageInfernal",
+        "DrawCardNow"
+      ],
+      "body": [
+        "When this card enters your hand, put it into play. You may choose to be unable to play cards or use powers until the end of your next turn. If you do not, {Price} deals himself 3 irreducible infernal damage. Draw a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "EBENEEZER PRICE! The time has come!"
+        }
+      ],
+      "flavorReference": "The Shadow Bride, Unholy Matrimony #1"
+    },
+    {
+      "identifier": "BloodSacrifice",
+      "count": 3,
+      "title": "Blood Sacrifice",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DealDamageInfernal",
+        "Search",
+        "PlayCardNow",
+        "Discard"
+      ],
+      "body": [
+        "{Price} deals 1 target 2 melee and 2 infernal damage. If {Price} is dealt damage this way, search your deck for a Pact card. Discard it and shuffle your deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Everything has a cost. A little blood{br}is hardly the worst price to pay."
+        }
+      ],
+      "flavorReference": "John Price, Mysterious Miscellany #131"
+    },
+    {
+      "identifier": "CarefulPlan",
+      "count": 3,
+      "title": "Careful Plan",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "body": [
+        "Move a card from your trash to the top of your deck. You may play a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Eb, listen to me. I have a better way�"
+        }
+      ],
+      "flavorReference": "John Price, Unholy Matrimony #1"
+    },
+    {
+      "identifier": "CautionToTheWinds",
+      "count": 3,
+      "title": "Caution to the Winds",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "Draw up to 3 cards. {Price} deals up to as many targets as cards drawn this way 3 infernal damage each."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "[b]EB![/b]  I'm coming Eb! Hold on!"
+        }
+      ],
+      "flavorReference": "John Price, Mysterious Miscellany #88"
+    },
+    {
+      "identifier": "CreepingDoom",
+      "count": 2,
+      "title": "Creeping Doom",
+      "keywords": [
+        "one-shot",
+        "pact"
+      ],
+      "icons": [
+        "DestroyOngoing",
+        "DestroyEquipment",
+        "DealDamageInfernal",
+        "DrawCardNow"
+      ],
+      "body": [
+        "When this card enters your hand, put it into play. You may destroy one of your ongoing or equipment cards. If no cards are destroyed this way, {Price} deals himself 3 irreducible infernal damage. Draw a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I won't answer that. No point. You'd{br}just think I was crazy."
+        }
+      ],
+      "flavorReference": "John Price, Mysterious Miscellany #26"
+    },
+    {
+      "identifier": "FamilyCurse",
+      "count": 3,
+      "title": "Family Curse",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Manipulate",
+        "DealDamageInfernal",
+        "DrawCardNow",
+        "GainHP"
+      ],
+      "body": [
+        "Reveal the top card of your deck. If it is a Pact card, put it into play and {Price} deals 1 target 5 infernal damage. Otherwise, put it in your hand and {Price} gains 4 HP."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Don't you worry about our children?{br}Their children? What might happen to them?"
+        }
+      ],
+      "flavorReference": "Grace Price, Guardians of Tomorrow #106"
+    },
+    {
+      "identifier": "FavorsCalledDue",
+      "count": 2,
+      "title": "Favors Called Due",
+      "keywords": [
+        "one-shot",
+        "pact"
+      ],
+      "icons": [
+        "Discard",
+        "DealDamageInfernal",
+        "DrawCardNow"
+      ],
+      "body": [
+        "When this card enters your hand, put it into play. You may discard 2 cards. If fewer than 2 cards are discarded this way, {Price} deals himself 3 irreducible infernal damage. Draw a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "According to subsection 43,{br}paragraph 5�"
+        }
+      ],
+      "flavorReference": "Messenger Imp, Mysterious Miscellany #88"
+    },
+    {
+      "identifier": "HoldOutHope",
+      "count": 3,
+      "title": "Hold out Hope",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageRadiant",
+        "Manipulate",
+        "PlayCardNow",
+        "Discard",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "{Price} deals 1 target 2 radiant damage. Reveal and replace the top card of your deck. Play or discard it. If you play a Pact card this way, {Price} deals each villain target 2 infernal damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I will not go back to you, [i]father[/i],{br}no matter what you do. My [b]real [/b]family will rescue me!"
+        }
+      ],
+      "flavorReference": "Grace Price, The Hunters #40"
+    },
+    {
+      "identifier": "LivingOnAPrayer",
+      "count": 3,
+      "title": "Living on a Prayer",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageRadiant",
+        "GainHP"
+      ],
+      "body": [
+        "{Price} deals up to 3 targets 1 radiant damage each. Then, {Price} gains HP equal to 4 minus the number of targets dealt damage this way."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Grace Price",
+          "text": "We have something they can never understand."
+        },
+        {
+          "identifier": "Eb Price",
+          "text": "Love?"
+        },
+        {
+          "identifier": "Grace Price",
+          "text": "Yes, but I was thinking of faith."
+        }
+      ]
+    },
+    {
+      "identifier": "OnTheRun",
+      "count": 2,
+      "title": "On the Run",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "Manipulate"
+      ],
+      "body": [
+        "Reduce damage dealt to {Price} by 1. When a Pact enters play, select up to 3 cards from your trash and shuffle them into your deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Out of my way! I have to get out of here!"
+        }
+      ],
+      "flavorReference": "John Price, Mysterious Miscellany #26"
+    },
+    {
+      "identifier": "PactBoon",
+      "count": 2,
+      "title": "Pact Boon",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtInfernal",
+        "ReduceDamageDealtRadiant",
+        "HasPower",
+        "Manipulate",
+        "PlayCardNow",
+        "Discard"
+      ],
+      "body": [
+        "Increase infernal damage dealt by {Price} by 1. Reduce radiant damage dealt to and by {Price} by 1."
+      ],
+      "powers": [
+        "{Price} deals up to 3 targets 2 infernal damage each. Reveal the top card of your deck. If it is a Pact card, put it into play. Otherwise, discard it."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "In addition, our arrangement comes{br}with some [i]side benefits[/i] for you."
+        }
+      ],
+      "flavorReference": "The Dark, Mysterious Miscellany #26"
+    },
+    {
+      "identifier": "PlayItSafe",
+      "count": 2,
+      "title": "Play it Safe",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "Manipulate",
+        "Discard",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "At the start of your turn, reveal the top card of your deck. You may replace or discard it. If you replaced a Pact card this way, {Price} deals up to 1 target 3 infernal damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Don't leave the house. We don't know{br}who is watching�"
+        }
+      ],
+      "flavorReference": "John Price, Mysterious Miscellany #88"
+    },
+    {
+      "identifier": "ReachIntoDarkness",
+      "count": 3,
+      "title": "Reach into Darkness",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageInfernal",
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "body": [
+        "{Price} deals 1 target 3 infernal damage, then deals himself 1 infernal damage. Reveal cards from your deck until an Ongoing or Equipment card is revealed. Put it into play and shuffle the other revealed cards into your deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I have sought out treasures of the{br}dark places of the earth, all for one purpose: to defeat you!"
+        }
+      ],
+      "flavorReference": "John Price, Mysterious Miscellany #131"
+    },
+    {
+      "identifier": "TheErishedTablets",
+      "count": 2,
+      "title": "The Erished Tablets",
+      "keywords": [
+        "equipment",
+        "relic",
+        "limited"
+      ],
+      "icons": [
+        "DealDamageInfernal",
+        "HasPower",
+        "DrawCardNow"
+      ],
+      "body": [
+        "After a Pact card enters play, {Price} may deal 1 target 1 infernal damage."
+      ],
+      "powers": [
+        "{Price} deals 1 target 3 infernal damage. Draw 1 card."
+      ],
+      "flavorText": "Facilis decensus Averno"
+    },
+    {
+      "identifier": "TheWheelOfTheOphanim",
+      "count": 2,
+      "title": "The Wheel of the Ophanim",
+      "keywords": [
+        "equipment",
+        "relic",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtRadiant",
+        "HasPower",
+        "Manipulate",
+        "Discard"
+      ],
+      "body": [
+        "Increase radiant damage dealt by {Price} by 1."
+      ],
+      "powers": [
+        "Reveal the top 2 cards of your deck. Discard one and put the other back on top of your deck."
+      ],
+      "flavorText": "A wheel of a holy chariot; it never stops rolling onward."
+    },
+    {
+      "identifier": "UnwhollyUnholy",
+      "count": 3,
+      "title": "Unwholly Unholy",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageInfernal",
+        "DealDamageRadiant",
+        "DestroyOngoing"
+      ],
+      "body": [
+        "{Price} deals 1 target 2 radiant or infernal damage. You may destroy an ongoing card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I'm not [i]just[/i] a demon! I'm better now!"
+        }
+      ],
+      "flavorReference": "Grace Price, The Hunters #40"
+    }
+  ]
+}

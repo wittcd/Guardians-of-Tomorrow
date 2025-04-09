@@ -1,0 +1,503 @@
+{
+  "name": "The Smiler",
+  "kind": "Villain",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "TheSmilerCharacter"
+  ],
+  "promoCards": [],
+  "cards": [
+    {
+      "identifier": "TheSmilerCharacter",
+      "count": 1,
+      "title": "The Smiler",
+      "keywords": [
+        "villain"
+      ],
+      "body": "Hidden Bogeyman",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "character": true,
+      "hitpoints": 60,
+      "setup": [
+        "{TheSmiler} enters play \"Hidden Bogeyman\" side up."
+      ],
+      "gameplay": [
+        "{TheSmiler} is immune to damage from hero targets without a Clue in their play area. Increase damage dealt by {TheSmiler} to hero targets by the number of Clues in their play area. After {TheSmiler} is dealt damage by a hero target, flip this card. At the end of the villain turn, {TheSmiler} deals each hero target 2 irreducible psychic damage."
+      ],
+      "advanced": "Redirect damage dealt by environment cards to {TheSmiler} to the hero with the most cards in their play area.",
+      "icons": [
+        "ImmuneToDamage",
+        "IncreaseDamageDealt",
+        "EndOfTurnAction",
+        "DealDamagePsychic"
+      ],
+      "flippedHitpoints": 60,
+      "flippedBody": "Deranged Magus",
+      "flippedGameplay": [
+        "Whenever a Clue enters play, destroy it and play the top card of the villain deck. Increase damage dealt by {TheSmiler} to hero targets by the number of Clues in their play area. At the end of the villain turn, {TheSmiler} deals the hero with the most Clues in their play area {H} infernal damage, then destroys one Clue in their play area. Then, if there are no Clues in play, shuffle the villain trash into the villain deck and flip this card."
+      ],
+      "flippedAdvanced": "At the end of the villain turn, {TheSmiler} deals each non-villain, non-character target 2 irreducible psychic damage. If any targets are destroyed this way, each hero must discard a card.",
+      "flippedIcons": [
+        "Discard",
+        "PlayCardNow",
+        "IncreaseDamageDealt",
+        "EndOfTurnAction",
+        "DealDamageInfernal",
+        "Destroy"
+      ],
+      "difficulty": 3,
+      "challengeTitle": "Urban Legend",
+      "challengeText": "Reduce damage dealt to {TheSmiler} to the number of Clues in play.",
+      "openingLines": {
+        "default": "You can't hunt down what doesn't exist. Good luck, 'heroes.'",
+        "GuardiansOfTomorrow.NyctophobiaCharacter": "I've outclassed you in every way. You can't hope to stop a killer like me.",
+        "NecrophobiaCharacter": "My ritual is nearly complete, and then I will disappear. You will never catch me."
+      },
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Nyctophobia"
+      ]
+    },
+    {
+      "identifier": "ArcaneTraces",
+      "count": 1,
+      "title": "Arcane Traces",
+      "keywords": [
+        "ongoing",
+        "clue"
+      ],
+      "icons": [
+        "IncreaseDamageDealtInfernal",
+        "IncreaseDamageTakenInfernal",
+        "EndOfTurnAction",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "When this card enters play, put it in a hero play area. Increase infernal damage dealt to and by targets in this play area by 1. At the end of the hero whose play area this card is in's turn, that hero may deal 1 target 1 infernal damage. If damage is dealt this way, they deal themselves 0 infernal damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Your police couldn't have found this evidence. They didn't know how to look."
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #13"
+    },
+    {
+      "identifier": "BurnTheEvidence",
+      "count": 2,
+      "title": "Burn the Evidence ",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageFire",
+        "DestroyOngoing"
+      ],
+      "body": [
+        "{TheSmiler} deals each hero target 2 fire damage. Destroy {H - 1} ongoing cards in hero play areas."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "They think they're so clever, but{br}their hopes are going up in smoke."
+        }
+      ],
+      "flavorReference": "The Smiler, The Hunters #17"
+    },
+    {
+      "identifier": "ColdCaseFiles",
+      "count": 1,
+      "title": "Cold Case Files",
+      "keywords": [
+        "ongoing",
+        "clue"
+      ],
+      "icons": [
+        "ReduceDamageDealt",
+        "StartOfTurnAction",
+        "DrawCardNow",
+        "GainHP"
+      ],
+      "body": [
+        "When this card enters play, put it in a hero play area. Reduce damage dealt by targets in this play area by 1. At the start of the environment turn, one hero in this play area either draws a card or gains 1 HP."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Arsenal",
+          "text": "Did you spend [i]all night[/i]{br}in here?"
+        },
+        {
+          "identifier": "Nyctophobia",
+          "text": "I thought there would be clues {YAWN} in the old files."
+        }
+      ],
+      "flavorReference": "The Hunters #20"
+    },
+    {
+      "identifier": "DangerousKnowledge",
+      "count": 1,
+      "title": "Dangerous Knowledge ",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Destroy",
+        "DealDamageInfernal",
+        "PlayCardNow",
+        "Manipulate"
+      ],
+      "body": [
+        "Destroy any number of Clues. If there are any clues in play, {TheSmiler} deals each hero infernal damage equal to the number of Clues in play. If no damage is dealt this way, play the top card of the villain deck. Shuffle the villain trash into the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Best not pry too deeply. Some{br}secrets draw unwanted attention."
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #13"
+    },
+    {
+      "identifier": "FavoredHaunt",
+      "count": 1,
+      "title": "Favored Haunt",
+      "keywords": [
+        "ongoing",
+        "clue"
+      ],
+      "icons": [
+        "RedirectDamage",
+        "DrawCardNow"
+      ],
+      "body": [
+        "When this card enters play, put it in a hero play area. Redirect damage dealt by environment cards to {TheSmiler} to a target in this play area. When a non-target environment card enters play, the player whose play area this card is in may draw a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Are ya sure this is the right place?{br}It looks so classy."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #17"
+    },
+    {
+      "identifier": "Fearmongering",
+      "count": 2,
+      "title": "Fearmongering",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyEnvironment",
+        "DealDamagePsychic",
+        "IncreaseDamageDealt",
+        "PlayCardNow"
+      ],
+      "body": [
+        "Destroy the environment target with the highest HP. If a card is destroyed this way, {TheSmiler} deals each non-villain target 3 psychic damage. Otherwise, increase damage dealt to hero targets by 1 until the start of the villain turn, then play the top card of the villain deck. Shuffle the villain trash into the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "With no pattern to the killings, panic{br}has gripped the city. Anyone could be next."
+        }
+      ],
+      "flavorReference": "Miranda Algernon, The Hunters #13"
+    },
+    {
+      "identifier": "FoundFootage",
+      "count": 1,
+      "title": "Found Footage",
+      "keywords": [
+        "ongoing",
+        "clue"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DrawCardNow",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "When this card enters play, put it in a hero play area. At the end of the hero whose play area this card is in's turn, they may draw a card. If they do, {TheSmiler} deals that hero 1 psychic damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Hey, Nyc? Ya might wanna see this.{br}Er, maybe not. It gets kinda graphic."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #15"
+    },
+    {
+      "identifier": "FrameJob",
+      "count": 1,
+      "title": "Frame Job",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "CannotDealDamage",
+        "StartOfTurnAction",
+        "DestroyOngoing",
+        "DestroySelf"
+      ],
+      "body": [
+        "When this card enters play, put it next to the hero with the most non-character cards in their play area. That hero may not deal damage. At the start of the villain turn destroy {H - 1} other non-character cards in their play area, then destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "You've got to believe me! I'm an{br}assassin, not a murderer!"
+        }
+      ],
+      "flavorReference": "Nyctophobia, The Hunters #18"
+    },
+    {
+      "identifier": "KnifeInTheDark",
+      "count": 2,
+      "title": "Knife in the Dark",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "Manipulate"
+      ],
+      "body": [
+        "{TheSmiler} deals the hero with the lowest HP {H} melee damage. Shuffle the villain trash into the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Surprised to see me?"
+        }
+      ],
+      "flavorReference": "The Smiler, The Hunters #23"
+    },
+    {
+      "identifier": "LabyrinthOfClues",
+      "count": 2,
+      "title": "Labyrinth of Clues",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamagePsychic",
+        "Discard",
+        "Reveal",
+        "PlayCardNow"
+      ],
+      "body": [
+        "{TheSmiler} deals each hero 2 psychic damage. Each hero may discard any number of cards. If more than {H} cards are discarded this way, reveal cards from the villain deck until a Clue is revealed and put it into play. Shuffle the other cards into the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Angler",
+          "text": "Ya know, the corkboard{br}makes you look [i]really[/i] crazy."
+        },
+        {
+          "identifier": "Nyctophobia",
+          "text": "But it all adds up!"
+        }
+      ],
+      "flavorReference": "The Hunters #23"
+    },
+    {
+      "identifier": "LingeringPoison",
+      "count": 2,
+      "title": "Lingering Poison",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageToxic",
+        "Discard"
+      ],
+      "body": [
+        "{TheSmiler} deals each non-villain target 2 toxic damage. Whenever a hero is dealt damage this way, their player must discard a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "[b]{Cough cough}[/b] It's a trap!"
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #16"
+    },
+    {
+      "identifier": "ModusOperandi",
+      "count": 1,
+      "title": "Modus Operandi ",
+      "keywords": [
+        "ongoing",
+        "clue"
+      ],
+      "icons": [
+        "StartOfTurnAction",
+        "Manipulate",
+        "Discard"
+      ],
+      "body": [
+        "When this card enters play, put it in a hero play area. At the start of the villain turn, reveal and replace the top card of the villain deck, then the hero whose play area this is in may discard 2 cards. If 2 cards are discarded this way, shuffle the villain trash into the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Angler",
+          "text": "Nobody murders this many{br}people without a reason"
+        },
+        {
+          "identifier": "Nyctophobia",
+          "text": "That's assuming it's not some[i]thing[/i]."
+        }
+      ],
+      "flavorReference": "The Hunters #13"
+    },
+    {
+      "identifier": "Pecks",
+      "count": 1,
+      "title": "Pecks",
+      "keywords": [
+        "fae",
+        "familiar"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "PlayCardNow",
+        "Destroy",
+        "Manipulate"
+      ],
+      "body": [
+        "At the end of the villain turn, play the top card of the villain deck, then destroy 1 Clue or hero non-character card in the hero play area with the most non-character cards. When this card is destroyed, reveal cards from the villain deck until a Clue is revealed. Put it into play and shuffle the other revealed cards into the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Cathain",
+          "text": "Stay back! That creature is{br}far more dangerous than you know!"
+        },
+        {
+          "identifier": "Pecks",
+          "text": "Awwrk! More shinies!"
+        }
+      ],
+      "flavorReference": "The Hunters #22",
+      "hitpoints": 7
+    },
+    {
+      "identifier": "Pox",
+      "count": 1,
+      "title": "Pox",
+      "keywords": [
+        "demon",
+        "familiar"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "Manipulate",
+        "DealDamageToxic",
+        "PlayCardNow"
+      ],
+      "body": [
+        "At the end of the villain turn, reveal the top card of each hero deck. This card deals the owner of each one-shot revealed this way 4 toxic damage. Then shuffle the revealed cards back into their owners' decks. When this card is destroyed, reveal cards from the villain deck until a Clue is revealed. Put it into play and shuffle the other revealed cards into the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "They still persist? Then sickness{br}shall be their constant companion."
+        }
+      ],
+      "flavorReference": "The Smiler, The Hunters #19",
+      "hitpoints": 7
+    },
+    {
+      "identifier": "RestlessSpirit",
+      "count": 2,
+      "title": "Restless Spirit",
+      "keywords": [
+        "ghost"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageProjectile",
+        "Discard",
+        "DrawCardNow",
+        "Manipulate",
+        "PlayCardNow",
+        "DestroySelf"
+      ],
+      "body": [
+        "At the end of the villain turn, this card deals the hero with the fewest Clues in their play area {H} projectile damage. That hero's player may discard their hand. If cards are discarded this way, they draw 3 cards, then reveal cards from the villain deck until a Clue is revealed. Put it into play, then shuffle the other revealed cards into the villain deck and destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Poor spirit. Unable to speak, it{br}reaches out the only way it can."
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #19",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "SacrificialVictim",
+      "count": 1,
+      "title": "Sacrificial Victim",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "PlayCardNow",
+        "DestroySelf",
+        "EndOfTurnAction",
+        "DealDamageInfernal",
+        "GainHP"
+      ],
+      "body": [
+        "When this card enters play, put it next to the non-character target with the lowest HP. If there is none, play the top card of the villain deck, then destroy this card. At the start of the villain turn, if there is no target next to this card, destroy it. Otherwise, {TheSmiler} deals the target next to this card 3 infernal damage. If it is destroyed this way, {TheSmiler} gains 5 HP and deals each non-villain target 3 irreducible infernal damage, then destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "To perfect the ritual, I need... this one."
+        }
+      ],
+      "flavorReference": "The Smiler, The Hunters #14"
+    },
+    {
+      "identifier": "TerrifiedWitness",
+      "count": 2,
+      "title": "Terrified Witness",
+      "keywords": [
+        "victim"
+      ],
+      "icons": [
+        "DealDamagePsychic",
+        "StartAndEndOfTurnAction",
+        "DestroyHero",
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "body": [
+        "When this card is destroyed, it deals each hero target 2 irreducible psychic damage. At the end of the villain turn, {TheSmiler} deals this card 3 irreducible psychic damage. At the start of the villain turn, you may destroy up to 2 hero non-character cards. If you do, reveal cards from the villain deck until a Clue is revealed and put it into play, then shuffle the remaining cards into the villain deck and move this card to the villain trash."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Please you have to help me I can't{br}stop seeing it I can't get it out of my mind!!"
+        }
+      ],
+      "flavorReference": "Witness, The Hunters #22",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "TheKnifeOfSilentScreams",
+      "count": 1,
+      "title": "The Knife of Silent Screams",
+      "keywords": [
+        "relic"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "DealDamageSonic",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "At the end of the villain turn, {TheSmiler} deals the non-villain target with the lowest HP {H - 1} melee damage, then deals the hero with the most Clues in their play area 1 sonic and 1 psychic damage. "
+      ],
+      "flavorQuotes": [
+        {
+          "text": "These visions of yours stem{br}from an artifact of immense power. Be on your guard."
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #14",
+      "hitpoints": 10
+    }
+  ]
+}

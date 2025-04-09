@@ -31,7 +31,7 @@ namespace GuardiansOfTomorrow.Eidolon
         private IEnumerator PreventLowestHPDamageResponse()
         {
             List<Card> lowestHero = new List<Card>();
-            IEnumerator coroutine = GameController.FindTargetWithLowestHitPoints(1, (Card c) => c.IsHero, lowestHero, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.FindTargetWithLowestHitPoints(1, (Card c) => IsHero(c), lowestHero, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

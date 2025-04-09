@@ -61,7 +61,9 @@
         "openingLines": {
           "default": "Welcome to my domain, children. Enjoy your stay.",
           "GuardiansOfTomorrow.NinetailsCharacter": "Come to me, my daughter. Your destiny awaits you.",
-          "GuardiansOfTomorrow.GuardiansOfTomorrowNinetailsCharacter": "Ah, the prodigal daughter returns. You have grown into a fine little fox, haven't you?"
+          "GuardiansOfTomorrowNinetailsCharacter": "Ah, the prodigal daughter returns. You have grown into a fine little fox, haven't you?",
+          "NinetailsBureauAgentCharacter": "This is your last chance to join me. I will devour you!",
+          "NinetailsFlamePriestessCharacter": "You've travelled far. You're too weak to stop me."
         }
       },
       {
@@ -75,11 +77,6 @@
           "Indestructible",
           "RemoveFromGame",
           "LoseTheGame"
-        ],
-        "challengeIcons": [
-          "EndOfTurnAction",
-          "MakeDamageIrreducible",
-          "DealDamageToxic"
         ],
         "flavorText": "I feel so... cold inside.",
         "flavorReference": "Jade Fisher, Guardians of Tomorrow Annual #5"
@@ -199,7 +196,7 @@
         "count": 3,
         "title": "Ghoulish Hunters",
         "keywords": [ "ghost" ],
-        "body": "At the end of the villain turn, this card deals the hero target with the lowest HP 1 melee and 1 cold damage. If that target is destroyed, restore this card to 5 HP, then play the top card of the villain deck.",
+        "body": "At the end of the villain turn, this card deals the hero target with the lowest HP 1 melee and 1 cold damage. If a target is destroyed this way, restore this card to 5 HP, then play the top card of the villain deck.",
         "hitpoints": 5,
         "icons": [
           "EndOfTurnAction",

@@ -65,7 +65,7 @@
       "openingLines": {
         "default": "All obstacles shall be removed.",
         "GuardiansOfTomorrow.ScaleCharacter": "Light in the void, you shall be snuffed.",
-        "GuardiansOfTomorrow.GuardiansOfTomorrowScaleCharacter": "Balance is weakness. Power is all."
+        "GuardiansOfTomorrowScaleCharacter": "Balance is weakness. Power is all."
       }
     },
     {
@@ -205,7 +205,7 @@
         "CannotDealDamage"
       ],
       "flavorText": "Augh! Help me out of here!",
-      "flavorReference": "Cassandra, Guardians of Tomorrow Annual #11"
+      "flavorReference": "Lady Luck, Guardians of Tomorrow Annual #11"
     },
     {
       "identifier": "KineticSpines",
@@ -311,7 +311,7 @@
       ],
       "body": "Reveal cards from the top of the villain deck until an Ongoing card is revealed. Put it into play and shuffle the other revealed cards into the villain deck. {Eidolon} deals each hero target {H - 2} damage of the type that was last dealt to it.",
       "icons": [
-        "Manipulate",
+        "Search",
         "PlayCardNow",
         "DealDamage"
       ],
@@ -327,7 +327,7 @@
       ],
       "body": "Reveal cards from the top of the villain deck until two Alteration cards are revealed. Put the revealed cards into play and shuffle the remaining cards into the villain deck.",
       "icons": [
-        "Manipulate",
+        "Search",
         "PlayCardNow"
       ],
       "flavorText": "It doesn't just draw power from our{br}attacks! It seems like it can alter itself{br}on its own.",

@@ -13,6 +13,7 @@ namespace GuardiansOfTomorrow.Argus
 		public RebuildAndReuseCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
+			SpecialStringMaker.ShowNumberOfCardsAtLocation(TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone"), "camdrone"));
 		}
 
 

@@ -7,7 +7,7 @@ using Handelabra.Sentinels.Engine.Model;
 
 namespace GuardiansOfTomorrow.Argus
 {
-    public class CamdroneCardController : CardController
+    public abstract class CamdroneCardController : CardController
 	{
 		public CamdroneCardController(Card card, TurnTakerController turnTakerController)
 		   : base(card, turnTakerController)
@@ -33,9 +33,6 @@ namespace GuardiansOfTomorrow.Argus
 			}
 		}
 
-		public virtual IEnumerator ActivateOperate()
-		{
-			yield return null;
-		}
+		public abstract IEnumerator ActivateOperate();
 	}
 }

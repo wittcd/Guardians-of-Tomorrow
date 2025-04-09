@@ -23,7 +23,7 @@ namespace GuardiansOfTomorrow.Ninetails
 		public override IEnumerator Play()
 		{
 			//deal each non-hero target 2 fire damage
-			IEnumerator coroutine = DealDamage(base.CharacterCard, (Card card) => !card.IsHero, 2, DamageType.Fire);
+			IEnumerator coroutine = DealDamage(base.CharacterCard, (Card card) => !IsHero(card), 2, DamageType.Fire);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -34,19 +34,9 @@ namespace GuardiansOfTomorrow.Ninetails
 			}
 			//discard. If so, play.
 			List<DiscardCardAction> srd = new List<DiscardCardAction>();
-			coroutine = SelectAndDiscardCards(DecisionMaker, 1, optional: true, null, srd);
-			if (base.UseUnityCoroutines)
+			if (FindCardsWhere((Card c) => c.Location == TurnTaker.ToHero().Hand).Count() > 0)
 			{
-				yield return base.GameController.StartCoroutine(coroutine);
-			}
-			else
-			{
-				base.GameController.ExhaustCoroutine(coroutine);
-			}
-
-			if (DidDiscardCards(srd))
-			{
-				coroutine = SelectAndPlayCardFromHand(DecisionMaker);
+				coroutine = SelectAndDiscardCards(DecisionMaker, 1, optional: true, null, srd);
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine);
@@ -54,6 +44,19 @@ namespace GuardiansOfTomorrow.Ninetails
 				else
 				{
 					base.GameController.ExhaustCoroutine(coroutine);
+				}
+
+				if (DidDiscardCards(srd))
+				{
+					coroutine = SelectAndPlayCardFromHand(DecisionMaker);
+					if (base.UseUnityCoroutines)
+					{
+						yield return base.GameController.StartCoroutine(coroutine);
+					}
+					else
+					{
+						base.GameController.ExhaustCoroutine(coroutine);
+					}
 				}
 			}
 		}

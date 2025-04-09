@@ -28,7 +28,7 @@ namespace GuardiansOfTomorrow.Kumiho
 			damagesToDeal.Add(new DealDamageAction(GetCardSource(), new DamageSource(GameController, base.Card), null, 1, DamageType.Melee));
 			damagesToDeal.Add(new DealDamageAction(GetCardSource(), new DamageSource(GameController, base.Card), null, 1, DamageType.Fire));
 			damagesToDeal.Add(new DealDamageAction(GetCardSource(), new DamageSource(GameController, base.Card), null, 1, DamageType.Infernal));
-			IEnumerator coroutine = DealMultipleInstancesOfDamageToHighestLowestHP(damagesToDeal, (Card c) => c.IsHero, HighestLowestHP.LowestHP, 2, 1);
+			IEnumerator coroutine = DealMultipleInstancesOfDamageToHighestLowestHP(damagesToDeal, (Card c) => IsHero(c), HighestLowestHP.LowestHP, 2, 1);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

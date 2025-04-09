@@ -43,6 +43,18 @@ namespace GuardiansOfTomorrow.Scale
                     base.GameController.ExhaustCoroutine(coroutine);
                 }
             }
+            else
+            {
+                coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, base.CharacterCard), 1, DamageType.Energy, 1, false, 1, cardSource: GetCardSource());
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(coroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(coroutine);
+                }
+            }
         }
 
         public override IEnumerator UseIncapacitatedAbility(int index)

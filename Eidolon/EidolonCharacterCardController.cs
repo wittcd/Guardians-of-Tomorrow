@@ -175,7 +175,7 @@ namespace GuardiansOfTomorrow.Eidolon
 					AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, FlipThisCharacterCardResponse, TriggerType.FlipCard, (PhaseChangeAction pc) => GameController.GetCardPropertyJournalEntryStringList(base.Card, ImmuneList, false).Count() >= H + 2, false));
 				}
 				AddSideTrigger(AddTrigger((PlayCardAction pc) => pc.CardToPlay.DoKeywordsContain("alteration"), DealDamageBecauseAlterationResponse, TriggerType.DealDamage, TriggerTiming.Before));
-				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => c.IsHero, (Card c) => H - 1, StringToDamageType(getMostRecentString())), TriggerType.DealDamage));
+				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => IsHero(c), (Card c) => H - 1, StringToDamageType(getMostRecentString())), TriggerType.DealDamage));
 			}
 			else
 			{
@@ -207,7 +207,7 @@ namespace GuardiansOfTomorrow.Eidolon
 			{
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
-			coroutine = DealDamage(base.CharacterCard, (Card c) => !c.IsVillain, 1, StringToDamageType(getMostRecentString()));
+			coroutine = DealDamage(base.CharacterCard, (Card c) => !IsVillain(c), 1, StringToDamageType(getMostRecentString()));
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -258,7 +258,7 @@ namespace GuardiansOfTomorrow.Eidolon
 			}
 			foreach (string s in immunities)
             {
-				coroutine = DealDamageToHighestHP(base.CharacterCard, 1, (Card c) => c.IsHero, (Card c) => 3, StringToDamageType(s), true);
+				coroutine = DealDamageToHighestHP(base.CharacterCard, 1, (Card c) => IsHero(c), (Card c) => 3, StringToDamageType(s), true);
 				//coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => c.IsHero, (Card c) => 2, d, true, false, null, null, null, false, null, null, false);
 				if (base.UseUnityCoroutines)
 				{

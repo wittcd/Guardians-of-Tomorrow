@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
         public override void AddTriggers()
         {
-            AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => DealDamageToHighestHP(base.Card, 1, (Card c) => c.IsHero, (Card c) => H, DamageType.Melee, false, false, null, () => 2, null, null, false, false), TriggerType.DealDamage);
+            AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => DealDamageToHighestHP(base.Card, 1, (Card c) => IsHero(c), (Card c) => H, DamageType.Melee, false, false, null, () => 2, null, null, false, false), TriggerType.DealDamage);
             base.AddTriggers();
         }
     }

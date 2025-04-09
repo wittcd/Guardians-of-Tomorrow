@@ -24,7 +24,7 @@ namespace GuardiansOfTomorrow.Scale
 
 			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance"), "balance cards");
 			List<DestroyCardAction> storedDestroy = new List<DestroyCardAction>();
-			IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker.ToHero(), isBalance, false, storedDestroy, null, GetCardSource());
+			IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker.ToHero(), isBalance, true, storedDestroy, null, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -51,7 +51,7 @@ namespace GuardiansOfTomorrow.Scale
 			
 			// {Scale} deals each non-hero target 1 infernal damage
 
-			coroutine = GameController.DealDamage(DecisionMaker.ToHero(), base.CharacterCard, (Card c) => !c.IsHero, 1, DamageType.Infernal, false, false, null, cardSource: GetCardSource());
+			coroutine = GameController.DealDamage(DecisionMaker.ToHero(), base.CharacterCard, (Card c) => !IsHero(c), 2, DamageType.Infernal, false, false, null, cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

@@ -10,7 +10,7 @@
       "count": 1,
       "title": "Hoplite",
       "body": "Project Shield",
-      "backgroundColor": "39a0d4",
+      "backgroundColor": "",
       "foilBackgroundColor": "FEFEFE",
       "hitpointsColor": "C94742",
       "character": true,
@@ -40,6 +40,9 @@
         "default": "If you guys stand behind me, I can take the brunt of this!",
         "GuardiansOfTomorrow.LegionCharacter": "You know, I don't think that quote was originally about nanomachines.",
         "OblivAeonFrontPageCharacter": "I'm coming back with my shield or on it for this one."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "CaptainCosmicCharacter"
       },
       "complexity": 2
     },
@@ -90,7 +93,7 @@
         "DrawCardNow"
       ],
       "body": "Whenever {Hoplite} deals himself damage, draw a card.",
-      "powers": ["Reduce the next 3 instances of damage dealt to {Hoplite} by 1."],
+      "powers": ["Reduce the next damage dealt to {Hoplite} by 1 until the start of your next turn."],
       "flavorText": "The only way to travel is atop the flaming{br}exhaust of unstable experimental gadgets.",
       "flavorReference": "Hoplite, Guardians of Tomorrow #13"
     },
@@ -215,7 +218,7 @@
       "icons": [
         "DealDamageFire"
       ],
-      "body": "{Hoplite} deals 1 target 3 fire damage, then 1 target 2 fire damage, then 1 target 1 fire damage. Then {Hoplite} deals himself 2 fire damage.",
+      "body": "{Hoplite} deals 1 target 3 fire damage, then 1 target 2 fire damage, then 1 target 1 fire damage. Then {Hoplite} deals himself fire damage equal to 4 minus the number of targets dealt damage this way.",
       "flavorText": "We're in a theater, should I shout 'FIRE!?'",
       "flavorReference": "Hoplite, Guardians of Tomorrow #14"
     },
@@ -228,7 +231,8 @@
       ],
       "icons": [
         "DealDamageEnergy",
-        "Manipulate"
+        "Search",
+        "PlayCardNow"
       ],
       "body": "{Hoplite} deals 1 target 4 energy damage. Search your deck or trash for a copy of Shield Bubble and put it into play. Shuffle your deck.",
       "flavorText": "How pathetic. The great inventor is{br}reduced to blowing bubbles at me.",
@@ -242,7 +246,8 @@
         "one-shot"
       ],
       "icons": [
-        "Manipulate",
+        "Search",
+        "PlayCardNow",
         "UsePowerNow"
       ],
       "body": "Search your deck for an equipment card and put it into play. Shuffle your deck. You may use a power.",
@@ -252,15 +257,17 @@
     {
       "identifier": "ImpenetrableRefuge",
       "count": 2,
-      "title": "Impenatrable Refuge",
+      "title": "Impenetrable Refuge",
       "keywords": [
         "ongoing",
         "limited"
       ],
       "icons": [
-        "CancelledDamageGreen"
+        "CancelledDamageGreen",
+        "StartOfTurnAction",
+        "DestroySelf"
       ],
-      "body": "All targets are immune to damage. All cards other than this one are indestructible. At the start of your turn, remove this card from the game.",
+      "body": "Prevent all damage. At the start of your turn, destroy this card.",
       "flavorText": "Phew, we've got a breather. Everyone get{br}ready, this large a shield won't last long.",
       "flavorReference": "Hoplite, Guardians of Tomorrow Annual #3"
     },
@@ -297,7 +304,7 @@
       "hitpointsColor": "F6AD41",
       "character": true,
       "powers": [
-        "Select a hero target. Redirect the next 2 instances of damage dealt to that target to {Hoplite}."
+        "Select a hero target. Redirect the next instance of damage dealt to that target to {Hoplite}."
       ],
       "hitpoints": 30,
       "nemesisIdentifiers": [
@@ -318,6 +325,9 @@
         "default": "Shields up, red alert! ... I just wanted an excuse to say that.",
         "GuardiansOfTomorrow.LegionCharacter": "We've done this song and dance plenty of times. Want me to remind you how it goes?",
         "OblivAeonFrontPageCharacter": "Even a titan like you can be felled!"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "CaptainCosmicCharacter"
       }
     }
   ]

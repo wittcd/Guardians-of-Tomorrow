@@ -28,7 +28,7 @@
       "incapacitatedAbilities": [
         "One hero may use a power.",
         "One player may play a card.",
-        "Select a hero target. Reduce all damage taken by that target by 1 until the start of your next turn."
+        "Select a target. Reduce all damage taken by that target by 1 until the start of your next turn."
       ],
       "flippedIcons": [
         "UsePowerNow",
@@ -39,6 +39,9 @@
         "default": "I've changed my ways, you'll see!",
         "GuardiansOfTomorrow.DelugeCharacter": "We'll see about that, you watery witch!",
         "OblivAeonFrontPageCharacter": "I guess running away isn't an option? Then you're going down hard, big guy."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "SkyScraperNormalCharacter"
       },
       "complexity": 2
     },
@@ -107,7 +110,7 @@
       "keywords": [
         "ongoing"
       ],
-      "powers": [ "{Starstone} deals 1 target 1 melee damage. You may play a stone." ],
+      "powers": [ "{Starstone} deals 1 target 1 melee damage. You may play a stone or put a stone from your trash into your hand." ],
       "icons": [
         "DealDamageMelee",
         "PlayCardNow"
@@ -139,20 +142,20 @@
       "flavorReference": "Starstone, Sage and Sinner #2"
     },
     {
-      "identifier": "SentryPillar",
+      "identifier": "CrystalSpines",
       "count": 3,
-      "title": "Sentry Pillar",
+      "title": "Crystal Spines",
       "keywords": [
         "stone"
       ],
-      "body": "The first time each turn a stone or {Starstone} takes damage from a non-hero target, this card deals the source of that damage 2 projectile damage.",
+      "body": "The first time each turn a stone or {Starstone} takes damage from a non-hero target, this card deals the source of that damage 2 melee damage.",
       "hitpoints":  4,
       "icons": [
         "CounterDamage",
-        "DealDamageProjectile"
+        "DealDamageMelee"
       ],
-      "flavorText": "Stop taking chunks out of the sidewalk!",
-      "flavorReference": "Argus, Guardians of Tomorrow Annual #2"
+      "flavorText": "Hit me again and see what it gets you!",
+      "flavorReference": "Starstone, Guardians of Tomorrow Annual #2"
     },
     {
       "identifier": "Reabsorb",
@@ -161,7 +164,7 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "Destroy a stone. If you do, {Starstone} and each stone regains 2 HP. Draw a card",
+      "body": "Destroy a stone. If you do, {Starstone} and each stone regain 2 HP. Draw a card",
       "icons": [
         "Destroy",
         "GainHP",
@@ -171,19 +174,20 @@
       "flavorReference": "Ninetails, Guardians of Tomorrow Annual #6"
     },
     {
-      "identifier": "Shatter",
+      "identifier": "FlyingBoulder",
       "count": 3,
-      "title": "Shatter",
+      "hitpoints": 6,
+      "title": "Flying Boulder",
       "keywords": [
-        "one-shot"
+        "stone"
       ],
-      "body": "You may destroy a stone. If you do, {Starstone} deals up to 4 targets 2 projectile damage each.",
+      "body": "At the start of your turn, this card deals up to 3 targets 3 melee damage each. Each target dealt damage this way deals this card 2 melee damage.",
       "icons": [
-        "Destroy",
+        "StartOfTurnAction",
         "DealDamageProjectile"
       ],
-      "flavorText": "You want to break it? Fine. Broken.",
-      "flavorReference": "Starstone, Sage and Sinner #4"
+      "flavorText": "I am not your enemy! End this attack!",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow #98"
     },
     {
       "identifier": "DrawMaterial",
@@ -208,13 +212,13 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "Return a stone from play to your hand. Play a stone. That stone deals 1 target 4 melee damage.",
+      "body": "Return one of your stones from play to your hand. Play a stone. That stone deals 1 target 4 melee damage.",
       "icons": [
         "Manipulate",
         "PlayCardNow",
         "DealDamageMelee"
       ],
-      "flavorText": "Don't think I can't see you over there,{br}trying to get one over one me.",
+      "flavorText": "[i]Now[/i] you'll stop following me, old man.",
       "flavorReference": "Starstone, Sage and Sinner #1"
     },
     {
@@ -238,9 +242,10 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "One stone deals one target melee damage equal to its current HP. ",
+      "body": "One stone deals one target melee damage equal to its current HP. If there are no stones in play, {Starstone} deals 1 target 2 projectile damage.",
       "icons": [
-        "DealDamageMelee"
+        "DealDamageMelee",
+        "DealDamageProjectile"
       ],
       "flavorText": "Somebody get this rock off of my foot!{br}Now!",
       "flavorReference": "The Hatter, Guardians of Tomorrow #23"
@@ -252,9 +257,10 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "{Starstone} deals 1 target 5 melee damage. {Starstone} may deal herself 2 melee damage. If damage is taken this way, you may play a stone.",
+      "body": "{Starstone} deals 1 target 5 melee damage. {Starstone} may deal herself 2 melee damage. If damage is taken this way, reveal cards from your deck until you reveal a stone, put it into play, then shuffle your deck.",
       "icons": [
         "DealDamageMelee",
+        "Manipulate",
         "PlayCardNow"
       ],
       "flavorText": "Hiyaaaah!",
@@ -267,10 +273,10 @@
       "keywords": [
         "ongoing"
       ],
-      "body": "Reduce damage dealt to {Starstone} by the number of Stones in play. When this enters play, move a stone from your trash to your hand. At the start of your turn, destroy this card.",
+      "body": "Reduce damage dealt to {Starstone} by the number of Stones in play. When this enters play, search your deck for a stone and put it into play, then shuffle your deck. At the start of your turn, destroy this card.",
       "icons": [
         "ReduceDamageTaken",
-        "Manipulate",
+        "Search",
         "StartOfTurnAction",
         "DestroySelf"
       ],
@@ -284,10 +290,11 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "{Starstone} deals each non-hero target 1 melee damage. You may move a stone from your trash to your hand",
+      "body": "{Starstone} deals each non-hero target 1 melee damage. You may move a stone from your trash into play.",
       "icons": [
         "DealDamageMelee",
-        "Manipulate"
+        "Manipulate",
+        "PlayCardNow"
       ],
       "flavorText": "Any property damage is gravity's fault,{br}not mine.",
       "flavorReference": "Starstone, Guardians of Tomorrow #31"
@@ -304,14 +311,15 @@
       "icons": [
         "HasPower",
         "DealDamageMelee",
+        "Search",
         "PlayCardNow"
       ],
-      "backgroundColor": "0ec40e",
+      "backgroundColor": "0afc0a",
       "foilBackgroundColor": "86BB71",
       "hitpointsColor": "F6AD41",
       "character": true,
       "powers": [
-        "{Starstone} deals herself 1 melee damage. If she takes damage this way, move a stone from your trash into play."
+        "{Starstone} deals herself 1 melee damage. If she takes damage this way, reveal cards from your deck until a Stone is revealed, put it into play, and shuffle the other revealed cards back into your deck."
       ],
       "hitpoints": 31,
       "nemesisIdentifiers": [
@@ -332,6 +340,9 @@
         "default": "I won't take this second chance for granite!",
         "GuardiansOfTomorrow.DelugeCharacter": "The only way out is through! Follow me!",
         "OblivAeonFrontPageCharacter": "Looks like we're stuck between a rock and a hard place!"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "SkyScraperNormalCharacter"
       }
     }
   ]

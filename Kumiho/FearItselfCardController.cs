@@ -38,7 +38,7 @@ namespace GuardiansOfTomorrow.Kumiho
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => c.IsHero, (Card c) => 1, DamageType.Psychic, true);
+            coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => IsHero(c), (Card c) => 1, DamageType.Psychic, true);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

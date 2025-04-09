@@ -1,0 +1,348 @@
+{
+  "name": "Chance",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "ChanceCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "ChanceCharacter",
+      "promoIdentifier": "ChanceBureauAgentCharacter",
+      "count": 1,
+      "title": "Chance: Bureau Agent",
+      "body": "Coverup",
+      "backgroundColor": "fc3a3a",
+      "foilBackgroundColor": "fc3a3a",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Flip a coin. Heads: Destroy 1 environment card. Tails: Destroy 1 villain ongoing card."
+      ],
+      "icons": [
+        "HasPower",
+        "GuardiansOfTomorrow.Flip",
+        "DestroyEnvironment",
+        "DestroyOngoing"
+      ],
+      "hitpoints": 27,
+      "incapacitatedAbilities": [
+        "One player may play a card",
+        "Destroy a target with 3 or fewer HP.",
+        "Flip a coin. Heads: Reduce the next damage dealt to a hero target by 2. Tails: Increase the next damage dealt to a villain target by 2."
+      ],
+      "flippedIcons": [
+        "PlayCardNow",
+        "DestroyTarget",
+        "GuardiansOfTomorrow.Flip",
+        "ReduceDamageTaken",
+        "IncreaseDamageTaken"
+      ],
+      "openingLines": {
+        "default": "Nothing to see here. It's just hallucinations caused by a gas leak."
+      },
+      "complexity": 3,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Chance"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "ChanceCharacter",
+      "count": 1,
+      "title": "Chance",
+      "body": "Fifty-Fifty",
+      "backgroundColor": "c2fc3a",
+      "foilBackgroundColor": "c2fc3a",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Flip a coin. Heads: Draw 1 card. Tails: {Chance} deals 1 target 2 damage of any type."
+      ],
+      "icons": [
+        "HasPower",
+        "GuardiansOfTomorrow.Flip",
+        "DrawCardNow",
+        "DealDamage"
+      ],
+      "hitpoints": 24,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Chance"
+      ],
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One player may use a power.",
+        "Flip a coin. Heads: One hero gains 2 HP. Tails: One hero deals one villain target 2 damage of any type."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "UsePowerNow",
+        "GuardiansOfTomorrow.Flip",
+        "GainHP",
+        "DealDamage"
+      ],
+      "openingLines": {
+        "default": "We've got good odds, let's get 'em!",
+        "GuardiansOfTomorrow.HrnTllCharacter": "Stop! You'll tear the universe apart!",
+        "OblivAeonFrontPageCharacter": "Don't bet on it."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "GuiseCharacter"
+      },
+      "complexity": 3
+    },
+    {
+      "identifier": "VorpalSword",
+      "count": 2,
+      "title": "Vorpal Sword",
+      "keywords": [
+        "equipment",
+        "relic",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "HasPower",
+        "DealDamageMelee",
+        "GuardiansOfTomorrow.Flip"
+      ],
+      "powers": [ "{Chance} deals 1 target 2 melee damage. If a non-character target is damaged this way, flip 4 coins. If there are at least 4 heads, destroy that target." ],
+      "body": "Increase melee damage dealt by {Chance} by 1.",
+      "flavorText": "Snicker-Snack!"
+    },
+    {
+      "identifier": "LuckyPenny",
+      "count": 3,
+      "title": "Lucky Penny",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "UsePowerNow",
+        "DestroySelf"
+      ],
+      "body": "When this card enters play, you may draw a card or use a power. When you would flip a coin, you may choose the result. If you do, destroy this card.",
+      "flavorText": "A penny? It's my lucky day.",
+      "flavorReference": "Chance, Mysterious Miscellany #18"
+    },
+    {
+      "identifier": "ChaosArc",
+      "count": 3,
+      "title": "Chaos Arc",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "HasPower",
+        "GuardiansOfTomorrow.Flip",
+        "DealDamage"
+      ],
+      "powers": [ "Flip 2 coins. {Chance} deals 1 target X damage of any type or up to X targets 1 damage of any type each, where X is the number of heads plus 1." ],
+      "flavorText": "Never tell me the odds!",
+      "flavorReference": "Chance, Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "UnstableEnergy",
+      "count": 2,
+      "title": "Unstable Energy",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Flip",
+        "DestroySelf"
+      ],
+      "body": "When {Chance} would use a power, you may select a numeral in that power and increase or reduce it by 2. Then, if you did, flip a coin. Tails: Destroy this card.",
+      "flavorText": "C'mon, just a little... bit... more!",
+      "flavorReference": "Chance, Guardians of Tomorrow #66"
+    },
+    {
+      "identifier": "MirrorImage",
+      "count": 3,
+      "title": "Mirror Image",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "UsePowerExtra",
+        "HasPower",
+        "DealDamagePsychic",
+        "UsePowerNow"
+      ],
+      "body": "You may use an additional power during your power phase.",
+      "powers": [ "{Chance} may deal 1 other hero 2 psychic damage. Each hero dealt damage this way may use a power." ],
+      "flavorText": "Yes, that's me, I am the real Heartbeat and{br}not an illusion.",
+      "flavorReference": "Mirror Image, Bureau Arcanum #22"
+    },
+    {
+      "identifier": "EntropicChains",
+      "count": 3,
+      "title": "Entropic Chains",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageProjectile",
+        "CancelledDamageGreen"
+      ],
+      "body": "{Chance} deals 1 target 3 projectile damage. Prevent the next damage dealt by that target.",
+      "flavorText": "These are no mortal bindings.{br}Let's test them on you.",
+      "flavorReference": "Chance, Bureau Arcanum #2"
+    },
+    {
+      "identifier": "ChanceEncounter",
+      "count": 2,
+      "title": "Chance Encounter",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "PlayCardNow",
+        "UsePowerNow",
+        "DrawCardNow"
+      ],
+      "body": "You may play a card, use a power, and draw a card.",
+      "flavorText": "Guess who I ran into on the street today!",
+      "flavorReference": "Chance, Bureau Arcanum #7"
+    },
+    {
+      "identifier": "ProbabilisticForesight",
+      "count": 2,
+      "title": "Probabilistic Foresight",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Manipulate",
+        "PlayCardNow",
+        "Discard"
+      ],
+      "body": "Reveal and replace the top card of each deck. You may play the top card of each deck or discard the top card of each deck.",
+      "flavorQuotes": [
+        {
+          "identifier": "Hoplite",
+          "text": "So he'll blow up the refinery?"
+        },
+        {
+          "identifier": "Chance",
+          "text": "It's the most likely possibility. It depends on what we do now."
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow #64"
+    },
+    {
+      "identifier": "Obliviate",
+      "count": 3,
+      "title": "Obliviate",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageInfernal",
+        "GuardiansOfTomorrow.Flip",
+        "Destroy"
+      ],
+      "body": "{Chance} deals 1 target 2 infernal damage. Flip a coin. Heads: You may destroy up to as many ongoing or environment cards as the damage dealt. Tails: If a non-character target dealt damage this way has less than 10 HP remaining, destroy it.",
+      "flavorText": "No. I am the end.",
+      "flavorReference": "Chance, Bureau Arcanum #18"
+    },
+    {
+      "identifier": "EldritchConduit",
+      "count": 3,
+      "title": "Eldritch Conduit",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamage",
+        "ImmuneToDamage"
+      ],
+      "body": "Select a damage type. Until the end of your next turn, {Chance} is immune to that damage type and increase damage of that type dealt by {Chance} by 1. {Chance} deals up to 3 targets 1 damage of that type each.",
+      "flavorText": "So much power. Where does it come from?",
+      "flavorReference": "Duke Venburgh, Bureau Arcanum #1"
+    },
+    {
+      "identifier": "ControlledChaos",
+      "count": 3,
+      "title": "Controlled Chaos",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "GuardiansOfTomorrow.Flip",
+        "DealDamageEnergy",
+        "Discard"
+      ],
+      "body": "Draw up to 3 cards. For each card drawn this way, flip a coin. Heads: {Chance} deals 1 target 1 energy damage. Tails: Discard a card and one other player draws a card.",
+      "flavorText": "Whenever a butterfly flaps its wings,{br}I see an opportunity.",
+      "flavorReference": "Chance, Bureau Arcanum #1"
+    },
+    {
+      "identifier": "ChaosBolt",
+      "count": 3,
+      "title": "Chaos Bolt",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamage",
+        "GuardiansOfTomorrow.Flip"
+      ],
+      "body": "{Chance} deals 1 non-hero target 3 damage of any type. If damage is dealt this way, flip a coin. Heads: {Chance} deals that target 3 additional damage of any type. Tails: {Chance} deals each other non-hero target 1 damage of any type.",
+      "flavorText": "Nothing like a giant blast of psychic{br}electricity to clear out a nest of spiders, eh?",
+      "flavorReference": "Heartbeat, Bureau Arcanum #11"
+    },
+    {
+      "identifier": "LuckyFind",
+      "count": 4,
+      "title": "Lucky Find",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Flip",
+        "Search",
+        "DrawCardNow",
+        "PlayCardNow"
+      ],
+      "body": "Flip a coin. Heads: Search your deck for an Ongoing or Equipment card and put it into your hand, then shuffle your deck. Tails: Reveal cards from your deck until an Ongoing or Equipment card is revealed. Put that card into play, then shuffle the other revealed cards into your deck.",
+      "flavorText": "It's been a while since I found a clue.{br}Odds are... Yep, there it is!",
+      "flavorReference": "Chance, Mysterious Miscellany #18"
+    },
+    {
+      "identifier": "WildRush",
+      "count": 2,
+      "title": "Wild Rush",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "UsePowerNow",
+        "DealDamageMelee"
+      ],
+      "body": "You may use a power now. {Chance} deals 1 target 2 melee damage.",
+      "flavorText": "You didn't account for - HIYAH!",
+      "flavorReference": "Chance, Bureau Arcanum #23"
+    },
+
+    {
+      "identifier": "ChaoticNimbus",
+      "count": 2,
+      "title": "Chaotic Nimbus",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamage",
+        "GuardiansOfTomorrow.Flip"
+      ],
+      "body": "{Chance} may deal 1 target 1 damage of any type. Flip a coin. Heads: repeat the entire game text of this card, but you may not choose the same damage type again.",
+      "flavorText": "Fire! Poison! Rubber ducks!{br}... Rubber ducks?",
+      "flavorReference": "Chance, Bureau Arcanum #28"
+    }
+  ]
+}

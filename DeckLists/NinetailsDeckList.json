@@ -4,6 +4,138 @@
   "initialCardIdentifiers": [
     "NinetailsCharacter"
   ],
+  "promoCards": [
+    {
+      "identifier": "NinetailsCharacter",
+      "promoIdentifier": "GuardiansOfTomorrowNinetailsCharacter",
+      "count": 1,
+      "title": "Ninetails",
+      "promoTitle": "Guardians of Tomorrow Ninetails",
+      "body": "Foxfire Storm",
+      "backgroundColor": "86BB71",
+      "foilBackgroundColor": "86BB71",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "You may discard a card. If you do, {Ninetails} deals up to 9 targets 1 fire damage each. Otherwise, {Ninetails} deals up to 3 targets 1 fire damage each."
+      ],
+      "icons": [
+        "HasPower",
+        "Discard",
+        "DealDamageFire"
+      ],
+      "hitpoints": 25,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Ninetails"
+      ],
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One player may play a card.",
+        "Select a target. Damage dealt to that target is irreducible until the start of your next turn."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "PlayCardNow",
+        "MakeDamageIrreducible"
+      ],
+      "openingLines": {
+        "default": "I've learned, I'm ready to be a hero this time!",
+        "GuardiansOfTomorrow.KumihoCharacter": "I am not like you. I will [b]never[/b] be like you.",
+        "OblivAeonFrontPageCharacter": "This is one fox who won't let your hounds get her!"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "HakaCharacter"
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "NinetailsCharacter",
+      "promoIdentifier": "NinetailsBureauAgentCharacter",
+      "count": 1,
+      "title": "Ninetails",
+      "promoTitle": "Ninetails: Bureau Agent",
+      "body": "Field Research",
+      "backgroundColor": "5b04cc",
+      "foilBackgroundColor": "5b04cc",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Discard up to 3 cards. One other player may draw up to as many cards as you discard this way."
+      ],
+      "icons": [
+        "HasPower",
+        "Discard",
+        "DrawCardNow"
+      ],
+      "hitpoints": 24,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Ninetails"
+      ],
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One hero may use a power.",
+        "Put an ongoing card from a hero trash into play."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "UsePowerNow",
+        "PlayCardNow"
+      ],
+      "openingLines": {
+        "default": "Keep the flashy power to a minimum, we want to keep this secret.",
+        "GuardiansOfTomorrow.KumihoCharacter": "This is [i]your[/i] last chance. Today, you die!",
+        "OblivAeonFrontPageCharacter": "I need to study this threat to defeat it."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "TachyonCharacter"
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "NinetailsCharacter",
+      "promoIdentifier": "NinetailsFlamePriestessCharacter",
+      "count": 1,
+      "title": "Ninetails",
+      "promoTitle": "Ninetails: Flame Priestess",
+      "body": "St. Elmo's Fire",
+      "backgroundColor": "ff0000",
+      "foilBackgroundColor": "ff0000",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "{Ninetails} deals 1 target 1 radiant damage. If a Ghost is dealt damage this way, {Ninetails} deals 1 non-hero target 3 fire damage, then draw a card."
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageRadiant",
+        "DealDamageFire",
+        "DrawCardNow"
+      ],
+      "hitpoints": 26,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Ninetails"
+      ],
+      "incapacitatedAbilities": [
+        "One player may play a card.",
+        "One hero may use a power.",
+        "Select a hero. Convert the next damage dealt by that hero to fire damage and increase it by 2."
+      ],
+      "flippedIcons": [
+        "PlayCardNow",
+        "UsePowerNow",
+        "IncreaseDamageDealtFire"
+      ],
+      "openingLines": {
+        "default": "Let me see... Oh yeah, I cast Fireball!",
+        "GuardiansOfTomorrow.KumihoCharacter": "I'm not out of spells yet!",
+        "OblivAeonFrontPageCharacter": "I know how to deal with you... More fireballs!"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "TheScholarCharacter"
+      },
+      "complexity": 2
+    }
+  ],
   "cards": [
     {
       "identifier": "NinetailsCharacter",
@@ -11,7 +143,7 @@
       "title": "Ninetails",
       "body": "Slippery Fox",
       "backgroundColor": "db8412",
-      "foilBackgroundColor": "FEFEFE",
+      "foilBackgroundColor": "db8412",
       "hitpointsColor": "C94742",
       "character": true,
       "powers": [
@@ -33,30 +165,143 @@
       "flippedIcons": [
         "UsePowerNow",
         "DestroyOngoing",
-        "Manipulate"
+        "RedirectDamage"
       ],
       "openingLines": {
         "default": "Just because I'm new to this doesn't mean I can't outfox you.",
         "GuardiansOfTomorrow.KumihoCharacter": "What did you do to me? What am I?",
-        "OblivAeonFrontPageCharacter": "This is bad, this is bad, this is bad!"
+        "OblivAeonFrontPageCharacter": "This is bad this is bad this is bad!"
       },
       "complexity": 2
     },
     {
-      "identifier": "ScientificApproachToMagic",
-      "count": 3,
-      "title": "Scientific Approach To Magic",
+      "identifier": "AssertHumanity",
+      "count": 2,
+      "title": "Assert Humanity",
       "keywords": [
-        "ongoing",
-        "limited"
+        "one-shot"
       ],
-      "body": "Whenever you discard a card, {Ninetails} gains 1 HP. At the end of your turn, you may discard a card.",
       "icons": [
-        "GainHP",
-        "Discard"
+        "DestroyOngoing",
+        "DealDamageMelee"
       ],
-      "flavorText": "Everything is explicable. Even... This.",
-      "flavorReference": "Jade Fisher, Guardians of Tomorrow Annual #5"
+      "body": [
+        "You may destroy one of your ongoing cards. If you do, {Ninetails} deals up to 2 targets 3 melee damage each."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I am [b]NOT[/b] a [b]MONSTER![/b] I am a [b]PERSON![/b]"
+        }
+      ],
+      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5"
+    },
+    {
+      "identifier": "BookSmartsStreetSmarts",
+      "count": 3,
+      "title": "Book Smarts, Street Smarts",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "RedirectDamage"
+      ],
+      "body": [
+        "Either draw 3 cards or redirect the next damage dealt to {Ninetails} to another target."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Ninetails",
+          "text": "Despite my magic power, I'm a scientist at heart."
+        },
+        {
+          "identifier": "Duke Venburgh",
+          "text": "That, Miss Fisher, is precisely why the Bureau Arcanum needs you."
+        }
+      ],
+      "flavorReference": "Bureau Arcanum #1"
+    },
+    {
+      "identifier": "BurningWhisper",
+      "count": 3,
+      "title": "Burning Whisper",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "IncreaseDamageDealtFire",
+        "DealDamageFire",
+        "HasPower",
+        "DestroySelf"
+      ],
+      "body": [
+        "Increase all fire damage by 1. When this card enters play, {Ninetails} deals up to 2 targets 1 fire damage each."
+      ],
+      "powers": [
+        "{Ninetails} deals 1 target 4 fire damage. Destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Ninetails",
+          "text": "This spell lets me light all the torches, right?"
+        },
+        {
+          "identifier": "Argus",
+          "text": "Yes, but that's not really the intent�"
+        },
+        {
+          "identifier": "Ninetails",
+          "text": "I do it."
+        }
+      ],
+      "flavorReference": "Roll of the Dice #2"
+    },
+    {
+      "identifier": "DancingFlame",
+      "count": 3,
+      "title": "Dancing Flame",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageFire",
+        "DealDamageMelee",
+        "Discard",
+        "RedirectDamage"
+      ],
+      "body": [
+        "{Ninetails} deals 1 target 1 fire damage and 1 melee damage. You may discard a card. If you do, redirect the next damage dealt to {Ninetails} to that target."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I'm glad to see you're putting those{BR}dance lessons to good use."
+        }
+      ],
+      "flavorReference": "Heartbeat, Bureau Arcanum #8"
+    },
+    {
+      "identifier": "FoxEcho",
+      "count": 3,
+      "title": "Fox Echo",
+      "keywords": [
+        "ghost"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DrawCardNow",
+        "DestroySelf",
+        "PlayCardNow"
+      ],
+      "body": [
+        "At the end of your turn, each player may draw a card. If at least {H - 1} cards are drawn this way, destroy this card. When this card is destroyed, you may play an ongoing card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "They're the remnants of those who tried{BR}this quest before... and failed."
+        }
+      ],
+      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5",
+      "hitpoints": 3
     },
     {
       "identifier": "FoxMarble",
@@ -67,19 +312,19 @@
         "relic",
         "limited"
       ],
-      "powers": [
-        "{Ninetails} deals 1 target 1 fire damage. You may draw 1 card or play 1 ongoing card."
-      ],
       "icons": [
         "HasPower",
         "DealDamageFire",
         "DrawCardNow",
         "PlayCardNow"
       ],
+      "powers": [
+        "{Ninetails} deals 1 target 1 fire damage. You may draw 1 card or play 1 Ongoing card."
+      ],
       "flavorQuotes": [
         {
           "identifier": "Jason Fisher",
-          "text": "Jade, what do you{br}have there?"
+          "text": "Jade, what do you{BR}have there?"
         },
         {
           "identifier": "Jade Fisher",
@@ -96,13 +341,41 @@
         "ongoing",
         "limited"
       ],
-      "body": "Whenever damage is redirected from {Ninetails}, increase or reduce it by 1.",
       "icons": [
         "IncreaseDamageDealt",
         "ReduceDamageDealt"
       ],
-      "flavorText": "It's weird how natural being a quadruped{br}feels. I haven't tripped once!{br}And how am I talking with this mouth?",
+      "body": [
+        "Whenever damage is redirected away from {Ninetails}, increase or reduce it by 1."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "It's weird how natural being a quadruped{BR}feels. I haven't tripped once!{BR}And how am I talking with this mouth?"
+        }
+      ],
       "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5"
+    },
+    {
+      "identifier": "FoxfireBurst",
+      "count": 3,
+      "title": "Foxfire Burst",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageFire",
+        "Discard",
+        "PlayCardNow"
+      ],
+      "body": [
+        "{Ninetails} deals each non-hero target 2 fire damage. You may discard a card. If you do, you may play a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Back, foul spirits! Did I do that right?"
+        }
+      ],
+      "flavorReference": "Ninetails, Bureau Arcanum #3"
     },
     {
       "identifier": "JadesCollar",
@@ -112,13 +385,72 @@
         "equipment",
         "limited"
       ],
-      "body": "When {Ninetails} would be dealt damage by an environment card, you may discard a card to redirect it to a villain target.",
       "icons": [
         "Discard",
         "RedirectDamage"
       ],
-      "flavorText": "I hate pretending to be someone's pet,{br}but it has saved my life several times.",
+      "body": [
+        "When {Ninetails} would be dealt damage by an environment card, you may discard a card to redirect that damage to a villain target."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I hate pretending to be someone's pet,{BR}but it has saved my life several times."
+        }
+      ],
       "flavorReference": "Ninetails, Guardians of Tomorrow #61"
+    },
+    {
+      "identifier": "PredatoryNature",
+      "count": 1,
+      "title": "Predatory Nature",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "MakeDamageUnredirectable",
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "DealDamageToxic",
+        "HasPower",
+        "DestroyTarget",
+        "GainHP",
+        "Manipulate"
+      ],
+      "body": [
+        "When this card enters your hand, put it into play. Damage dealt by {Ninetails} cannot be redirected. At the end of your turn, {Ninetails} deals 1 other hero target 2 melee damage. If no damage is dealt this way, she deals herself 4 irreducible toxic damage."
+      ],
+      "powers": [
+        "Destroy a target with 3 or fewer HP. If a target is destroyed this way, {Ninetails} gains 3 HP, then shuffle this card into your deck."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "What have I done? [b]What have I done!?[/b]"
+        }
+      ],
+      "flavorReference": "Jade Fisher, Guardians of Tomorrow Annual #5"
+    },
+    {
+      "identifier": "ScientificApproachToMagic",
+      "count": 3,
+      "title": "Scientific Approach to Magic",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "GainHP",
+        "EndOfTurnAction",
+        "Discard"
+      ],
+      "body": [
+        "Whenever you discard a card, {Ninetails} gains 1 HP. At the end of your turn, you may discard a card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Everything is explicable. Even� This."
+        }
+      ],
+      "flavorReference": "Jade Fisher, Guardians of Tomorrow Annual #5"
     },
     {
       "identifier": "SpiritOfDeception",
@@ -127,16 +459,22 @@
       "keywords": [
         "ghost"
       ],
-      "hitpoints": 3,
-      "body": "At the end of your turn, you may destroy an ongoing card. If you do, destroy this card. When this card is destroyed, {Ninetails} deals each non-hero target 1 irreducible psychic damage.",
       "icons": [
         "EndOfTurnAction",
         "DestroyOngoing",
         "DestroySelf",
         "DealDamagePsychic"
       ],
-      "flavorText": "What are lies? ... What is truth?",
-      "flavorReference": "Spirit of Deception, Guardians of Tomorrow #82"
+      "body": [
+        "At the end of your turn, you may destroy an ongoing card. If you do, destroy this card. When this card is destroyed, {Ninetails} deals each non-hero target 1 irreducible psychic damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "What are lies? � What is truth?"
+        }
+      ],
+      "flavorReference": "Spirit of Deception, Guardians of Tomorrow #82",
+      "hitpoints": 3
     },
     {
       "identifier": "SpiritVisions",
@@ -146,12 +484,17 @@
         "ongoing",
         "limited"
       ],
-      "body": "The first time each turn {Ninetails} would take damage, redirect it to a ghost in her play area.",
       "icons": [
         "RedirectDamage",
         "HasPower",
         "Discard",
-        "Manipulate"
+        "PlayCardNow"
+      ],
+      "body": [
+        "The first time each turn {Ninetails} would be dealt damage, redirect it to a Ghost in her play area."
+      ],
+      "powers": [
+        "You may discard a card. If you do, put a ghost from your trash into play or your hand."
       ],
       "flavorQuotes": [
         {
@@ -163,113 +506,7 @@
           "text": "There? It's just a shadow."
         }
       ],
-      "flavorReference": "Guardians of Tomorrow Annual #5",
-      "powers": [
-        "You may discard a card. If you do, put a ghost from your trash into play or your hand."
-      ]
-    },
-    {
-      "identifier": "PredatoryNature",
-      "count": 1,
-      "title": "Predatory Nature",
-      "keywords": [
-        "ongoing"
-      ],
-      "body": "When this card enters your hand, put it into play. Damage dealt by {Ninetails} cannot be redirected. At the end of your turn, {Ninetails} deals 1 other hero target 2 melee damage. If no damage is dealt this way, she deals herself 4 irreducible toxic damage.",
-      "icons": [
-        "MakeDamageUnredirectable",
-        "EndOfTurnAction",
-        "DealDamageMelee",
-        "DealDamageToxic",
-        "HasPower",
-        "DestroyTarget",
-        "GainHP",
-        "Manipulate"
-      ],
-      "powers": [
-        "Destroy a target with 3 or fewer HP. If a target is destroyed this way, {Ninetails} regains 3 HP, then shuffle this card into your deck."
-      ],
-      "flavorText": "What have I done? What have I done!?",
-      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5"
-    },
-    {
-      "identifier": "BurningWhisper",
-      "count": 3,
-      "title": "Burning Whisper",
-      "keywords": [
-        "ongoing"
-      ],
-      "body": "Increase all fire damage by 1. When this card enters play, {Ninetails} deals up to 2 targets 1 fire damage each. At the start of your turn, destroy this card.",
-      "icons": [
-        "IncreaseDamageDealtFire",
-        "DealDamageFire",
-        "StartOfTurnAction",
-        "DestroySelf"
-      ],
-      "flavorQuotes": [
-        {
-          "identifier": "Ra",
-          "text": "What did you just say?"
-        },
-        {
-          "identifier": "Ninetails",
-          "text": "Oh, nothing much."
-        }
-      ],
-      "flavorReference": "Guardians of Tomorrow #83"
-    },
-    {
-      "identifier": "TwistingCinder",
-      "count": 2,
-      "title": "Twisting Cinder",
-      "keywords": [
-        "ghost"
-      ],
-      "body": "At the end of your turn, this card may deal 1 target up to 3 fire damage. If 3 or more damage is dealt this way, destroy this card. When this card is destroyed, draw 2 cards.",
-      "icons": [
-        "EndOfTurnAction",
-        "DealDamageFire",
-        "DestroySelf",
-        "DrawCardNow"
-      ],
-      "flavorText": "I don't know what they are, they just{br}keep following me around.",
-      "flavorReference": "Ninetails, Guardians of Tomorrow #59",
-      "hitpoints": 3
-    },
-    {
-      "identifier": "FoxEcho",
-      "count": 3,
-      "title": "Fox Echo",
-      "keywords": [
-        "ghost"
-      ],
-      "body": "At the end of your turn, each player may draw a card. If at least {H - 1} cards are drawn this way, destroy this card. When this card is destroyed, you may play an ongoing card.",
-      "icons": [
-        "EndOfTurnAction",
-        "DrawCardNow",
-        "DestroySelf",
-        "PlayCardNow"
-      ],
-      "flavorText": "They're the remnants of those who tried{br}this quest before... and failed.",
-      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5",
-      "hitpoints": 3
-    },
-    {
-      "identifier": "DancingFlame",
-      "count": 3,
-      "title": "Dancing Flame",
-      "keywords": [
-        "one-shot"
-      ],
-      "body": "{Ninetails} deals 1 target 1 fire damage and 1 melee damage. You may discard a card. If you do, redirect the next damage dealt to {Ninetails} to that target.",
-      "icons": [
-        "DealDamageFire",
-        "DealDamageMelee",
-        "Discard",
-        "RedirectDamage"
-      ],
-      "flavorText": "I'm glad to see you're putting those{br}dance lessons to good use.",
-      "flavorReference": "Heartbeat, Bureau Arcanum #8"
+      "flavorReference": "Guardians of Tomorrow Annual #5"
     },
     {
       "identifier": "StalkedByGhosts",
@@ -278,110 +515,44 @@
       "keywords": [
         "one-shot"
       ],
-      "body": "{Ninetails} deals 1 target 3 infernal damage. Reveal cards from your deck until a ghost is revealed. Put it into play. Discard the other revealed cards and shuffle your trash into your deck.",
       "icons": [
         "DealDamageInfernal",
-        "Manipulate"
-      ],
-      "flavorText": "Once ghosts realize you can see them,{br}they will never leave you alone.",
-      "flavorReference": "Amos Forder, Bureau Arcanum #2"
-    },
-    {
-      "identifier": "FoxfireBurst",
-      "count": 3,
-      "title": "Foxfire Burst",
-      "keywords": [
-        "one-shot"
-      ],
-      "body": "{Ninetails} deals each non-hero target 2 fire damage. You may discard a card. If you do, you may play a card.",
-      "icons": [
-        "DealDamageFire",
-        "Discard",
+        "Manipulate",
         "PlayCardNow"
       ],
-      "flavorText": "Back, foul spirits! Did I do that right?",
-      "flavorReference": "Ninetails, Bureau Arcanum #3"
-    },
-    {
-      "identifier": "BookSmartsStreetSmarts",
-      "count": 3,
-      "title": "Book Smarts, Street Smarts",
-      "keywords": [
-        "one-shot"
-      ],
-      "body": "Either draw 3 cards or redirect the next damage dealt to {Ninetails} to another target.",
-      "icons": [
-        "DrawCardNow",
-        "RedirectDamage"
+      "body": [
+        "{Ninetails} deals 1 target 3 infernal damage. Reveal cards from your deck until a ghost is revealed. Put it into play. Discard the other revealed cards and shuffle your trash into your deck."
       ],
       "flavorQuotes": [
         {
-          "identifier": "Ninetails",
-          "text": "Despite my magic power, I'm a scientist at heart."
-        },
-        {
-          "identifier": "Duke Venburgh",
-          "text": "That, Miss Fisher, is{br}precisely why we want you in the{br}Bureau Arcanum."
+          "text": "Once ghosts realize you can see them,{BR}they will never leave you alone."
         }
       ],
-      "flavorReference": "Bureau Arcanum #1"
+      "flavorReference": "Amos Forder, Bureau Arcanum #2"
     },
     {
-      "identifier": "AssertHumanity",
+      "identifier": "TwistingCinder",
       "count": 2,
-      "title": "Assert Humanity",
+      "title": "Twisting Cinder",
       "keywords": [
-        "one-shot"
+        "ghost"
       ],
-      "body": "You may destroy one of your ongoing cards. If you do, {Ninetails} deals up to 2 targets 3 melee damage each.",
       "icons": [
-        "DestroyOngoing",
-        "DealDamageMelee"
-      ],
-      "flavorText": "I am NOT a MONSTER! I am a PERSON!",
-      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #5"
-    }
-  ],
-  "promoCards": [
-    {
-      "identifier": "NinetailsCharacter",
-      "promoIdentifier": "GuardiansOfTomorrowNinetailsCharacter",
-      "count": 1,
-      "title": "Ninetails",
-      "promoTitle": "Guardians of Tomorrow Ninetails",
-      "body": "Foxfire Storm",
-      "icons": [
-        "HasPower",
+        "EndOfTurnAction",
         "DealDamageFire",
-        "Discard"
+        "DestroySelf",
+        "DrawCardNow"
       ],
-      "backgroundColor": "08ffef",
-      "foilBackgroundColor": "86BB71",
-      "hitpointsColor": "F6AD41",
-      "character": true,
-      "powers": [
-        "Discard up to 3 cards. {Ninetails} deals up to X targets 1 fire damage each where X is 3 + 2 times the number of cards discarded this way"
+      "body": [
+        "At the end of your turn, this card may deal 1 target up to 3 fire damage. If 3 or more damage is dealt this way, destroy this card. When this card is destroyed, draw 2 cards."
       ],
-      "hitpoints": 25,
-      "nemesisIdentifiers": [
-        "GuardiansOfTomorrow.Ninetails"
+      "flavorQuotes": [
+        {
+          "text": "I don't know what they are, they just{br}keep following me around."
+        }
       ],
-      "incapacitatedAbilities": [
-        "One player may draw a card.",
-        "One player may play a card.",
-        "Choose a non-hero target. Damage dealt to that target is irreducible until the start of your next turn."
-      ],
-      "flippedIcons": [
-        "DrawCardNow",
-        "PlayCardNow",
-        "MakeDamageIrreducible"
-      ],
-      "complexity": 2,
-      "openingLines": {
-        "default": "I've learned, I'm ready to be a hero this time!",
-        "GuardiansOfTomorrow.KumihoCharacter": "I am not like you. I will never be like you.",
-        "OblivAeonFrontPageCharacter": "This is one fox who won't let your hounds get her!"
-      }
+      "flavorReference": "Ninetails, Guardians of Tomorrow #59",
+      "hitpoints": 3
     }
   ]
 }

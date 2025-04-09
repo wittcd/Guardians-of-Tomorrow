@@ -13,6 +13,7 @@ namespace GuardiansOfTomorrow.Starstone
 		public CrushingStonesCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
+			SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone"), "stone", false, false, "stone", "stones", false));
 		}
 
 		public override IEnumerator Play()
@@ -32,6 +33,18 @@ namespace GuardiansOfTomorrow.Starstone
 			{
 				DamageSource ds = new DamageSource(base.GameController, selectCardDecision.SelectedCard);
 				coroutine = base.GameController.SelectTargetsAndDealDamage(DecisionMaker, ds, selectCardDecision.SelectedCard.HitPoints.Value, DamageType.Melee, 1, false, 1, false, false, false, null, null, null, null, null, false, null, null, false, null, GetCardSource());
+				if (base.UseUnityCoroutines)
+				{
+					yield return base.GameController.StartCoroutine(coroutine);
+				}
+				else
+				{
+					base.GameController.ExhaustCoroutine(coroutine);
+				}
+			}
+			else
+            {
+				coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), 2, DamageType.Projectile, 1, false, 1, cardSource: GetCardSource());
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine);

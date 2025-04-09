@@ -38,8 +38,11 @@
       ],
       "openingLines": {
         "default": "Positions, everyone! I have overwatch on the situation!",
-        "GuardiansOfTomorrow.TheHatterCharacter": "Lots of tech in that headgear for just an “ordinary” hatmaker.",
+        "GuardiansOfTomorrow.TheHatterCharacter": "Lots of tech in that headgear for just an ï¿½ordinaryï¿½ hatmaker.",
         "OblivAeonFrontPageCharacter": "I can coordinate, but we'll need everyone together to win this one!"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "UnityCharacter"
       },
       "complexity": 2
     },
@@ -64,8 +67,8 @@
           "text": "one player may draw a card"
         }
       ],
-      "flavorText": "Long range, low profile, high-definition{br}camera. Perfect.",
-      "flavorReference": "Argus, The Hundred Eyes #1"
+      "flavorText": "Ladies and gentlemen of the board, I present: the Panopticon!",
+      "flavorReference": "Chief Engineer, The Hundred Eyes #1"
     },
     {
       "identifier": "SecurityDrone",
@@ -180,7 +183,8 @@
       ],
       "icons": [
         "HasPower",
-        "Manipulate"
+        "Search",
+        "PlayCardNow"
       ],
       "flavorQuotes": [
         {
@@ -236,7 +240,8 @@
         "one-shot"
       ],
       "icons": [
-        "Manipulate",
+        "Search",
+        "PlayCardNow",
         "UsePowerNow",
         "GuardiansOfTomorrow.HasOperate"
       ],
@@ -294,6 +299,7 @@
         "one-shot"
       ],
       "icons": [
+        "DrawCardNow",
         "Manipulate",
         "GuardiansOfTomorrow.HasOperate"
       ],
@@ -389,7 +395,10 @@
       "openingLines": {
         "default": "Okay team! I'll hit them from above, you take them from below!",
         "GuardiansOfTomorrow.TheHatterCharacter": "You won't control anyone again. I'll stop you here and now!",
-        "OblivAeonFrontPageCharacter": "My drones don't stand a chance agaisnt something so powerful. I'll need to pull out all the stops here."
+        "OblivAeonFrontPageCharacter": "My drones don't stand a chance against something so powerful. I'll need to pull out all the stops here."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "UnityCharacter"
       }
     }
   ]

@@ -38,7 +38,8 @@
       ],
       "gameplay": [
         "Whenever a Thrall is destroyed, each hero discards a card.",
-        "At the start of the villain turn, if there are 1 or fewer Thralls in play, {TheHatter} flips."
+        "At the start of the villain turn, if there are 1 or fewer Thralls in play, {TheHatter} flips.",
+        "At the end of the villain turn, {TheHatter} deals the hero target with the highest HP {H - 1} projectile damage."
       ],
       "advanced": "Increase damage dealt to hero targets by 1.",
       "flippedBody": "Hostile Haberdasher",
@@ -66,7 +67,7 @@
       "openingLines": {
         "default": "Want a hat? They're half price, today only!",
         "GuardiansOfTomorrow.ArgusCharacter": "I'm just an ordinary hatmaker. Don't mind me.",
-        "GuardiansOfTomorrow.GuardiansOfTomorrowArgusCharacter": "You're acting irrational! A nice hat would help."
+        "GuardiansOfTomorrowArgusCharacter": "You're acting irrational! A nice hat would help."
       }
     },
     {
@@ -281,7 +282,7 @@
         "DealDamageMelee"
       ],
       "flavorText": "Off with his head!",
-      "flavorReference": "The Queen of Hearts, Guardians of Tomorrow #12",
+      "flavorReference": "The Queen of Hearts, Guardians of Tomorrow #23",
       "hitpoints": 8
     },
     {

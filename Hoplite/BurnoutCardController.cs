@@ -51,7 +51,7 @@ namespace GuardiansOfTomorrow.Hoplite
 
             //srdFull.Add(srd2.FirstOrDefault());
 
-            coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, ds, 1, DamageType.Fire, 1, false, 1, storedResultsDamage: srd1, cardSource: GetCardSource());
+            coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, ds, 1, DamageType.Fire, 1, false, 1, storedResultsDamage: srd3, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -61,44 +61,47 @@ namespace GuardiansOfTomorrow.Hoplite
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            //srdFull.Add(srd3.FirstOrDefault());
+            List<DealDamageAction> finalStoredResults = new List<DealDamageAction>();
+            finalStoredResults.AddRange(srd1);
+            finalStoredResults.AddRange(srd2);
+            finalStoredResults.AddRange(srd3);
 
-            /*Card c1 = null;
-            Card c2 = null;
-            Card c3 = null;
-
-
-            if (DidDealDamage(srd1))
+            /*coroutine = GameController.SendMessageAction("Successfully concatenated", Priority.Critical, GetCardSource());
+            if (base.UseUnityCoroutines)
             {
-                c1 = srd1.FirstOrDefault().Target;
+                yield return base.GameController.StartCoroutine(coroutine);
             }
-            if (DidDealDamage(srd2))
+            else
             {
-                c2 = srd2.FirstOrDefault().Target;
-            }
-            if (DidDealDamage(srd3))
-            {
-                c3 = srd3.FirstOrDefault().Target;
+                base.GameController.ExhaustCoroutine(coroutine);
             }*/
 
-            
+            //int totalTargets = GetNumberOfTargetsDealtDamage(finalStoredResults);
 
-            //int damageToDeal = 4 - srdFull.Where((DealDamageAction dd) => dd.DidDealDamage).Select((DealDamageAction dd) => dd.Target).Distinct().Count();
+            int totalTargets = 0;
 
-            /*if (c1 != null && c2 != null && c1 != c2)
+            List<Card> targets = new List<Card>();
+
+            foreach (DealDamageAction dd in finalStoredResults)
             {
-                damageToDeal--;
+                if (!targets.Contains(dd.Target) && dd.DidDealDamage)
+                {
+                    totalTargets++;
+                    targets.Add(dd.Target);
+                }
             }
-            if (c2 != null && c3 != null && c2 != c3)
+
+            /*coroutine = GameController.SendMessageAction("Successfully Calculated target count", Priority.Critical, GetCardSource());
+            if (base.UseUnityCoroutines)
             {
-                damageToDeal--;
+                yield return base.GameController.StartCoroutine(coroutine);
             }
-            if (c3 != null && c1 != null && c3 != c1)
+            else
             {
-                damageToDeal--;
+                base.GameController.ExhaustCoroutine(coroutine);
             }*/
 
-            coroutine = DealDamage(base.CharacterCard, base.CharacterCard, 2, DamageType.Fire, cardSource: GetCardSource());
+            coroutine = DealDamage(base.CharacterCard, base.CharacterCard, 4 - totalTargets, DamageType.Fire, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

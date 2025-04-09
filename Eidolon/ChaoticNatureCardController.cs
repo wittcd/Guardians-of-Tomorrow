@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Eidolon
 
         public override IEnumerator Play()
         {
-            LinqCardCriteria isOng = new LinqCardCriteria((Card c) => c.IsOngoing, "ongoing");
+            LinqCardCriteria isOng = new LinqCardCriteria((Card c) => IsOngoing(c), "ongoing");
             IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(base.TurnTakerController, base.TurnTaker.Deck, false, true, false, isOng, 1, null, true, false, RevealedCardDisplay.None, false, false, null, false, false);
             if (base.UseUnityCoroutines)
             {
@@ -27,7 +27,7 @@ namespace GuardiansOfTomorrow.Eidolon
             {
                 base.GameController.ExhaustCoroutine(coroutine);
             }
-            coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => c.IsHero, (Card c) => H - 2, StringToDamageType(((EidolonCharacterCardController)base.CharacterCardController).getMostRecentString()));
+            coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => IsHero(c), (Card c) => H - 2, StringToDamageType(((EidolonCharacterCardController)base.CharacterCardController).getMostRecentString()));
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

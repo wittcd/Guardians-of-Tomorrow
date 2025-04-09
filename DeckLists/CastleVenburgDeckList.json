@@ -1,0 +1,298 @@
+{
+  "name": "Castle Venburg",
+  "kind": "Environment",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "backgroundColor": "331385",
+  "difficulty": null,
+  "shortName": "CastleVenburg",
+  "cards": [
+    {
+      "identifier": "AmosForder",
+      "count": 1,
+      "title": "Amos Forder",
+      "keywords": [
+        "researcher"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "Whenever a Ghost enters play, one hero draws a card, then this card deals itself 1 psychic damage."
+      ],
+      "flavorText": "He knows more about ghosts than anyone. The problem is, he's terrified of them and they won't leave him alone.",
+      "hitpoints": 4
+    },
+    {
+      "identifier": "AzagTheHideous",
+      "count": 1,
+      "title": "Azag the Hideous",
+      "keywords": [
+        "demon"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "CounterDamage",
+        "DealDamageFire",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "Reduce damage dealt to Demons by 1. When this card would be dealt damage by a non-demon target, it first deals that target 1 irreducible fire damage and 1 irreducible psychic damage."
+      ],
+      "flavorText": "Entity classification: ZEUS-GAMMA{br}Notes: Causes intense heat and pain through its presence. Followed by legions of lesser entities formed from rock. Do not engage in close quarters.",
+      "hitpoints": 10,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Arsenal"
+      ]
+    },
+    {
+      "identifier": "Carnwennan",
+      "count": 1,
+      "title": "Carnwennan",
+      "keywords": [
+        "relic"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "MakeDamageIrreducible",
+        "IncreaseDamageDealt"
+      ],
+      "body": [
+        "At the end of the environment turn, if this card is not next to another card, move it next to the non-character card with the lowest HP. Reduce the first damage dealt to the target next to this card each turn by 2. Damage dealt by the target next to this card is irreducible and increased by 1."
+      ],
+      "flavorText": "The presence of King Arthur's holy dagger in the Bureau's vaults is a closely guarded secret. If word got out, there would be a serious incident between the Bureau and Great Britain.",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "EerieCatacombs",
+      "count": 1,
+      "title": "Eerie Catacombs",
+      "keywords": [
+        "room"
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "Manipulate"
+      ],
+      "body": [
+        "Increase damage dealt by Ghosts by 1. Whenever a Ghost is destroyed, put it on top of its owner's deck."
+      ],
+      "flavorText": "Beneath Castle Venburg is a labyrinthine network of tombs and vaults, some dating back to Roman times. The inhabitants buried many supernatural artifacts mysterious corpses since then, creating a locus of ghostly activity."
+    },
+    {
+      "identifier": "EvidenceStorage3",
+      "count": 1,
+      "title": "Evidence Storage 3",
+      "keywords": [
+        "room"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "body": [
+        "At the end of the environment turn, put a Relic from the villain trash, the environment trash, and one hero trash into play in that order."
+      ],
+      "flavorText": "Storages 1 and 2 are for mundane items associated with magical crimes. 3 is where they keep the good stuff."
+    },
+    {
+      "identifier": "GhostlyDuplicate",
+      "count": 1,
+      "title": "Ghostly Duplicate",
+      "keywords": [
+        "ghost"
+      ],
+      "icons": [
+        "DealDamage"
+      ],
+      "body": [
+        "When this card enters play, put it next to the hero with the highest HP. The first time each turn that hero deals damage, this card deals the same target the same damage. The first time each turn this card is dealt damage, it deals that hero the same damage."
+      ],
+      "flavorText": "Entity classification: DIONYSUS-EPSILON{br}Notes: No direct contact yet. Entity imitates living beings it encounters, possibly by making a spiritual connection.",
+      "hitpoints": 10
+    },
+    {
+      "identifier": "GrafVenburg",
+      "count": 1,
+      "title": "Graf Venburg",
+      "keywords": [
+        "researcher"
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "EndOfTurnAction",
+        "PlayCardNow",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "Increase damage dealt by Demons by 1. At the end of the environment turn, reveal cards from the environment deck until a Demon is revealed. Put it into play and shuffle the other revealed cards back into the environment deck. Then the Demon with the lowest HP deals the non-demon villain target with the lowest HP 2 infernal damage."
+      ],
+      "flavorText": "The host of the Bureau Arcanum is the world's foremost demonologist, but his sense of restraint is sorely lacking.",
+      "hitpoints": 7
+    },
+    {
+      "identifier": "HalloweenParty",
+      "count": 1,
+      "title": "Halloween Party",
+      "keywords": [
+        "event"
+      ],
+      "icons": [
+        "StartOfTurnAction",
+        "DestroySelf"
+      ],
+      "body": [
+        "When this card enters play, each hero may choose Demon, Ghost, or Monster. Add that keyword to their character card until this card leaves play. At the start of the environment turn, destroy this card."
+      ],
+      "flavorText": "The Bureau's annual halloween party hosts many heroes, as well as many spooks and specters taking advantage of the night when the veil is at its thinnest."
+    },
+    {
+      "identifier": "Imhullu",
+      "count": 1,
+      "title": "Imhullu",
+      "keywords": [
+        "demon"
+      ],
+      "icons": [
+        "IncreaseDamageTaken",
+        "EndOfTurnAction",
+        "DealDamageSonic",
+        "DealDamageToxic"
+      ],
+      "body": [
+        "The first time each turn this card deals damage, increase damage dealt to that target by 1 until the start of the next environment turn. At the end of the environment turn, this card deals the hero with the most cards in play {H-2} sonic damage and {H-3} toxic damage. "
+      ],
+      "flavorText": "Entity classification: ARES-GAMMA{br}Notes: Formed of toxic gas. Prefers attacking through suffocation and strangulation. Ancient sources indicate god-killing potential but present state seems diminished from that capability.",
+      "hitpoints": 8
+    },
+    {
+      "identifier": "LudwigII",
+      "count": 1,
+      "title": "Ludwig II",
+      "keywords": [
+        "ghost"
+      ],
+      "icons": [
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "Whenever a Room enters play or is destroyed, this card deals each target 1 psychic damage."
+      ],
+      "flavorText": "Entity classification: HEPHAESTUS-DELTA{br}Notes: Architectural suggestions are occasionally useful. Defends ideas with extreme prejudice.",
+      "hitpoints": 8
+    },
+    {
+      "identifier": "PanicRoom",
+      "count": 1,
+      "title": "Panic Room",
+      "keywords": [
+        "room"
+      ],
+      "icons": [
+        "StartOfTurnAction",
+        "DestroyOngoing",
+        "DestroyEquipment",
+        "DestroyEnvironment",
+        "DestroySelf"
+      ],
+      "body": [
+        "At the start of the environment turn, destroy any number of hero ongoing or equipment cards. If at least 3 cards are destroyed this way, destroy all other environment cards, then destroy this card."
+      ],
+      "flavorText": "The counts of Castle Venburg built this secret chamber and reinforced it against all mundane and magical attack, in case one of their experiments should go terribly awry."
+    },
+    {
+      "identifier": "TheAmherstStalker",
+      "count": 1,
+      "title": "The Amherst Stalker",
+      "keywords": [
+        "ghost"
+      ],
+      "icons": [
+        "ImmuneToDamageMelee",
+        "ImmuneToDamageProjectile",
+        "EndOfTurnAction",
+        "DealDamageFire",
+        "Destroy"
+      ],
+      "body": [
+        "This card is immune to melee and projectile damage. At the end of the environment turn, this card deals the hero with the most cards in play {H - 1} fire damage, then destroys one of their ongoing or equipment cards and a Room."
+      ],
+      "flavorText": "Entity classification: TYPHON-GAMMA{br}Notes: Arsonistic tendencies. Enjoys reactions of fear from its victims. Permanently invisible and intangible.",
+      "hitpoints": 7
+    },
+    {
+      "identifier": "TheBellWitch",
+      "count": 1,
+      "title": "The Bell Witch",
+      "keywords": [
+        "demon"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "Discard",
+        "DealDamageToxic"
+      ],
+      "body": [
+        "At the end of each hero turn, that hero may draw 3 cards. Discard each Ongoing or Equipment card drawn this way, then this card deals that hero X toxic damage where X is the number of cards discarded this way times 2."
+      ],
+      "flavorText": "Entity classification: DIONYSUS-DELTA{br} Notes: Do not agree to any bargains offered. Do not provide information on Bureau operations. Ensure sufficient protection against curses and theft before making contact.",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "TheBrazenHeadOfDrMirabilis",
+      "count": 1,
+      "title": "The Brazen Head of Dr. Mirabilis",
+      "keywords": [
+        "relic"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamagePsychic",
+        "Manipulate",
+        "Discard"
+      ],
+      "body": [
+        "At the end of the environment turn, this card deals up to {H} heroes 1 irreducible psychic damage each. Each hero dealt damage this way may reveal and either replace or discard the top card of their deck."
+      ],
+      "flavorText": "The Brazen Head is an alchemical construct that always tells the truth, even when it's inconvenient and especially when it's dangerous.",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "TheHandOfGlory",
+      "count": 1,
+      "title": "The Hand of Glory",
+      "keywords": [
+        "relic"
+      ],
+      "icons": [
+        "ReduceDamageDealt",
+        "StartOfTurnAction",
+        "Search",
+        "PlayCardNow"
+      ],
+      "body": [
+        "Reduce damage dealt by non-environment targets by 1. At the start of the environment turn, search the environment deck for a Room and put it into play, then shuffle the environment deck."
+      ],
+      "flavorText": "Open lock to the dead man's knock! Fly bolt, bar and band! Nor move nor swerve, joint muscle, or nerve, at the spell of the dead man's hand! Sleep all who sleep, wake all who wake, but be as the dead for the dead man's sake! - The Ingoldsby Legends",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "TheScribe",
+      "count": 1,
+      "title": "The Scribe",
+      "keywords": [
+        "researcher"
+      ],
+      "icons": [
+        "GainHP",
+        "DealDamageEnergy"
+      ],
+      "body": [
+        "Whenever a card enters play, this card gains X HP and deals the non-researcher target with the second lowest HP X energy damage, where X is the number of keywords on that card."
+      ],
+      "flavorText": "Entity classification: IRIS-DELTA{br}Notes: Functions as Bureau librarian. Primary objective appears to be accumulation of rare knowledge. May report to unknown entities (see EMPEROR HYPTOTHESIS).",
+      "hitpoints": 9
+    }
+  ]
+}

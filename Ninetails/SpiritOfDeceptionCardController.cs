@@ -28,7 +28,7 @@ namespace GuardiansOfTomorrow.Ninetails
 
 		private IEnumerator OnDestroyResponse(DestroyCardAction dc)
 		{
-			IEnumerator coroutine = DealDamage(base.CharacterCard, (Card card) => !card.IsHero, 1, DamageType.Psychic, true);
+			IEnumerator coroutine = DealDamage(base.CharacterCard, (Card card) => !IsHero(card), 1, DamageType.Psychic, true);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -42,7 +42,7 @@ namespace GuardiansOfTomorrow.Ninetails
 		public IEnumerator EndOfTurnResponse(PhaseChangeAction p)
 		{
 			List<DestroyCardAction> storedDestroy = new List<DestroyCardAction>();
-			IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.IsOngoing, "ongoing"), true, storedDestroy, cardSource: GetCardSource());
+			IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => IsOngoing(c), "ongoing"), true, storedDestroy, cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

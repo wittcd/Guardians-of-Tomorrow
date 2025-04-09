@@ -1,0 +1,409 @@
+{
+  "name": "Angler",
+  "kind": "Hero",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "AnglerCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "AnglerCharacter",
+      "promoIdentifier": "DeepSirenAnglerCharacter",
+      "count": 1,
+      "title": "Deep Siren Angler",
+      "body": "Mesmerizing Song",
+      "backgroundColor": "759ee0",
+      "foilBackgroundColor": "759ee0",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "{Angler} deals 1 target 1 sonic damage. Redirect the next damage dealt by each target dealt damage this way to {Angler}"
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageSonic",
+        "RedirectDamage"
+      ],
+      "hitpoints": 29,
+      "incapacitatedAbilities": [
+        "One hero may use a power",
+        "One player may play a card",
+        "Destroy a target with 2 or less HP. If a target is destroyed this way, one hero gains 2 HP."
+      ],
+      "flippedIcons": [
+        "UsePowerNow",
+        "PlayCardNow",
+        "DestroyTarget",
+        "GainHP"
+      ],
+      "openingLines": {
+        "default": "Grumble grumble... fishlady... grumble... geas... grumble... mermaid...",
+        "CharybdisCharacter": "You smashed my ship! Now this's personal!",
+        "OblivAeonFrontPageCharacter": "Their hope spells your doom!"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "AbsoluteZeroCharacter"
+      },
+      "complexity": 2
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "AnglerCharacter",
+      "count": 1,
+      "title": "Angler",
+      "body": "Go Fish",
+      "backgroundColor": "2360c2",
+      "foilBackgroundColor": "2360c2",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "You may play a Bait card or draw a card."
+      ],
+      "icons": [
+        "HasPower",
+        "PlayCardNow",
+        "DrawCardNow"
+      ],
+      "hitpoints": 30,
+      "incapacitatedAbilities": [
+        "One player may draw a card.",
+        "One hero may use a power.",
+        "You may destroy a hero non-character card. If you do, that card's owner may deal 1 target 3 projectile damage."
+      ],
+      "flippedIcons": [
+        "DrawCardNow",
+        "UsePowerNow",
+        "Destroy",
+        "DealDamageProjectile"
+      ],
+      "openingLines": {
+        "default": "You'll be the catch of the day!",
+        "CharybdisCharacter": "This is what my family trains for! I'll make Grandpappy proud!",
+        "OblivAeonFrontPageCharacter": "We got joy no matter what you do!"
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "AbsoluteZeroCharacter"
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "ChargedLure",
+      "count": 3,
+      "title": "Charged Lure",
+      "keywords": [
+        "bait"
+      ],
+      "icons": [
+        "RedirectDamage",
+        "DestroyOngoing",
+        "DestroyEnvironment"
+      ],
+      "body": [
+        "Redirect damage dealt to {Angler} or the SS Langley to this card. When this card is destroyed, you may destroy an ongoing or environment card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "This should git 'is attention."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #26",
+      "hitpoints": 1
+    },
+    {
+      "identifier": "ChumBucket",
+      "count": 3,
+      "title": "Chum Bucket",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "Manipulate",
+        "HasPower",
+        "DealDamageMelee",
+        "PlayCardNow"
+      ],
+      "body": [
+        "The first time each turn {Angler} destroys a target, you may put a Bait card from your trash into your hand."
+      ],
+      "powers": [
+        "{Angler} deals 1 target 1 melee damage. Play a Bait card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Euuurgh, that [i]reeks[/i]!",
+          "identifier": "Nyctophobia"
+        },
+        {
+          "text": "Monsters don't think so.",
+          "identifier": "Angler"
+        }
+      ],
+      "flavorReference": "The Hunters #11"
+    },
+    {
+      "identifier": "DepthCharge",
+      "count": 3,
+      "title": "Depth Charge",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageSonic",
+        "DestroyEnvironment"
+      ],
+      "body": [
+        "{Angler} deals each non-hero target 2 sonic damage. Destroy an environment card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Ta kill such a great monster,{br}we're gonna need some real firepower."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #26"
+    },
+    {
+      "identifier": "DesignatedVictim",
+      "count": 2,
+      "title": "Designated Victim",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "RedirectDamage",
+        "DestroySelf"
+      ],
+      "body": [
+        "Play this next to a hero. Redirect damage dealt to other heroes to that hero. Redirect damage dealt to that hero to a Bait card. At the start of your turn, destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Why am [i]I[/i] always the bait?"
+        }
+      ],
+      "flavorReference": "Arsenal, The Hunters #4"
+    },
+    {
+      "identifier": "Electrofishing",
+      "count": 3,
+      "title": "Electrofishing",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageLightning",
+        "ReduceDamageDealt"
+      ],
+      "body": [
+        "{Angler} deals each non-hero target 1 lightning damage. Reduce damage dealt by each target dealt damage this way by 2 until the start of your next turn."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I call that a stunnin' development!"
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #6"
+    },
+    {
+      "identifier": "FishingTackle",
+      "count": 3,
+      "title": "Fishing Tackle",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "PlayCardNow",
+        "RedirectDamage"
+      ],
+      "body": [
+        "{Angler} deals 1 target 3 melee damage. Either play a Bait card or redirect the next damage dealt by that target to Angler."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "She ain't gettin' away from me!"
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #25"
+    },
+    {
+      "identifier": "GoneFishin",
+      "count": 3,
+      "title": "Gone Fishin'",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "GainHP",
+        "SkipTurn"
+      ],
+      "body": [
+        "Draw 3 cards. {Angler} gains 3 HP. Immediately end your turn."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Dammit! Where's Angie when{br}you need her!?"
+        }
+      ],
+      "flavorReference": "Nyctophobia, The Hunters #14"
+    },
+    {
+      "identifier": "HookLineAndSinker",
+      "count": 3,
+      "title": "Hook, Line, and Sinker",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DestroySelf"
+      ],
+      "body": [
+        "After one of your targets is dealt damage, {Angler} may deal the source of that damage 5 melee damage. If damage is dealt this way, destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I gotcha!"
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #9"
+    },
+    {
+      "identifier": "NoodleAround",
+      "count": 3,
+      "title": "Noodle Around",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "Draw 2 cards. One non-hero target deals {Angler} 1 irreducible melee damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Sometimes, ya gotta stick your hand in a hole, see what bites."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #17"
+    },
+    {
+      "identifier": "SetLines",
+      "count": 4,
+      "title": "Set Lines",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Search",
+        "DrawCardNow",
+        "PlayCardNow"
+      ],
+      "body": [
+        "Search your deck for a Bait card and put it into your hand. Shuffle your deck. You may play any number of Bait cards."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "All ready now! Let 'em come!"
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #6"
+    },
+    {
+      "identifier": "SSLangley",
+      "count": 1,
+      "title": "SS Langley",
+      "keywords": [
+        "boat"
+      ],
+      "icons": [
+        "RedirectDamage",
+        "DrawCardNow",
+        "DealDamageCold",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "When {Angler} would be dealt damage by a source other than this card, you may redirect it to this card. The first time each turn a Bait card is destroyed, draw a card. When this card is destroyed, {Angler} deals herself 3 irreducible cold damage and 3 irreducible psychic damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "She's a good ship. My grandpappy's ship."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #25",
+      "hitpoints": 10
+    },
+    {
+      "identifier": "TauntingBeacon",
+      "count": 3,
+      "title": "Taunting Beacon",
+      "keywords": [
+        "bait"
+      ],
+      "icons": [
+        "RedirectDamage",
+        "DealDamageSonic"
+      ],
+      "body": [
+        "Redirect damage dealt to {Angler} or the SS Langley to this card. When this card is destroyed, it deals each non-hero target 2 sonic damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "HEY! Blood-breath! Stinky! Yeah you!"
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #6",
+      "hitpoints": 1
+    },
+    {
+      "identifier": "TrustyHarpoon",
+      "count": 3,
+      "title": "Trusty Harpoon",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageProjectile",
+        "RedirectDamage"
+      ],
+      "powers": [
+        "{Angler} deals 1 target 3 projectile damage. If a non-character target is dealt damage this way, redirect damage dealt by that target to {Angler} until the start of your next turn."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Git over here!"
+        }
+      ],
+      "flavorReference": "Angler, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "WrigglingWorm",
+      "count": 3,
+      "title": "Wriggling Worm",
+      "keywords": [
+        "bait"
+      ],
+      "icons": [
+        "RedirectDamage",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "Redirect damage dealt to {Angler} or the SS Langley to this card. When this card is destroyed, {Angler} may deal 1 target 3 melee damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "It ain't smart. It'll bite."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #12",
+      "hitpoints": 1
+    }
+  ]
+}

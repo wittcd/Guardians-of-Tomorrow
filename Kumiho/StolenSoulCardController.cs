@@ -16,7 +16,7 @@ namespace GuardiansOfTomorrow.Kumiho
 			: base(card, turnTakerController)
 		{
 			AddThisCardControllerToList(CardControllerListType.MakesIndestructible);
-			base.SpecialStringMaker.ShowHeroTargetWithHighestHP();
+			base.SpecialStringMaker.ShowHeroTargetWithLowestHP();
             TimeToEndGame = false;
 		}
 
@@ -24,7 +24,7 @@ namespace GuardiansOfTomorrow.Kumiho
         {
             //When this card enters play, put it in the play area of the hero with the lowest HP.
             List<Card> low = new List<Card>();
-            IEnumerator coroutine = GameController.FindTargetWithLowestHitPoints(1, (Card c) => c.IsHeroCharacterCard, low, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.FindTargetWithLowestHitPoints(1, (Card c) => IsHeroCharacterCard(c), low, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -81,15 +81,15 @@ namespace GuardiansOfTomorrow.Kumiho
         public override void AddTriggers()
         {
             //AddTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard && dd.DamageSource.Card == GetCardThisCardIsNextTo(), HighestHPRedirectResponse, TriggerType.RedirectDamage, TriggerTiming.Before);
-            AddTrigger((DealDamageAction dd) => dd.Target.IsHeroCharacterCard && dd.DidDealDamage && dd.DamageSource.Card == GetCardThisCardIsNextTo(), DiscardFromBeneathResponse, TriggerType.MoveCard, TriggerTiming.After);
-            AddTrigger((GameAction ga) => GetCardThisCardIsNextTo() != null && GetCardThisCardIsNextTo().IsHeroCharacterCard && GetCardThisCardIsNextTo().IsIncapacitated && !TimeToEndGame, LoseWhenIncappedResponse, TriggerType.GameOver, TriggerTiming.After);
+            AddTrigger((DealDamageAction dd) => IsHeroCharacterCard(dd.Target) && dd.DidDealDamage && dd.DamageSource.Card == GetCardThisCardIsNextTo(), DiscardFromBeneathResponse, TriggerType.MoveCard, TriggerTiming.After);
+            AddTrigger((GameAction ga) => GetCardThisCardIsNextTo() != null && IsHeroCharacterCard(GetCardThisCardIsNextTo()) && GetCardThisCardIsNextTo().IsIncapacitated && !TimeToEndGame, LoseWhenIncappedResponse, TriggerType.GameOver, TriggerTiming.After);
             base.AddTriggers();
         }
 
         private IEnumerator HighestHPRedirectResponse(DealDamageAction dd)
         {
             List<Card> stored = new List<Card>();
-            IEnumerator coroutine = GameController.FindTargetsWithHighestHitPoints(1, 1, (Card c) => c.IsHeroCharacterCard && c != GetCardThisCardIsNextTo(), stored, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.FindTargetsWithHighestHitPoints(1, 1, (Card c) => IsHeroCharacterCard(c) && c != GetCardThisCardIsNextTo(), stored, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -149,7 +149,7 @@ namespace GuardiansOfTomorrow.Kumiho
         {
             TimeToEndGame = true;
             string defeatString = "Kumiho has devoured " + GetCardThisCardIsNextTo().Title + "'s soul!";
-            IEnumerator coroutine = base.GameController.SendMessageAction(defeatString, Priority.Critical, GetCardSource(), null, showCardSource: true);
+            /*IEnumerator coroutine = base.GameController.SendMessageAction(defeatString, Priority.Critical, GetCardSource(), null, showCardSource: true);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -157,8 +157,8 @@ namespace GuardiansOfTomorrow.Kumiho
             else
             {
                 base.GameController.ExhaustCoroutine(coroutine);
-            }
-            IEnumerator coroutine2 = base.GameController.GameOver(EndingResult.AlternateDefeat, defeatString, showEndingTextAsMessage: false, null, null, GetCardSource());
+            }*/
+            IEnumerator coroutine2 = base.GameController.GameOver(EndingResult.AlternateDefeat, defeatString, showEndingTextAsMessage: true, null, null, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine2);

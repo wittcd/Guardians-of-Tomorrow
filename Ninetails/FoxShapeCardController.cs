@@ -22,11 +22,13 @@ namespace GuardiansOfTomorrow.Ninetails
 		public FoxShapeCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
+			AllowFastCoroutinesDuringPretend = false;
+			RunModifyDamageAmountSimulationForThisCard = false;
 		}
 
 		public override void AddTriggers() 
 		{
-			AddTrigger((RedirectDamageAction rd) => rd.OldTarget == base.CharacterCard, (RedirectDamageAction rd) => ModifyDamageAmountResponse(rd), TriggerType.ModifyDamageAmount, TriggerTiming.After);
+			_modifyDamageAmount = AddTrigger((RedirectDamageAction rd) => rd.OldTarget == base.CharacterCard, (RedirectDamageAction rd) => ModifyDamageAmountResponse(rd), TriggerType.ModifyDamageAmount, TriggerTiming.After);
 		}
 
 		private IEnumerator IncreaseFunction()
@@ -82,7 +84,21 @@ namespace GuardiansOfTomorrow.Ninetails
 			{
 				SelectFunctionDecision = null;
 				DealDamageAction = null;
+				Target = null;
 			}
 		}
+
+		/*private IEnumerator ModifyDamageAmountResponse(RedirectDamageAction rd)
+		{
+			if (rd.IsPretend)
+			{
+				List<Function> options = new List<Function>();
+				options.Add(new Function(DecisionMaker, "Increase by 1", SelectionType.IncreaseDamage, () => GameController.IncreaseDamage(rd.DealDamageAction, 1, false, GetCardSource())));
+				options.Add(new Function(DecisionMaker, "Reduce by 1", SelectionType.ReduceDamageDealt, () => GameController.ReduceDamage(rd.DealDamageAction, 1, null, GetCardSource())));
+
+				SelectFunctionDecision sfd = new SelectFunctionDecision(GameController, DecisionMaker, options, false, cardSource: GetCardSource());
+				IEnumerator coroutine = GameController.SelectAndPerformFunction(sfd, )
+			}
+		}*/
 	}
 }

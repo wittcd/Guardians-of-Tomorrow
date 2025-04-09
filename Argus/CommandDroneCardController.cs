@@ -30,9 +30,10 @@ namespace GuardiansOfTomorrow.Argus
 
         public override IEnumerator UsePower(int index = 0)
         {
+            int powerNumeralOperates = GetPowerNumeral(0, 3);
             List<Card> usedCards = new List<Card>();
             LinqCardCriteria unused = new LinqCardCriteria((Card c) => !usedCards.Contains(c) && c.IsInPlay);
-            for (int x = 0; x < 3; x++) 
+            for (int x = 0; x < powerNumeralOperates; x++) 
             {
                 List<ActivateAbilityDecision> activated = new List<ActivateAbilityDecision>();
                 IEnumerator coroutine = GameController.SelectAndActivateAbility(DecisionMaker, "operate", unused, activated, true, GetCardSource());
@@ -50,7 +51,7 @@ namespace GuardiansOfTomorrow.Argus
                 }
                 else
                 {
-                    x = 3;
+                    x = powerNumeralOperates;
                 }
             }
         }

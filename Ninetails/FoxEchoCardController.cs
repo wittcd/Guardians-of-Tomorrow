@@ -28,7 +28,7 @@ namespace GuardiansOfTomorrow.Ninetails
 
 		private IEnumerator OnDestroyResponse(DestroyCardAction dc)
 		{
-			IEnumerator coroutine = SelectAndPlayCardsFromHand(DecisionMaker, 1, optional: true, cardCriteria: new LinqCardCriteria((Card c) => c.IsOngoing, "ongoing"), requiredDecisions: 0);
+			IEnumerator coroutine = SelectAndPlayCardsFromHand(DecisionMaker, 1, optional: true, cardCriteria: new LinqCardCriteria((Card c) => IsOngoing(c), "ongoing"), requiredDecisions: 0);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -51,10 +51,7 @@ namespace GuardiansOfTomorrow.Ninetails
 			{
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
-			int value = (from ttc in base.GameController.FindHeroTurnTakerControllers()
-						 where !ttc.IsIncapacitatedOrOutOfGame
-						 select ttc).Count();
-			if (DidDrawCards(storedResults, value) || DidDrawCards(storedResults, value - 1))
+			if (DidDrawCards(storedResults, H) || DidDrawCards(storedResults, H - 1))
 			{
 				GameController gameController = base.GameController;
 				HeroTurnTakerController decisionMaker = DecisionMaker;

@@ -1,0 +1,599 @@
+{
+  "name": "Cathain",
+  "kind": "Hero",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "CathainCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "CathainCharacter",
+      "count": 1,
+      "title": "Cathain",
+      "body": "Place of Power",
+      "backgroundColor": "bd3a3d",
+      "foilBackgroundColor": "bd3a3d",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "If you have a Locus in play, reveal cards from your deck until a card that shares a keyword with one of your Loci is revealed. Put that card in your hand and shuffle the other revealed cards into your deck. Otherwise, search your deck or trash for a Locus and put it into your hand. If you searched your deck, shuffle it."
+      ],
+      "icons": [
+        "HasPower",
+        "DrawCardNow",
+        "Search"
+      ],
+      "hitpoints": 25,
+      "incapacitatedAbilities": [
+        "One player may play a card",
+        "One player may draw a card",
+        "One hero may deal themselves 1 irreducible infernal damage. If they take damage this way, they may deal 1 other target 3 cold, fire, lightning, or melee damage."
+      ],
+      "flippedIcons": [
+        "PlayCardNow",
+        "DrawCardNow",
+        "DealDamageInfernal",
+        "DealDamage"
+      ],
+      "openingLines": {
+        "default": "I wield the most ancient of magicks. You cannot stand before me.",
+        "AbhartachCharacter": "My old enemy, this time you shall fall for good.",
+        "OblivAeonFrontPageCharacter": "And I will face you all the same, no matter what awaits."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "LifelineCharacter"
+      },
+      "complexity": 3
+    },
+    {
+      "identifier": "AethericLocus",
+      "count": 1,
+      "title": "Aetheric Locus",
+      "keywords": [
+        "locus",
+        "air"
+      ],
+      "icons": [
+        "Destroy",
+        "DealDamageLightning"
+      ],
+      "body": [
+        "When this card enters play, destroy your other Loci. Whenever you play another Air card, this card deals 1 target 2 lightning damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "These winds are perfect. I will{br}draw power here."
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #26",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "ArcaneShielding",
+      "count": 3,
+      "title": "Arcane Shielding",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "RedirectDamage",
+        "StartOfTurnAction",
+        "DestroySelf"
+      ],
+      "body": [
+        "Redirect damage dealt to {Cathain} to one of your Loci. At the start of your turn, destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Your technique has only gotten{br}sloppier over the centuries."
+        }
+      ],
+      "flavorReference": "Abhartach, The Hunters #3"
+    },
+    {
+      "identifier": "ChokingAsh",
+      "count": 1,
+      "title": "Choking Ash",
+      "keywords": [
+        "ongoing",
+        "air",
+        "fire"
+      ],
+      "icons": [
+        "IncreaseDamageTaken",
+        "DealDamageInfernal",
+        "DealDamageToxic",
+        "EndOfTurnAction",
+        "DestroySelf"
+      ],
+      "body": [
+        "When this card enters play, increase the next damage dealt to each non-hero target by 1 and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "After a non-hero target deals damage to another target, they deal themselves 2 toxic damage.",
+        "At the end of your turn, if this card did not enter play this turn, destroy it."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "This will force them out!"
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #12"
+    },
+    {
+      "identifier": "DustStorm",
+      "count": 2,
+      "title": "Dust Storm",
+      "keywords": [
+        "ongoing",
+        "air",
+        "earth"
+      ],
+      "icons": [
+        "CancelledDamageGreen",
+        "DealDamageInfernal",
+        "StartAndEndOfTurnAction",
+        "DealDamageProjectile",
+        "DestroySelf"
+      ],
+      "body": [
+        "When this card enters play, prevent the next damage dealt by each non-hero target and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "At the start of each turn, {Cathain} deals up to 3 targets 1 projectile damage each.",
+        "At the end of your turn, if this card did not enter play this turn, destroy it."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "May the desert strike you down!"
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #11"
+    },
+    {
+      "identifier": "EarthCrack",
+      "count": 3,
+      "title": "Earth Crack",
+      "keywords": [
+        "one-shot",
+        "earth"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "{Cathain} deals 1 target 3 melee damage then deals that target 2 melee damage. {Cathain} or one of your Loci deals itself 3 irreducible infernal damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Stone! Heed my command!"
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #2"
+    },
+    {
+      "identifier": "ElementalAttunement",
+      "count": 3,
+      "title": "Elemental Attunement",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "GainHP"
+      ],
+      "body": [
+        "Whenever you play a one-shot card that shares a keyword with a Locus in play, you may draw a card or {Cathain} gains 1 HP."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Magic is not so simple a thing as words and gestures. You must [i]feel[/i] it inside you."
+        }
+      ],
+      "flavorReference": "Cathain, Guardians of Tomorrow Annual #10"
+    },
+    {
+      "identifier": "ElementalOutburst",
+      "count": 3,
+      "title": "Elemental Outburst",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "PlayCardNow"
+      ],
+      "body": [
+        "Play up to 3 one-shots that share a keyword with a Locus in play. Immediately end your turn."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "This land shall not fall while I stand!"
+        }
+      ],
+      "flavorReference": "Cathain, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "FreezeBlood",
+      "count": 3,
+      "title": "Freeze Blood",
+      "keywords": [
+        "one-shot",
+        "water"
+      ],
+      "icons": [
+        "DealDamageCold",
+        "ReduceDamageDealt",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "{Cathain} deals 1 target 4 cold damage. Reduce damage dealt by that target by 1 until the start of your turn. {Cathain} or one of your Loci deals itself 3 irreducible infernal damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "This time, I will find a way to{br}end you for good."
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #6"
+    },
+    {
+      "identifier": "Hurricane",
+      "count": 1,
+      "title": "Hurricane",
+      "keywords": [
+        "ongoing",
+        "air",
+        "water"
+      ],
+      "icons": [
+        "PlayCardNow",
+        "DealDamageInfernal",
+        "DestroyEnvironment",
+        "DealDamageCold",
+        "DealDamageLightning"
+      ],
+      "body": [
+        "When this card enters play, play the top 2 cards of the environment deck and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "At the start of each turn, destroy an environment card. If a card is destroyed this way, {Cathain} deals 1 target 2 lightning and 2 cold damage.",
+        "At the end of your turn, if this card did not enter play this turn, destroy it."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Let up! You're gonna sink us too!"
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #31"
+    },
+    {
+      "identifier": "LightningStrike",
+      "count": 3,
+      "title": "Lightning Strike",
+      "keywords": [
+        "one-shot",
+        "air"
+      ],
+      "icons": [
+        "DealDamageLightning",
+        "DealDamageSonic",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "{Cathain} deals 1 target 4 lightning damage, then deals each other non-hero target 1 sonic damage. {Cathain} or one of your Loci deals itself 3 irreducible infernal damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "You think he's taking apprentices?{br}I have got to learn that trick."
+        }
+      ],
+      "flavorReference": "Chance, Guardians of Tomorrow Annual #10"
+    },
+    {
+      "identifier": "MeltArmor",
+      "count": 3,
+      "title": "Melt Armor",
+      "keywords": [
+        "one-shot",
+        "fire"
+      ],
+      "icons": [
+        "DealDamageFire",
+        "IncreaseDamageTaken",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "{Cathain} deals 1 target 4 fire damage. Increase damage dealt to that target by 1 until the start of your turn. {Cathain} or one of your Loci deals itself 2 irreducible infernal damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Cora! Hit it now!"
+        }
+      ],
+      "flavorReference": "Cathain, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "OceanicLocus",
+      "count": 1,
+      "title": "Oceanic Locus",
+      "keywords": [
+        "locus",
+        "water"
+      ],
+      "icons": [
+        "Destroy",
+        "GainHP"
+      ],
+      "body": [
+        "When this card enters play, destroy your other Loci. Whenever you play another Water card, {Cathain} gains 1 HP."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Another chosen of the seas?",
+          "identifier": "Deluge"
+        },
+        {
+          "text": "I have mastered the deep, not submitted to it.",
+          "identifier": "Cathain"
+        }
+      ],
+      "flavorReference": "Abhartach, The Hunters #3",
+      "hitpoints": 10
+    },
+    {
+      "identifier": "SiphonElements",
+      "count": 3,
+      "title": "Siphon Elements",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "HasPower",
+        "Destroy",
+        "GainHP"
+      ],
+      "body": [
+        "When {Cathain} deals himself infernal damage, increase the next non-infernal damage dealt by {Cathain} by 1."
+      ],
+      "powers": [
+        "Destroy one of your Loci. {Cathain} gains HP equal to half its remaining HP, rounded up."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "A little time, to reclaim invested power."
+        }
+      ],
+      "flavorReference": "Cathian, The Hunters #3"
+    },
+    {
+      "identifier": "Pyroclasm",
+      "count": 1,
+      "title": "Pyroclasm",
+      "keywords": [
+        "ongoing",
+        "earth",
+        "fire"
+      ],
+      "icons": [
+        "DealDamageFire",
+        "DealDamageInfernal",
+        "EndOfTurnAction",
+        "DestroySelf"
+      ],
+      "body": [
+        "When this card enters play, {Cathain} deals each non-hero target 2 fire damage and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "The first time each turn each non-hero target is dealt non-fire damage, {Cathain} deals that target 1 fire damage.",
+        "At the end of your turn, if this card did not enter play this turn, destroy it."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "This rock once bathed in fire.{br}It shall again."
+        }
+      ],
+      "flavorReference": "Cathain, The Hunters #13"
+    },
+    {
+      "identifier": "SinkingMorass",
+      "count": 1,
+      "title": "Sinking Morass",
+      "keywords": [
+        "ongoing",
+        "earth",
+        "water"
+      ],
+      "icons": [
+        "DestroyOngoing",
+        "DestroyEnvironment",
+        "ReduceDamageDealt",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "When this card enters play, destroy up to 3 ongoing or environment cards and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "Reduce damage dealt by non-hero targets by 2.",
+        "At the end of your turn, if this card did not enter play this turn, destroy it."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I couldn'ta made a better trap."
+        }
+      ],
+      "flavorReference": "Angler, The Hunters #5"
+    },
+    {
+      "identifier": "TelluricLocus",
+      "count": 1,
+      "title": "Telluric Locus",
+      "keywords": [
+        "locus",
+        "earth"
+      ],
+      "icons": [
+        "Destroy",
+        "DestroyEnvironment"
+      ],
+      "body": [
+        "When this card enters play, destroy your other Loci. Whenever you play another Earth card, you may destroy an environment card."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "The Earth. It trembles. Something approaches."
+        }
+      ],
+      "flavorReference": "Balor, Guardians of Tomorrow Annual #11",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "SteamGeyser",
+      "count": 1,
+      "title": "Steam Geyser",
+      "keywords": [
+        "ongoing",
+        "fire",
+        "water"
+      ],
+      "icons": [
+        "DealDamageFire",
+        "DealDamageCold",
+        "MakeDamageIrreducible",
+        "DealDamageInfernal"
+      ],
+      "body": [
+        "When this card enters play, {Cathain} deals one target 5 fire damage, then {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "At the start of each turn, either {Cathain} deals 1 target 1 fire damage or 1 target gains 1 HP.",
+        "At the end of your turn, if this card did not enter play this turn, destroy it."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "You used the thermal stress to{br}penetrate its shell. Very clever."
+        }
+      ],
+      "flavorReference": "Argus, The Hunters #33"
+    },
+    {
+      "identifier": "VolcanicLocus",
+      "count": 1,
+      "title": "Volcanic Locus",
+      "keywords": [
+        "locus",
+        "fire"
+      ],
+      "icons": [
+        "Destroy",
+        "DealDamageFire"
+      ],
+      "body": [
+        "When this card enters play, destroy your other Loci. Whenever you play another Fire card, this card deals each non-hero target 1 fire damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Please tell me you're not planning{br}to blow up Mt. Vesuvius?"
+        }
+      ],
+      "flavorReference": "Arsenal, The Hunters #13",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "ShillelaghDraiochta",
+      "count": 2,
+      "title": "Shillelagh Draiochta",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageMelee",
+        "DealDamageCold",
+        "DealDamageFire",
+        "DealDamageLightning",
+        "DealDamageProjectile"
+      ],
+      "powers": [
+        "{Cathain} deals 1 target 1 melee damage. Then he deals that target 1 cold damage if you played a Water card this turn, 1 fire damage if you played a Fire card this turn, 1 lightning damage if you played an Air card this turn, and 1 projectile damage if you played an Earth card this turn."
+      ],
+      "flavorQuotes": [
+        {
+          "text": ""
+        }
+      ],
+      "flavorReference": ""
+    },
+    {
+      "identifier": "WindGrasp",
+      "count": 2,
+      "title": "Wind Grasp",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+
+      ],
+      "body": [
+
+      ],
+      "flavorQuotes": [
+        {
+          "text": ""
+        }
+      ],
+      "flavorReference": ""
+    },
+    {
+      "identifier": "RockShield",
+      "count": 2,
+      "title": "Rock Shield",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+
+      ],
+      "body": [
+
+      ],
+      "flavorQuotes": [
+        {
+          "text": ""
+        }
+      ],
+      "flavorReference": "",
+    },
+    {
+      "identifier": "TonguesOfFlame",
+      "count": 2,
+      "title": "Tongues of Flame",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+
+      ],
+      "body": [
+
+      ],
+      "flavorQuotes": [
+        {
+          "text": ""
+        }
+      ],
+      "flavorReference": ""
+    },
+    {
+      "identifier": "SoothingFlow",
+      "count": 2,
+      "title": "Soothing Flow",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+
+      ],
+      "body": [
+
+      ],
+      "flavorQuotes": [
+        {
+          "text": ""
+        }
+      ],
+      "flavorReference": ""
+    }
+  ]
+}

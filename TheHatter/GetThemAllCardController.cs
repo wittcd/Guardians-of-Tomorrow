@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.TheHatter
             IEnumerator coroutine;
             if (FindCardsWhere(new LinqCardCriteria((Card c) => c.DoKeywordsContain("thrall"), "thrall")).Count() > 0)
             {
-                coroutine = DealDamage((Card c) => c.DoKeywordsContain("thrall") && c.IsInPlayAndHasGameText, (Card c) => c.IsHero, (Card c) => 1, DamageType.Melee);
+                coroutine = DealDamage((Card c) => c.DoKeywordsContain("thrall") && c.IsInPlayAndHasGameText, (Card c) => IsHero(c), (Card c) => 1, DamageType.Melee);
             }
             else
             {

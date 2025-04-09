@@ -16,7 +16,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
         public override IEnumerator Play()
         {
-            IEnumerator coroutine = DealDamage(base.CharacterCard, (Card c) => c.IsHero, (Card c) => 1, DamageType.Projectile, addStatusEffect: RepeatDamageResponse);
+            IEnumerator coroutine = DealDamage(base.CharacterCard, (Card c) => IsHero(c), (Card c) => 1, DamageType.Projectile, addStatusEffect: RepeatDamageResponse);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

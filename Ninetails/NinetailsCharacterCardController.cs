@@ -60,7 +60,7 @@ namespace GuardiansOfTomorrow.Ninetails
                 case 1:
                     {
                         //destroy ong
-                        IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.IsOngoing, "ongoing"), optional: false, null, null, GetCardSource());
+                        IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => IsOngoing(c), "ongoing"), optional: false, null, null, GetCardSource());
                         if (base.UseUnityCoroutines)
                         {
                             yield return base.GameController.StartCoroutine(coroutine);

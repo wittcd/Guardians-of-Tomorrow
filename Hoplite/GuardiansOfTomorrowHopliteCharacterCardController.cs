@@ -18,11 +18,10 @@ namespace GuardiansOfTomorrow.Hoplite
 
         public override IEnumerator UsePower(int index = 0)
         {
-            int times = GetPowerNumeral(0, 2);
             
             //redirect next from selected hero
             List<SelectCardDecision> selectCards = new List<SelectCardDecision>();
-            IEnumerator coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.RedirectDamageDirectedAtTarget, new LinqCardCriteria((Card c) => c.IsHeroCharacterCard, "Hero character card"), selectCards, false, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.RedirectDamageDirectedAtTarget, new LinqCardCriteria((Card c) => IsHeroCharacterCard(c), "Hero character card"), selectCards, false, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -38,7 +37,7 @@ namespace GuardiansOfTomorrow.Hoplite
                 RedirectDamageStatusEffect rdse = new RedirectDamageStatusEffect();
                 rdse.TargetCriteria.IsSpecificCard = c;
                 rdse.RedirectTarget = base.CharacterCard;
-                rdse.NumberOfUses = times;
+                rdse.NumberOfUses = 1;
                 coroutine = GameController.AddStatusEffect(rdse, true, GetCardSource());
                 if (base.UseUnityCoroutines)
                 {
@@ -87,7 +86,7 @@ namespace GuardiansOfTomorrow.Hoplite
                     {
                         //redirect next damage dealt to A to B
                         List<SelectCardDecision> selectCards = new List<SelectCardDecision>();
-                        IEnumerator coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.RedirectDamage, new LinqCardCriteria((Card c) => c.IsHeroCharacterCard, "Hero character card"), selectCards, false, cardSource: GetCardSource());
+                        IEnumerator coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.RedirectDamage, new LinqCardCriteria((Card c) => IsHeroCharacterCard(c), "Hero character card"), selectCards, false, cardSource: GetCardSource());
                         if (base.UseUnityCoroutines)
                         {
                             yield return base.GameController.StartCoroutine(coroutine);
@@ -101,7 +100,7 @@ namespace GuardiansOfTomorrow.Hoplite
                         {
                             Card origin = selectCards.FirstOrDefault().SelectedCard;
                             List<SelectCardDecision> secondSelect = new List<SelectCardDecision>();
-                            coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.RedirectDamage, new LinqCardCriteria((Card c) => c.IsHeroCharacterCard && c != origin, "other Hero character card"), secondSelect, false, cardSource: GetCardSource());
+                            coroutine = GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.RedirectDamage, new LinqCardCriteria((Card c) => IsHeroCharacterCard(c) && c != origin, "other Hero character card"), secondSelect, false, cardSource: GetCardSource());
                             if (base.UseUnityCoroutines)
                             {
                                 yield return base.GameController.StartCoroutine(coroutine);

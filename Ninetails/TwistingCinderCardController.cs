@@ -66,7 +66,7 @@ namespace GuardiansOfTomorrow.Ninetails
 				DamageSource source = new DamageSource(base.GameController, base.Card);
 				CardSource cardSource = GetCardSource();
 				List<DealDamageAction> storedDamage = new List<DealDamageAction>();
-				coroutine = base.GameController.SelectTargetsAndDealDamage(base.DecisionMaker, source, selectNumberDecision.SelectedNumber.Value, DamageType.Fire, 1, optional: false, 1, isIrreducible: false, allowAutoDecide: false, autoDecide: false, null, null, storedDamage, null, null, selectTargetsEvenIfCannotDealDamage: false, null, null, ignoreBattleZone: false, null, cardSource);
+				coroutine = base.GameController.SelectTargetsAndDealDamage(base.DecisionMaker, source, selectNumberDecision.SelectedNumber.Value, DamageType.Fire, 1, optional: false, 0, isIrreducible: false, allowAutoDecide: false, autoDecide: false, null, null, storedDamage, null, null, selectTargetsEvenIfCannotDealDamage: false, null, null, ignoreBattleZone: false, null, cardSource);
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine);

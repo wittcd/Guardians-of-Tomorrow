@@ -18,11 +18,13 @@ namespace GuardiansOfTomorrow.Ninetails
 
         public override IEnumerator UsePower(int index = 0)
         {
-            //discard up to 3 cards. Ninetails deals up to X targets 1 fire damage each where X is 3 + twice the number of cards discarded this way
-            int powerNumeralDiscard = GetPowerNumeral(0, 3);
-            int powerNumeralDamage = GetPowerNumeral(1, 1);
+            //may discard, if so 1 damage to 9 targets otherwise 1 damage to 3 targets (up to)
+            int powerNumeralTargetsDisc = GetPowerNumeral(0, 9);
+            int powerNumeralDamageDisc = GetPowerNumeral(1, 1);
+            int powerNumeralTargetNot = GetPowerNumeral(2, 3);
+            int powerNumeralDamageNot = GetPowerNumeral(3, 1);
             List<DiscardCardAction> storedResults = new List<DiscardCardAction>();
-            IEnumerator coroutine = SelectAndDiscardCards(DecisionMaker, powerNumeralDiscard, optional: false, 0, storedResults, false, null, null, null, selectionType: SelectionType.DiscardCard, responsibleTurnTaker: base.TurnTaker);
+            IEnumerator coroutine = GameController.SelectAndDiscardCard(DecisionMaker, true, null, storedResults, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -31,17 +33,31 @@ namespace GuardiansOfTomorrow.Ninetails
             {
                 base.GameController.ExhaustCoroutine(coroutine);
             }
-            int numberOfCardsDiscarded = GetNumberOfCardsDiscarded(storedResults);
-            int x = 3 + (2 * numberOfCardsDiscarded);
-            DamageSource ds = new DamageSource(base.GameController, base.CharacterCard);
-            coroutine = base.GameController.SelectTargetsAndDealDamage(DecisionMaker, ds, powerNumeralDamage, DamageType.Fire, x, optional: false, 0, isIrreducible: false, allowAutoDecide:false, autoDecide: false, null, null, null, null, null, selectTargetsEvenIfCannotDealDamage: false, null, null, ignoreBattleZone: false, null, GetCardSource());
-            if (base.UseUnityCoroutines)
+            if (DidDiscardCards(storedResults))
             {
-                yield return base.GameController.StartCoroutine(coroutine);
+                DamageSource ds = new DamageSource(base.GameController, base.CharacterCard);
+                coroutine = base.GameController.SelectTargetsAndDealDamage(DecisionMaker, ds, powerNumeralDamageDisc, DamageType.Fire, powerNumeralTargetsDisc, optional: false, 0, isIrreducible: false, allowAutoDecide: false, autoDecide: false, null, null, null, null, null, selectTargetsEvenIfCannotDealDamage: false, null, null, ignoreBattleZone: false, null, GetCardSource());
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(coroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(coroutine);
+                }
             }
-            else
+            else 
             {
-                base.GameController.ExhaustCoroutine(coroutine);
+                DamageSource ds = new DamageSource(base.GameController, base.CharacterCard);
+                coroutine = base.GameController.SelectTargetsAndDealDamage(DecisionMaker, ds, powerNumeralDamageNot, DamageType.Fire, powerNumeralTargetNot, optional: false, 0, isIrreducible: false, allowAutoDecide: false, autoDecide: false, null, null, null, null, null, selectTargetsEvenIfCannotDealDamage: false, null, null, ignoreBattleZone: false, null, GetCardSource());
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(coroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(coroutine);
+                }
             }
         }
 

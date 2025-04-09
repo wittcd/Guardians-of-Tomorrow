@@ -1,0 +1,302 @@
+{
+  "name": "The Reverse Engineer",
+  "sortName": "Reverse Engineer",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "TheReverseEngineerCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "TheReverseEngineerCharacter",
+      "count": 1,
+      "title": "The Reverse Engineer",
+      "body": "Scavenge",
+      "backgroundColor": "707070",
+      "foilBackgroundColor": "707070",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "You may discard the top card of your deck. Play the top card of your trash."
+      ],
+      "icons": [
+        "HasPower",
+        "PlayCardNow"
+      ],
+      "hitpoints": 30,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.TheReverseEngineer"
+      ],
+      "incapacitatedAbilities": [
+        "One hero may use a power.",
+        "One player may play a card.",
+        "Play the top card of a hero trash."
+      ],
+      "flippedIcons": [
+        "UsePowerNow",
+        "PlayCardNow"
+      ],
+      "openingLines": {
+        "default": "Nothing personal, but I need your tech for my upgrades.",
+        "GuardiansOfTomorrow.TheLastMonsterHunterCharacter": "I'm not the monster here. You are.",
+        "OblivAeonFrontPageCharacter": "I'm sure I can scrounge up something to use against you."
+      },
+      "openingLineRequests": {
+        "OblivAeonFrontPageCharacter": "CaptainCosmicCharacter"
+      },
+      "complexity": 3
+    },
+    {
+      "identifier": "BacklashGenerator",
+      "count": 2,
+      "title": "Backlash Generator",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "body": [
+        "If this card was played from your trash, draw a card.",
+        "The first time each turn {TheReverseEngineer} is dealt damage by a non-hero target, he deals the source of that damage 2 lightning damage."
+      ],
+      "icons": [
+        "DrawCardNow",
+        "CounterDamage",
+        "DealDamageLightning"
+      ],
+      "flavorText": "I have you n... Bzzzzzt!",
+      "flavorReference": "The Last Monster Hunter, Monster Hunted #1"
+    },
+    {
+      "identifier": "NaniteSludgeSprayer",
+      "count": 2,
+      "title": "Nanite Sludge Sprayer",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "body": "If this card was played from your trash, you may destroy an environment card.",
+      "powers": [ "Select up to 2 targets and reduce the next damage dealt by each of them by 2." ],
+      "icons": [
+        "DestroyEnvironment",
+        "HasPower",
+        "ReduceDamageDealt"
+      ],
+      "flavorText": "Is that Legion goop? I still don't have it{br}all out of my hair from last time!",
+      "flavorReference": "Ninetails, Guardians of Tomorrow #102"
+    },
+    {
+      "identifier": "TransdimensionalBlade",
+      "count": 3,
+      "title": "Transdimensional Blade",
+      "keywords": [
+        "equipment",
+        "relic",
+        "limited"
+      ],
+      "body": "If this card was played from your trash, {TheReverseEngineer} deals up to 3 targets 1 irreducible melee damage each.",
+      "powers": [ "{TheReverseEngineer} deals 1 target 2 irreducible melee damage." ],
+      "icons": [
+        "DealDamageMelee",
+        "HasPower",
+        "DealDamageMelee"
+      ],
+      "flavorText": "This sword doesn't miss.",
+      "flavorReference": "The Reverse Engineer, Monster Hunted #4."
+    },
+    {
+      "identifier": "UnstableAmplifier",
+      "count": 3,
+      "title": "Unstable Amplifier",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "body": "If this card was played from your trash, increase damage dealt to villain targets by 1 until the end of this turn.",
+      "powers": [ "{TheReverseEngineer} deals each non-hero target 1 sonic damage. Whenever a target is destroyed this way, {TheReverseEngineer} deals the non-hero target with the highest HP 1 sonic damage." ],
+      "icons": [
+        "IncreaseDamageTaken",
+        "HasPower",
+        "DealDamageSonic"
+      ],
+      "flavorText": "I'll get you for that...{br}once my ears stop ringing.",
+      "flavorReference": "The Hatter, Guardians of Tomorrow #102"
+    },
+    {
+      "identifier": "AlphaStrike",
+      "count": 3,
+      "title": "Alpha Strike",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "body": [ "If this card was played from your trash, you may use a power.", "At the end of your turn, {TheReverseEngineer} may use up to 10 powers, then {TheReverseEngineer} deals himself fire damage equal to the number of powers used this way." ],
+      "icons": [
+        "EndOfTurnAction",
+        "UsePowerNow",
+        "DealDamageFire"
+      ],
+      "flavorText": "I'm giving it everything I've got!",
+      "flavorReference": "The Reverse Engineer, Monster Hunted #1"
+    },
+    {
+      "identifier": "Zandatsu",
+      "count": 3,
+      "title": "Zandatsu",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "body": [ "If this card was played from your trash, {TheReverseEngineer} deals up to 1 target with 2 or less HP 2 irreducible melee damage.", "Whenever {TheReverseEngineer} destroys a target, {TheReverseEngineer} gains 2 HP." ],
+      "icons": [
+        "DealDamageMelee",
+        "GainHP"
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Teen",
+          "text": "Hey man, have you played Metal Gear?"
+        },
+        {
+          "identifier": "The Reverse Engineer, lying",
+          "text": "No."
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow #98"
+    },
+    {
+      "identifier": "AugmentedChassis",
+      "count": 3,
+      "title": "Augmented Chassis",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "body": [ "If this card was played from your trash, {TheReverseEngineer} gains 3 HP.", "Increase damage dealt by {TheReverseEngineer} by 1. Reduce damage dealt to {TheReverseEngineer} by 1. At the end of your turn, {TheReverseEngineer} must destroy this card or deal himself 2 fire damage." ],
+      "icons": [
+        "GainHP",
+        "IncreaseDamageDealt",
+        "ReduceDamageTaken",
+        "EndOfTurnAction",
+        "DealDamageFire"
+      ],
+      "flavorText": "Hey ugly! Why don't you pick on someone{br}your own tech level!?",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "CoolantPack",
+      "count": 2,
+      "title": "Coolant Pack",
+      "keywords": [
+        "equipment"
+      ],
+      "body": [ "If this card was played from your trash, {TheReverseEngineer} deals up to 3 targets 2 cold damage each.", "Reduce fire damage dealt to {TheReverseEngineer} by 4. At the start of your turn, destroy this card." ],
+      "icons": [
+        "DealDamageCold",
+        "ReduceDamageTakenFire",
+        "StartOfTurnAction",
+        "DestroySelf"
+      ],
+      "flavorText": "You want to know what's in the tank? Chill.",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "SurprisePayload",
+      "count": 3,
+      "title": "Surprise Payload",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [ "If this card was played from your trash, {TheReverseEngineer} deals 1 target 3 projectile damage.", "You may destroy 1 of your equipment cards. If you do {TheReverseEngineer} deals each villain target 1 projectile and 1 fire damage, then you may draw 2 cards." ],
+      "icons": [
+        "DealDamageProjectile",
+        "DestroyEquipment",
+        "DealDamageFire",
+        "DrawCardNow"
+      ],
+      "flavorText": "Here! Catch!",
+      "flavorReference": "The Reverse Engineer, Monster Hunted #6"
+    },
+    {
+      "identifier": "AggressiveSalvaging",
+      "count": 3,
+      "title": "Aggressive Salvaging",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [ "If this card was played from your trash, reveal the top 2 cards of your deck. Draw one and discard the other.", "{TheReverseEngineer} deals 1 target 2 melee damage. Play the top card of your trash." ],
+      "icons": [
+        "Manipulate",
+        "DealDamageMelee",
+        "PlayCardNow"
+      ],
+      "flavorText": "Can I borrow that processor? Thanks!",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow #109"
+    },
+    {
+      "identifier": "TweakedCalibration",
+      "count": 3,
+      "title": "Tweaked Calibration",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [ "If this card was played from your trash, increase the next damage dealt by {TheReverseEngineer} by 2.", "Discard a card. Play the top card of your trash. You may use a power. If you do, {TheReverseEngineer} deals himself 2 fire damage." ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "Discard",
+        "PlayCardNow",
+        "UsePowerNow",
+        "DealDamageFire"
+      ],
+      "flavorText": "If I dilate the aperture by 3.6mm, I can{br}improve the range by at least 3 feet. I{br}need some spare parts.",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow #109"
+    },
+    {
+      "identifier": "EnergyConverter",
+      "count": 2,
+      "title": "Energy Converter",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "body": [ "If this card was played from your trash, you may destroy an ongoing card.", "After {TheReverseEngineer} is dealt 3 or more damage from a single source, you may reveal the top card of your deck and either replace or discard it, then {TheReverseEngineer} deals each villain target 1 energy damage." ],
+      "icons": [
+        "DestroyOngoing",
+        "Manipulate",
+        "Discard",
+        "CounterDamageEnergy"
+      ],
+      "flavorText": "You keep hitting me, and I keep getting{br}stronger!",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow Annual #11"
+    },
+    {
+      "identifier": "GearRecovery",
+      "count": 3,
+      "title": "Gear Recovery",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [ "If this card was played from your trash, {TheReverseEngineer} gains 2 HP", "Search your trash for an equipment card and put it into play." ],
+      "icons": [
+        "GainHP",
+        "Search",
+        "PlayCardNow"
+      ],
+      "flavorText": "You know, boomerangs would save me{br}so much effort.",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow #102"
+    },
+    {
+      "identifier": "Reengineer",
+      "count": 3,
+      "title": "Reengineer",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [ "If this card is played from your trash, draw a card.", "Play the top card of your trash. Draw a card." ],
+      "icons": [
+        "DrawCardNow",
+        "PlayCardNow"
+      ],
+      "flavorText": "Hold on, I need a minute to get something{br}ready! Don't die in the meantime!",
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow Annual #11"
+    }
+  ]
+}

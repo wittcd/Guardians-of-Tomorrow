@@ -1,0 +1,383 @@
+{
+  "name": "Ludramor",
+  "sortName": "Ludramor",
+  "kind": "Villain",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "LudramorCharacter"
+  ],
+  "promoCards": [],
+  "cards": [
+    {
+      "identifier": "LudramorCharacter",
+      "count": 1,
+      "title": "Ludramor",
+      "keywords": [
+        "villain",
+        "executive"
+      ],
+      "body": "Slick CEO",
+      "backgroundColor": "acf4fc",
+      "foilBackgroundColor": "ffffff",
+      "character": true,
+      "hitpoints": 60,
+      "setup": [
+        "{Ludramor} enters play \"Slick CEO\" side up. The Planetcracker Barge is put into play.",
+        "Reveal cards from the villain deck until {H - 2} Executives and {H} non-Executive targets are revealed. Put the revealed cards into play and shuffle the remaining cards into the deck."
+      ],
+      "gameplay": [
+        "When {Ludramor} would be dealt damage, redirect it to the other Executive with the lowest HP.",
+        "If there are no cards in the environment deck, the environment cannot play cards.",
+        "At the start of the villain turn, if there are no other Executives in play, shuffle the villain trash into the villain deck, then {Ludramor} flips."
+      ],
+      "advanced": "Reduce damage dealt to Executives by 1.",
+      "icons": [
+        "RedirectDamage",
+        "CannotPlayCards",
+        "StartOfTurnAction",
+        "Manipulate"
+      ],
+      "flippedHitpoints": 60,
+      "flippedBody": "Taking the Fall",
+      "flippedGameplay": [
+        "If there are no cards in the environment deck, the environment cannot play cards.",
+        "At the start of the villain turn, if there are at least {H - 1} other villain targets including at least 1 other Executive in play, Ludramor flips.",
+        "At the end of the villain turn, reveal cards from the villain deck until a target is revealed. Put it into play and shuffle the other revealed cards back into the villain deck. Then Ludramor deals the non-villain target with the lowest HP {H - 1} energy damage."
+      ],
+      "flippedAdvanced": "Increase damage dealt by Executives by 1.",
+      "flippedIcons": [
+        "CannotPlayCards",
+        "StartAndEndOfTurnAction",
+        "Manipulate",
+        "PlayCardNow",
+        "DealDamageEnergy"
+      ],
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Spore"
+      ],
+      "difficulty": 3,
+      "challengeTitle": "Surgical Strike",
+      "challengeText": "The Planetcracker Barge is immune to all damage. At the end of the villain turn, destroy an environment card.",
+      "challengeIcons": [
+        "ImmuneToDamage",
+        "DestroyEnvironment"
+      ],
+      "openingLines": {
+        "default": "It's nothing personal, you understand. We have a quota to make.",
+        "GuardiansofTomorrow.SporeCharacter": "You know me, but I can't say I remember you. Or care.",
+        "SporeSeedOfVengeanceCharacter": "Name your price, just leave me alone!",
+        "SporeNascentHiveCharacter": "Why does it matter? They would've died eventually anyway."
+      }
+    },
+    {
+      "identifier": "AdvanceScout",
+      "count": 2,
+      "title": "Advance Scout",
+      "keywords": [
+        "spaceship"
+      ],
+      "icons": [
+        "ImmuneToDamage"
+      ],
+      "body": [
+        "Executives and Spaceships are immune to damage from Environment cards."
+      ],
+      "flavorText": "UFO sightings are on the rise this week...",
+      "flavorReference": "Miranda Algernon, Guardians of Tomorrow Annual #7",
+      "hitpoints": 6
+    },
+    {
+      "identifier": "BiomeHarvesting",
+      "count": 2,
+      "title": " Biome Harvesting",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyEnvironment",
+        "DealDamageProjectile",
+        "GainHP"
+      ],
+      "body": [
+        "Destroy the environment target with the lowest HP. If no card was destroyed this way, the villain target with the lowest HP deals each non-villain target 2 projectile damage. Otherwise, each Executive gains {H + 2} HP."
+      ],
+      "flavorText": "They're taking everything! Animals, plants,{br}even microbes out of the soil!",
+      "flavorReference": "Starstone, Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "CarpetBombing",
+      "count": 2,
+      "title": "Carpet Bombing",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageFire"
+      ],
+      "body": [
+        "The Spaceship with the second lowest HP deals each non-villain target 3 fire damage."
+      ],
+      "flavorQuotes": [
+        {
+          "text": "The fires begin! Run!"
+        }
+      ],
+      "flavorReference": "Spore, Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "ChiefEngineerKomac",
+      "count": 1,
+      "title": "Chief Engineer Komac",
+      "keywords": [
+        "executive",
+        "technician"
+      ],
+      "icons": [
+        "IncreaseGainHP",
+        "RedirectDamage",
+        "EndOfTurnAction",
+        "GainHP"
+      ],
+      "body": [
+        "Increase HP gained by Spaceships by the number of Technicians in play.",
+        "When this card would be dealt damage, redirect it to the other Technician with the lowest HP.",
+        "At the end of the villain turn, the villain Spaceship with the most missing HP gains {H - 1} HP."
+      ],
+      "flavorText": "Listen, if you don't break my reactors,{br}I'll overlook your trespassing.",
+      "flavorReference": "Komac, Guardians of Tomorrow Annual #7",
+      "hitpoints": 10
+    },
+    {
+      "identifier": "ColonelPrenakka",
+      "count": 1,
+      "title": "Colonel Prenakka",
+      "keywords": [
+        "executive",
+        "soldier"
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "RedirectDamage",
+        "EndOfTurnAction",
+        "DealDamageProjectile"
+      ],
+      "body": [
+        "Increase damage dealt by Soldiers by the number of Soldiers in play.",
+        "When this card would be dealt damage, redirect it to the other Soldier with the lowest HP.",
+        "At the end of the villain turn, this card deals the non-villain target with the highest HP {H - 1} projectile damage."
+      ],
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Spore"
+      ],
+      "flavorText": "It is she, the burner, the breaker!{br}[b]SHE MUST DIE![/b]",
+      "flavorReference": "Spore, Guardians of Tomorrow Annual #7",
+      "hitpoints": 10
+    },
+    {
+      "identifier": "EngineeringTeam",
+      "count": 2,
+      "title": "Engineering Team",
+      "keywords": [
+        "employee",
+        "technician"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "GainHP"
+      ],
+      "body": [
+        "At the end of the villain turn, each villain Spaceship gains 1 HP."
+      ],
+      "flavorText": "They aren't combatants. Should we leave{br}them be?",
+      "flavorReference": "Ninetails, Guardians of Tomorrow Annual #7",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "EradicatorGunship",
+      "count": 2,
+      "title": "Eradicator Gunship",
+      "keywords": [
+        "spaceship"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageProjectile"
+      ],
+      "body": [
+        "At the end of the villain turn, this card deals the 2 non-villain targets with the highest HP {H - 1} projectile damage each."
+      ],
+      "flavorText": "Get the civilians to cover! I'll handle this!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #7",
+      "hitpoints": 8
+    },
+    {
+      "identifier": "ExterminatorSquad",
+      "count": 2,
+      "title": "Exterminator Squad",
+      "keywords": [
+        "employee",
+        "soldier"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageProjectile"
+      ],
+      "body": [
+        "At the end of the villain turn, this card deals each non-villain target 1 projectile damage."
+      ],
+      "flavorText": "It's time for these vermin to be removed,{br}[i]with prejudice[/i].",
+      "flavorReference": "Prenakka, Guardians of Tomorrow Annual #7",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "IntelligenceOfficerSalguul",
+      "count": 1,
+      "title": "Intelligence Officer Salguul",
+      "keywords": [
+        "executive",
+        "analyst"
+      ],
+      "icons": [
+        "Discard",
+        "RedirectDamage",
+        "EndOfTurnAction"
+      ],
+      "body": [
+        "The first time a player discards a card each turn, they must discard 1 additional card for each Analyst in play, minus 1.",
+        "When this card would be dealt damage, redirect it to the other Analyst with the lowest HP.",
+        "At the end of the villain turn, each player must discard a card."
+      ],
+      "flavorText": "I predict only a 23% chance that these{br}barbarians will pose a substantial threat.",
+      "flavorReference": "Salguul, Guardians of Tomorrow Annual #7",
+      "hitpoints": 10
+    },
+    {
+      "identifier": "PlanetcrackerBarge",
+      "count": 1,
+      "title": "Planetcracker Barge",
+      "keywords": [
+        "spaceship"
+      ],
+      "icons": [
+        "Indestructible",
+        "EndOfTurnAction",
+        "DealDamageEnergy",
+        "DestroyEnvironment",
+        "DealDamagePsychic",
+        "RemoveFromGame"
+      ],
+      "body": [
+        "This card is indestructible if it has any HP.",
+        "At the end of the environment turn, this card deals each non-villain target energy damage equal to the number of cards in the environment trash.",
+        "When this card is destroyed, it deals each villain target 5 irreducible psychic damage, then remove this card from the game."
+      ],
+      "flavorText": "If my calculations are correct, we have{br}10 hours before that thing blows the{br}Earth entirely apart!",
+      "flavorReference": "Argus, Guardians of Tomorrow Annual #7",
+      "hitpoints": 40
+    },
+    {
+      "identifier": "ProspectingInitiative",
+      "count": 2,
+      "title": "Prospecting Initiative",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "PlayCardNow",
+        "Search"
+      ],
+      "body": [
+        "If Intelligence Officer Salguul is in play, play the top X cards of the environment deck, where X is the number of Analysts in play.",
+        "Otherwise, search the villain trash and deck for Intelligence Officer Salguul and put him into play, then shuffle the villain deck."
+      ],
+      "flavorText": "We've identified valuable biologicals here,{br}here and here. Those should be your{br}first targets.",
+      "flavorReference": "Salguul, Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "QuashResistance",
+      "count": 2,
+      "title": "Quash Resistance",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageProjectile",
+        "Search",
+        "PlayCardNow"
+      ],
+      "body": [
+        "If Colonel Prenakka is in play, she deals the X hero targets with the highest HP 2 energy damage each where X is the number of Soldiers in play.",
+        "Otherwise, search the villain deck and trash for Colonel Prenakka and put her into play, then shuffle the villain deck."
+      ],
+      "flavorText": "The little frond who escaped me on{br}Baltoras 3. What a surprise!",
+      "flavorReference": "Prenakka, Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "RushRepairs",
+      "count": 2,
+      "title": "Rush Repairs",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Manipulate",
+        "PlayCardNow",
+        "Search"
+      ],
+      "body": [
+        "If Chief Engineer Komac is in play, reveal cards from the villain deck until X spaceships are revealed, where X is the number of Technicians in play. Put the revealed Spaceships into play and shuffle the remaining cards into the villain deck.",
+        "Otherwise, search the villain trash and deck for Chief Engineer Komac and put him into play, then shuffle the villain deck."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Komac",
+          "text": "[b]Are you mad!?[/b] I can't work that fast!"
+        },
+        {
+          "identifier": "Ludramor",
+          "text": "You have two local hours."
+        }
+      ],
+      "flavorReference": "Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "ShareholderMeeting",
+      "count": 1,
+      "title": "Shareholder Meeting",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Manipulate",
+        "PlayCardNow",
+        "GainHP",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "If the Planetcracker Barge is in play, reveal cards from the villain deck until a target is revealed. Put the revealed target into play, then each Executive gains 5 HP.",
+        "Otherwise, {Ludramor} deals himself 5 irreducible psychic damage, then play the top card of the villain deck."
+      ],
+      "flavorText": "You can't hide it, [i]sir[/i]. They are aboard this{br}vessel. We are [i]losing[/i].",
+      "flavorReference": "Komac, Guardians of Tomorrow Annual #7"
+    },
+    {
+      "identifier": "SurveyDepartment",
+      "count": 2,
+      "title": "Survey Department",
+      "keywords": [
+        "employee",
+        "analyst"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "Discard"
+      ],
+      "body": [
+        "At the end of the villain turn, one player must discard a card."
+      ],
+      "flavorText": "Give me all your data on these{br}'Guardians.'",
+      "flavorReference": "Salguul, Guardians of Tomorrow Annual #7",
+      "hitpoints": 5
+    }
+  ]
+}

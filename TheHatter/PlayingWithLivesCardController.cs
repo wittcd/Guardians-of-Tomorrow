@@ -38,7 +38,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
             if (destroyed)
             {
-                coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => c.IsHero, (Card c) => H, DamageType.Psychic);
+                coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => IsHero(c), (Card c) => H, DamageType.Psychic);
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(coroutine);

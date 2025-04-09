@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Kumiho
 
         public override IEnumerator Play()
         {
-            IEnumerator coroutine = GameController.YesNoDoAction_ManyPlayers((HeroTurnTakerController httc) => !httc.IsIncapacitatedOrOutOfGame, (HeroTurnTakerController httc) => new YesNoDecision(GameController, httc, SelectionType.DiscardCard, cardSource: GetCardSource()), DealDamageBasedOnDiscardsResponse, JustDealFullDamageResponse, null, SelectionType.DiscardCard, GetCardSource());
+            IEnumerator coroutine = GameController.YesNoDoAction_ManyPlayers((HeroTurnTakerController httc) => !httc.IsIncapacitatedOrOutOfGame, (HeroTurnTakerController httc) => new YesNoDecision(GameController, httc, SelectionType.Custom, cardSource: GetCardSource()), DealDamageBasedOnDiscardsResponse, JustDealFullDamageResponse, null, SelectionType.DiscardCard, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -81,6 +81,14 @@ namespace GuardiansOfTomorrow.Kumiho
             }
         }
 
-        
+        public override CustomDecisionText GetCustomDecisionText(IDecision decision)
+        {
+            return new CustomDecisionText(
+                $"Discard 2 cards to deal yourself 1 psychic damage instead of being dealt 2 fire damage?",
+                $"The other heroes are deciding whether to discard 2 cards to deal themselves 1 psychic damage instead of being dealt 2 fire damage?",
+                $"Vote for whether to discard 2 cards to deal yourself 1 psychic damage instead of being dealt 2 fire damage?",
+                $"whether to discard 2 cards to deal yourself 1 psychic damage instead of being dealt 2 fire damage?"
+            );
+        }
     }
 }

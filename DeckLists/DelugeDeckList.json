@@ -1,0 +1,258 @@
+﻿{
+  "name": "Deluge",
+  "kind": "Villain",
+  "initialCardIdentifiers": [
+    "DelugeCharacter"
+  ],
+  "cards": [
+    {
+      "identifier": "DelugeCharacter",
+      "count": 1,
+      "title": "Deluge",
+      "keywords": [
+        "villain"
+      ],
+      "icons": [
+        "Manipulate",
+        "StartAndEndOfTurnAction",
+        "PlayCardNow"
+      ],
+      "advancedIcons": [
+        "ReduceDamageTaken"
+      ],
+      "body": "Rising Waters",
+      "backgroundColor": "8fe3e3",
+      "foilBackgroundColor": "8fe3e3",
+      "character": true,
+      "flippedHitpoints": 40,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Starstone"
+      ],
+      "setup": [
+        "{Deluge} enters play Rising Waters side up. Place the top {H - 1} environment cards beneath this card. Reveal cards from the villain deck until {H - 2} flood cards are revealed and put them into play. Shuffle the villain deck."
+      ],
+      "gameplay": [
+        "Whenever an environment card is destroyed, place it under this card.",
+        "If there are ever 10 or more cards under this card, the heroes lose the game.",
+        "Cards underneath this card are not considered in play.",
+        "Whenever a flood card is destroyed, move the top card under this card to its owner's trash. Then, if there are no cards under this one, {Deluge} flips",
+        "At the end of the villain turn, play the top card of the villain deck."
+      ],
+      "advanced": "Reduce damage dealt to villain targets by 1.",
+      "flippedBody": "Hurricane Controller",
+      "flippedGameplay": [
+        "Whenever a villain ongoing or non-minion flood card enters play, destroy it and {Deluge} deals the hero target with the highest HP {H} lightning damage.",
+        "Whenever an environment card is destroyed, play the top card of the villain deck.",
+        "At the end of the villain turn, {Deluge} deals each non-villain target 2 projectile damage."
+      ],
+      "flippedAdvanced": "Increase damage dealt to non-villain targets by 1.",
+      "flippedIcons": [
+        "Destroy",
+        "DealDamageProjectile",
+        "PlayCardNow"
+      ],
+      "flippedAdvancedIcons": [
+        "IncreaseDamageDealt"
+      ],
+      "challengeTitle": "Unceasing Storm",
+      "challengeText": "On {Deluge}'s 'Rising Waters' side, she does not play the top card of the villain deck at the end of her turn. On her 'Hurricane Controller' side, whenever an ongoing or flood card is destroyed, play the top card of the villain deck.",
+      "challengeIcons": [
+      ],
+      "difficulty": 2,
+      "openingLines": {
+        "default": "I shall wash thine stain off the face of the earth!",
+        "GuardiansOfTomorrow.StarstoneCharacter": "Rocks are weak. Thy resistance shall be eroded away.",
+        "GuardiansOfTomorrowStarstoneCharacter": "The waters surround thee! Accept thy demise!"
+      }
+    },
+    {
+      "identifier": "SubmergedStreets",
+      "count": 3,
+      "title": "Submerged Streets",
+      "keywords": [
+        "flood"
+      ],
+      "hitpoints": 8,
+      "body": "Heroes may not draw more than 1 card each turn.",
+      "icons": [
+      ],
+      "flavorText": "Uh... anybody got a boat?",
+      "flavorReference": "Starstone, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "SeaSerpents",
+      "count": 3,
+      "title": "Sea Serpents",
+      "keywords": [
+        "flood",
+        "minion"
+      ],
+      "hitpoints": 8,
+      "body": "Increase damage dealt by this card to environment targets by 2. At the end of the villain turn, this card deals the {H - 2} non-villain targets with the lowest HP 1 melee damage and 1 cold damage each.",
+      "icons": [
+        "IncreaseDamageDealt",
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "DealDamageCold"
+      ],
+      "flavorText": "My beautiful serpents. Devour these{br}meddlers!",
+      "flavorReference": "Deluge, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "TidalWaves",
+      "count": 3,
+      "title": "Tidal Waves",
+      "keywords": [
+        "flood"
+      ],
+      "hitpoints": 8,
+      "body": "At the end of the villain turn, you may destroy an environment card. If you do not, this card deals each hero target 3 melee damage.",
+      "icons": [
+        "EndOfTurnAction",
+        "DestroyEnvironment",
+        "DealDamageMelee"
+      ],
+      "flavorText": "That's a lot of water... Coming this way!",
+      "flavorReference": "Starstone, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "WashAway",
+      "count": 2,
+      "title": "Wash Away",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Destroy a hero ongoing or equipment card. If {Deluge} is on her Rising Waters side, put it under her character card. Otherwise, {Deluge} deals its owner {H - 1} projectile damage.",
+      "icons": [
+        "DestroyHero",
+        "Manipulate",
+        "DealDamageProjectile"
+      ],
+      "flavorText": "I've got to find my way off this island...{br}without any gear.",
+      "flavorReference": "Argus, Washed Away One-Shot"
+    },
+    {
+      "identifier": "TorrentialDownpour",
+      "count": 2,
+      "title": "Torrential Downpour",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "Restore all flood cards to full HP. Play the top card of the villain deck.",
+      "icons": [
+        "GainHP",
+        "PlayCardNow"
+      ],
+      "flavorText": "Guys, I just found proof of water on{br}Mars!",
+      "flavorReference": "Guardians of Tomorrow #78"
+    },
+    {
+      "identifier": "LightningCloud",
+      "count": 2,
+      "title": "Lightning Cloud",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "The environment deals the hero target with the most cards in play {H} lightning damage.",
+      "icons": [
+        "DealDamageLightning",
+      ],
+      "flavorText": "The air itself smites thee!",
+      "flavorReference": "Deluge, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "WaterTower",
+      "count": 2,
+      "title": "Water Tower",
+      "keywords": [
+        "building"
+      ],
+      "body": "Reduce damage dealt to villain targets other than this card by 1. When this card is destroyed, shuffle the villain trash and reveal cards from the top until a Flood card is revealed. Put it into play and put the other revealed cards back into the villain trash.",
+      "hitpoints": 5,
+      "icons": [
+        "ReduceDamageTaken",
+        "Search",
+        "PlayCardNow"
+      ],
+      "flavorText": "Thou cageth the rivers in steel. I shall{br}free them against you!",
+      "flavorReference": "Deluge, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "CostlyRelief",
+      "count": 1,
+      "title": "Costly Relief",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": "Whenever a Flood is destroyed, each hero deals themselves 2 psychic damage.",
+      "icons": [
+        "DealDamagePsychic"
+      ],
+      "flavorText": "So many... We can't save everyone.",
+      "flavorReference": "Scale, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "BurstDam",
+      "count": 1,
+      "title": "Burst Dam",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": "Floods are immune to damage. At the end of the villain turn, one hero may discard their hand and draw 2 cards. If at least 3 cards are discarded this way, destroy this card.",
+      "icons": [
+        "ImmuneToDamage",
+        "StartOfTurnAction",
+        "Discard",
+        "DrawCardNow"
+      ],
+      "flavorText": "I can block the flow for a while, but you{br}need to cover me.",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "Overwhelm",
+      "count": 2,
+      "title": "Overwhelm",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "The non-hero target with the highest HP deals the hero with the most cards in their hand {H - 1} melee damage. That hero may not play cards until the start of the villain turn.",
+      "icons": [
+        "DealDamageMelee",
+        "CannotPlayCards"
+      ],
+      "flavorText": "Fall, usurper of nature!",
+      "flavorReference": "Deluge, Guardians of Tomorrow Annual #4"
+    },
+    {
+      "identifier": "SplashDamage",
+      "count": 2,
+      "title": "Splash Damage",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "{Deluge} deals each hero target 2 cold damage, then destroys an environment card.",
+      "icons": [
+        "DealDamageCold",
+        "DestroyEnvironment"
+      ],
+      "flavorText": "Thine mechanical heresies cannot stand{br}before the seas!",
+      "flavorReference": "Deluge, Guardians of Tomorrow #112"
+    },
+    {
+      "identifier": "Waterlogged",
+      "count": 2,
+      "title": "Waterlogged",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": "At the end of the villain turn, destroy a hero Ongoing or Equipment card.",
+      "icons": [
+        "EndOfTurnAction",
+        "DestroyOngoing",
+        "DestroyEquipment"
+      ],
+      "flavorText": "It's no use! The circuit's shorted out!",
+      "flavorReference": "Hoplite, Guardians of Tomorrow Annual #4"
+    }
+  ]
+}

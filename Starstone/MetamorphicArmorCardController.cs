@@ -13,6 +13,7 @@ namespace GuardiansOfTomorrow.Starstone
 		public MetamorphicArmorCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
+			SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone"), "stone"));
 		}
 
 		public override void AddTriggers()
@@ -24,7 +25,7 @@ namespace GuardiansOfTomorrow.Starstone
 		public override IEnumerator Play()
 		{
 			MoveCardDestination obj = new MoveCardDestination(base.HeroTurnTakerController.HeroTurnTaker.Hand);
-			IEnumerator coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.HeroTurnTakerController.TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone", false, false), "stone"), obj.ToEnumerable(), isPutIntoPlay: false, playIfMovingToPlayArea: true, shuffleAfterwards: false, optional: true, null, flipFaceDown: false, showOutput: false, null, isDiscardIfMovingtoTrash: false, allowAutoDecide: false, null, null, GetCardSource());
+			IEnumerator coroutine = SearchForCards(DecisionMaker, true, false, 1, 1, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone")), true, false, false, false, null, false, true, null);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

@@ -1,0 +1,363 @@
+{
+  "name": "The Last Monster Hunter",
+  "kind": "Villain",
+  "initialCardIdentifiers": [
+    "TheLastMonsterHunterCharacter"
+  ],
+  "sortName": "Last Monster Hunter",
+  "cards": [
+    {
+      "identifier": "TheLastMonsterHunterCharacter",
+      "count": 1,
+      "title": "The Last Monster Hunter",
+      "keywords": [
+        "villain"
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "CancelledDamageRed",
+        "AddTokens",
+        "StartAndEndOfTurnAction"
+      ],
+      "advancedIcons": [
+        "ReduceDamageTaken"
+      ],
+      "body": "Mechanized Crusader",
+      "backgroundColor": "f55e38",
+      "foilBackgroundColor": "f55e38",
+      "character": true,
+      "hitpoints": 100,
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.TheReverseEngineer"
+      ],
+      "setup": [
+        "{TheLastMonsterHunter} enters play 'Mechanized Crusader' side up.",
+        "Cards are revealed from the top of the villain deck until 2 Weapons and 1 Upgrade are revealed and put into play. Other revealed cards are shuffled back into the villain deck."
+      ],
+      "gameplay": [
+        "Reduce damage dealt to this card by by 2. When this card would be dealt fire damage by a villain target, prevent it and add that many tokens to this card's heat pool.",
+        "At the start of the villain turn, if there are at least 10 tokens in this card's heat pool, {TheLastMonsterHunter} flips.",
+        "At the end of the villain turn, activate the [b]Attack[/b] text on each Weapon in play."
+      ],
+      "advanced": "Reduce damage dealt to Upgrades and Weapons by 1.",
+      "flippedBody": "Overheat Warning",
+      "flippedGameplay": [
+        "Increase damage dealt to villain targets by 1.",
+        "The first time each turn {TheLastMonsterHunter} deals each target non-fire damage, he deals that target 2 fire damage.",
+        "At the start of the villain turn, if there are no tokens in this card's heat pool, {TheLastMonsterHunter} flips.",
+        "At the end of the villain turn, this card deals each target 2 fire damage, then remove 10 tokens from this card's heat pool."
+      ],
+      "flippedAdvanced": "Increase damage dealt to hero targets by 1.",
+      "flippedIcons": [
+        "IncreaseDamageTaken",
+        "StartAndEndOfTurnAction",
+        "DealDamageFire",
+        "RemoveTokens"
+      ],
+      "flippedAdvancedIcons": [
+        "IncreaseDamageTaken"
+      ],
+      "challengeTitle": "Upgraded Cooling System",
+      "challengeText": "At the end of the villain turn, remove {H - 2} tokens from this card's Heat Pool.",
+      "challengeIcons": [
+      ],
+      "difficulty": 3,
+      "openingLines": {
+        "default": "I must protect humanity... from you.",
+        "GuardiansOfTomorrow.TheReverseEngineerCharacter": "I've tracked you to the ends of space and time! Your terror ends here!"
+      },
+      "tokenPools": [
+        {
+          "identifier": "HeatPool",
+          "name": "The Last Monster Hunter's' Heat Pool",
+          "initialValue": 0,
+          "minimumValue": 0,
+          "maximumValue": 9999,
+          "color": "ff0000"
+        }
+      ]
+    },
+    {
+      "identifier": "HeatSinkArray",
+      "count": 1,
+      "title": "Heat Sink Array",
+      "keywords": [
+        "upgrade"
+      ],
+      "hitpoints": 10,
+      "body": [
+        "Villain targets are immune to fire damage."
+      ],
+      "icons": [
+        "ImmuneToDamageFire"
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Hoplite",
+          "text": "That's an extremely efficient design,{br}I'll have to copy that."
+        }
+      ],
+      "flavorReference": "Hoplite, Guardians of Tomorrow #99"
+    },
+    {
+      "identifier": "Pulsejet",
+      "count": 1,
+      "title": "Pulsejet",
+      "keywords": [
+        "upgrade"
+      ],
+      "hitpoints": 10,
+      "body": [
+        "Increase melee damage dealt by {TheLastMonsterHunter} by 1. At the end of the villain turn, {TheLastMonsterHunter} deals the hero target with the highest HP {H - 2} melee damage."
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "EndOfTurnAction",
+        "DealDamageMelee"
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "The Last Monster Hunter",
+          "text": "You can never outrun me!"
+        }
+      ],
+      "flavorReference": "The Last Monster Hunter, Monster Hunted #3"
+    },
+    {
+      "identifier": "PointDefenseCannons",
+      "count": 1,
+      "title": "Point-Defense Cannons",
+      "keywords": [
+        "upgrade"
+      ],
+      "hitpoints": 10,
+      "body": [
+        "Whenever a hero card is played, {TheLastMonsterHunter} deals its owner 1 projectile damage."
+      ],
+      "icons": [
+        "DealDamageProjectile"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "As long he’s got those guns,{br}we can’t even get close!",
+          "identifier": "Starstone"
+        }
+      ],
+      "flavorReference": "Starstone, Guardians of Tomorrow #99"
+    },
+    {
+      "identifier": "ColossalChainsaw",
+      "count": 2,
+      "title": "Colossal Chainsaw",
+      "keywords": [
+        "weapon"
+      ],
+      "hitpoints": 10,
+      "body": [
+        ""
+      ],
+      "activatableAbilities": [
+        {
+          "name": "attack",
+          "text": "{TheLastMonsterHunter} deals the 2 hero targets with the lowest HP {H - 1} melee damage each, then this card deals {TheLastMonsterHunter} 2 fire damage."
+        }
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DealDamageFire"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Oof, that’s gonna leave a mark.",
+          "identifier": "The Reverse Engineer"
+        }
+      ],
+      "flavorReference": "The Reverse Engineer, Guardians of Tomorrow #100"
+    },
+    {
+      "identifier": "IncendiaryMissiles",
+      "count": 2,
+      "title": "Incendiary Missiles",
+      "keywords": [
+        "weapon"
+      ],
+      "hitpoints": 10,
+      "body": [
+        ""
+      ],
+      "activatableAbilities": [
+        {
+          "name": "attack",
+          "text": "{TheLastMonsterHunter} deals each non-villain target 2 fire damage, then this card deals {TheLastMonsterHunter} 2 fire damage."
+        }
+      ],
+      "icons": [
+        "DealDamageFire"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "So you like to play with fire?",
+          "identifier": "The Last Monster Hunter"
+        }
+      ],
+      "flavorReference": "The Last Monster Hunter, Guardians of Tomorrow #100"
+    },
+    {
+      "identifier": "LightningCannon",
+      "count": 2,
+      "title": "Lightning Cannon",
+      "keywords": [
+        "weapon"
+      ],
+      "hitpoints": 10,
+      "body": [
+        ""
+      ],
+      "activatableAbilities": [
+        {
+          "name": "attack",
+          "text": "{TheLastMonsterHunter} deals each target in the play area of the hero with the most cards in play {H} lightning damage, then this card deals {TheLastMonsterHunter} 2 fire damage."
+        }
+      ],
+      "icons": [
+        "DealDamageLightning",
+        "DealDamageFire"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Your scrap is just a lightning{br}rod for me.",
+          "identifier": "The Last Monster Hunter"
+        }
+      ],
+      "flavorReference": "The Last Monster Hunter, Monster Hunted #5"
+    },
+    {
+      "identifier": "SustainedBarrage",
+      "count": 3,
+      "title": "Sustained Barrage",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [
+        "Activate the [b]Attack[/b] text on the Weapon with the highest HP. {TheLastMonsterHunter} deals the hero target with the highest HP {H - 1} projectile damage."
+      ],
+      "icons": [
+        "DealDamageProjectile"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "I'm pinned down over here!",
+          "identifier": "Argus"
+        }
+      ],
+      "flavorReference": "Argus, Guardians of Tomorrow #100"
+    },
+    {
+      "identifier": "EmergencyRepairs",
+      "count": 2,
+      "title": "Emergency Repairs",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [
+        "Each villain target gains {H} HP."
+      ],
+      "icons": [
+        "GainHP"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "That only slows me down! I'll be back!",
+          "identifier": "The Last Monster Hunter"
+        }
+      ],
+      "flavorReference": "The Last Monster Hunter, Monster Hunted #4"
+    },
+    {
+      "identifier": "CrushingGrip",
+      "count": 3,
+      "title": "Crushing Grip",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [
+        "{TheLastMonsterHunter} deals the hero target with the highest HP {H} melee damage. That target may not deal damage until the start of the villain turn."
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "CannotDealDamage"
+      ],
+      "flavorQuotes": [ {"text": "I have you now. No more running." } ],
+      "flavorReference": "The Last Monster Hunter, Monster Hunted #1"
+    },
+    {
+      "identifier": "AggressiveHeatBleed",
+      "count": 2,
+      "title": "Aggressive Heat Bleed",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [
+        "If there are no tokens in {TheLastMonsterHunter}'s Heat Pool, play the top card of the villain deck. If there are at least 5 tokens, {TheLastMonsterHunter} deals each hero target 2 fire damage. If there are at least 10 tokens, {TheLastMonsterHunter} deals himself 3 fire damage, then play the top card of the villain deck.",
+        "Remove {H} tokens from {TheLastMonsterHunter}'s Heat Pool."
+      ],
+      "icons": [
+        "DealDamageFire",
+        "PlayCardNow",
+        "RemoveTokens"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Look out! It's too hot to touch!",
+          "identifier": "Starstone"
+        }
+      ],
+      "flavorReference": "Starstone, Guardians of Tomorrow #100"
+    },
+    {
+      "identifier": "TechnologicallySuperior",
+      "count": 3,
+      "title": "Technologically Superior",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [
+        "{TheLastMonsterHunter} deals each non-villain target 2 lightning damage. Each hero dealt damage this way must destroy one of their non-character cards."
+      ],
+      "icons": [
+        "DealDamageLightning",
+        "Destroy"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "Your monstrous powers are no match{br}for my technology!",
+          "identifier": "The Last Monster Hunter"
+        }
+      ],
+      "flavorReference": "The Last Monster Hunter, Guardians of Tomorrow #99"
+    },
+    {
+      "identifier": "FieldRefit",
+      "count": 3,
+      "title": "Field Refit",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": [
+        "Reveal cards from the villain deck until a Weapon is revealed. Put it into play and shuffle the remaining cards back into the villain deck. Activate its Attack text and reduce damage dealt to it by 1 until the start of the villain turn."
+      ],
+      "icons": [
+        "Manipulate",
+        "PlayCardNow",
+        "ReduceDamageTaken"
+      ],
+      "flavorQuotes": [
+        {
+          "text": "When I return to battle, I will be{br}far more powerful than before.",
+          "identifier": "The Last Monster Hunter"
+        }
+      ],
+      "flavorReference": "The Last Monster Hunter, Monster Hunted #1"
+    }
+  ]
+}

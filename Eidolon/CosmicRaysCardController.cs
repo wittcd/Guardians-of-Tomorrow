@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Eidolon
 
         public override IEnumerator Play()
         {
-            LinqCardCriteria linq = new LinqCardCriteria((Card c) => c.IsHero && c.IsOngoing, "Hero Ongoing");
+            LinqCardCriteria linq = new LinqCardCriteria((Card c) => IsHero(c) && IsOngoing(c), "Hero Ongoing");
             IEnumerator coroutine = AlterationPlayedResponse(DamageType.Energy, GameController.SelectAndDestroyCards(DecisionMaker, linq, H - 1, cardSource: GetCardSource()));
             if (base.UseUnityCoroutines)
             {

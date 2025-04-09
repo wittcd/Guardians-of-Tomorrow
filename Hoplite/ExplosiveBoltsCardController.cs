@@ -37,17 +37,21 @@ namespace GuardiansOfTomorrow.Hoplite
 			}
 			if (DidDealDamage(damages))
 			{
-				int x = 0;
+				int totalTargets = 0;
+
+				List<Card> targets = new List<Card>();
+
 				foreach (DealDamageAction dd in damages)
-                {
-					if (dd.DidDealDamage)
-                    {
-						x++;
-                    }
-                }
-				x -= reduction;
-				if (x > 0) {
-					coroutine = DealDamage(base.CharacterCard, base.CharacterCard, x, DamageType.Fire, cardSource: GetCardSource());
+				{
+					if (!targets.Contains(dd.Target) && dd.DidDealDamage)
+					{
+						totalTargets++;
+						targets.Add(dd.Target);
+					}
+				}
+				totalTargets -= reduction;
+				if (totalTargets > 0) {
+					coroutine = DealDamage(base.CharacterCard, base.CharacterCard, totalTargets, DamageType.Fire, cardSource: GetCardSource());
 					if (base.UseUnityCoroutines)
 					{
 						yield return base.GameController.StartCoroutine(coroutine);

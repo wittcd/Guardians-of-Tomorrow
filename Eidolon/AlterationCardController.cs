@@ -41,7 +41,7 @@ namespace GuardiansOfTomorrow.Eidolon
             }
             else
             {
-                coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => !c.IsVillain, (Card c) => 2, DamageTypeToDeal);
+                coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => !IsVillain(c), (Card c) => 2, DamageTypeToDeal);
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(coroutine);

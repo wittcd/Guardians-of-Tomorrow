@@ -1,0 +1,234 @@
+{
+  "name": "Green Creek, Indiana",
+  "kind": "Environment",
+  "backgroundColor": "FB5455",
+  "difficulty": 2,
+  "cards": [
+    {
+      "identifier": "TroyConglomerate",
+      "count": 1,
+      "title": "Troy Conglomerate HQ",
+      "hitpoints": 10,
+      "body": [
+        "At the start of the environment turn, each player may draw a card. When this card is destroyed, it first deals each hero target 2 fire damage."
+      ],
+      "keywords": [
+        "building"
+      ],
+      "icons": [
+        "StartAndEndOfTurnAction",
+        "DrawCardNow",
+        "DealDamageLightning"
+      ],
+      "flavorText": "After their move to Green Creek, the Troy Conglomerate has been a primary supporter of heroes in the area. Unfortunately, it has also been the target of numerous attacks by villains."
+    },
+    {
+      "identifier": "BloodTiger",
+      "count": 1,
+      "title": "Blood Tiger",
+      "hitpoints": 6,
+      "keywords": [
+        "terrorist"
+      ],
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Argus"
+      ],
+      "body": [
+        "This card is immune to damage so long as any Plots are in play. Increase damage dealt by this card by the number of Plots in play. At the end of the environment turn, play the top card of the environment deck, then this card deals each non-terrorist target 1 projectile damage."
+      ],
+      "icons": [
+        "ImmuneToDamage",
+        "PlayCardNow",
+        "DealDamageProjectile"
+      ],
+      "flavorText": "The mastermind behind the various attacks on businesses in Green Creek speaks to the heartless corporations of the world the only way they understand - with violence. He cares not for the hundreds of people who have been caught in the way of his plots."
+    },
+    {
+      "identifier": "EcoterroristCell",
+      "count": 2,
+      "title": "Ecoterrorist Cell",
+      "hitpoints": 4,
+      "keywords": [
+        "terrorist"
+      ],
+      "body": [
+        "Reduce damage dealt to this card by the number of Plots in play. Whenever a Building is destroyed, each hero must discard a card and each Terrorist gains 3 HP."
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "Discard",
+        "GainHP"
+      ],
+      "flavorText": "In the shadows of Green Creek, an ecoterrorist organization plans to tear apart the monuments to corporate greed, no matter how much blood they must shed."
+    },
+    {
+      "identifier": "BombThreat",
+      "count": 1,
+      "title": "Bomb Threat",
+      "keywords": [
+        "plot"
+      ],
+      "body": [
+        "At the end of the environment turn, this card deals each hero target 2 fire damage. At the start of the environment turn, if there are any buildings in play, destroy one of them and this card."
+      ],
+      "icons": [
+        "DealDamageFire",
+        "Discard",
+        "DestroyEnvironment",
+        "DestroySelf"
+      ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "MercenaryMuscle",
+      "title": "Mercenary Muscle",
+      "count": 2,
+      "hitpoints": 5,
+      "keywords": [
+        "terrorist"
+      ],
+      "body": [
+        "When this card would deal damage to a building, a hero may discard a card to redirect it to their character card. At the end of the environment turn, this card deals the non-terrorist target with the lowest HP {H} projectile damage."
+      ],
+      "icons": [
+        "Discard",
+        "RedirectDamage",
+        "EndOfTurnAction",
+        "DealDamageProjectile"
+      ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "HostageTaking",
+      "title": "Hostage Taking",
+      "count": 1,
+      "keywords": [
+        "plot"
+      ],
+      "body": [
+        "Reduce damage dealt to Terrorists by 1. Whenever a building is destroyed, the hero with the highest HP deals themselves 2 psychic damage."
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "DealDamagePsychic"
+      ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "PolicePrecinct",
+      "title": "Police Precinct",
+      "count": 1,
+      "keywords": [
+        "building"
+      ],
+      "body": [
+        "Reduce the first damage dealt by a hero target each turn by 1. At the start of the environment turn, destroy a plot. If no card is destroyed this way, destroy a terrorist. When this card is destroyed, play the top card of the villain deck."
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "DestroyEnv",
+        "PlayCardNow"
+      ],
+      "hitpoints": 10,
+      "flavorText": ""
+    },
+    {
+      "identifier": "RichardsonHaM",
+      "title": "Richardson Haberdashery and Millinery",
+      "count": 1,
+      "hitpoints": 10,
+      "keywords": [
+        "building"
+      ],
+      "body": [
+        "Increase damage dealt by non-character targets by 1. When this card is destroyed, increase damage dealt by villain targets by 1 until the start of the environment turn."
+      ],
+      "icons": [
+        "IncreaseDamageDealt"
+      ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "PhalanxLabs",
+      "title": "Phalanx Labs",
+      "count": 1,
+      "keywords": [
+        "building"
+      ],
+      "body": [
+        "Whenever an equipment or device card enters play, its owner gains 1 HP. When this card is destroyed, reveal cards from the environment deck until a Plot is revealed. Put it into play and shuffle the remaining cards back into the deck."
+      ],
+      "icons": [
+        "GainHP",
+        "PlayCardNow"
+      ],
+      "hitpoints": 10,
+      "flavorText": ""
+    },
+    {
+      "identifier": "CreeksideBank",
+      "title": "1st Creekside Bank",
+      "count": 1,
+      "keywords": [
+        "building"
+      ],
+      "body": [
+        "Reduce damage dealt to non-character targets by 1. When this card is destroyed, the villain character card gains 5 HP."
+      ],
+      "icons": [
+        "ReduceDamageTaken",
+        "GainHP"
+      ],
+      "hitpoints": 10,
+      "flavorText": ""
+    },
+    {
+      "identifier": "TechHeist",
+      "title": "Tech Heist",
+      "count": 1,
+      "keywords": [
+        "plot"
+      ],
+      "body": [
+        "At the end of the environment turn, the Terrorist with the lowest HP deals the Building with the lowest HP {H - 1} lightning damage. If this destroys it, that terrorist then deals each hero target {H - 1} lightning damage."
+      ],
+      "icons": [
+        "DealDamageLightning"
+      ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "WantonChaos",
+      "title": "Wanton Chaos",
+      "count": 1,
+      "keywords": [
+        "plot"
+      ],
+      "body": [
+        "At the end of each turn, this card deals each target 1 melee damage each. Redirect damage dealt by heroes to terrorists to the environment target with the highest HP."
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "RedirectDamage"
+      ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "DirectConfrontation",
+      "title": "Direct Confrontation",
+      "count": 1,
+      "keywords": [
+        "plot"
+      ],
+      "body": [
+        "Increase damage dealt to and by terrorists by 1. Whenever a hero is dealt damage by a Terrorist, destroy one of their non-character cards."
+      ],
+      "icons": [
+        "IncreaseDamageDealt",
+        "IncreaseDamageTaken",
+        "DestroyHero"
+      ],
+      "flavorText": ""
+    }
+  ]
+}

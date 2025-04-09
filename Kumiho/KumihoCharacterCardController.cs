@@ -45,8 +45,8 @@ namespace GuardiansOfTomorrow.Kumiho
 					AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.PlayTheTopCardOfTheVillainDeckWithMessageResponse, TriggerType.PlayCard));
 				}
 
-				AddSideTrigger(AddTrigger((DealDamageAction dd) => dd.DamageSource.Card.IsHeroCharacterCard, SoulIncreaseDamageResponse, TriggerType.IncreaseDamage, TriggerTiming.Before));
-				AddSideTrigger(AddTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard && dd.DamageSource.Card.IsHeroCharacterCard, SoulHighestHPRedirectResponse, TriggerType.RedirectDamage, TriggerTiming.Before));
+				AddSideTrigger(AddTrigger((DealDamageAction dd) => IsHeroCharacterCard(dd.DamageSource.Card), SoulIncreaseDamageResponse, TriggerType.IncreaseDamage, TriggerTiming.Before));
+				AddSideTrigger(AddTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard && IsHeroCharacterCard(dd.DamageSource.Card), SoulHighestHPRedirectResponse, TriggerType.RedirectDamage, TriggerTiming.Before));
 				AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => FlipThisCharacterCardResponse(null), TriggerType.FlipCard, (PhaseChangeAction pc) => FindCardsWhere((Card c) => c.IsInPlay && c.Identifier == "StolenSoul").Count() == 0 ));
             }
 			else
@@ -98,7 +98,7 @@ namespace GuardiansOfTomorrow.Kumiho
 
 		private IEnumerator DealDamageAndMaybePlayTopCardResponse(PhaseChangeAction pc)
         {
-			IEnumerator coroutine = DealDamage((Card c) => c == base.Card, (Card c) => c.IsHero, (Card c) => 1, DamageType.Infernal);
+			IEnumerator coroutine = DealDamage((Card c) => c == base.Card, (Card c) => IsHero(c), (Card c) => 1, DamageType.Infernal);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -162,7 +162,7 @@ namespace GuardiansOfTomorrow.Kumiho
 				Card soul = findSoul.FirstOrDefault();
 				if (dd.DamageSource.Card == soul.Location.OwnerTurnTaker.CharacterCard)
 				{
-					IEnumerator coroutine = GameController.FindTargetsWithHighestHitPoints(1, 1, (Card c) => c.IsHeroCharacterCard && c != soul.Location.OwnerTurnTaker.CharacterCard, stored, cardSource: GetCardSource());
+					IEnumerator coroutine = GameController.FindTargetsWithHighestHitPoints(1, 1, (Card c) => IsHeroCharacterCard(c) && c != soul.Location.OwnerTurnTaker.CharacterCard, stored, cardSource: GetCardSource());
 					if (base.UseUnityCoroutines)
 					{
 						yield return base.GameController.StartCoroutine(coroutine);

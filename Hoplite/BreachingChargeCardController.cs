@@ -34,7 +34,7 @@ namespace GuardiansOfTomorrow.Hoplite
 
 			if (!DidDestroyCard(destroyed))
             {
-				coroutine = DealDamage(base.CharacterCard, (Card card) => !card.IsHero || card == base.CharacterCard, 2, DamageType.Fire);
+				coroutine = DealDamage(base.CharacterCard, (Card card) => !IsHero(card) || card == base.CharacterCard, 2, DamageType.Fire);
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine);

@@ -23,7 +23,7 @@ namespace GuardiansOfTomorrow.Scale
 			//one villain target deals 2 self-psychic damage.
 			List<SelectCardDecision> storedDecision = new List<SelectCardDecision>();
 			List<DealDamageAction> storedDamage = new List<DealDamageAction>();
-			IEnumerator coroutine = GameController.SelectTargetsToDealDamageToSelf(DecisionMaker, 2, DamageType.Psychic, 1, false, 1, false, false, false, (Card c) => c.IsVillain, storedDecision, storedDamage, cardSource: GetCardSource());
+			IEnumerator coroutine = GameController.SelectTargetsToDealDamageToSelf(DecisionMaker, 2, DamageType.Psychic, 1, false, 1, false, false, false, (Card c) => IsVillain(c), storedDecision, storedDamage, cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

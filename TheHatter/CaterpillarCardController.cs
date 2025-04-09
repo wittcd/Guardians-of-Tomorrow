@@ -41,7 +41,7 @@ namespace GuardiansOfTomorrow.TheHatter
             {
                 if (!destroyed.FirstOrDefault().CardToDestroy.Card.IsTarget)
                 {
-                    coroutine = DealDamage(base.Card, (Card c) => c.IsHero, (Card c) => 2, DamageType.Projectile, false, false, null, null, null, false, null, null, false, false);
+                    coroutine = DealDamage(base.Card, (Card c) => IsHero(c), (Card c) => 2, DamageType.Projectile, false, false, null, null, null, false, null, null, false, false);
                     if (base.UseUnityCoroutines)
                     {
                         yield return base.GameController.StartCoroutine(coroutine);

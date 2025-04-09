@@ -20,8 +20,8 @@ namespace GuardiansOfTomorrow.Scale
 
 		public override void AddTriggers()
 		{
-			AddTrigger((DealDamageAction dd) => dd.Target.IsHero, HeroRedirectResponse, new TriggerType[1] { TriggerType.RedirectDamage }, TriggerTiming.Before);
-			AddTrigger((DealDamageAction dd) => dd.Target.IsVillain, VillainRedirectResponse, new TriggerType[1] { TriggerType.RedirectDamage }, TriggerTiming.Before);
+			AddTrigger((DealDamageAction dd) => IsHero(dd.Target), HeroRedirectResponse, new TriggerType[1] { TriggerType.RedirectDamage }, TriggerTiming.Before);
+			AddTrigger((DealDamageAction dd) => IsVillain(dd.Target), VillainRedirectResponse, new TriggerType[1] { TriggerType.RedirectDamage }, TriggerTiming.Before);
 			AddTrigger((DealDamageAction dd) => dd.Target.IsEnvironment, EnvironmentRedirectResponse, new TriggerType[1] { TriggerType.RedirectDamage }, TriggerTiming.Before);
 		}
 
@@ -32,7 +32,7 @@ namespace GuardiansOfTomorrow.Scale
 				yield break;
 			}
 			List<Card> storedResults = new List<Card>();
-			IEnumerator coroutine = base.GameController.FindTargetWithHighestHitPoints(1, (Card c) => c.IsHero, storedResults, null, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
+			IEnumerator coroutine = base.GameController.FindTargetWithHighestHitPoints(1, (Card c) => IsHero(c), storedResults, null, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -63,7 +63,7 @@ namespace GuardiansOfTomorrow.Scale
 				yield break;
 			}
 			List<Card> storedResults = new List<Card>();
-			IEnumerator coroutine = base.GameController.FindTargetWithHighestHitPoints(1, (Card c) => c.IsVillain, storedResults, null, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
+			IEnumerator coroutine = base.GameController.FindTargetWithHighestHitPoints(1, (Card c) => IsVillain(c), storedResults, null, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

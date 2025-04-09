@@ -24,7 +24,7 @@ namespace GuardiansOfTomorrow.Ninetails
         {
             //destroy one of your ongoings
             List<DestroyCardAction> storedDestroy = new List<DestroyCardAction>();
-            IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.IsOngoing && c.Owner == base.TurnTaker, "ongoing"), true, storedDestroy, null, GetCardSource());
+            IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => IsOngoing(c) && c.Owner == base.TurnTaker, "ongoing"), true, storedDestroy, null, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
