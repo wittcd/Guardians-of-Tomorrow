@@ -31,7 +31,7 @@ namespace GuardiansOfTomorrow.Starstone
 			}
 			//you may destroy a stone. if you do, draw 2 cards.
 			List<DestroyCardAction> storedResults = new List<DestroyCardAction>();
-			coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.Owner == base.TurnTaker && c.DoKeywordsContain("stone", false, false)), optional: true, storedResults, null, GetCardSource());
+			coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.Owner == base.TurnTaker && GameController.DoesCardContainKeyword(c, "stone")), optional: true, storedResults, null, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

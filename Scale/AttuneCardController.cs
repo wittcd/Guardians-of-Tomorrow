@@ -21,7 +21,7 @@ namespace GuardiansOfTomorrow.Scale
 		public override IEnumerator Play()
 		{
 			//move any number of balance from trash to hand
-			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance"), "balance cards");
+			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "balance"), "balance cards");
 			MoveCardDestination obj = new MoveCardDestination(base.HeroTurnTakerController.HeroTurnTaker.Hand);
 			IEnumerator coroutine = GameController.SelectCardsFromLocationAndMoveThem(DecisionMaker, base.HeroTurnTakerController.TurnTaker.Trash, 0, 6, isBalance, obj.ToEnumerable(), cardSource: GetCardSource());
 			if (base.UseUnityCoroutines)

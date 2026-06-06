@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Starstone
 
 		public override void AddTriggers()
 		{
-			AddTrigger((DestroyCardAction d) => d.CardToDestroy.Card.DoKeywordsContain("stone", false, false), DealDamageResponse, TriggerType.DealDamage, TriggerTiming.After);
+			AddTrigger((DestroyCardAction d) => GameController.DoesCardContainKeyword(d.CardToDestroy.Card, "stone"), DealDamageResponse, TriggerType.DealDamage, TriggerTiming.After);
 		}
 
 		private IEnumerator DealDamageResponse(DestroyCardAction d)

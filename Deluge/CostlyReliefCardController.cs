@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Deluge
 
         public override void AddTriggers()
         {
-            AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.DoKeywordsContain("flood") && DidDestroyCard(dc), (DestroyCardAction dc) => EachHeroDealsSelfDamage(), TriggerType.DealDamage, TriggerTiming.After);
+            AddTrigger((DestroyCardAction dc) => GameController.DoesCardContainKeyword(dc.CardToDestroy.Card, "flood") && DidDestroyCard(dc), (DestroyCardAction dc) => EachHeroDealsSelfDamage(), TriggerType.DealDamage, TriggerTiming.After);
         }
 
         private IEnumerator EachHeroDealsSelfDamage()

@@ -44,6 +44,9 @@
       "openingLineRequests": {
         "OblivAeonFrontPageCharacter": "AbsoluteZeroCharacter"
       },
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Angler"
+      ],
       "complexity": 2
     }
   ],
@@ -85,6 +88,9 @@
       "openingLineRequests": {
         "OblivAeonFrontPageCharacter": "AbsoluteZeroCharacter"
       },
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Angler"
+      ],
       "complexity": 2
     },
     {
@@ -328,7 +334,7 @@
         "DealDamagePsychic"
       ],
       "body": [
-        "When {Angler} would be dealt damage by a source other than this card, you may redirect it to this card. The first time each turn a Bait card is destroyed, draw a card. When this card is destroyed, {Angler} deals herself 3 irreducible cold damage and 3 irreducible psychic damage."
+        "When {Angler} would be dealt damage by a source other than this card, you may redirect it to this card. The first time each turn a Bait card is destroyed, draw a card. When this card is destroyed, it deals {Angler} 3 irreducible cold damage and 3 irreducible psychic damage."
       ],
       "flavorQuotes": [
         {

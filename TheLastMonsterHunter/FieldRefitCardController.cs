@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.TheLastMonsterHunter
         {
             //"Reveal cards from the villain deck until a Weapon is revealed. Put it into play and shuffle the remaining cards back into the villain deck. Activate its Attack text and reduce damage dealt to it by 1 until the start of the villain turn."
             List<Card> playedCards = new List<Card>();
-            IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(TurnTakerController, TurnTaker.Deck, false, true, false, new LinqCardCriteria((Card c) => c.DoKeywordsContain("weapon"), "weapon"), 1, storedPlayResults: playedCards);
+            IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(TurnTakerController, TurnTaker.Deck, false, true, false, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "weapon"), "weapon"), 1, storedPlayResults: playedCards);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

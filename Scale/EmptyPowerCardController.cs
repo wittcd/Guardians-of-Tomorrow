@@ -23,7 +23,7 @@ namespace GuardiansOfTomorrow.Scale
 			//destroy all balance = X
 			//charactercard deals 1 target X irreducible energy damage
 
-			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance"));
+			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "balance"));
 			List<DestroyCardAction> dclist = new List<DestroyCardAction>();
 			IEnumerator coroutine = DestroyCardsAndDoActionBasedOnNumberOfCardsDestroyed(DecisionMaker, isBalance, DealXDamage, true, dclist);
 			if (base.UseUnityCoroutines)

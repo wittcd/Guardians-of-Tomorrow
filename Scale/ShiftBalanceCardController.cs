@@ -22,7 +22,7 @@ namespace GuardiansOfTomorrow.Scale
 		{
 			//Destroy a balance card.
 
-			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance"), "balance cards");
+			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "balance"), "balance cards");
 			List<DestroyCardAction> storedDestroy = new List<DestroyCardAction>();
 			IEnumerator coroutine = GameController.SelectAndDestroyCard(DecisionMaker.ToHero(), isBalance, true, storedDestroy, null, GetCardSource());
 			if (base.UseUnityCoroutines)
@@ -36,7 +36,7 @@ namespace GuardiansOfTomorrow.Scale
 
 			//search your deck for a balance card and put it into play, then shuffle it.
 			
-			coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.TurnTaker.Deck, new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance"), () => "balance"), new MoveCardDestination[1]
+			coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.TurnTaker.Deck, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "balance"), () => "balance"), new MoveCardDestination[1]
 			{
 				new MoveCardDestination(base.TurnTaker.PlayArea)
 			}, isPutIntoPlay: true, playIfMovingToPlayArea: true, shuffleAfterwards: true, optional: false, null, flipFaceDown: false, showOutput: false, null, isDiscardIfMovingtoTrash: false, allowAutoDecide: false, null, null, GetCardSource());

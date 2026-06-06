@@ -13,13 +13,13 @@ namespace GuardiansOfTomorrow.Argus
 		public RebuildAndReuseCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
-			SpecialStringMaker.ShowNumberOfCardsAtLocation(TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone"), "camdrone"));
+			SpecialStringMaker.ShowNumberOfCardsAtLocation(TurnTaker.Trash, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "camdrone"), "camdrone"));
 		}
 
 
 		public override IEnumerator Play()
 		{
-			LinqCardCriteria isCamdrone = new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone"), "camdrone");
+			LinqCardCriteria isCamdrone = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "camdrone"), "camdrone");
 			MoveCardDestination obj = new MoveCardDestination(DecisionMaker.TurnTaker.PlayArea);
 			//move up to 2 camdrones from trash to play
 			List<SelectCardDecision> selectedCards = new List<SelectCardDecision>();

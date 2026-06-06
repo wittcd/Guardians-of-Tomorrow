@@ -44,7 +44,7 @@ namespace GuardiansOfTomorrow.Argus
                 {
                     base.GameController.ExhaustCoroutine(coroutine);
                 }
-                LinqCardCriteria isCamdrone = new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone") && c.IsInPlay, "camdrone in play");
+                LinqCardCriteria isCamdrone = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "camdrone") && c.IsInPlay, "camdrone in play");
                 coroutine = GameController.SelectAndActivateAbility(DecisionMaker, "operate", isCamdrone, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)
                 {

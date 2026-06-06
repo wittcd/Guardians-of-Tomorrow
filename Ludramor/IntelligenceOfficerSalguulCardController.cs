@@ -14,13 +14,13 @@ namespace GuardiansOfTomorrow.Ludramor
         public IntelligenceOfficerSalguulCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("analyst"), "analyst"));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "analyst"), "analyst"));
         }
 
         private IEnumerator RedirectToAnalyst(DealDamageAction dd)
         {
             List<Card> storedResults = new List<Card>();
-            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != Card && card.DoKeywordsContain("analyst"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
+            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != Card && GameController.DoesCardContainKeyword(card, "analyst"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -46,7 +46,7 @@ namespace GuardiansOfTomorrow.Ludramor
 
         private int numAnalyst()
         {
-            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && c.DoKeywordsContain("analyst")).Count();
+            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && GameController.DoesCardContainKeyword(c, "analyst")).Count();
         }
 
         public override void AddTriggers()

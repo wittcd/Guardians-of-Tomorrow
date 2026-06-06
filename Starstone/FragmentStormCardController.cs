@@ -48,7 +48,7 @@ namespace GuardiansOfTomorrow.Starstone
 				}
 				Card target = item.Target;
 				int? targetPlayIndex = target.PlayIndex;
-				SelectCardsDecision selectCardsDecision = new SelectCardsDecision(base.GameController, DecisionMaker, (Card c) => c.IsInPlay && c.DoKeywordsContain("stone", false, false), SelectionType.CardToDealDamage, null, isOptional: false, cardSource: GetCardSource(), requiredDecisions: null, eliminateOptions: true, allowAutoDecide: true, allAtOnce: false, dynamicNumberOfCards: () => DoesstoneDamageContinue(target));
+				SelectCardsDecision selectCardsDecision = new SelectCardsDecision(base.GameController, DecisionMaker, (Card c) => c.IsInPlay && GameController.DoesCardContainKeyword(c, "stone"), SelectionType.CardToDealDamage, null, isOptional: false, cardSource: GetCardSource(), requiredDecisions: null, eliminateOptions: true, allowAutoDecide: true, allAtOnce: false, dynamicNumberOfCards: () => DoesstoneDamageContinue(target));
 				IEnumerator coroutine2 = base.GameController.SelectCardsAndDoAction(selectCardsDecision, (SelectCardDecision sc) => stoneDamageResponse(sc, target, stoneDamageAmount), null, () => target.PlayIndex != targetPlayIndex, GetCardSource());
 				if (base.UseUnityCoroutines)
 				{
@@ -65,7 +65,7 @@ namespace GuardiansOfTomorrow.Starstone
 		{
 			if (!target.IsBeingDestroyed && target.Location.IsInPlay && !target.IsBeingDestroyed)
 			{
-				int num = FindCardsWhere((Card c) => c.DoKeywordsContain("stone", false, false) && c.IsInPlay).Except(actedstones).Count();
+				int num = FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "stone") && c.IsInPlay).Except(actedstones).Count();
 				return actedstones.Count() + num;
 			}
 			return 0;

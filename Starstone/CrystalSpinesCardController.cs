@@ -22,7 +22,7 @@ namespace GuardiansOfTomorrow.Starstone
 
 		public override void AddTriggers()
 		{
-			AddTrigger((DealDamageAction dd) => !IsPropertyTrue("FirstDamageToStoneOrStarstoneThisTurn") && dd.DamageSource.IsTarget && !dd.DamageSource.IsHero && dd.DidDealDamage && (dd.Target.DoKeywordsContain("stone", evenIfUnderCard: true) || dd.Target.Identifier == "StarstoneCharacter"), FirstDamageDealtResponse, TriggerType.DealDamage, TriggerTiming.After, ActionDescription.DamageTaken);
+			AddTrigger<DealDamageAction>((DealDamageAction dd) => !IsPropertyTrue("FirstDamageToStoneOrStarstoneThisTurn") && dd.DamageSource.IsTarget && !dd.DamageSource.IsHero && dd.DidDealDamage && GameController.DoesCardContainKeyword(dd.Target, "stone") || dd.Target == CharacterCard, FirstDamageDealtResponse, TriggerType.DealDamage, TriggerTiming.After);
 			AddAfterLeavesPlayAction((GameAction ga) => ResetFlagAfterLeavesPlay("FirstDamageToStoneOrStarstoneThisTurn"), TriggerType.Hidden);
 		}
 

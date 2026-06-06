@@ -13,14 +13,14 @@ namespace GuardiansOfTomorrow.Argus
 		public DroneBombardmentCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
-			SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone")));
+			SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "camdrone")));
 		}
 
 
 		public override IEnumerator Play()
 		{
 			//1 target 1 damage x times where x is number of camdrones.
-			LinqCardCriteria isCamdrone = new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone") && c.IsInPlay, "Camdrone in play");
+			LinqCardCriteria isCamdrone = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "camdrone") && c.IsInPlay, "Camdrone in play");
 			List<DealDamageAction> list = new List<DealDamageAction>();
 			int amount = FindCardsWhere(isCamdrone, null, false).Count();
 			for (int i = 0; i < amount; i++)

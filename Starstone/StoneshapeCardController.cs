@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Starstone
 
 		public override IEnumerator Play()
 		{
-			IEnumerator coroutine = base.GameController.SelectAndReturnCards(base.HeroTurnTakerController, 1, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone", false, false) && c.Owner == base.TurnTaker, "stone"), toHand: true, toDeck: false, optional: false, 0, null, null, GetCardSource());
+			IEnumerator coroutine = base.GameController.SelectAndReturnCards(base.HeroTurnTakerController, 1, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "stone") && c.Owner == base.TurnTaker, "stone"), toHand: true, toDeck: false, optional: false, 0, null, null, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
@@ -27,7 +27,7 @@ namespace GuardiansOfTomorrow.Starstone
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
 			List<PlayCardAction> storedResults = new List<PlayCardAction>();
-			coroutine = SelectAndPlayCardsFromHand(base.HeroTurnTakerController, 1, optional: false, 1, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone", false, false), "stone"), isPutIntoPlay: false, storedResults: storedResults);
+			coroutine = SelectAndPlayCardsFromHand(base.HeroTurnTakerController, 1, optional: false, 1, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "stone"), "stone"), isPutIntoPlay: false, storedResults: storedResults);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

@@ -34,7 +34,7 @@ namespace GuardiansOfTomorrow.TheLastMonsterHunter
                 if (IsGameAdvanced)
                 {
                     // Reduce damage dealt to Upgrades and Weapons by 1.
-                    AddSideTrigger(AddReduceDamageTrigger((Card c) => c.DoKeywordsContain("weapon") || c.DoKeywordsContain("upgrade"), 1));
+                    AddSideTrigger(AddReduceDamageTrigger((Card c) => GameController.DoesCardContainKeyword(c, "weapon") || GameController.DoesCardContainKeyword(c, "upgrade"), 1));
                 }
                 // "Reduce non-fire damage dealt to this card by 2. .",
                 AddSideTrigger(AddReduceDamageTrigger((DealDamageAction dd) => dd.Target == CharacterCard, (DealDamageAction dd) => 2));
@@ -93,7 +93,7 @@ namespace GuardiansOfTomorrow.TheLastMonsterHunter
 
         private IEnumerator ActivateAllWeapons()
         {
-            List<Card> weapons = FindCardsWhere((Card c) => c.DoKeywordsContain("weapon") && c.IsInPlayAndHasGameText && c.HasActivatableAbility("attack")).ToList();
+            List<Card> weapons = FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "weapon") && c.IsInPlayAndHasGameText && c.HasActivatableAbility("attack")).ToList();
             SelectCardsDecision dec = new SelectCardsDecision(GameController, DecisionMaker, (Card c) => weapons.Contains(c), SelectionType.ActivateAbility, weapons.Count(), eliminateOptions: true, allowAutoDecide: true, cardSource: GetCardSource());
             IEnumerator coroutine = GameController.SelectCardsAndDoAction(dec, (SelectCardDecision scd) => ActivateWeaponAttack(scd.SelectedCard), cardSource: GetCardSource());
             if (base.UseUnityCoroutines)

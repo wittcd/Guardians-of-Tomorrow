@@ -27,8 +27,7 @@ namespace GuardiansOfTomorrow.Starstone
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
 			MoveCardDestination obj = new MoveCardDestination(base.HeroTurnTakerController.HeroTurnTaker.Hand);
-			//coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.HeroTurnTakerController.TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone", false, false), "stone"), obj.ToEnumerable(), isPutIntoPlay: false, playIfMovingToPlayArea: true, shuffleAfterwards: false, optional: true, null, flipFaceDown: false, showOutput: false, null, isDiscardIfMovingtoTrash: false, allowAutoDecide: false, null, null, GetCardSource());
-			coroutine = base.GameController.SelectCardsFromLocationAndMoveThem(DecisionMaker, base.HeroTurnTakerController.TurnTaker.Trash, 0, 2, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone", false, false), "stone"), obj.ToEnumerable(), false, true, false, false, null, null, false, false, false, TurnTaker, false, false, null, null, GetCardSource());
+			coroutine = base.GameController.SelectCardsFromLocationAndMoveThem(DecisionMaker, base.HeroTurnTakerController.TurnTaker.Trash, 0, 2, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "stone"), "stone"), obj.ToEnumerable(), false, true, false, false, null, null, false, false, false, TurnTaker, false, false, null, null, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

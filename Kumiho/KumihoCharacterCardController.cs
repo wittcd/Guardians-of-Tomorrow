@@ -15,7 +15,7 @@ namespace GuardiansOfTomorrow.Kumiho
 		{
 			AddThisCardControllerToList(CardControllerListType.MakesIndestructible);
 			base.SpecialStringMaker.ShowHeroTargetWithHighestHP().Condition = () => !base.Card.IsFlipped;
-			base.SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("ghost"), "ghost"), () => true).Condition = () => base.Card.IsFlipped;
+			base.SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "ghost"), "ghost"), () => true).Condition = () => base.Card.IsFlipped;
 		}
 		/*
 		  "{Kumiho} is indestructible",
@@ -51,10 +51,10 @@ namespace GuardiansOfTomorrow.Kumiho
             }
 			else
             {
-				AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => dd.DamageSource.Card == base.Card || dd.DamageSource.Card.DoKeywordsContain("ghost"), H - 2));
+				AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => dd.DamageSource.Card == base.Card || GameController.DoesCardContainKeyword(dd.DamageSource.Card, "ghost"), H - 2));
 				if (base.IsGameAdvanced)
                 {
-					AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => dd.CardSource.Card == base.Card || dd.CardSource.Card.DoKeywordsContain("ghost"), 1));
+					AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => dd.CardSource.Card == base.Card || GameController.DoesCardContainKeyword(dd.CardSource.Card, "ghost"), 1));
 				}
 				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, DealDamageAndMaybePlayTopCardResponse, TriggerType.DealDamage));
             }
@@ -108,7 +108,7 @@ namespace GuardiansOfTomorrow.Kumiho
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
 
-			if (FindCardsWhere((Card c) => c.IsInPlay && c.DoKeywordsContain("ghost")).Count() <= 0)
+			if (FindCardsWhere((Card c) => c.IsInPlay && GameController.DoesCardContainKeyword(c, "ghost")).Count() <= 0)
             {
 				coroutine = base.PlayTheTopCardOfTheVillainDeckResponse(null);
 				if (base.UseUnityCoroutines)

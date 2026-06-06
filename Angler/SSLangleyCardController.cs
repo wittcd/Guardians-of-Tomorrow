@@ -21,7 +21,7 @@ namespace GuardiansOfTomorrow.Angler
         public override void AddTriggers()
         {
             AddRedirectDamageTrigger((DealDamageAction dd) => dd.Target == CharacterCard && (dd.DamageSource.Card != Card), () => Card, true);
-            AddTrigger<DestroyCardAction>((DestroyCardAction dc) => dc.CardToDestroy.Card.DoKeywordsContain("bait") && !GameController.GetCardPropertyJournalEntryBoolean(Card, FirstBaitDestroyKey).Value, (DestroyCardAction dc) => DrawAndSetProperty(), TriggerType.DrawCard, TriggerTiming.After);
+            AddTrigger<DestroyCardAction>((DestroyCardAction dc) => GameController.DoesCardContainKeyword(dc.CardToDestroy.Card, "bait") && !GameController.GetCardPropertyJournalEntryBoolean(Card, FirstBaitDestroyKey).Value, (DestroyCardAction dc) => DrawAndSetProperty(), TriggerType.DrawCard, TriggerTiming.After);
             AddStartOfTurnTrigger((TurnTaker tt) => true, (PhaseChangeAction pc) => reset_bait_destroyed(), TriggerType.Other);
             AddWhenDestroyedTrigger((DestroyCardAction dc) => DamageHeroWhenDestroyed(), TriggerType.DealDamage);
         }

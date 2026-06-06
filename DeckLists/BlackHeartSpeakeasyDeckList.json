@@ -1,0 +1,174 @@
+{
+  "name": "Black Heart Speakeasy",
+  "kind": "Environment",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "backgroundColor": "000000",
+  "difficulty": 1,
+  "shortName": "BlackHeartSpeakeasy",
+  "cards": [
+    {
+      "identifier": "BurningDisaster",
+      "count": 1,
+      "title": "Burning Disaster",
+      "keywords": [
+        "Arson"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageFire",
+        "DrawCardNow"
+      ],
+      "body": [
+        "At the end of the environment turn, this card deals each target 2 fire damage.",
+        "When this card is destroyed, each hero draws 2 cards."
+      ],
+      "flavorText": "No one knew how the blaze started, but thankfully the heroes rushed to save the staff and patrons from the flames.",
+      "hitpoints": 10
+    },
+    {
+      "identifier": "DriveBy",
+      "count": 2,
+      "title": "Drive-By",
+      "keywords": [],
+      "icons": [],
+      "body": [
+        "When this card enters play, it deals the 3 non-Mobster targets with the lowest HP {H - 1} projectile damage each."
+      ],
+      "flavorText": "\"Don Carazzo sends his regards!\" the mobster shouted through the broken windows before the car sped rapidly away."
+    },
+    {
+      "identifier": "FloydTheDealer",
+      "count": 1,
+      "title": "Floyd, the Dealer",
+      "keywords": [
+        "staff"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of the environment turn, one player reveals a card from their hand, then reveal the top cards of the villain and environment decks. Put the card with the most letters in its title into play and discard the other two cards."
+      ],
+      "flavorText": "The swift-fingered dealer shuffled the cards again. The stakes on this game couldn't have been higher.",
+      "hitpoints": 3
+    },
+    {
+      "identifier": "JackTheContact",
+      "count": 1,
+      "title": "Jack, the Contact",
+      "keywords": [
+        "patron"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of the environment turn, reveal the top card of the villain deck. One player may discard 3 cards. If 3 cards are discarded this way, discard the revealed card, otherwise put it into play."
+      ],
+      "flavorText": "Jack grinned. \"If you don't want them, I'm sure the Carazzos will pay handsomely to keep these documents secret.\"",
+      "hitpoints": 4
+    },
+    {
+      "identifier": "KatTheSinger",
+      "count": 1,
+      "title": "Kat, the Singer",
+      "keywords": [
+        "staff"
+      ],
+      "icons": [],
+      "body": [
+        "When this card is dealt damage, it deals each non-staff target 2 sonic damage."
+      ],
+      "flavorText": "Kat's shrill scream sent heroes and villains alike staggering and covering their ears. Her voice, pleasing when raised in song, was equally painful when raised in terror.",
+      "hitpoints": 4
+    },
+    {
+      "identifier": "MayIHaveThisDance",
+      "count": 1,
+      "title": "May I Have This Dance?",
+      "keywords": [],
+      "icons": [],
+      "body": [
+        "Select 2 character cards. Until this card leaves play, the first time each turn either of them takes damage, the other takes the same damage. At the start of the environment turn, destroy this card."
+      ],
+      "flavorText": "As the slow music started, Hoplite reached down and gently took Nyctophobia's hand. \"Miss Lim,\" he asked, \"would you care for a dance?\""
+    },
+    {
+      "identifier": "MuttTheBouncer",
+      "count": 1,
+      "title": "Mutt, the Bouncer",
+      "keywords": [
+        "staff"
+      ],
+      "icons": [],
+      "body": [
+        "Whenever a Staff target is dealt damage, this card deals the source of that damage 4 melee damage."
+      ],
+      "flavorText": "The staff were practically family, and despite his unpleasant nickname, Mutt wasn't going to let anything happen to them.",
+      "hitpoints": 8
+    },
+    {
+      "identifier": "OliverTheBartender",
+      "count": 1,
+      "title": "Oliver, the Bartender",
+      "keywords": [
+        "staff"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of the environment turn, this card deals 1 hero 3 toxic damage. That hero plays a one-shot."
+      ],
+      "flavorText": "The bartender was all too eager to keep the heroes around. Their presence might keep some of the speakeasy's less savory patrons in check.",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "PoliceRaid",
+      "count": 1,
+      "title": "Police Raid",
+      "keywords": [],
+      "icons": [],
+      "body": [
+        "When this card enters play, players may discard any number of cards. Destroy other environment cards until there are as many remaining as the number of cards discarded this way, then destroy this card."
+      ],
+      "flavorText": "The Black Heart was known as a haven for people of ill repute, even long after Prohibition was a distant memory. A surprise visit from the authorities was not an uncommon event."
+    },
+    {
+      "identifier": "RowdyPatron",
+      "count": 2,
+      "title": "Rowdy Patron",
+      "keywords": [
+        "patron"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of the environment turn, this card deals the other targets with the highest and lowest HP 2 melee damage each."
+      ],
+      "flavorText": "",
+      "hitpoints": 5
+    },
+    {
+      "identifier": "SalTheWaitress",
+      "count": 1,
+      "title": "Sal, the Waitress",
+      "keywords": [
+        "staff"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of the environment turn, one hero may draw a card. Then they may discard a card. If they do, they gain 2 HP."
+      ],
+      "flavorText": "\"Drinks are on the house for our heroes,\" the waitress reminded. The Hunters understood; after they saved the staff from the fire, they could expect the best treatment.",
+      "hitpoints": 3
+    },
+    {
+      "identifier": "UpendedTable",
+      "count": 2,
+      "title": "Upended Table",
+      "keywords": [
+        "cover"
+      ],
+      "icons": [],
+      "body": [
+        "The first time each turn a hero or environment target would be dealt damage, one player may discard a card. If they do, redirect that damage to this card."
+      ],
+      "flavorText": "Hoplite crouched behind the table and thanked God for the Black Heart's sturdy oak furniture.",
+      "hitpoints": 5
+    }
+  ]
+}

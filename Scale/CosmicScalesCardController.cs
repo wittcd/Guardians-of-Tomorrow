@@ -25,7 +25,7 @@ namespace GuardiansOfTomorrow.Scale
 
 		private IEnumerator PickAThingResponse(PhaseChangeAction pc)
 		{
-			LinqCardCriteria isBalanceCard = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance", false, false), "balance");
+			LinqCardCriteria isBalanceCard = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "balance"), "balance");
 			List<Function> list = new List<Function>();
 			Function playBalance = new Function(DecisionMaker, "Put a balance card from hand into play", SelectionType.PutIntoPlay, () => SelectAndPlayCardFromHand(DecisionMaker, false, null, isBalanceCard, true, false, true, null));
 			list.Add(playBalance);

@@ -174,7 +174,7 @@ namespace GuardiansOfTomorrow.Eidolon
                 {
 					AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, FlipThisCharacterCardResponse, TriggerType.FlipCard, (PhaseChangeAction pc) => GameController.GetCardPropertyJournalEntryStringList(base.Card, ImmuneList, false).Count() >= H + 2, false));
 				}
-				AddSideTrigger(AddTrigger((PlayCardAction pc) => pc.CardToPlay.DoKeywordsContain("alteration"), DealDamageBecauseAlterationResponse, TriggerType.DealDamage, TriggerTiming.Before));
+				AddSideTrigger(AddTrigger((PlayCardAction pc) => GameController.DoesCardContainKeyword(pc.CardToPlay, "alteration"), DealDamageBecauseAlterationResponse, TriggerType.DealDamage, TriggerTiming.Before));
 				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => IsHero(c), (Card c) => H - 1, StringToDamageType(getMostRecentString())), TriggerType.DealDamage));
 			}
 			else

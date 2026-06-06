@@ -31,7 +31,7 @@ namespace GuardiansOfTomorrow.Legion
             if (!this.Card.IsFlipped)
             {
                 AddSideTrigger(AddEndOfTurnTrigger(tt => tt == this.TurnTaker, EndVillainTurnResponse, new TriggerType[] { TriggerType.DealDamage, TriggerType.DestroyCard }));
-                AddSideTrigger(AddTrigger((PlayCardAction pc) => pc.CardToPlay.DoKeywordsContain("nanite swarm"), MoveNaniteSwarmUnderResponse, TriggerType.MoveCard, TriggerTiming.After));
+                AddSideTrigger(AddTrigger((PlayCardAction pc) => GameController.DoesCardContainKeyword(pc.CardToPlay, "nanite swarm"), MoveNaniteSwarmUnderResponse, TriggerType.MoveCard, TriggerTiming.After));
                 if (IsGameAdvanced)
                 {
                     AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => dd.DamageSource.Card.IsVillain, 1));
@@ -44,7 +44,7 @@ namespace GuardiansOfTomorrow.Legion
                 {
                     AddSideTrigger(AddReduceDamageTrigger((Card c) => c.IsVillain, 1));
                 }
-                AddSideTrigger(AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.DoKeywordsContain("nanite swarm") && dc.WasCardDestroyed, (DestroyCardAction dc) => RemoveDestroyedSwarmThenFlipResponse(dc), TriggerType.FlipCard, TriggerTiming.After));
+                AddSideTrigger(AddTrigger((DestroyCardAction dc) => GameController.DoesCardContainKeyword(dc.CardToDestroy.Card, "nanite swarm") && dc.WasCardDestroyed, (DestroyCardAction dc) => RemoveDestroyedSwarmThenFlipResponse(dc), TriggerType.FlipCard, TriggerTiming.After));
             }
         }
 
@@ -149,7 +149,7 @@ namespace GuardiansOfTomorrow.Legion
             }
             else
             {
-                coroutine = GameController.MoveCards(base.TurnTakerController, FindCardsWhere(new LinqCardCriteria((Card c) => c.IsInPlay && c.DoKeywordsContain("nanite swarm") && !c.IsBeingDestroyed)), base.CharacterCard.UnderLocation, cardSource:GetCardSource());
+                coroutine = GameController.MoveCards(base.TurnTakerController, FindCardsWhere(new LinqCardCriteria((Card c) => c.IsInPlay && GameController.DoesCardContainKeyword(c, "nanite swarm") && !c.IsBeingDestroyed)), base.CharacterCard.UnderLocation, cardSource:GetCardSource());
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(coroutine);

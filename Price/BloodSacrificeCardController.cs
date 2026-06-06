@@ -44,7 +44,7 @@ namespace GuardiansOfTomorrow.Price
             {
                 List<MoveCardDestination> t = new List<MoveCardDestination>();
                 t.Add(new MoveCardDestination(TurnTaker.Trash));
-                coroutine = GameController.SelectCardFromLocationAndMoveIt(DecisionMaker, TurnTaker.Deck, new LinqCardCriteria((Card c) => c.DoKeywordsContain("pact"), "Pact"), t, isDiscardIfMovingtoTrash: true, cardSource: GetCardSource());
+                coroutine = GameController.SelectCardFromLocationAndMoveIt(DecisionMaker, TurnTaker.Deck, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "pact"), "Pact"), t, isDiscardIfMovingtoTrash: true, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(coroutine);

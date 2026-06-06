@@ -1,8 +1,65 @@
 {
   "name": "Spore",
   "kind": "Hero",
+  "expansionIdentifier": "Guardians of Tomorrow",
   "initialCardIdentifiers": [
     "SporeCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "SporeCharacter",
+      "promoIdentifier": "SporeNascentHiveCharacter",
+      "count": 1,
+      "title": "Spore: Nascent Hive",
+      "body": "Growing Self",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        "Search your deck for a Mind card and put it into your hand or in play. If you put it into play, {Spore} deals itself 2 toxic damage."
+      ],
+      "icons": [
+        "Search",
+        "DrawCardNow",
+        "PlayCardNow",
+        "DealDamageToxic"
+      ],
+      "hitpoints": 26,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {},
+      "complexity": 2
+    },
+    {
+      "identifier": "SporeCharacter",
+      "promoIdentifier": "SporeSeedOfVengeanceCharacter",
+      "count": 1,
+      "title": "Spore: Seed of Vengeance",
+      "body": "Retributive Lash",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        "The next time a hero is dealt damage by a non-hero target, {Spore} deals that target 1 melee damage. [b]Beast:[/b] Increase damage dealt this way by 2. [b]Mind:[/b] Change the damage type to psychic and reduce damage dealt by the source of the triggering damage by 1 until the start of {Spore}'s next turn."
+      ],
+      "icons": [
+        "CounterDamage",
+        "DealDamageMelee",
+        "DealDamagePsychic",
+        "ReduceDamageDealt"
+      ],
+      "hitpoints": 32,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {},
+      "complexity": 2
+    }
   ],
   "cards": [
     {
@@ -10,12 +67,12 @@
       "count": 1,
       "title": "Spore",
       "body": "Adaptive Synapse",
-      "backgroundColor": "e4f065",
-      "foilBackgroundColor": "e4f065",
+      "backgroundColor": "26c21b",
+      "foilBackgroundColor": "26c21b",
       "hitpointsColor": "C94742",
       "character": true,
       "powers": [
-        "Draw a card. [b]Beast:[/b] {Spore} deals 1 target 1 melee damage and 1 toxic damage. [b]Mind:[/b] Up to 2 other heroes may each draw a card."
+        "Draw a card. [b]Beast:[/b] {Spore} deals 1 target 1 melee damage and 1 toxic damage. [b]Mind:[/b] up to 2 other heroes may each draw a card."
       ],
       "icons": [
         "HasPower",
@@ -23,26 +80,301 @@
         "DealDamageMelee",
         "DealDamageToxic"
       ],
-      "hitpoints": 29,
-      "nemesisIdentifiers": [
-        "GuardiansOfTomorrow.Spore"
-      ],
+      "hitpoints": 30,
       "incapacitatedAbilities": [
-        "One player may draw a card.",
-        "One player  may play a card.",
-        "One hero deals each non-hero target 1 psychic damage."
+        ""
       ],
-      "flippedIcons": [
-        "DrawCardNow",
-        "PlayCardNow",
-        "DealDamagePsychic"
-      ],
+      "flippedIcons": [],
       "openingLines": {
-        "default": "",
-        "GuardiansOfTomorrow.LudramorCharacter": "",
-        "OblivAeonFrontPageCharacter": ""
+        "default": "Tremble and Obey!"
       },
       "complexity": 2
+    },
+    {
+      "identifier": "BehaviorModulation",
+      "count": 2,
+      "title": "Behavior Modulation",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "Search",
+        "PlayCardNow"
+      ],
+      "body": [
+        "Draw 2 cards. [b]Beast:[/b] Search your deck for a Mind card and put it into your hand or in play. [b]Mind:[/b] Search your deck for a Beast card and put it into your hand or in play."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "BladedTendrils",
+      "count": 2,
+      "title": "Bladed Tendrils",
+      "keywords": [
+        "ongoing",
+        "beast",
+        "limited"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Beast",
+        "IncreaseDamageDealtMelee",
+        "DealDamageToxic",
+        "HasPower"
+      ],
+      "body": [
+        "When a Mind card enters play, destroy this card. Activate [b]Beast[/b] effects. Increase melee damage dealt by {Spore} by 1. The first time {Spore} deals each target melee damage each turn, {Spore} deals that target 1 toxic damage."
+      ],
+      "powers": [
+        "{Spore} deals up to 2 targets 1 melee damage each."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ChokingSpores",
+      "count": 2,
+      "title": "Choking Spores",
+      "keywords": [
+        "ongoing",
+        "beast",
+        "limited"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Beast",
+        "IncreaseDamageDealtToxic",
+        "CounterDamage",
+        "DealDamageToxic",
+        "ReduceDamageDealt"
+      ],
+      "body": [
+        "When a Mind card enters play, destroy this card. Activate [b]Beast[/b] effects. Increase toxic damage dealt by {Spore} by 1. The first time each target deals damage to {Spore} each turn, {Spore} deals that target 0 toxic damage. Reduce the next damage dealt by a target dealt damage this way by 1."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ColossalLeap",
+      "count": 3,
+      "title": "Colossal Leap",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "CancelledDamageGreen",
+        "RedirectDamage"
+      ],
+      "body": [
+        "{Spore} deals 1 target 3 melee damage. [b]Beast:[/b] Redirect the next damage dealt by that target to {Spore}. [b]Mind:[/b] Prevent the next damage dealt to {Spore}."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "EmpathicRelay",
+      "count": 2,
+      "title": "Empathic Relay",
+      "keywords": [
+        "ongoing",
+        "mind",
+        "limited"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Mind",
+        "ReduceDamageTakenPsychic",
+        "DrawCardNow"
+      ],
+      "body": [
+        "When a Beast card enters play, destroy this card. Activate [b]Mind[/b] effects. Reduce psychic damage dealt to heroes by 1. The second time each turn a hero draws a card, one other hero may draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "MentalMotivator",
+      "count": 2,
+      "title": "Mental Motivator",
+      "keywords": [
+        "ongoing",
+        "mind",
+        "limited"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Mind",
+        "IncreaseDamageDealtPsychic",
+        "HasPower",
+        "DealDamagePsychic"
+      ],
+      "body": [
+        "When a Beast card enters play, destroy this card. Activate [b]Mind[/b] effects. Increase psychic damage dealt by heroes by 1."
+      ],
+      "powers": [
+        "One hero other than {Spore} deals 1 target 2 psychic damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "MonstrousGuardian",
+      "count": 2,
+      "title": "Monstrous Guardian",
+      "keywords": [
+        "ongoing",
+        "beast",
+        "limited"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Beast",
+        "ReduceDamageTaken",
+        "RedirectDamage"
+      ],
+      "body": [
+        "When a Mind card enters play, destroy this card. Activate [b]Beast[/b] effects. Reduce damage dealt to {Spore} by 1. The first time each turn another hero would be dealt damage by a non-hero target, you may redirect that damage to {Spore}"
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "NeuralBlast",
+      "count": 3,
+      "title": "Neural Blast",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "{Spore} deals 1 target 2 psychic damage. [b]Mind:[/b] Each other hero deals that target 1 psychic damage. [b]Beast:[/b] That target deals 1 other target 3 melee damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "NutrientAbsorption",
+      "count": 3,
+      "title": "Nutrient Absorption",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyEnvironment",
+        "DestroyOngoing",
+        "DealDamageToxic",
+        "GainHP",
+        "DrawCardNow"
+      ],
+      "body": [
+        "You may destroy a non-target environment or hero ongoing card. If a card is destroyed this way, [b]Beast:[/b] {Spore} deals up to 3 targets 2 toxic damage each. [b]Mind:[/b] {Spore} gains 2 HP and you may draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "Photosynthesis",
+      "count": 3,
+      "title": "Photosynthesis",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GainHP",
+        "DrawCardNow",
+        "DealDamageToxic"
+      ],
+      "body": [
+        "{Spore} gains 1 HP. Draw a card. [b]Beast:[/b] {Spore} deals 1 target 1 toxic damage. [b]Mind:[/b] One other hero gains 1 HP."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "PsychicStimulation",
+      "count": 3,
+      "title": "Psychic Stimulation",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "One other hero draws 2 cards. [b]Beast:[/b] Increase damage dealt to and by that hero by 1 until the start of your next turn. [b]Mind: [/b]reduce damage dealt to and by that hero by 1 until the start of your next turn."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "RapidGrowth",
+      "count": 3,
+      "title": "Rapid Growth",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageToxic",
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "body": [
+        "{Spore} deals 1 target 2 toxic damage. [b]Beast:[/b] Reveal cards from your deck until a Beast card is revealed and put it into play. Shuffle the other revealed cards into your deck. [b]Mind:[/b] Reveal cards from your deck until a Mind card is revealed and put it into play. Shuffle the other revealed cards into your deck."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "RootBarrier",
+      "count": 3,
+      "title": "Root Barrier",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Reduce the next damage dealt to {Spore} by 2. [b]Beast:[/b] The next time {Spore} is dealt damage, it deals the source of that damage 2 toxic damage. [b]Mind:[/b] {Spore} gains 3 HP."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "SensorySpores",
+      "count": 2,
+      "title": "Sensory Spores",
+      "keywords": [
+        "ongoing",
+        "mind",
+        "limited"
+      ],
+      "icons": [
+        "GuardiansOfTomorrow.Mind",
+        "ReduceDamageTaken",
+        "HasPower",
+        "Manipulate",
+        "DrawCardNow"
+      ],
+      "body": [
+        "When a Beast card enters play, destroy this card. Activate [b]Mind[/b] effects. Reduce the first damage dealt to {Spore} each turn by 2."
+      ],
+      "powers": [
+        "Reveal and replace the top card of a deck. Draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "Tanglevine",
+      "count": 3,
+      "title": "Tanglevine",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "CounterDamage",
+        "DealDamageToxic",
+        "CancelledDamageGreen"
+      ],
+      "body": [
+        "{Spore} deals 1 target 2 melee damage. [b]Beast:[/b] Until the start of your next turn, whenever that target deals damage, {Spore} deals that target 1 toxic damage.[b] Mind: [/b]prevent the next damage dealt by that target."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ViseGrip",
+      "count": 2,
+      "title": "Vise Grip",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Select a target. Until the end of your next turn, redirect damage dealt by {Spore} to that target. [b]Beast:[/b] {Spore} deals that target 2 melee damage. [b]Mind:[/b] You may use an extra power during your power phase."
+      ],
+      "flavorQuotes": []
     }
   ]
 }

@@ -21,7 +21,7 @@ namespace GuardiansOfTomorrow.Ninetails
 		public override void AddTriggers()
 		{
 			//first damage dealt each turn, redirect to ghost in play area.
-			AddFirstTimePerTurnRedirectTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard && dd.Amount > 0, "RedirectOpportunityPresented", TargetType.SelectTarget, (Card c) => c.DoKeywordsContain("ghost", false, false) && c.IsAtLocationRecursive(base.CharacterCard.Location), 1, optional: false);
+			AddFirstTimePerTurnRedirectTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard && dd.Amount > 0, "RedirectOpportunityPresented", TargetType.SelectTarget, (Card c) => GameController.DoesCardContainKeyword(c, "ghost") && c.IsAtLocationRecursive(base.CharacterCard.Location), 1, optional: false);
 		}
 
 		public override IEnumerator UsePower(int index = 0)
@@ -39,7 +39,7 @@ namespace GuardiansOfTomorrow.Ninetails
 			}
 			if (discards.Count() > 0)
 			{
-				coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.HeroTurnTakerController.HeroTurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain("ghost", false, false), "ghost"), new MoveCardDestination[2]
+				coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.HeroTurnTakerController.HeroTurnTaker.Trash, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "ghost"), "ghost"), new MoveCardDestination[2]
 			{
 				new MoveCardDestination(base.HeroTurnTakerController.HeroTurnTaker.PlayArea),
 				new MoveCardDestination(base.HeroTurnTakerController.HeroTurnTaker.Hand)

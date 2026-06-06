@@ -56,7 +56,7 @@ namespace GuardiansOfTomorrow.Price
             bool playedPact = false;
             foreach (Card c in played)
             {
-                if (c.DoKeywordsContain("pact"))
+                if (GameController.DoesCardContainKeyword(c, "pact"))
                 {
                     playedPact = true;
                 }

@@ -37,7 +37,7 @@ namespace GuardiansOfTomorrow.Price
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = RevealCards_PutSomeIntoPlay_DiscardRemaining(DecisionMaker, TurnTaker.Deck, 1, new LinqCardCriteria((Card c) => c.DoKeywordsContain("pact"), "pact"));
+            coroutine = RevealCards_PutSomeIntoPlay_DiscardRemaining(DecisionMaker, TurnTaker.Deck, 1, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "pact"), "pact"));
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

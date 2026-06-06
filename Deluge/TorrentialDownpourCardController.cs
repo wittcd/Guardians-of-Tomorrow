@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Deluge
 
         public override IEnumerator Play()
         {
-            IEnumerator coroutine = GameController.GainHP(DecisionMaker, (Card c) => c.DoKeywordsContain("flood"), 8, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.GainHP(DecisionMaker, (Card c) => GameController.DoesCardContainKeyword(c, "flood"), 8, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

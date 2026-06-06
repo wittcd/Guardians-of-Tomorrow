@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Ludramor
 
         public override void AddTriggers()
         {
-            AddImmuneToDamageTrigger((DealDamageAction dd) => (dd.Target.DoKeywordsContain("spaceship") || dd.Target.DoKeywordsContain("executive")) && (dd.DamageSource.Card != null && dd.DamageSource.Card.IsEnvironment));
+            AddImmuneToDamageTrigger((DealDamageAction dd) => (GameController.DoesCardContainKeyword(dd.Target, "spaceship") || GameController.DoesCardContainKeyword(dd.Target, "executive")) && (dd.DamageSource.Card != null && dd.DamageSource.Card.IsEnvironment));
         }
     }
 }

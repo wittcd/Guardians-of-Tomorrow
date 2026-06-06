@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.TheLastMonsterHunter
             // Cards are revealed from the top of the villain deck until 2 Weapons and 1 Upgrade are revealed and put into play.
             // Other revealed cards are shuffled back into the villain deck.
 
-            IEnumerator coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("weapon"), "weapon"), 2);
+            IEnumerator coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "weapon"), "weapon"), 2);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -30,7 +30,7 @@ namespace GuardiansOfTomorrow.TheLastMonsterHunter
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("upgrade"), "upgrade"), 1);
+            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "upgrade"), "upgrade"), 1);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

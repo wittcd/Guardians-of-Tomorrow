@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
 		public override IEnumerator StartGame()
 		{
-			IEnumerator coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("thrall"), "thrall"), base.H - 1);
+			IEnumerator coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "thrall"), "thrall"), base.H - 1);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

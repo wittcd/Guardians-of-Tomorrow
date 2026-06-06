@@ -13,7 +13,7 @@ namespace GuardiansOfTomorrow.TheHatter
 		public TheHatterCharacterCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
-			base.SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("thrall"), "thrall"), () => true);
+			base.SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "thrall"), "thrall"), () => true);
 			base.SpecialStringMaker.ShowHeroTargetWithHighestHP().Condition = () => !base.Card.IsFlipped;
 			base.SpecialStringMaker.ShowHeroTargetWithLowestHP(1, 2, false).Condition = () => base.Card.IsFlipped;
 		}
@@ -34,9 +34,9 @@ namespace GuardiansOfTomorrow.TheHatter
 			if (base.IsGameChallenge)
 			{
 				//"challengeText": "The first time each turn {The Hatter} would be dealt damage, redirect that damage to a Thrall",
-				AddFirstTimePerTurnRedirectTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard, "dealt damage", TargetType.SelectTarget, (Card c) => c.DoKeywordsContain("thrall"));
+				AddFirstTimePerTurnRedirectTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard, "dealt damage", TargetType.SelectTarget, (Card c) => GameController.DoesCardContainKeyword(c, "thrall"));
 			}
-			AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.DoKeywordsContain("thrall"), AllPlayersMustDiscardResponse, TriggerType.DiscardCard, TriggerTiming.After);
+			AddTrigger((DestroyCardAction dc) => GameController.DoesCardContainKeyword(dc.CardToDestroy.Card, "thrall"), AllPlayersMustDiscardResponse, TriggerType.DiscardCard, TriggerTiming.After);
 			AddDefeatedIfDestroyedTriggers(false);
 			base.AddTriggers();
 		}
@@ -51,7 +51,7 @@ namespace GuardiansOfTomorrow.TheHatter
                 }
 				//AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, BringThrallBackResponse, TriggerType.PutIntoPlay));
 				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction p) => DealDamageToHighestHP(base.CharacterCard, 1, (Card c) => IsHero(c), (Card c) => H - 1, DamageType.Projectile), TriggerType.DealDamage));
-				AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.FlipThisCharacterCardResponse, TriggerType.FlipCard, (PhaseChangeAction p) => FindCardsWhere((Card c) => c.DoKeywordsContain("thrall") && c.IsInPlayAndHasGameText).Count() <= 1));
+				AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.FlipThisCharacterCardResponse, TriggerType.FlipCard, (PhaseChangeAction p) => FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "thrall") && c.IsInPlayAndHasGameText).Count() <= 1));
             }
 			else
             {
@@ -61,7 +61,7 @@ namespace GuardiansOfTomorrow.TheHatter
 				}
 				//AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction p) => DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => c.IsHeroCharacterCard, (Card c) => base.H - 2, DamageType.Psychic, false, false, null, 2, null, null, false), TriggerType.DealDamage));
 				AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, DamageThenDestroyResponse, TriggerType.DealDamage));
-				AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.FlipThisCharacterCardResponse, TriggerType.FlipCard, (PhaseChangeAction p) => FindCardsWhere((Card c) => c.DoKeywordsContain("thrall") && c.IsInPlayAndHasGameText).Count() >= 2));
+				AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, base.FlipThisCharacterCardResponse, TriggerType.FlipCard, (PhaseChangeAction p) => FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "thrall") && c.IsInPlayAndHasGameText).Count() >= 2));
             }
 
 			base.AddSideTriggers();
@@ -84,7 +84,7 @@ namespace GuardiansOfTomorrow.TheHatter
 		{
 			bool tryPlaying = true;
 			string message = base.Card.Title + " plays a Thrall card from the Trash.";
-			if (!base.TurnTaker.Trash.Cards.Any((Card c) => c.DoKeywordsContain("thrall")));
+			if (!base.TurnTaker.Trash.Cards.Any((Card c) => GameController.DoesCardContainKeyword(c, "thrall")));
 			{
 				tryPlaying = false;
 				message = "There are no Thrall cards in The Hatter's trash to play.";
@@ -100,7 +100,7 @@ namespace GuardiansOfTomorrow.TheHatter
 			}
 			if (tryPlaying)
 			{
-				IEnumerator coroutine2 = ReviveCardFromTrash(base.TurnTakerController, (Card c) => c.DoKeywordsContain("thrall"));
+				IEnumerator coroutine2 = ReviveCardFromTrash(base.TurnTakerController, (Card c) => GameController.DoesCardContainKeyword(c, "thrall"));
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine2);

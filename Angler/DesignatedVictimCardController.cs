@@ -35,7 +35,7 @@ namespace GuardiansOfTomorrow.Angler
         {
             AddStartOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, (PhaseChangeAction pc) => DestroyThisCardResponse(null), TriggerType.DestroySelf);
             AddRedirectDamageTrigger((DealDamageAction dd) => IsHeroCharacterCard(dd.Target) && dd.Target != GetCardThisCardIsNextTo(), () => GetCardThisCardIsNextTo(), false);
-            AddTrigger<DealDamageAction>((DealDamageAction dd) => dd.Target == GetCardThisCardIsNextTo(), (DealDamageAction dd) => GameController.SelectTargetAndRedirectDamage(DecisionMaker, (Card c) => c.DoKeywordsContain("bait"), dd, false, null, GetCardSource()), TriggerType.RedirectDamage, TriggerTiming.Before);
+            AddTrigger<DealDamageAction>((DealDamageAction dd) => dd.Target == GetCardThisCardIsNextTo(), (DealDamageAction dd) => GameController.SelectTargetAndRedirectDamage(DecisionMaker, (Card c) => GameController.DoesCardContainKeyword(c, "bait"), dd, false, null, GetCardSource()), TriggerType.RedirectDamage, TriggerTiming.Before);
         }
     }
 }

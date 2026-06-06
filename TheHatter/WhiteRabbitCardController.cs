@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.TheHatter
         public override void AddTriggers()
         {
             AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, HeroWithMostMustDiscard, TriggerType.DiscardCard);
-            AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => DealDamage((Card c) => c == base.Card, (Card c) => c.DoKeywordsContain("thrall") && c != base.Card, (Card c) => 1, DamageType.Sonic), TriggerType.DealDamage);
+            AddEndOfTurnTrigger((TurnTaker tt) => tt == base.TurnTaker, (PhaseChangeAction pc) => DealDamage((Card c) => c == base.Card, (Card c) => GameController.DoesCardContainKeyword(c, "thrall") && c != base.Card, (Card c) => 1, DamageType.Sonic), TriggerType.DealDamage);
             base.AddTriggers();
         }
 

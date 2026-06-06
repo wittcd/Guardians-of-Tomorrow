@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Angler
         {
             //You may play a Bait card or draw a card.
             List<Function> options = new List<Function>();
-            options.Add(new Function(DecisionMaker, "Play a Bait Card", SelectionType.PlayCard, () => GameController.SelectAndPlayCardFromHand(DecisionMaker, false, null, new LinqCardCriteria((Card c) => c.DoKeywordsContain("bait"), "bait"), cardSource: GetCardSource()), FindCardsWhere((Card c) => c.DoKeywordsContain("bait") && c.Location == TurnTaker.ToHero().Hand).Count() > 0));
+            options.Add(new Function(DecisionMaker, "Play a Bait Card", SelectionType.PlayCard, () => GameController.SelectAndPlayCardFromHand(DecisionMaker, false, null, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "bait"), "bait"), cardSource: GetCardSource()), FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "bait") && c.Location == TurnTaker.ToHero().Hand).Count() > 0));
             options.Add(new Function(DecisionMaker, "Draw a Card", SelectionType.DrawCard, () => GameController.DrawCard(TurnTaker.ToHero(), cardSource: GetCardSource())));
             SelectFunctionDecision select = new SelectFunctionDecision(GameController, DecisionMaker, options, false, cardSource: GetCardSource());
             IEnumerator coroutine = GameController.SelectAndPerformFunction(select);

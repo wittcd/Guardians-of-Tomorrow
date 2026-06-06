@@ -14,13 +14,13 @@ namespace GuardiansOfTomorrow.Ludramor
         public ProspectingInitiativeCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("analyst"), "analyst"));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "analyst"), "analyst"));
             SpecialStringMaker.ShowIfSpecificCardIsInPlay("IntelligenceOfficerSalguul");
         }
 
         private int numAnalyst()
         {
-            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && c.DoKeywordsContain("analyst")).Count();
+            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && GameController.DoesCardContainKeyword(c, "analyst")).Count();
         }
 
         public override IEnumerator Play()

@@ -13,14 +13,14 @@ namespace GuardiansOfTomorrow.Ludramor
         public RushRepairsCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("technician"), "technician"));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "technician"), "technician"));
             SpecialStringMaker.ShowIfSpecificCardIsInPlay("ChiefEngineerKomac");
-            SpecialStringMaker.ShowNumberOfCardsAtLocation(TurnTaker.Deck, new LinqCardCriteria((Card c) => c.DoKeywordsContain("spaceship"), "spaceship"));
+            SpecialStringMaker.ShowNumberOfCardsAtLocation(TurnTaker.Deck, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "spaceship"), "spaceship"));
         }
 
         private int numTechnicians()
         {
-            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && c.DoKeywordsContain("technician")).Count();
+            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && GameController.DoesCardContainKeyword(c, "technician")).Count();
         }
 
         public override IEnumerator Play()
@@ -28,7 +28,7 @@ namespace GuardiansOfTomorrow.Ludramor
             //check if Komac in play
             if (FindCardsWhere((Card c) => c.Identifier == "ChiefEngineerKomac" && c.IsInPlay).Count() > 0)
             {
-                IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(TurnTakerController, TurnTaker.Deck, true, true, false, new LinqCardCriteria((Card c) => c.DoKeywordsContain("spaceship"), "spaceship"), numTechnicians());
+                IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(TurnTakerController, TurnTaker.Deck, true, true, false, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "spaceship"), "spaceship"), numTechnicians());
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(coroutine);

@@ -39,7 +39,7 @@ namespace GuardiansOfTomorrow.Starstone
 			if (base.TurnTaker.IsHero)
 			{
 				MoveCardDestination obj = new MoveCardDestination(DecisionMaker.TurnTaker.PlayArea);
-				IEnumerator coroutine3 = RevealCards_MoveMatching_ReturnNonMatchingCards(DecisionMaker, Card.Owner.Deck, false, true, false, new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone")), 1);
+				IEnumerator coroutine3 = RevealCards_MoveMatching_ReturnNonMatchingCards(DecisionMaker, Card.Owner.Deck, false, true, false, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "stone")), 1);
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine3);

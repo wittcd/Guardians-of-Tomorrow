@@ -14,14 +14,14 @@ namespace GuardiansOfTomorrow.Ludramor
         public ChiefEngineerKomacCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("technician"), "technician"));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "technician"), "technician"));
             SpecialStringMaker.ShowListOfCards(new LinqCardCriteria((Card c) => MostDamagedSpaceship().Contains(c), "most damaged spaceships", false));
         }
 
         private IEnumerator RedirectToTechnician(DealDamageAction dd)
         {
             List<Card> storedResults = new List<Card>();
-            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != Card && card.DoKeywordsContain("technician"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
+            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != Card && GameController.DoesCardContainKeyword(card, "technician"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -47,19 +47,19 @@ namespace GuardiansOfTomorrow.Ludramor
 
         private int numTechnicians()
         {
-            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && c.DoKeywordsContain("technician")).Count();
+            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && GameController.DoesCardContainKeyword(c, "technician")).Count();
         }
 
         public override void AddTriggers()
         {
-            AddTrigger((GainHPAction gh) => gh.HpGainer.DoKeywordsContain("spaceship"), (GainHPAction gh) => GameController.IncreaseHPGain(gh, numTechnicians(), GetCardSource()), TriggerType.IncreaseHPGain, TriggerTiming.Before);
+            AddTrigger((GainHPAction gh) => GameController.DoesCardContainKeyword(gh.HpGainer, "spaceship"), (GainHPAction gh) => GameController.IncreaseHPGain(gh, numTechnicians(), GetCardSource()), TriggerType.IncreaseHPGain, TriggerTiming.Before);
             AddTrigger((DealDamageAction dd) => dd.Target == Card, RedirectToTechnician, TriggerType.RedirectDamage, TriggerTiming.Before);
             AddEndOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, (PhaseChangeAction pc) => HealMostDamagedSpaceship(), TriggerType.GainHP);
         }
 
         private List<Card> MostDamagedSpaceship()
         {
-            List<Card> spaceships = (List<Card>)FindCardsWhere((Card c) => c.IsTarget && IsVillain(c) && c.DoKeywordsContain("spaceship") && c.IsInPlayAndHasGameText);
+            List<Card> spaceships = (List<Card>)FindCardsWhere((Card c) => c.IsTarget && IsVillain(c) && GameController.DoesCardContainKeyword(c, "spaceship") && c.IsInPlayAndHasGameText);
             List<Card> damaged = new List<Card>();
             int damage = -1;
             foreach (Card spaceship in spaceships)

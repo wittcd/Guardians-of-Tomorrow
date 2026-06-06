@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.TheLastMonsterHunter
         public override IEnumerator Play()
         {
             List<Card> highest = new List<Card>();
-            IEnumerator coroutine = GameController.FindTargetWithHighestHitPoints(1, (Card c) => c.DoKeywordsContain("weapon"), highest, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.FindTargetWithHighestHitPoints(1, (Card c) => GameController.DoesCardContainKeyword(c, "weapon"), highest, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

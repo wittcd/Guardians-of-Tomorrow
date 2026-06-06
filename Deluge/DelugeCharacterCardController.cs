@@ -19,10 +19,6 @@ namespace GuardiansOfTomorrow.Deluge
         public override void AddTriggers()
         {
             AddDefeatedIfDestroyedTriggers(false);
-            /*if (IsGameChallenge)
-            {
-                AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.DoKeywordsContain("flood") && dc.CardSource != null && dc.CardSource.Card.Owner == TurnTaker && dc.CardToDestroy.Card.IsTarget && dc.WasCardDestroyed && (dc.DealDamageAction == null || !dc.DealDamageAction.DamageSource.Card.IsEnvironment) && (dc.DealDamageAction != null || dc.CardSource.Card.IsOneShot || dc.CardSource.Card.HasPowers || !dc.ResponsibleCard.IsEnvironment), (DestroyCardAction dc) => PlayTheTopCardOfTheVillainDeckResponse(dc), TriggerType.PlayCard, TriggerTiming.After);
-            }*/
             base.AddTriggers();
         }
         public override void AddSideTriggers()
@@ -37,7 +33,7 @@ namespace GuardiansOfTomorrow.Deluge
                     AddSideTrigger(AddReduceDamageTrigger((Card c) => IsVillain(c), 1));
                 }
                 base.Card.UnderLocation.OverrideIsInPlay = false;
-                AddSideTrigger(AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.IsEnvironment || dc.CardToDestroy.Card.DoKeywordsContain("flood"), (DestroyCardAction dc) => RespondToCardDestructionIfCorrectType(dc), TriggerType.MoveCard, TriggerTiming.After));
+                AddSideTrigger(AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.IsEnvironment || GameController.DoesCardContainKeyword(dc.CardToDestroy.Card, "flood"), (DestroyCardAction dc) => RespondToCardDestructionIfCorrectType(dc), TriggerType.MoveCard, TriggerTiming.After));
                 //AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == CharacterCard.Owner && FindCardsWhere((Card c) => c.Location == Card.UnderLocation).Count() <= 0, FlipThisCharacterCardResponse, TriggerType.FlipCard));
                 AddSideTrigger(AddTrigger((MoveCardAction mc) => mc.Destination == CharacterCard.UnderLocation && CharacterCard.UnderLocation.NumberOfCards >= 10, (MoveCardAction mc) => GameController.GameOver(EndingResult.AlternateDefeat, "Everything is flooded. The heroes lose the game!", showEndingTextAsMessage: true, cardSource: GetCardSource()), TriggerType.GameOver, TriggerTiming.After));
             }
@@ -49,9 +45,9 @@ namespace GuardiansOfTomorrow.Deluge
                 }
                 if (IsGameChallenge)
                 {
-                    AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.DoKeywordsContain("flood") || IsOngoing(dc.CardToDestroy.Card), PlayTheTopCardOfTheVillainDeckResponse, TriggerType.PlayCard, TriggerTiming.After);
+                    AddTrigger((DestroyCardAction dc) => GameController.DoesCardContainKeyword(dc.CardToDestroy.Card, "flood") || IsOngoing(dc.CardToDestroy.Card), PlayTheTopCardOfTheVillainDeckResponse, TriggerType.PlayCard, TriggerTiming.After);
                 }
-                AddSideTrigger(AddTrigger((CardEntersPlayAction cep) => (cep.CardEnteringPlay.DoKeywordsContain("flood") && !cep.CardEnteringPlay.IsMinion) || (cep.CardEnteringPlay.IsVillain && IsOngoing(cep.CardEnteringPlay)), (CardEntersPlayAction cep) => FlippedPlayFloodResponse(cep), TriggerType.DestroyCard, TriggerTiming.After));
+                AddSideTrigger(AddTrigger((CardEntersPlayAction cep) => (GameController.DoesCardContainKeyword(cep.CardEnteringPlay, "flood") && !cep.CardEnteringPlay.IsMinion) || (cep.CardEnteringPlay.IsVillain && IsOngoing(cep.CardEnteringPlay)), (CardEntersPlayAction cep) => FlippedPlayFloodResponse(cep), TriggerType.DestroyCard, TriggerTiming.After));
                 AddSideTrigger(AddTrigger((DestroyCardAction dc) => dc.CardToDestroy.Card.IsEnvironment, (DestroyCardAction dc) => PlayTheTopCardOfTheVillainDeckResponse(dc), TriggerType.PlayCard, TriggerTiming.After));
                 AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, (PhaseChangeAction pc) => GameController.DealDamage(DecisionMaker, CharacterCard, (Card c) => !IsVillain(c), 2, DamageType.Projectile, cardSource: GetCardSource()), TriggerType.DealDamage));
             }
@@ -96,7 +92,7 @@ namespace GuardiansOfTomorrow.Deluge
             {
                 dc.SetPostDestroyDestination(CharacterCard.UnderLocation, cardSource: GetCardSource());
             }
-            else if (dc.CardToDestroy.Card.DoKeywordsContain("flood"))
+            else if (GameController.DoesCardContainKeyword(dc.CardToDestroy.Card, "flood"))
             {
                 IEnumerator coroutine = GameController.MoveCard(DecisionMaker, CharacterCard.UnderLocation.TopCard, CharacterCard.UnderLocation.TopCard.Owner.Trash, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)

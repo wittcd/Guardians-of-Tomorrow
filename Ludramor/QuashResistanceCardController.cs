@@ -13,14 +13,14 @@ namespace GuardiansOfTomorrow.Ludramor
         public QuashResistanceCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("soldier"), "soldier"));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "soldier"), "soldier"));
             SpecialStringMaker.ShowIfSpecificCardIsInPlay("ColonelPrenakka");
             SpecialStringMaker.ShowHighestHP(1, () => numSoldier(), new LinqCardCriteria((Card c) => IsHero(c)));
         }
 
         private int numSoldier()
         {
-            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && c.DoKeywordsContain("soldier")).Count();
+            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && GameController.DoesCardContainKeyword(c, "soldier")).Count();
         }
 
         public override IEnumerator Play()

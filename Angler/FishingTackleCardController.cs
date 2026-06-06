@@ -32,7 +32,7 @@ namespace GuardiansOfTomorrow.Angler
             }
 
             List<Function> options = new List<Function>();
-            options.Add(new Function(DecisionMaker, "Play a Bait Card", SelectionType.PlayCard, () => GameController.SelectAndPlayCardFromHand(DecisionMaker, false, null, new LinqCardCriteria((Card c) => c.DoKeywordsContain("bait"), "bait"), cardSource: GetCardSource()), FindCardsWhere((Card c) => c.DoKeywordsContain("bait") && c.Location == TurnTaker.ToHero().Hand).Count() > 0));
+            options.Add(new Function(DecisionMaker, "Play a Bait Card", SelectionType.PlayCard, () => GameController.SelectAndPlayCardFromHand(DecisionMaker, false, null, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "bait"), "bait"), cardSource: GetCardSource()), FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "bait") && c.Location == TurnTaker.ToHero().Hand).Count() > 0));
             
             if (DidSelectCard(selected))
             {

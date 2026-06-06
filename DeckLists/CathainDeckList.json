@@ -16,7 +16,7 @@
       "hitpointsColor": "C94742",
       "character": true,
       "powers": [
-        "If you have a Locus in play, reveal cards from your deck until a card that shares a keyword with one of your Loci is revealed. Put that card in your hand and shuffle the other revealed cards into your deck. Otherwise, search your deck or trash for a Locus and put it into your hand. If you searched your deck, shuffle it."
+        "If you have a Locus in play, reveal cards from your deck until 1 non-Locus card that shares a keyword with one of your Loci is revealed. Put that card in your hand and shuffle the other revealed cards into your deck. Otherwise, search your deck or trash for a Locus and put it into your hand. If you searched your deck, shuffle it."
       ],
       "icons": [
         "HasPower",
@@ -36,13 +36,16 @@
         "DealDamage"
       ],
       "openingLines": {
-        "default": "I wield the most ancient of magicks. You cannot stand before me.",
+        "default": "I wield the most ancient of magicks. You cannot stand before me!",
         "AbhartachCharacter": "My old enemy, this time you shall fall for good.",
         "OblivAeonFrontPageCharacter": "And I will face you all the same, no matter what awaits."
       },
       "openingLineRequests": {
         "OblivAeonFrontPageCharacter": "LifelineCharacter"
       },
+      "nemesisIdentifiers": [
+        "GuardiansOfTomorrow.Cathain"
+      ],
       "complexity": 3
     },
     {
@@ -55,10 +58,13 @@
       ],
       "icons": [
         "Destroy",
+        "PlayCardNow",
         "DealDamageLightning"
       ],
       "body": [
-        "When this card enters play, destroy your other Loci. Whenever you play another Air card, this card deals 1 target 2 lightning damage."
+        "When this card enters play, destroy your other Loci, then you may play a card.",
+        "When {Cathain} would deal himself infernal damage, you may redirect it to this card.",
+        "Whenever you play another Air card, this card deals 1 target 2 lightning damage."
       ],
       "flavorQuotes": [
         {
@@ -108,8 +114,8 @@
         "DestroySelf"
       ],
       "body": [
-        "When this card enters play, increase the next damage dealt to each non-hero target by 1 and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
-        "After a non-hero target deals damage to another target, they deal themselves 2 toxic damage.",
+        "When this card enters play, increase the next damage dealt to each non-hero target by 1 and {Cathain} deals himself 6 irreducible infernal damage.",
+        "The first time each turn each non-hero target deals damage to another target, they deal themselves 2 toxic damage.",
         "At the end of your turn, if this card did not enter play this turn, destroy it."
       ],
       "flavorQuotes": [
@@ -121,7 +127,7 @@
     },
     {
       "identifier": "DustStorm",
-      "count": 2,
+      "count": 1,
       "title": "Dust Storm",
       "keywords": [
         "ongoing",
@@ -136,7 +142,7 @@
         "DestroySelf"
       ],
       "body": [
-        "When this card enters play, prevent the next damage dealt by each non-hero target and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "When this card enters play, prevent the next damage dealt by each non-hero target and {Cathain} deals himself 6 irreducible infernal damage.",
         "At the start of each turn, {Cathain} deals up to 3 targets 1 projectile damage each.",
         "At the end of your turn, if this card did not enter play this turn, destroy it."
       ],
@@ -149,7 +155,7 @@
     },
     {
       "identifier": "EarthCrack",
-      "count": 3,
+      "count": 2,
       "title": "Earth Crack",
       "keywords": [
         "one-shot",
@@ -160,7 +166,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "{Cathain} deals 1 target 3 melee damage then deals that target 2 melee damage. {Cathain} or one of your Loci deals itself 3 irreducible infernal damage."
+        "{Cathain} deals 1 target 3 melee damage then deals that target 2 melee damage. {Cathain} deals himself 3 irreducible infernal damage."
       ],
       "flavorQuotes": [
         {
@@ -182,7 +188,7 @@
         "GainHP"
       ],
       "body": [
-        "Whenever you play a one-shot card that shares a keyword with a Locus in play, you may draw a card or {Cathain} gains 1 HP."
+        "Whenever you play a non-Locus card that shares a keyword with a Locus in play, you may draw a card or {Cathain} gains 1 HP."
       ],
       "flavorQuotes": [
         {
@@ -202,7 +208,7 @@
         "PlayCardNow"
       ],
       "body": [
-        "Play up to 3 one-shots that share a keyword with a Locus in play. Immediately end your turn."
+        "Play up to 3 non-Locus cards that share a keyword with a Locus in play. Immediately end your turn."
       ],
       "flavorQuotes": [
         {
@@ -213,7 +219,7 @@
     },
     {
       "identifier": "FreezeBlood",
-      "count": 3,
+      "count": 2,
       "title": "Freeze Blood",
       "keywords": [
         "one-shot",
@@ -225,7 +231,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "{Cathain} deals 1 target 4 cold damage. Reduce damage dealt by that target by 1 until the start of your turn. {Cathain} or one of your Loci deals itself 3 irreducible infernal damage."
+        "{Cathain} deals 1 target 4 cold damage. Reduce damage dealt by that target by 1 until the start of your turn. {Cathain} deals himself 3 irreducible infernal damage."
       ],
       "flavorQuotes": [
         {
@@ -251,8 +257,8 @@
         "DealDamageLightning"
       ],
       "body": [
-        "When this card enters play, play the top 2 cards of the environment deck and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
-        "At the start of each turn, destroy an environment card. If a card is destroyed this way, {Cathain} deals 1 target 2 lightning and 2 cold damage.",
+        "When this card enters play, play the top 2 cards of the environment deck and {Cathain} deals himself 6 irreducible infernal damage.",
+        "At the start of each turn, destroy an environment card. If you do, {Cathain} deals 1 target 2 lightning and 2 cold damage.",
         "At the end of your turn, if this card did not enter play this turn, destroy it."
       ],
       "flavorQuotes": [
@@ -264,7 +270,7 @@
     },
     {
       "identifier": "LightningStrike",
-      "count": 3,
+      "count": 2,
       "title": "Lightning Strike",
       "keywords": [
         "one-shot",
@@ -276,7 +282,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "{Cathain} deals 1 target 4 lightning damage, then deals each other non-hero target 1 sonic damage. {Cathain} or one of your Loci deals itself 3 irreducible infernal damage."
+        "{Cathain} deals 1 target 4 lightning damage, then deals each other non-hero target 1 sonic damage. {Cathain} deals himself 3 irreducible infernal damage."
       ],
       "flavorQuotes": [
         {
@@ -287,7 +293,7 @@
     },
     {
       "identifier": "MeltArmor",
-      "count": 3,
+      "count": 2,
       "title": "Melt Armor",
       "keywords": [
         "one-shot",
@@ -299,7 +305,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "{Cathain} deals 1 target 4 fire damage. Increase damage dealt to that target by 1 until the start of your turn. {Cathain} or one of your Loci deals itself 2 irreducible infernal damage."
+        "{Cathain} deals 1 target 4 fire damage. Increase damage dealt to that target by 1 until the start of your turn. {Cathain} deals himself 3 irreducible infernal damage."
       ],
       "flavorQuotes": [
         {
@@ -318,10 +324,13 @@
       ],
       "icons": [
         "Destroy",
+        "PlayCardNow",
         "GainHP"
       ],
       "body": [
-        "When this card enters play, destroy your other Loci. Whenever you play another Water card, {Cathain} gains 1 HP."
+        "When this card enters play, destroy your other Loci, then you may play a card.",
+        "When {Cathain} would deal himself infernal damage, you may redirect it to this card.",
+        "Whenever you play another Water card, {Cathain} gains 1 HP."
       ],
       "flavorQuotes": [
         {
@@ -333,8 +342,8 @@
           "identifier": "Cathain"
         }
       ],
-      "flavorReference": "Abhartach, The Hunters #3",
-      "hitpoints": 10
+      "flavorReference": "",
+      "hitpoints": 6
     },
     {
       "identifier": "SiphonElements",
@@ -379,7 +388,7 @@
         "DestroySelf"
       ],
       "body": [
-        "When this card enters play, {Cathain} deals each non-hero target 2 fire damage and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "When this card enters play, {Cathain} deals each non-hero target 2 fire damage and himself 6 irreducible infernal damage.",
         "The first time each turn each non-hero target is dealt non-fire damage, {Cathain} deals that target 1 fire damage.",
         "At the end of your turn, if this card did not enter play this turn, destroy it."
       ],
@@ -406,7 +415,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "When this card enters play, destroy up to 3 ongoing or environment cards and {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
+        "When this card enters play, destroy up to 3 ongoing or environment cards and {Cathain} deals himself 6 irreducible infernal damage.",
         "Reduce damage dealt by non-hero targets by 2.",
         "At the end of your turn, if this card did not enter play this turn, destroy it."
       ],
@@ -427,10 +436,13 @@
       ],
       "icons": [
         "Destroy",
+        "PlayCardNow",
         "DestroyEnvironment"
       ],
       "body": [
-        "When this card enters play, destroy your other Loci. Whenever you play another Earth card, you may destroy an environment card."
+        "When this card enters play, destroy your other Loci, then you may play a card.",
+        "When {Cathain} would deal himself infernal damage, you may redirect it to this card.",
+        "Whenever you play another Earth card, you may destroy an environment card."
       ],
       "flavorQuotes": [
         {
@@ -441,9 +453,9 @@
       "hitpoints": 6
     },
     {
-      "identifier": "SteamGeyser",
+      "identifier": "Antipode",
       "count": 1,
-      "title": "Steam Geyser",
+      "title": "Antipode",
       "keywords": [
         "ongoing",
         "fire",
@@ -452,12 +464,11 @@
       "icons": [
         "DealDamageFire",
         "DealDamageCold",
-        "MakeDamageIrreducible",
         "DealDamageInfernal"
       ],
       "body": [
-        "When this card enters play, {Cathain} deals one target 5 fire damage, then {Cathain} or one of your Loci deals itself 6 irreducible infernal damage.",
-        "At the start of each turn, either {Cathain} deals 1 target 1 fire damage or 1 target gains 1 HP.",
+        "When this card enters play, {Cathain} deals 1 target 3 cold or fire damage and himself 6 irreducible infernal damage.",
+        "The first time each turn a non-hero target takes cold or fire damage, {Cathain} deals it 3 irreducible damage of the other type.",
         "At the end of your turn, if this card did not enter play this turn, destroy it."
       ],
       "flavorQuotes": [
@@ -477,10 +488,13 @@
       ],
       "icons": [
         "Destroy",
+        "PlayCardNow",
         "DealDamageFire"
       ],
       "body": [
-        "When this card enters play, destroy your other Loci. Whenever you play another Fire card, this card deals each non-hero target 1 fire damage."
+        "When this card enters play, destroy your other Loci, then you may play a card.",
+        "When {Cathain} would deal himself infernal damage, you may redirect it to this card.",
+        "Whenever you play another Fire card, this card deals each non-hero target 1 fire damage."
       ],
       "flavorQuotes": [
         {
@@ -495,7 +509,8 @@
       "count": 2,
       "title": "Shillelagh Draiochta",
       "keywords": [
-        "equipment"
+        "equipment",
+        "limited"
       ],
       "icons": [
         "HasPower",
@@ -520,13 +535,14 @@
       "count": 2,
       "title": "Wind Grasp",
       "keywords": [
-        "one-shot"
+        "one-shot",
+        "air"
       ],
       "icons": [
-
+        "ReduceDamageDealt"
       ],
       "body": [
-
+        "Select a target. Reduce the damage dealt by that target by 1 until the start of your next turn."
       ],
       "flavorQuotes": [
         {
@@ -540,33 +556,35 @@
       "count": 2,
       "title": "Rock Shield",
       "keywords": [
-        "one-shot"
+        "one-shot",
+        "earth"
       ],
       "icons": [
-
+        "ReduceDamageTaken"
       ],
       "body": [
-
+        "Reduce the next damage dealt to a target in your play area by 3."
       ],
       "flavorQuotes": [
         {
           "text": ""
         }
       ],
-      "flavorReference": "",
+      "flavorReference": ""
     },
     {
       "identifier": "TonguesOfFlame",
       "count": 2,
       "title": "Tongues of Flame",
       "keywords": [
-        "one-shot"
+        "one-shot",
+        "fire"
       ],
       "icons": [
-
+        "DealDamageFire"
       ],
       "body": [
-
+        "{Cathain} deals up to 3 targets 1 fire damage each."
       ],
       "flavorQuotes": [
         {
@@ -580,13 +598,15 @@
       "count": 2,
       "title": "Soothing Flow",
       "keywords": [
-        "one-shot"
+        "one-shot",
+        "water"
       ],
       "icons": [
-
+        "GainHP",
+        "DrawCardNow"
       ],
       "body": [
-
+        "{Cathain} gains 1 HP. Draw a card."
       ],
       "flavorQuotes": [
         {

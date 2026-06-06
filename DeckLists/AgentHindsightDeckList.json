@@ -1,0 +1,276 @@
+{
+  "name": "Agent Hindsight",
+  "kind": "Hero",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "AgentHindsightCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "AgentHindsightCharacter",
+      "promoIdentifier": "HeroVariantNameCharacter",
+      "count": 1,
+      "title": "Hero Variant Name",
+      "body": "",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        ""
+      ],
+      "icons": [],
+      "hitpoints": 20,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {},
+      "complexity": null
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "AgentHindsightCharacter",
+      "count": 1,
+      "title": "Agent Hindsight",
+      "body": "Lookback",
+      "backgroundColor": "bd3a3d",
+      "foilBackgroundColor": "bd3a3d",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "You may discard a card. If you do, reveal the top and bottom cards of any deck, otherwise reveal the top and bottom cards of your deck. Put one on the top of that deck and one on the bottom."
+      ],
+      "icons": [],
+      "hitpoints": 22,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {
+        "default": "Tremble and Obey!"
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "ChronalCache",
+      "count": 2,
+      "title": "Chronal Cache",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [],
+      "body": [
+        "You may use an additional power during your power phase."
+      ],
+      "powers": [
+        "One player may put a card from their hand on the bottom of their deck. If they do, they may draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "Chronologue",
+      "count": 3,
+      "title": "Chronologue",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [],
+      "body": [
+        "At the start of your turn, reveal and replace the bottom card of a deck."
+      ],
+      "powers": [
+        "Discard the bottom card of a hero deck. Draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "Clockstopper",
+      "count": 2,
+      "title": "Clockstopper",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [],
+      "powers": [
+        "{Agent Hindsight} deals 1 target 1 melee damage and 1 lightning damage. Reveal the bottom card of your deck. If it's a one-shot, reduce damage dealt by each target dealt damage this way by 1 until the start of your next turn. Put the revealed card on the top of your deck."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "DelayTheInevitable",
+      "count": 4,
+      "title": "Delay the Inevitable",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Reveal the top card of a deck. Either replace it or put it on the bottom of that deck. Draw a card and {Agent Hindsight} deals 1 target 2 projectile damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "DowntimePerspective",
+      "count": 3,
+      "title": "Downtime Perspective",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Reveal the bottom two cards of a deck. Put one on top of that deck and the other on the bottom. Draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "HistoryRepeatsItself",
+      "count": 3,
+      "title": "History Repeats Itself",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Select a card from a trash and put it on the bottom of its owner's deck. {Agent Hindsight} deals 1 target 3 psychic damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "HypercryptedLenses",
+      "count": 3,
+      "title": "Hypercrypted Lenses",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [],
+      "body": [
+        "The first time one of your cards is revealed each turn, draw a card."
+      ],
+      "powers": [
+        "Reveal the bottom card of your deck. Either play it or discard it."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ItsTime",
+      "count": 2,
+      "title": "It's Time!",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Reveal the bottom card of each hero deck. You may play or discard each revealed card. Each hero whose card is played this way deals themselves 2 irreducible psychic damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "PredictedAmbush",
+      "count": 3,
+      "title": "Predicted Ambush",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Select a villain deck and a keyword in that deck. Reveal the bottom card of that deck. If it has the selected keyword, {Agent Hindsight} deals each of its targets 3 energy damage. Put the revealed card on top of its deck."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "QMetalBoneGraft",
+      "count": 2,
+      "title": "Q-Metal Bone Graft",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [],
+      "body": [
+        "Reduce damage dealt to {Agent Hindsight} by 1. "
+      ],
+      "powers": [
+        "Until the start of your turn, the first time each turn one of your cards is revealed, {Agent Hindsight} gains 1 HP."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "RetroactiveOrders",
+      "count": 2,
+      "title": "Retroactive Orders",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Put the bottom card of your deck into your hand. If it's a one-shot, either play it or {Agent Hindsight} deals 1 target 4 energy damage. Otherwise, draw 2 cards. Put a card from your hand on the bottom of your deck."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "TemporalRequisition",
+      "count": 3,
+      "title": "Temporal Requisition",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Reveal the bottom card of your deck. If it's an equipment card, put it into play. Otherwise, put it into your hand. Draw 2 cards."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "TimeBomb",
+      "count": 3,
+      "title": "Time Bomb",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [],
+      "body": [
+        "When this card is destroyed, reveal the bottom card of the environment deck and put it on top of that deck. If the revealed card is a target, {Agent Hindsight} deals each non-hero target 2 irreducible fire damage. Otherwise, destroy an environment card."
+      ],
+      "powers": [
+        "Destroy this card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "TimeLimiter",
+      "count": 2,
+      "title": "Time Limiter",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [],
+      "powers": [
+        "Select a villain target and reveal the bottom card of its owner's deck. If it is a one-shot, {Agent Hindsight} deals that target 3 energy damage, otherwise, {Agent Hindsight} deals that target 1 projectile damage. Put the revealed card on top of its owner's deck."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "UnstableCorridor",
+      "count": 3,
+      "title": "Unstable Corridor",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of each hero turn, you may reveal the bottom card of that hero's deck. If you do, {Agent Hindsight} deals herself 1 irreducible energy damage. Either replace it or put it on top of its owner's deck."
+      ],
+      "powers": [
+        "Put the bottom card of a hero deck into play. Either {Agent Hindsight} deals that hero 2 energy damage or destroy this card."
+      ],
+      "flavorQuotes": []
+    }
+  ]
+}

@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Eidolon
 
         public override IEnumerator Play()
         {
-            LinqCardCriteria isAlt = new LinqCardCriteria((Card c) => c.DoKeywordsContain("alteration"), "alteration");
+            LinqCardCriteria isAlt = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "alteration"), "alteration");
             IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(base.TurnTakerController, base.TurnTaker.Deck, false, true, false, isAlt, 2, null, true, false, RevealedCardDisplay.None, false, false, null, false, false);
             if (base.UseUnityCoroutines)
             {

@@ -27,7 +27,7 @@ namespace GuardiansOfTomorrow.Ludramor
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("executive"), "executive"), base.H - 2);
+            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "executive"), "executive"), base.H - 2);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -37,7 +37,7 @@ namespace GuardiansOfTomorrow.Ludramor
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => !c.DoKeywordsContain("executive") && c.IsTarget, "non-executive target"), base.H);
+            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => !GameController.DoesCardContainKeyword(c, "executive") && c.IsTarget, "non-executive target"), base.H);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

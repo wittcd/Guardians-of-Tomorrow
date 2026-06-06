@@ -29,8 +29,8 @@ namespace GuardiansOfTomorrow.Starstone
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
 			List<Function> options = new List<Function>();
-			options.Add(new Function(DecisionMaker, "Play a Stone", SelectionType.PlayCard, () => SelectAndPlayCardsFromHand(DecisionMaker, 1, optional: false, cardCriteria: new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone", false, false), "stone"), requiredDecisions: 0)));
-			options.Add(new Function(DecisionMaker, "Put a Stone from your trash into your hand", SelectionType.DrawCard, () => GameController.SelectAndMoveCard(DecisionMaker, (Card c) => c.Location == TurnTaker.Trash && c.DoKeywordsContain("stone"), TurnTaker.ToHero().Hand, false, true, true, true, null, GetCardSource())));
+			options.Add(new Function(DecisionMaker, "Play a Stone", SelectionType.PlayCard, () => SelectAndPlayCardsFromHand(DecisionMaker, 1, optional: false, cardCriteria: new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "stone"), "stone"), requiredDecisions: 0)));
+			options.Add(new Function(DecisionMaker, "Put a Stone from your trash into your hand", SelectionType.DrawCard, () => GameController.SelectAndMoveCard(DecisionMaker, (Card c) => c.Location == TurnTaker.Trash && GameController.DoesCardContainKeyword(c, "stone"), TurnTaker.ToHero().Hand, false, true, true, true, null, GetCardSource())));
 			coroutine = SelectAndPerformFunction(DecisionMaker, options);
 			if (base.UseUnityCoroutines)
 			{

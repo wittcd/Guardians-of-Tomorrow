@@ -12,7 +12,7 @@ namespace GuardiansOfTomorrow.Ninetails
         public NinetailsFlamePriestessCharacterCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("ghost")));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "ghost")));
         }
 
         public override IEnumerator UsePower(int index = 0)
@@ -35,7 +35,7 @@ namespace GuardiansOfTomorrow.Ninetails
             int d = 0;
             foreach (DealDamageAction dd in damages)
             {
-                if (dd.Target.DoKeywordsContain("ghost") && dd.DidDealDamage)
+                if (GameController.DoesCardContainKeyword(dd.Target, "ghost") && dd.DidDealDamage)
                 {
                     d = 1;
                 }

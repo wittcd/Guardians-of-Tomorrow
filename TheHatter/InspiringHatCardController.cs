@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
         public override void AddTriggers()
         {
-            AddIncreaseDamageTrigger((DealDamageAction dd) => dd.CardSource.Card.DoKeywordsContain("thrall"), 1);
+            AddIncreaseDamageTrigger((DealDamageAction dd) => GameController.DoesCardContainKeyword(dd.CardSource.Card, "thrall"), 1);
             base.AddTriggers();
         }
     }

@@ -31,7 +31,7 @@ namespace GuardiansOfTomorrow.Price
 
             Card revealed = storedResults.FirstOrDefault().RevealedCards.FirstOrDefault();
 
-            if (revealed.DoKeywordsContain("pact"))
+            if (GameController.DoesCardContainKeyword(revealed, "pact"))
             {
                 coroutine = GameController.PlayCard(TurnTakerController, revealed, true, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)

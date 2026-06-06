@@ -16,7 +16,7 @@ namespace GuardiansOfTomorrow.Argus
 
         public override void AddTriggers()
         {
-            AddTrigger((CardEntersPlayAction cep) => cep.CardEnteringPlay.DoKeywordsContain("camdrone"), (CardEntersPlayAction cep) => GameController.SelectAndActivateAbility(DecisionMaker, "operate", new LinqCardCriteria((Card c) => c == cep.CardEnteringPlay, "card entering play"), null, true, GetCardSource()), TriggerType.Other, TriggerTiming.After);
+            AddTrigger((CardEntersPlayAction cep) => GameController.DoesCardContainKeyword(cep.CardEnteringPlay, "camdrone"), (CardEntersPlayAction cep) => GameController.SelectAndActivateAbility(DecisionMaker, "operate", new LinqCardCriteria((Card c) => c == cep.CardEnteringPlay, "card entering play"), null, true, GetCardSource()), TriggerType.Other, TriggerTiming.After);
         }
     }
 }

@@ -1,0 +1,304 @@
+{
+  "name": "Gunslinger",
+  "kind": "Hero",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "GunslingerCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "GunslingerCharacter",
+      "promoIdentifier": "DragonChampionGunslingerCharacter",
+      "count": 1,
+      "title": "Dragon Champion Gunslinger",
+      "body": "Dragon's Mastery",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        "Destroy one of your Equipment cards. Switch to {{Gunslinger}}'s dragon character card and move all Ammo Tokens from the destroyed card onto it."
+      ],
+      "icons": [],
+      "hitpoints": 27,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {},
+      "complexity": null
+    },
+    {
+      "identifier": "GunslingerCharacter",
+      "promoIdentifier": "DragonChampionGunslingerDragonFormCharacter",
+      "count": 1,
+      "title": "Dragon Champion Gunslinger (dragon form)",
+      "body": "",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        "Remove an ammo token from this card. If you do, {Gunslinger} deals 1 target 3 fire damage and up to 2 other targets 1 fire damage each. Then, if there are no Ammo Tokens on this card, switch to {Gunslinger}'s human character card."
+      ],
+      "icons": [],
+      "hitpoints": 27,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {},
+      "complexity": null
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "GunslingerCharacter",
+      "count": 1,
+      "title": "Gunslinger",
+      "body": "One Kill",
+      "backgroundColor": "bd3a3d",
+      "foilBackgroundColor": "bd3a3d",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Play a one-shot. If you destroy a target this way, draw a card."
+      ],
+      "icons": [],
+      "hitpoints": 30,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {
+        "default": "Tremble and Obey!"
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "ArmedToTheTeeth",
+      "count": 4,
+      "title": "Armed to the Teeth",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Search your deck for up to 3 equipment cards. Put them into your hand. Shuffle your deck."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "BraceOfDeringers",
+      "count": 2,
+      "title": "Brace of Deringers",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [],
+      "body": [
+        "This card's maximum Ammo is 1."
+      ],
+      "powers": [
+        "Remove an Ammo Token from this card. If you do, {Gunslinger} deals 1 target 1 irreducible projectile damage, then deals 1 target 1 irreducible projectile damage. Otherwise, restore this card to its maximum Ammo."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "DoubleTap",
+      "count": 3,
+      "title": "Double Tap",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Use the power on one of your equipment cards twice."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "FastDraw",
+      "count": 3,
+      "title": "Fast Draw",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Play an equipment card. Use the power on that card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "GravenBullet",
+      "count": 2,
+      "title": "Graven Bullet",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "The next damage dealt by {Gunslinger} is irreducible and increased by 2. Add 1 Ammo Token to one of your Equipment cards."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "GunCleaning",
+      "count": 3,
+      "title": "Gun Cleaning",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Draw a card. Restore one of your Equipment cards to its maximum Ammo. Increase damage dealt by {Gunslinger} by 1 until the end of your next turn."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "GunsAkimbo",
+      "count": 2,
+      "title": "Guns Akimbo",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [],
+      "body": [
+        "You may use an extra power during your power phase."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "InMySights",
+      "count": 2,
+      "title": "In My Sights",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealt"
+      ],
+      "body": [
+        "Increase damage dealt by {Gunslinger} by 1."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "LeverRepeater",
+      "count": 2,
+      "title": "Lever Repeater",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [],
+      "body": [
+        "This card's maximum Ammo is 7."
+      ],
+      "powers": [
+        "Remove an Ammo Token from this card. If you do, {Gunslinger} deals 1 target 2 irreducible projectile damage. Otherwise, restore this card to its maximum Ammo."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ModifiedMagazines",
+      "count": 3,
+      "title": "Modified Magazines",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [],
+      "body": [
+        "The maximum Ammo of your equipment cards is increased by 1. When this card enters play, add 1 Ammo Token to each of your equipment cards."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "NavyRevolver",
+      "count": 2,
+      "title": "Navy Revolver",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [],
+      "body": [
+        "This card's maximum Ammo is 6."
+      ],
+      "powers": [
+        "Remove 1 Ammo Token from this card. If you do, {Gunslinger} deals 1 target 3 projectile damage. Otherwise, restore this card to it's maximum Ammo."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "PointBlank",
+      "count": 3,
+      "title": "Point Blank",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Use the power on one of your equipment cards. If that power deals damage, increase it by 4."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "SawnOffShotgun",
+      "count": 2,
+      "title": "Sawn-Off Shotgun",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [],
+      "body": [
+        "This card's maximum Ammo is 2."
+      ],
+      "powers": [
+        "Remove 1 Ammo Token from this card. If you do, {Gunslinger} deals up to 3 targets 2 projectile damage each. Otherwise, restore this card to its maximum Ammo."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "SnapShot",
+      "count": 3,
+      "title": "Snap Shot",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Use the power on one of your equipment cards. Draw 2 cards."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "TheWhitesOfTheirEyes",
+      "count": 2,
+      "title": "The Whites of Their Eyes",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [],
+      "body": [
+        "The first time each turn {Gunslinger} is dealt damage, you may use the power on one of your equipment cards."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ViciousUnload",
+      "count": 2,
+      "title": "Vicious Unload",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [],
+      "body": [
+        "Use the power on one of your equipment cards repeatedly until there are no Ammo Tokens left on it. Destroy that equipment card and {Gunslinger} deals himself fire damage equal to the number of ammo tokens removed this way minus 1."
+      ],
+      "flavorQuotes": []
+    }
+  ]
+}

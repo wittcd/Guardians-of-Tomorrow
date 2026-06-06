@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.Price
         public override void AddTriggers()
         {
             AddReduceDamageTrigger((Card c) => c == CharacterCard, 1);
-            AddTrigger((CardEntersPlayAction cep) => cep.CardEnteringPlay.DoKeywordsContain("pact"), (CardEntersPlayAction cep) => PickAndShuffleResponse(), TriggerType.MoveCard, TriggerTiming.After);
+            AddTrigger((CardEntersPlayAction cep) => GameController.DoesCardContainKeyword(cep.CardEnteringPlay, "pact"), (CardEntersPlayAction cep) => PickAndShuffleResponse(), TriggerType.MoveCard, TriggerTiming.After);
         }
 
         private IEnumerator PickAndShuffleResponse()

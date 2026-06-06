@@ -13,7 +13,7 @@ namespace GuardiansOfTomorrow.Ludramor
         public LudramorCharacterCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowListOfCards(new LinqCardCriteria((Card c) => FindAllTargetsWithLowestHitPoints((Card c2) => c2 != CharacterCard && c2.DoKeywordsContain("executive"), 1).Contains(c) && !CharacterCard.IsFlipped, "other executive"));
+            SpecialStringMaker.ShowListOfCards(new LinqCardCriteria((Card c) => FindAllTargetsWithLowestHitPoints((Card c2) => c2 != CharacterCard && GameController.DoesCardContainKeyword(c2, "executive"), 1).Contains(c) && !CharacterCard.IsFlipped, "other executive"));
         }
 
         public override void AddTriggers()
@@ -37,7 +37,7 @@ namespace GuardiansOfTomorrow.Ludramor
                 AddSideTrigger(AddStartOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, FlipIfNoExecs, TriggerType.FlipCard));
                 if (IsGameAdvanced)
                 {
-                    AddSideTrigger(AddReduceDamageTrigger((Card c) => c.DoKeywordsContain("executive"), 1));
+                    AddSideTrigger(AddReduceDamageTrigger((Card c) => GameController.DoesCardContainKeyword(c, "executive"), 1));
                 }
             }
             else
@@ -46,14 +46,14 @@ namespace GuardiansOfTomorrow.Ludramor
                 AddSideTrigger(AddEndOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, FlippedEoT, TriggerType.PutIntoPlay));
                 if (IsGameAdvanced)
                 {
-                    AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => dd.DamageSource.Card.DoKeywordsContain("executive"), (DealDamageAction dd) => 1));
+                    AddSideTrigger(AddIncreaseDamageTrigger((DealDamageAction dd) => GameController.DoesCardContainKeyword(dd.DamageSource.Card, "executive"), (DealDamageAction dd) => 1));
                 }
             }
         }
 
         private IEnumerator FlipIfNoExecs(PhaseChangeAction pc)
         {
-            if (GameController.FindTargetsInPlay((Card c) => c != CharacterCard && c.DoKeywordsContain("executive")).Count() == 0)
+            if (GameController.FindTargetsInPlay((Card c) => c != CharacterCard && GameController.DoesCardContainKeyword(c, "executive")).Count() == 0)
             {
                 IEnumerator coroutine = GameController.ShuffleTrashIntoDeck(TurnTakerController, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)
@@ -89,7 +89,7 @@ namespace GuardiansOfTomorrow.Ludramor
 
         private IEnumerator FlipIfSufficientExecs(PhaseChangeAction pc)
         {
-            if (GameController.FindTargetsInPlay((Card c) => IsVillain(c) && c != CharacterCard).Count() >= H - 1 && GameController.FindTargetsInPlay((Card c) => c.DoKeywordsContain("executive") && c != CharacterCard).Count() > 0)
+            if (GameController.FindTargetsInPlay((Card c) => IsVillain(c) && c != CharacterCard).Count() >= H - 1 && GameController.FindTargetsInPlay((Card c) => GameController.DoesCardContainKeyword(c, "executive") && c != CharacterCard).Count() > 0)
             {
                 IEnumerator coroutine = FlipThisCharacterCardResponse(pc);
                 if (base.UseUnityCoroutines)
@@ -118,7 +118,7 @@ namespace GuardiansOfTomorrow.Ludramor
         private IEnumerator RedirectToExecutive(DealDamageAction dd)
         {
             List<Card> storedResults = new List<Card>();
-            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != CharacterCard && card.DoKeywordsContain("executive"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
+            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != CharacterCard && GameController.DoesCardContainKeyword(card, "executive"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

@@ -21,7 +21,7 @@ namespace GuardiansOfTomorrow.Angler
         public override void AddTriggers()
         {
             //"The first time each turn {Angler} destroys a target, you may put a Bait card from your trash into your hand."
-            AddTrigger<DestroyCardAction>((DestroyCardAction dc) => dc.CardSource != null && dc.CardSource.Card.Owner == TurnTaker && dc.CardToDestroy.Card.IsTarget && dc.WasCardDestroyed && (dc.DealDamageAction == null || dc.DealDamageAction.DamageSource.Card == base.CharacterCard) && (dc.DealDamageAction != null || dc.CardSource.Card.IsOneShot || dc.CardSource.Card.HasPowers || dc.ResponsibleCard == CharacterCard) && !GameController.GetCardPropertyJournalEntryBoolean(Card, FirstAnglerDestroyKey).Value, (DestroyCardAction dc) => GameController.SelectCardFromLocationAndMoveIt(DecisionMaker, TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain("bait"), "bait"), new MoveCardDestination[] { new MoveCardDestination(TurnTaker.ToHero().Hand) }, cardSource: GetCardSource()), TriggerType.MoveCard, TriggerTiming.After);
+            AddTrigger<DestroyCardAction>((DestroyCardAction dc) => dc.CardSource != null && dc.CardSource.Card.Owner == TurnTaker && dc.CardToDestroy.Card.IsTarget && dc.WasCardDestroyed && (dc.DealDamageAction == null || dc.DealDamageAction.DamageSource.Card == base.CharacterCard) && (dc.DealDamageAction != null || dc.CardSource.Card.IsOneShot || dc.CardSource.Card.HasPowers || dc.ResponsibleCard == CharacterCard) && !GameController.GetCardPropertyJournalEntryBoolean(Card, FirstAnglerDestroyKey).Value, (DestroyCardAction dc) => GameController.SelectCardFromLocationAndMoveIt(DecisionMaker, TurnTaker.Trash, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "bait"), "bait"), new MoveCardDestination[] { new MoveCardDestination(TurnTaker.ToHero().Hand) }, cardSource: GetCardSource()), TriggerType.MoveCard, TriggerTiming.After);
             AddStartOfTurnTrigger((TurnTaker tt) => true, (PhaseChangeAction pc) => reset_target_destroyed(), TriggerType.Other);
         }
 
@@ -40,7 +40,7 @@ namespace GuardiansOfTomorrow.Angler
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = GameController.SelectAndPlayCardFromHand(TurnTakerController.ToHero(), false, cardCriteria: new LinqCardCriteria((Card c) => c.DoKeywordsContain("bait"), "bait"), cardSource: GetCardSource());
+            coroutine = GameController.SelectAndPlayCardFromHand(TurnTakerController.ToHero(), false, cardCriteria: new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "bait"), "bait"), cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

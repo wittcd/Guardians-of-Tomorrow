@@ -61,7 +61,7 @@
       "hitpointsColor": "C94742",
       "character": true,
       "powers": [
-        "Increase the next damage dealt by {Nyctophobia} by 1."
+        "Either increase the next damage dealt by {Nyctophobia} by 1 or {Nyctophobia} deals 1 target 1 melee damage."
       ],
       "icons": [
         "HasPower",

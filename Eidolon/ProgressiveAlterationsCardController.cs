@@ -13,12 +13,12 @@ namespace GuardiansOfTomorrow.Eidolon
         public ProgressiveAlterationsCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsAtLocation(base.TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain("alteration"), "alteration"));
+            SpecialStringMaker.ShowNumberOfCardsAtLocation(base.TurnTaker.Trash, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "alteration"), "alteration"));
         }
 
         public override IEnumerator Play()
         {
-            IEnumerator coroutine = GameController.ShuffleCardsIntoLocation(DecisionMaker, FindCardsWhere((Card c) => c.DoKeywordsContain("alteration") && c.Location == base.TurnTaker.Trash), base.TurnTaker.Deck, false, GetCardSource());
+            IEnumerator coroutine = GameController.ShuffleCardsIntoLocation(DecisionMaker, FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "alteration") && c.Location == base.TurnTaker.Trash), base.TurnTaker.Deck, false, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

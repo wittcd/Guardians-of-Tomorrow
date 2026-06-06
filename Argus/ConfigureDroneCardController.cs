@@ -16,7 +16,7 @@ namespace GuardiansOfTomorrow.Argus
 
         public override IEnumerator Play()
         {
-            IEnumerator coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.TurnTaker.Deck, new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone"), () => "camdrone"), new MoveCardDestination[1]
+            IEnumerator coroutine = base.GameController.SelectCardFromLocationAndMoveIt(base.HeroTurnTakerController, base.TurnTaker.Deck, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "camdrone"), () => "camdrone"), new MoveCardDestination[1]
            {
                 new MoveCardDestination(base.TurnTaker.PlayArea)
            }, isPutIntoPlay: true, playIfMovingToPlayArea: true, shuffleAfterwards: true, optional: false, null, flipFaceDown: false, showOutput: false, null, isDiscardIfMovingtoTrash: false, allowAutoDecide: false, null, null, GetCardSource());

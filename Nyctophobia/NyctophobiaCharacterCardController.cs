@@ -50,6 +50,23 @@ namespace GuardiansOfTomorrow.Nyctophobia
                 }
             }*/
 
+            List<Function> options = new List<Function>();
+            options.Add(new Function(DecisionMaker, "Increase the next damage dealt by {Nyctophobia} by 1.", SelectionType.IncreaseNextDamage, GainStatus));
+            options.Add(new Function(DecisionMaker, "{Nyctophobia} deals 1 target 1 melee damage.", SelectionType.DealDamage, () => GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), 1, DamageType.Melee, 1, false, 1, cardSource: GetCardSource())));
+            SelectFunctionDecision sfd = new SelectFunctionDecision(GameController, DecisionMaker, options, true, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.SelectAndPerformFunction(sfd);
+            if (base.UseUnityCoroutines)
+            {
+                yield return base.GameController.StartCoroutine(coroutine);
+            }
+            else
+            {
+                base.GameController.ExhaustCoroutine(coroutine);
+            }
+        }
+
+        private IEnumerator GainStatus()
+        {
             IncreaseDamageStatusEffect idse = new IncreaseDamageStatusEffect(1);
             idse.SourceCriteria.IsSpecificCard = CharacterCard;
             idse.NumberOfUses = 1;

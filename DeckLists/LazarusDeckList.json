@@ -1,0 +1,339 @@
+{
+  "name": "Lazarus",
+  "kind": "Hero",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "LazarusCharacter"
+  ],
+  "promoCards": [
+    {
+      "identifier": "LazarusCharacter",
+      "promoIdentifier": "DragonChampionLazarusCharacter",
+      "count": 1,
+      "title": "Dragon Champion Lazarus",
+      "body": "Dragon's Immortality",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        "{Lazarus} deals himself 2 irreducible toxic damage. Change to {Lazarus}' dragon character card."
+      ],
+      "icons": [],
+      "hitpoints": 30,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {},
+      "complexity": null
+    },
+    {
+      "identifier": "LazarusCharacter",
+      "promoIdentifier": "DragonChampionLazarusDragonFormCharacter",
+      "count": 1,
+      "title": "Dragon Champion Lazarus (dragon form)",
+      "body": "",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "hitpointsColor": "ffffff",
+      "character": true,
+      "powers": [
+        "{Lazarus} deals himself 2 irreducible toxic damage, then either deals 1 target 3 melee damage or each villain target 2 toxic damage."
+      ],
+      "icons": [],
+      "hitpoints": 30,
+      "incapacitatedAbilities": [
+        ""
+      ],
+      "flippedIcons": [],
+      "openingLines": {},
+      "complexity": null
+    }
+  ],
+  "cards": [
+    {
+      "identifier": "LazarusCharacter",
+      "count": 1,
+      "title": "Lazarus",
+      "body": "Grin and Bear It",
+      "backgroundColor": "bd3a3d",
+      "foilBackgroundColor": "bd3a3d",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "{Lazarus} deals himself 1 irreducible toxic damage. Draw a card or {Lazarus} deals 1 target 2 melee damage."
+      ],
+      "icons": [
+        "HasPower"
+      ],
+      "hitpoints": 25,
+      "incapacitatedAbilities": [
+        "Reduce the next damage dealt to a hero by 2.",
+        "One player draws a card.",
+        "One player may discard 2 cards. If 2 cards are discarded this way, flip {Lazarus}, restore him to 1 HP, and draw 2 cards."
+      ],
+      "flippedIcons": [
+        "ReduceDamageTaken",
+        "DrawCardNow",
+        "Discard",
+        "FlipFaceUp"
+      ],
+      "openingLines": {
+        "default": "Tremble and Obey!"
+      },
+      "complexity": 2
+    },
+    {
+      "identifier": "BreathOfLife",
+      "count": 3,
+      "title": "Breath of Life",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GainHP",
+        "DrawCardNow"
+      ],
+      "body": [
+        "Each hero target gains 1 HP. Draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "BrutalSweep",
+      "count": 3,
+      "title": "Brutal Sweep",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee"
+      ],
+      "body": [
+        "{Lazarus} deals 1 target 1 melee damage then may deal 1 other target the same damage then may deal a third target the same damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "BurstOfStrength",
+      "count": 3,
+      "title": "Burst of Strength",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GainHP",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "{Lazarus} gains 2 HP and deals 1 target 2 melee damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ChainsOfEternity",
+      "count": 3,
+      "title": "Chains of Eternity ",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "DealDamageToxic",
+        "CancelledDamageGreen",
+        "HasPower",
+        "GainHP"
+      ],
+      "body": [
+        "When one of your other non-character cards would be destroyed, {Lazarus} may deal himself 4 irreducible toxic damage. If he takes damage this way, prevent that destruction."
+      ],
+      "powers": [
+        "{Lazarus} deals himself 5 toxic damage. One other hero gains HP equal to the damage dealt this way "
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "DefyDeath",
+      "count": 2,
+      "title": "Defy Death",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GainHP"
+      ],
+      "body": [
+        "If {Lazarus} has less than 10 HP, he gains 5 HP. Otherwise, he gains 3 HP."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "Dragoncleaver",
+      "count": 3,
+      "title": "Dragoncleaver",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "HasPower",
+        "DealDamageMelee",
+        "DestroySelf"
+      ],
+      "body": [
+        "Increase melee damage dealt by {Lazarus} by 1."
+      ],
+      "powers": [
+        "{Lazarus} deals up to 2 targets 1 melee damage each. He may deal another target 3 melee damage. If damage is dealt this way, destroy this card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "PushThroughPain",
+      "count": 3,
+      "title": "Push Through Pain",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "GainHP",
+        "HasPower"
+      ],
+      "body": [
+        "The first time each turn {Lazarus} deals himself toxic damage, {Lazarus} gains 1 HP."
+      ],
+      "powers": [
+        "{Lazarus} gains 2 HP."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "QuickRecovery",
+      "count": 3,
+      "title": "Quick Recovery",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GainHP",
+        "DrawCardNow"
+      ],
+      "body": [
+        "{Lazarus} gains 2 HP. Draw until you have 4 or more cards in your hand."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "RegeneratorsRage",
+      "count": 3,
+      "title": "Regenerator's Rage",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "GainHP",
+        "IncreaseDamageDealt",
+        "PlayCardNow"
+      ],
+      "body": [
+        "{Lazarus} gains 1 HP. Increase damage dealt by {Lazarus} by 1 until the end of your next turn. You may play a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "SiphonBlast",
+      "count": 2,
+      "title": "Siphon Blast",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "CancelledDamageGreen",
+        "GainHP",
+        "DealDamageToxic"
+      ],
+      "body": [
+        "{Lazarus} deals each other target 1 infernal damage. When a hero target would be dealt damage this way, you may prevent it. If you do, that hero gains 1 HP and {Lazarus} deals himself 1 irreducible toxic damage. When a non-hero target is dealt damage this way, that target deals itself 1 irreducible toxic damage and {Lazarus} gains 1 HP."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "ThrowingSpikes",
+      "count": 3,
+      "title": "Throwing Spikes",
+      "keywords": [
+        "equipment"
+      ],
+      "icons": [
+        "StartOfTurnAction",
+        "DealDamageProjectile",
+        "HasPower",
+        "IncreaseDamageDealtProjectile"
+      ],
+      "body": [
+        "At the start of your turn, you may destroy this card. When this card is destroyed, {Lazarus} deals each villain target 2 projectile damage."
+      ],
+      "powers": [
+        "Increase the next melee damage dealt by {Lazarus} by 1 and change its type to projectile."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "UndyingChampion",
+      "count": 3,
+      "title": "Undying Champion",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": [
+        "CancelledDamageGreen",
+        "DrawCardNow",
+        "PlayCardNow",
+        "DealDamageToxic"
+      ],
+      "body": [
+        "The first time each turn {Lazarus} would be reduced to 0 or less HP, prevent that damage and set {Lazarus}' HP to 1. Then you may draw a card and play a card and {Lazarus} deals himself 1 irreducible toxic damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "VengefulFist",
+      "count": 3,
+      "title": "Vengeful Fist",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "IncreaseDamageDealt",
+        "GainHP",
+        "DrawCardNow"
+      ],
+      "body": [
+        "{Lazarus} deals 1 target 3 melee damage. If that target dealt damage to {Lazarus} since the start of your last turn, increase this damage by 1, {Lazarus} gains 1 HP, and draw a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "VitalForce",
+      "count": 3,
+      "title": "Vital Force",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "StartOfTurnAction",
+        "GainHP"
+      ],
+      "body": [
+        "At the start of your turn, {Lazarus} gains 1 HP"
+      ],
+      "flavorQuotes": []
+    }
+  ]
+}

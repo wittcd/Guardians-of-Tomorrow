@@ -13,7 +13,7 @@ namespace GuardiansOfTomorrow.TheReverseEngineer
         public TheReverseEngineerCharacterCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.Owner == TurnTaker && c.DoKeywordsContain("salvage"), "salvage"));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.Owner == TurnTaker && GameController.DoesCardContainKeyword(c, "salvage"), "salvage"));
         }
 
         public override IEnumerator UsePower(int index = 0)

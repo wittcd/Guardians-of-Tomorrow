@@ -12,7 +12,7 @@ namespace GuardiansOfTomorrow.Argus
         public DroneScanCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("camdrone")));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "camdrone")));
         }
 
         public override IEnumerator Play()

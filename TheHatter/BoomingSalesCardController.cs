@@ -25,7 +25,7 @@ namespace GuardiansOfTomorrow.TheHatter
 
         private IEnumerator FindThrallResponse(PhaseChangeAction pc)
         {
-            IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(base.TurnTakerController, base.TurnTaker.Deck, playMatchingCards: false, putMatchingCardsIntoPlay: true, moveMatchingCardsToHand: false, new LinqCardCriteria((Card c) => c.DoKeywordsContain("thrall"), "thrall"), 1);
+            IEnumerator coroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(base.TurnTakerController, base.TurnTaker.Deck, playMatchingCards: false, putMatchingCardsIntoPlay: true, moveMatchingCardsToHand: false, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "thrall"), "thrall"), 1);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.TheHatter
         public override IEnumerator Play()
         {
             List<DealDamageAction> storedResults = new List<DealDamageAction>();
-            IEnumerator coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => c.DoKeywordsContain("thrall"), (Card c) => 5, DamageType.Sonic, storedResults:storedResults);
+            IEnumerator coroutine = DealDamage((Card c) => c == base.CharacterCard, (Card c) => GameController.DoesCardContainKeyword(c, "thrall"), (Card c) => 5, DamageType.Sonic, storedResults:storedResults);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

@@ -28,7 +28,7 @@ namespace GuardiansOfTomorrow.Deluge
             {
                 base.GameController.ExhaustCoroutine(coroutine);
             }
-            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("flood")), H - 2, true);
+            coroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "flood")), H - 2, true);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

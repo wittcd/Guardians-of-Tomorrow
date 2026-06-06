@@ -13,13 +13,13 @@ namespace GuardiansOfTomorrow.Starstone
 		public CrushingStonesCardController(Card card, TurnTakerController turnTakerController)
 			: base(card, turnTakerController)
 		{
-			SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("stone"), "stone", false, false, "stone", "stones", false));
+			SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "stone"), "stone", false, false, "stone", "stones", false));
 		}
 
 		public override IEnumerator Play()
 		{
 			List<SelectCardDecision> storedResults = new List<SelectCardDecision>();
-			IEnumerator coroutine = base.GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.CardToDealDamage, new LinqCardCriteria((Card c) => c.Location == base.TurnTaker.PlayArea && c.DoKeywordsContain("stone", false, false)), storedResults, optional: false, allowAutoDecide: false, null, includeRealCardsOnly: true, GetCardSource());
+			IEnumerator coroutine = base.GameController.SelectCardAndStoreResults(DecisionMaker, SelectionType.CardToDealDamage, new LinqCardCriteria((Card c) => c.Location == base.TurnTaker.PlayArea && GameController.DoesCardContainKeyword(c, "stone")), storedResults, optional: false, allowAutoDecide: false, null, includeRealCardsOnly: true, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

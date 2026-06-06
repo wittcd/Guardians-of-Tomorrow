@@ -13,14 +13,14 @@ namespace GuardiansOfTomorrow.Ludramor
         public CarpetBombingCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowLowestHP(2, () => 1, new LinqCardCriteria((Card c) => c.DoKeywordsContain("spaceship"), "spaceship"));
-            SpecialStringMaker.ShowListOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("employee"), "employee"));
+            SpecialStringMaker.ShowLowestHP(2, () => 1, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "spaceship"), "spaceship"));
+            SpecialStringMaker.ShowListOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "employee"), "employee"));
         }
 
         public override IEnumerator Play()
         {
             List<Card> lowestShips = new List<Card>();
-            IEnumerator coroutine = GameController.FindTargetsWithLowestHitPoints(2, 1, (Card c) => c.DoKeywordsContain("spaceship"), lowestShips, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.FindTargetsWithLowestHitPoints(2, 1, (Card c) => GameController.DoesCardContainKeyword(c, "spaceship"), lowestShips, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

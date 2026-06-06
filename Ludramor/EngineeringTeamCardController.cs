@@ -22,7 +22,7 @@ namespace GuardiansOfTomorrow.Ludramor
             {
                 GameController gameController = base.GameController;
                 HeroTurnTakerController decisionMaker = DecisionMaker;
-                Func<Card, bool> criteria = (Card card) => card.DoKeywordsContain("spaceship") && IsVillain(card);
+                Func<Card, bool> criteria = (Card card) => GameController.DoesCardContainKeyword(card, "spaceship") && IsVillain(card);
                 CardSource cardSource = GetCardSource();
                 return gameController.GainHP(decisionMaker, criteria, 1, null, optional: false, null, null, null, cardSource);
             }, TriggerType.GainHP);

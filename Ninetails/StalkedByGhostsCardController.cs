@@ -40,7 +40,7 @@ namespace GuardiansOfTomorrow.Ninetails
 			}
 
 			//reveal until ghost, play, reshuffle others
-			coroutine = RevealCards_PutSomeIntoPlay_DiscardRemaining(base.TurnTakerController, base.TurnTaker.Deck, null, new LinqCardCriteria((Card c) => c.DoKeywordsContain("ghost", false, false), "ghost"), isPutIntoPlay: true, null, null, null, fromBottom: false, 1);
+			coroutine = RevealCards_PutSomeIntoPlay_DiscardRemaining(base.TurnTakerController, base.TurnTaker.Deck, null, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "ghost"), "ghost"), isPutIntoPlay: true, null, null, null, fromBottom: false, 1);
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);

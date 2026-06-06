@@ -43,7 +43,7 @@ namespace GuardiansOfTomorrow.Ludramor
                 }
                 if (DidDestroyCard(destroys))
                 {
-                    coroutine = GameController.GainHP(DecisionMaker, (Card c) => c.DoKeywordsContain("executive"), H + 2, cardSource: GetCardSource());
+                    coroutine = GameController.GainHP(DecisionMaker, (Card c) => GameController.DoesCardContainKeyword(c, "executive"), H + 2, cardSource: GetCardSource());
                     if (base.UseUnityCoroutines)
                     {
                         yield return base.GameController.StartCoroutine(coroutine);

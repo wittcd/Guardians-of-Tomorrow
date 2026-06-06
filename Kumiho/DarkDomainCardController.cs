@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Kumiho
         public override void AddTriggers()
         {
 			AddReduceDamageTrigger((Card c) => c.IsVillain, 1);
-			AddTrigger((DestroyCardAction d) => d.WasCardDestroyed && d.PostDestroyDestinationCanBeChanged && d.CardToDestroy.Card.DoKeywordsContain("ghost"), GainHPFromDeathResponse, TriggerType.MoveCard, TriggerTiming.After);
+			AddTrigger((DestroyCardAction d) => d.WasCardDestroyed && d.PostDestroyDestinationCanBeChanged && GameController.DoesCardContainKeyword(d.CardToDestroy.Card, "ghost"), GainHPFromDeathResponse, TriggerType.MoveCard, TriggerTiming.After);
 			base.AddTriggers();
         }
 

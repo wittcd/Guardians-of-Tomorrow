@@ -30,7 +30,7 @@ namespace GuardiansOfTomorrow.Scale
 				base.GameController.ExhaustCoroutine(coroutine);
 			}
 
-			LinqCardCriteria isBalanceCard = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance", false, false), "balance");
+			LinqCardCriteria isBalanceCard = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "balance"), "balance");
 			List<Function> list = new List<Function>();
 			Function playBalance = new Function(DecisionMaker, "Play a balance card", SelectionType.PlayCard, () => SelectAndPlayCardFromHand(DecisionMaker, false, null, isBalanceCard, false, false, true, null));
 			list.Add(playBalance);

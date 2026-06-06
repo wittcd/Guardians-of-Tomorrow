@@ -25,7 +25,7 @@ namespace GuardiansOfTomorrow.Deluge
         {
 			bool tryPlaying = true;
 			string message = base.Card.Title + " plays a Flood card from the Trash.";
-			if (!base.TurnTaker.Trash.Cards.Any((Card c) => c.DoKeywordsContain("flood")))
+			if (!base.TurnTaker.Trash.Cards.Any((Card c) => GameController.DoesCardContainKeyword(c, "flood")))
 			{
 				tryPlaying = false;
 				message = "There are no Flood cards in Deluge's trash for her to play.";
@@ -41,7 +41,7 @@ namespace GuardiansOfTomorrow.Deluge
 			}
 			if (tryPlaying)
 			{
-				IEnumerator coroutine2 = ReviveCardFromTrash(base.TurnTakerController, (Card c) => c.DoKeywordsContain("flood"));
+				IEnumerator coroutine2 = ReviveCardFromTrash(base.TurnTakerController, (Card c) => GameController.DoesCardContainKeyword(c, "flood"));
 				if (base.UseUnityCoroutines)
 				{
 					yield return base.GameController.StartCoroutine(coroutine2);

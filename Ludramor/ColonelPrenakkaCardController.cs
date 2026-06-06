@@ -13,14 +13,14 @@ namespace GuardiansOfTomorrow.Ludramor
         public ColonelPrenakkaCardController(Card card, TurnTakerController turnTakerController)
            : base(card, turnTakerController)
         {
-            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("soldier"), "soldier"));
+            SpecialStringMaker.ShowNumberOfCardsInPlay(new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "soldier"), "soldier"));
             SpecialStringMaker.ShowHighestHP(1, () => 1, new LinqCardCriteria((Card c) => !IsVillain(c)));
         }
 
         private IEnumerator RedirectToSoldier(DealDamageAction dd)
         {
             List<Card> storedResults = new List<Card>();
-            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != Card && card.DoKeywordsContain("soldier"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
+            IEnumerator coroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card card) => card != Card && GameController.DoesCardContainKeyword(card, "soldier"), storedResults, dd, null, evenIfCannotDealDamage: false, optional: false, null, ignoreBattleZone: false, GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -46,12 +46,12 @@ namespace GuardiansOfTomorrow.Ludramor
 
         private int numSoldier()
         {
-            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && c.DoKeywordsContain("soldier")).Count();
+            return FindCardsWhere((Card c) => c.IsInPlayAndHasGameText && GameController.DoesCardContainKeyword(c, "soldier")).Count();
         }
 
         public override void AddTriggers()
         {
-            AddIncreaseDamageTrigger((DealDamageAction dd) => dd.DamageSource.Card.DoKeywordsContain("soldier"), (DealDamageAction dd) => numSoldier());
+            AddIncreaseDamageTrigger((DealDamageAction dd) => GameController.DoesCardContainKeyword(dd.DamageSource.Card, "soldier"), (DealDamageAction dd) => numSoldier());
             AddTrigger((DealDamageAction dd) => dd.Target == Card, RedirectToSoldier, TriggerType.RedirectDamage, TriggerTiming.Before);
             AddEndOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, (PhaseChangeAction pc) => DealDamageToHighestHP(Card, 1, (Card c) => !IsVillain(c), (Card c) => H - 1, DamageType.Projectile), TriggerType.DealDamage);
         }

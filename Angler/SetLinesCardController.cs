@@ -19,7 +19,7 @@ namespace GuardiansOfTomorrow.Angler
 
         public override IEnumerator Play()
         {
-            IEnumerator coroutine = GameController.SelectCardFromLocationAndMoveIt(DecisionMaker, TurnTaker.Deck, new LinqCardCriteria((Card c) => c.DoKeywordsContain("bait"), "bait"), new MoveCardDestination[] { new MoveCardDestination(TurnTaker.ToHero().Hand) }, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.SelectCardFromLocationAndMoveIt(DecisionMaker, TurnTaker.Deck, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "bait"), "bait"), new MoveCardDestination[] { new MoveCardDestination(TurnTaker.ToHero().Hand) }, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -29,7 +29,7 @@ namespace GuardiansOfTomorrow.Angler
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = GameController.SelectAndPlayCardsFromHand(FindHeroTurnTakerController(TurnTaker.ToHero()), FindCardsWhere((Card c) => c.Location == TurnTaker.ToHero().Hand && c.DoKeywordsContain("bait")).Count(), false, 0, new LinqCardCriteria((Card c) => c.DoKeywordsContain("bait"), "bait"), cardSource: GetCardSource(), cancelDecisionsIfTrue: () => FindCardsWhere((Card c) => c.Location == TurnTaker.ToHero().Hand && c.DoKeywordsContain("bait")).Count() == 0);
+            coroutine = GameController.SelectAndPlayCardsFromHand(FindHeroTurnTakerController(TurnTaker.ToHero()), FindCardsWhere((Card c) => c.Location == TurnTaker.ToHero().Hand && GameController.DoesCardContainKeyword(c, "bait")).Count(), false, 0, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "bait"), "bait"), cardSource: GetCardSource(), cancelDecisionsIfTrue: () => FindCardsWhere((Card c) => c.Location == TurnTaker.ToHero().Hand && GameController.DoesCardContainKeyword(c, "bait")).Count() == 0);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

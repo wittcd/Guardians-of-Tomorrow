@@ -1,0 +1,308 @@
+{
+  "name": "Charybdis",
+  "kind": "Villain",
+  "expansionIdentifier": "Guardians of Tomorrow",
+  "initialCardIdentifiers": [
+    "CharybdisCharacter"
+  ],
+  "promoCards": [],
+  "cards": [
+    {
+      "identifier": "CharybdisCharacter",
+      "count": 1,
+      "title": "Charybdis",
+      "keywords": [
+        "villain"
+      ],
+      "body": "Heart of the Maelstrom",
+      "backgroundColor": "ffffff",
+      "foilBackgroundColor": "ffffff",
+      "character": true,
+      "hitpoints": 100,
+      "setup": [
+        "{Charybdis enters play \"Heart of the Maelstrom\" side up. Reveal cards from the villain deck until {H - 2} Appendages are revealed. Put them into play and shuffle the other revealed cards into the villain deck."
+      ],
+      "gameplay": [
+        "Villain targets are immune to damage dealt by appendages.",
+        "When {Charybdis} flips to this side, each player draws until they have 3 or more cards in their hand.",
+        "Whenever a hero card is discarded, {Charybdis} gains 1 HP.",
+        "At the end of the villain turn, each hero may discard a card. {Charybdis} deals each hero who does not 3 cold damage. Then, if there are any players without cards in their hand, flip this card."
+      ],
+      "advanced": "",
+      "icons": [
+        "ImmuneToDamage",
+        "EndOfTurnAction",
+        "Discard",
+        "DealDamageCold",
+        "DrawCardNow"
+      ],
+      "flippedHitpoints": 100,
+      "flippedBody": "Maw of the Deep",
+      "flippedGameplay": [
+        "Villain targets are immune to damage dealt by appendages.",
+        "When Charybdis flips to this side, and at the start of the villain turn, each hero with no cards in their hand deals themselves {H} irreducible toxic damage.",
+        "Players without cards in their hand may not draw cards during their turns.",
+        "When {Charybdis} is dealt 8 or more damage in a single round, flip this card."
+      ],
+      "flippedAdvanced": "",
+      "flippedIcons": [
+        "ImmuneToDamage",
+        "StartOfTurnAction",
+        "DealDamageToxic",
+        "CannotDrawCards"
+      ],
+      "difficulty": 2,
+      "challengeTitle": "",
+      "challengeText": "",
+      "openingLines": {
+        "default": "Tremble and Obey!"
+      }
+    },
+    {
+      "identifier": "ChokingTentacle",
+      "count": 2,
+      "title": "Choking Tentacle",
+      "keywords": [
+        "appendage"
+      ],
+      "icons": [
+        "CannotDrawCards",
+        "StartOfTurnAction",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "When this card enters play, put it next to the hero with the most cards in hand. That hero may not draw cards. At the start of the villain turn, this card deals the hero next to it {H - 2} melee damage."
+      ],
+      "flavorQuotes": [],
+      "hitpoints": 8
+    },
+    {
+      "identifier": "ChurningWaters",
+      "count": 2,
+      "title": "Churning Waters",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DestroyEquipment",
+        "Discard"
+      ],
+      "body": [
+        "{Charybdis} deals each hero target 3 melee damage. Each hero may destroy one of their equipment cards. If they do not destroy a card this way, they must discard a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "DragIntoTheDeep",
+      "count": 2,
+      "title": "Drag into the Deep",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Discard",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "The hero with the fewest cards in hand discards 2 cards. If they have no cards in their hand, {Charybdis} deals them {H} irreducible melee damage"
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "GraspingArm",
+      "count": 2,
+      "title": "Grasping Arm",
+      "keywords": [
+        "appendage"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "Discard",
+        "CancelDamageRed"
+      ],
+      "body": [
+        "At the end of the villain turn, this card deals the hero with the fewest cards in hand {H - 2} melee damage. That hero may discard 2 cards. If fewer than 2 cards are discarded this way, they cannot deal damage until the start of the villain turn."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Seaman",
+          "text": "The curse is real! Doom has come to our ship!"
+        }
+      ],
+      "flavorReference": "Seaman, Maw of the Deep one-shot",
+      "hitpoints": 8
+    },
+    {
+      "identifier": "HurricaneForce",
+      "count": 3,
+      "title": "Hurricane Force",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageCold",
+        "DestroyHero",
+        "Discard"
+      ],
+      "body": [
+        "{Charybdis} deals each hero cold damage equal to the number of cards in their hand. Each hero that does not take damage this way must destroy 1 of their non-character cards."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "NeedlingTendril",
+      "count": 2,
+      "title": "Needling Tendril",
+      "keywords": [
+        "appendage"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageProjectile",
+        "DealDamageToxic"
+      ],
+      "body": [
+        "At the end of the villain turn, this card deals each hero target 2 projectile damage. Each target dealt damage this way deals itself 2 toxic damage."
+      ],
+      "flavorQuotes": [],
+      "hitpoints": 8
+    },
+    {
+      "identifier": "NoxiousFog",
+      "count": 2,
+      "title": "Noxious Fog",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageToxic",
+        "DestroyOngoing",
+        "Discard"
+      ],
+      "body": [
+        "{Charybdis} deals each non-villain non-appendage target 2 toxic damage. Each hero dealt damage this way must destroy one of their Ongoing cards and discard a card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "RendingLimb",
+      "count": 2,
+      "title": "Rending Limb",
+      "keywords": [
+        "appendage"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of the villain turn, this card deals the hero target with the lowest HP {H - 1} irreducible melee damage. If this destroys a target, repeat the entire game text of this card."
+      ],
+      "flavorQuotes": [
+        "EndOfTurnAction",
+        "DealDamageMelee"
+      ],
+      "hitpoints": 8
+    },
+    {
+      "identifier": "Shipwreck",
+      "count": 1,
+      "title": "Shipwreck!",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DestroyTarget",
+        "DealDamageMelee",
+        "DealDamageCold"
+      ],
+      "body": [
+        "Destroy the non-character non-appendage target with the highest HP. {Charybdis} deals each non-villain non-appendage target 2 melee damage and 2 cold damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "StormBrewing",
+      "count": 1,
+      "title": "Storm Brewing",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "StartOfTurnAction",
+        "PlayCardNow",
+        "DestroySelf"
+      ],
+      "body": [
+        "At the start of the villain turn, play the top 2 cards of the villain deck, then destroy this card."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "TentacleHurl",
+      "count": 2,
+      "title": "Tentacle Hurl",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "Discard",
+        "DrawCardNow"
+      ],
+      "body": [
+        "{Charybdis} deals the hero with the fewest cards in hand {H - 2} melee damage, then that hero deals the other hero with the most cards in hand {H - 1} melee damage. If the first hero has no cards in hand, the second hero discards their hand and the first hero draws that many cards minus 1."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "Undertow",
+      "count": 1,
+      "title": "Undertow",
+      "keywords": [
+        "ongoing"
+      ],
+      "icons": [
+        "Discard",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "The first time each turn a player discards a card, they may discard another card. If they do not, {Charybdis} deals them 3 melee damage."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "UnnaturalShoal",
+      "count": 2,
+      "title": "Unnatural Shoal",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "Manipulate",
+        "PlayCardNow"
+      ],
+      "body": [
+        "{Charybdis} deals each non-villain non-appendage target 2 melee damage. Reveal cards from the villain deck until an Appendage is revealed. Put it into play and shuffle the remaining cards back into the villain deck."
+      ],
+      "flavorQuotes": []
+    },
+    {
+      "identifier": "WateryGrave",
+      "count": 1,
+      "title": "Watery Grave",
+      "keywords": [
+        "one-shot"
+      ],
+      "icons": [
+        "Discard",
+        "DealDamageMelee",
+        "PlayCardNow"
+      ],
+      "body": [
+        "One hero may discard their hand. If they do not, {Charybdis} deals one hero with no cards in their hand 10 melee damage. If no cards are discarded and no hero target is dealt damage this way, play the top cards of the villain and environment decks."
+      ],
+      "flavorQuotes": []
+    }
+  ]
+}

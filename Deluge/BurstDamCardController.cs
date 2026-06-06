@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Deluge
 
         public override void AddTriggers()
         {
-            AddImmuneToDamageTrigger((DealDamageAction dd) => dd.Target.DoKeywordsContain("flood"));
+            AddImmuneToDamageTrigger((DealDamageAction dd) => GameController.DoesCardContainKeyword(dd.Target, "flood"));
             AddEndOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, (PhaseChangeAction pc) => DiscardAndDrawToDestroy(pc), TriggerType.DiscardCard);
         }
 

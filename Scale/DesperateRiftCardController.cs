@@ -20,7 +20,7 @@ namespace GuardiansOfTomorrow.Scale
 
 		public override IEnumerator Play()
 		{
-			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => c.DoKeywordsContain("balance"), "balance cards");
+			LinqCardCriteria isBalance = new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "balance"), "balance cards");
 			//play balance
 			IEnumerator coroutine = SelectAndPlayCardFromHand(DecisionMaker, false, null, isBalance, false, false, true, null);
 			if (base.UseUnityCoroutines)

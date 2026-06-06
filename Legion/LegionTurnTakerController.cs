@@ -34,7 +34,7 @@ namespace GuardiansOfTomorrow.Legion
 
             List<MoveCardDestination> locs = new List<MoveCardDestination>();
             locs.Add(new MoveCardDestination(base.CharacterCard.UnderLocation));
-            IEnumerator coroutine2 = GameController.SelectCardsFromLocationAndMoveThem(FindDecisionMaker(), GameController.GetNativeDeck(base.CharacterCard), SwarmsToMove, SwarmsToMove, new LinqCardCriteria((Card c) => c.DoKeywordsContain("nanite swarm"), "nanite swarm"), locs, allowAutoDecide: true, selectionType: SelectionType.MoveCardToUnderCard, cardSource: base.CharacterCardController.GetCardSource());
+            IEnumerator coroutine2 = GameController.SelectCardsFromLocationAndMoveThem(FindDecisionMaker(), GameController.GetNativeDeck(base.CharacterCard), SwarmsToMove, SwarmsToMove, new LinqCardCriteria((Card c) => GameController.DoesCardContainKeyword(c, "nanite swarm"), "nanite swarm"), locs, allowAutoDecide: true, selectionType: SelectionType.MoveCardToUnderCard, cardSource: base.CharacterCardController.GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine2);
@@ -47,7 +47,7 @@ namespace GuardiansOfTomorrow.Legion
             
             if (!CharacterCardController.IsGameChallenge)
             {
-                coroutine2 = GameController.MoveCards(this, FindCardsWhere((Card c) => c.DoKeywordsContain("nanite swarm") && c.Location == TurnTaker.Deck), TurnTaker.OutOfGame, cardSource: CharacterCardController.GetCardSource());
+                coroutine2 = GameController.MoveCards(this, FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "nanite swarm") && c.Location == TurnTaker.Deck), TurnTaker.OutOfGame, cardSource: CharacterCardController.GetCardSource());
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(coroutine2);

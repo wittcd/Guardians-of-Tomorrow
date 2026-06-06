@@ -17,7 +17,7 @@ namespace GuardiansOfTomorrow.Price
 
         public override void AddTriggers()
         {
-            AddTrigger((CardEntersPlayAction cep) => cep.CardEnteringPlay.DoKeywordsContain("pact"), (CardEntersPlayAction cep) => GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), 1, DamageType.Infernal, 1, false, 0, cardSource: GetCardSource()), TriggerType.DealDamage, TriggerTiming.After);
+            AddTrigger((CardEntersPlayAction cep) => GameController.DoesCardContainKeyword(cep.CardEnteringPlay, "pact"), (CardEntersPlayAction cep) => GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), 1, DamageType.Infernal, 1, false, 0, cardSource: GetCardSource()), TriggerType.DealDamage, TriggerTiming.After);
         }
 
         public override IEnumerator UsePower(int index = 0)

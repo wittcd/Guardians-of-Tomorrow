@@ -48,7 +48,7 @@ namespace GuardiansOfTomorrow.Price
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            if (results.FirstOrDefault().CardToMove.DoKeywordsContain("pact") && results.FirstOrDefault().Destination == TurnTaker.Deck)
+            if (GameController.DoesCardContainKeyword(results.FirstOrDefault().CardToMove, "pact") && results.FirstOrDefault().Destination == TurnTaker.Deck)
             {
                 coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), 3, DamageType.Infernal, 1, false, 0, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)

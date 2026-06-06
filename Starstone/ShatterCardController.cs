@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Starstone
 		public override IEnumerator Play()
 		{
 			List<DestroyCardAction> storedResults = new List<DestroyCardAction>();
-			IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.Owner == base.TurnTaker && c.DoKeywordsContain("stone", false, false)), optional: true, storedResults, null, GetCardSource());
+			IEnumerator coroutine = base.GameController.SelectAndDestroyCard(DecisionMaker, new LinqCardCriteria((Card c) => c.Owner == base.TurnTaker && GameController.DoesCardContainKeyword(c, "stone")), optional: true, storedResults, null, GetCardSource());
 			if (base.UseUnityCoroutines)
 			{
 				yield return base.GameController.StartCoroutine(coroutine);
