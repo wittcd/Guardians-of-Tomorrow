@@ -33,7 +33,11 @@
       "promoIdentifier": "DragonChampionLazarusDragonFormCharacter",
       "count": 1,
       "title": "Dragon Champion Lazarus (dragon form)",
-      "body": "",
+      "gameplay": [
+        "Reduce damage dealt to {Lazarus} by 1.",
+        "At the end of your turn, if {Lazarus} did not take toxic damage this turn, change to {Lazarus}' human character card."
+      ],
+      "body": "Breath of Decay",
       "backgroundColor": "ffffff",
       "foilBackgroundColor": "ffffff",
       "hitpointsColor": "ffffff",

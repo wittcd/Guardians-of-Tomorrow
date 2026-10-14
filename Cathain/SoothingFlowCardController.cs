@@ -18,7 +18,7 @@ namespace GuardiansOfTomorrow.Cathain
 
         public override IEnumerator Play()
         {
-            IEnumerator coroutine = GameController.GainHPEx(CharacterCard, 1, cardSource: GetCardSource());
+            IEnumerator coroutine = GameController.GainHPEx(CharacterCard, 2, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -28,7 +28,17 @@ namespace GuardiansOfTomorrow.Cathain
                 base.GameController.ExhaustCoroutine(coroutine);
             }
 
-            coroutine = GameController.DrawCardsEx(new LinqTurnTakerCriteria((TurnTaker tt) => tt == TurnTaker), 1, cardSource: GetCardSource());
+            coroutine = GameController.DrawCardsEx(new LinqTurnTakerCriteria((TurnTaker tt) => tt == TurnTaker), 1, true, cardSource: GetCardSource());
+            if (base.UseUnityCoroutines)
+            {
+                yield return base.GameController.StartCoroutine(coroutine);
+            }
+            else
+            {
+                base.GameController.ExhaustCoroutine(coroutine);
+            }
+
+            coroutine = GameController.SelectAndPlayCardFromHand(TurnTakerController.ToHero(), true, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);

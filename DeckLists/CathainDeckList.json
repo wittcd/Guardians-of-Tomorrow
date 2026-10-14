@@ -59,6 +59,7 @@
       "icons": [
         "Destroy",
         "PlayCardNow",
+        "RedirectDamage",
         "DealDamageLightning"
       ],
       "body": [
@@ -72,7 +73,7 @@
         }
       ],
       "flavorReference": "Cathain, The Hunters #26",
-      "hitpoints": 6
+      "hitpoints": 12
     },
     {
       "identifier": "ArcaneShielding",
@@ -88,7 +89,8 @@
         "DestroySelf"
       ],
       "body": [
-        "Redirect damage dealt to {Cathain} to one of your Loci. At the start of your turn, destroy this card."
+        "When {Cathain} would be dealt damage, redirect it to one of your Loci.",
+        "At the start of your turn, destroy this card."
       ],
       "flavorQuotes": [
         {
@@ -162,11 +164,10 @@
         "earth"
       ],
       "icons": [
-        "DealDamageMelee",
-        "DealDamageInfernal"
+        "DealDamageMelee"
       ],
       "body": [
-        "{Cathain} deals 1 target 3 melee damage then deals that target 2 melee damage. {Cathain} deals himself 3 irreducible infernal damage."
+        "{Cathain} deals 1 target 3 melee damage then deals that target 2 melee damage."
       ],
       "flavorQuotes": [
         {
@@ -231,7 +232,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "{Cathain} deals 1 target 4 cold damage. Reduce damage dealt by that target by 1 until the start of your turn. {Cathain} deals himself 3 irreducible infernal damage."
+        "{Cathain} deals 1 target 4 cold damage. Reduce damage dealt by that target by 1 until the start of your turn."
       ],
       "flavorQuotes": [
         {
@@ -282,7 +283,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "{Cathain} deals 1 target 4 lightning damage, then deals each other non-hero target 1 sonic damage. {Cathain} deals himself 3 irreducible infernal damage."
+        "{Cathain} deals 1 target 4 lightning damage, then deals each other non-hero target 1 sonic damage."
       ],
       "flavorQuotes": [
         {
@@ -305,7 +306,7 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "{Cathain} deals 1 target 4 fire damage. Increase damage dealt to that target by 1 until the start of your turn. {Cathain} deals himself 3 irreducible infernal damage."
+        "{Cathain} deals 1 target 4 fire damage. Increase damage dealt to that target by 1 until the start of your turn."
       ],
       "flavorQuotes": [
         {
@@ -343,7 +344,7 @@
         }
       ],
       "flavorReference": "",
-      "hitpoints": 6
+      "hitpoints": 12
     },
     {
       "identifier": "SiphonElements",
@@ -437,6 +438,7 @@
       "icons": [
         "Destroy",
         "PlayCardNow",
+        "RedirectDamage",
         "DestroyEnvironment"
       ],
       "body": [
@@ -450,12 +452,12 @@
         }
       ],
       "flavorReference": "Balor, Guardians of Tomorrow Annual #11",
-      "hitpoints": 6
+      "hitpoints": 12
     },
     {
       "identifier": "Antipode",
       "count": 1,
-      "title": "Antipode",
+      "title": "Antipode Charge",
       "keywords": [
         "ongoing",
         "fire",
@@ -467,8 +469,8 @@
         "DealDamageInfernal"
       ],
       "body": [
-        "When this card enters play, {Cathain} deals 1 target 3 cold or fire damage and himself 6 irreducible infernal damage.",
-        "The first time each turn a non-hero target takes cold or fire damage, {Cathain} deals it 3 irreducible damage of the other type.",
+        "When this card enters play, {Cathain} deals 1 target 2 cold or fire damage and himself 6 irreducible infernal damage.",
+        "Change all damage dealt by heroes to cold or fire damage. Whenever a non-hero target takes cold or fire damage, increase the next damage it takes of the other type by 1 and make it irreducible.",
         "At the end of your turn, if this card did not enter play this turn, destroy it."
       ],
       "flavorQuotes": [
@@ -489,6 +491,7 @@
       "icons": [
         "Destroy",
         "PlayCardNow",
+        "RedirectDamage",
         "DealDamageFire"
       ],
       "body": [
@@ -502,7 +505,7 @@
         }
       ],
       "flavorReference": "Arsenal, The Hunters #13",
-      "hitpoints": 6
+      "hitpoints": 12
     },
     {
       "identifier": "ShillelaghDraiochta",
@@ -539,10 +542,12 @@
         "air"
       ],
       "icons": [
-        "ReduceDamageDealt"
+        "ReduceDamageDealt",
+        "DrawCardNow",
+        "PlayCardNow"
       ],
       "body": [
-        "Select a target. Reduce the damage dealt by that target by 1 until the start of your next turn."
+        "Select a target. Reduce the damage dealt by that target by 1 until the start of your next turn. You may draw a card and play a card."
       ],
       "flavorQuotes": [
         {
@@ -560,10 +565,12 @@
         "earth"
       ],
       "icons": [
-        "ReduceDamageTaken"
+        "ReduceDamageTaken",
+        "DrawCardNow",
+        "PlayCardNow"
       ],
       "body": [
-        "Reduce the next damage dealt to a target in your play area by 3."
+        "Reduce the next damage dealt to a target in your play area by 3. You may draw a card and play a card."
       ],
       "flavorQuotes": [
         {
@@ -581,10 +588,12 @@
         "fire"
       ],
       "icons": [
-        "DealDamageFire"
+        "DealDamageFire",
+        "DrawCardNow",
+        "PlayCardNow"
       ],
       "body": [
-        "{Cathain} deals up to 3 targets 1 fire damage each."
+        "{Cathain} deals up to 3 targets 1 fire damage each. You may draw a card and play a card."
       ],
       "flavorQuotes": [
         {
@@ -603,10 +612,11 @@
       ],
       "icons": [
         "GainHP",
-        "DrawCardNow"
+        "DrawCardNow",
+        "PlayCardNow"
       ],
       "body": [
-        "{Cathain} gains 1 HP. Draw a card."
+        "{Cathain} gains 2 HP. You may draw a card and play a card."
       ],
       "flavorQuotes": [
         {

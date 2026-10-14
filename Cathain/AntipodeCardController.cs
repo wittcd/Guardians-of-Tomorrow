@@ -30,7 +30,7 @@ namespace GuardiansOfTomorrow.Cathain
             {
                 base.GameController.ExhaustCoroutine(coroutine);
             }
-            coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), 3, choice.FirstOrDefault().SelectedDamageType.Value, 1, false, 1, cardSource: GetCardSource());
+            coroutine = GameController.SelectTargetsAndDealDamage(DecisionMaker, new DamageSource(GameController, CharacterCard), 2, choice.FirstOrDefault().SelectedDamageType.Value, 1, false, 1, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(coroutine);
@@ -54,41 +54,11 @@ namespace GuardiansOfTomorrow.Cathain
 
         public override void AddTriggers()
         {
-            //"The first time each turn a non-hero target takes cold damage, {Cathain} deals that target 3 irreducible fire damage.
-            AddTrigger<DealDamageAction>((DealDamageAction dd) => !IsHeroTarget(dd.Target) && (dd.DamageType == DamageType.Cold || dd.DamageType == DamageType.Fire) && GameController.GetCardPropertyJournalEntryBoolean(Card, "cathain_antipode_trigger").Value != true, DealOtherTypeDamage, TriggerType.DealDamage, TriggerTiming.After);
-            AddEndOfTurnTrigger((TurnTaker tt) => true, (PhaseChangeAction pc) => ResetTracker(), TriggerType.Other);
-            //"At the end of your turn, if this card did not enter play this turn, destroy it."
+            
+            AddTrigger<DealDamageAction>((DealDamageAction dd) => IsHeroCharacterCard(dd.DamageSource.Card), ChangeToColdOrFire, TriggerType.ChangeDamageType, TriggerTiming.Before);
+            AddTrigger<DealDamageAction>((DealDamageAction dd) => !IsHero(dd.Target) && (dd.DamageType == DamageType.Cold || dd.DamageType == DamageType.Fire), IncreaseNextOtherType, TriggerType.IncreaseDamage, TriggerTiming.After);
+            //Change all damage dealt by heroes to cold or fire damage. Whenever a non-hero target takes cold or fire damage, increase the next damage it takes of the other type by 1 and make it irreducible.
             AddEndOfTurnTrigger((TurnTaker tt) => tt == TurnTaker, (PhaseChangeAction pc) => DestroyThisCardResponse(null), TriggerType.DestroySelf, (PhaseChangeAction pc) => !DidEnterThisTurn(pc));
-        }
-
-        private int NumColdOrFireTaken()
-        {
-            List<DealDamageJournalEntry> ddje = Journal.DealDamageEntriesThisTurn().ToList();
-            int count = 0;
-
-            foreach (DealDamageJournalEntry entry in ddje)
-            {
-                if ((entry.DamageType == DamageType.Cold || entry.DamageType == DamageType.Fire) && !IsHeroTarget(entry.TargetCard))
-                {
-                    count++;
-                }
-            }
-
-            return count;
-        }
-
-        private IEnumerator ResetTracker()
-        {
-            GameController.AddCardPropertyJournalEntry(Card, "cathain_antipode_trigger", false);
-            IEnumerator coroutine = GameController.DoNothing();
-            if (base.UseUnityCoroutines)
-            {
-                yield return base.GameController.StartCoroutine(coroutine);
-            }
-            else
-            {
-                base.GameController.ExhaustCoroutine(coroutine);
-            }
         }
 
         private DamageType OtherDamageType(DamageType dt)
@@ -100,32 +70,58 @@ namespace GuardiansOfTomorrow.Cathain
             return DamageType.Cold;
         }
 
-        private IEnumerator DealOtherTypeDamage(DealDamageAction dd)
-        {
-            bool triggered = GameController.GetCardPropertyJournalEntryBoolean(Card, "cathain_antipode_trigger").Value;
-
-            if (triggered != true)
-            {
-                GameController.AddCardPropertyJournalEntry(Card, "cathain_antipode_trigger", true);
-
-                IEnumerator coroutine1 = GameController.DealDamage(DecisionMaker, CharacterCard, (Card c) => c == dd.Target, 3, OtherDamageType(dd.DamageType), isIrreducible: true, cardSource: GetCardSource());
-                if (base.UseUnityCoroutines)
-                {
-                    yield return base.GameController.StartCoroutine(coroutine1);
-                }
-                else
-                {
-                    base.GameController.ExhaustCoroutine(coroutine1);
-                }
-            }
-            IEnumerator coroutine2 = GameController.DoNothing();
+        private IEnumerator ChangeToColdOrFire(DealDamageAction dd) { 
+            List<SelectDamageTypeDecision> chosenDT = new List<SelectDamageTypeDecision>();
+            DamageType[] options = {DamageType.Cold, DamageType.Fire};
+            IEnumerator coroutine = GameController.SelectDamageType(DecisionMaker, chosenDT, options, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
-                yield return base.GameController.StartCoroutine(coroutine2);
+                yield return base.GameController.StartCoroutine(coroutine);
             }
             else
             {
-                base.GameController.ExhaustCoroutine(coroutine2);
+                base.GameController.ExhaustCoroutine(coroutine);
+            }
+            coroutine = GameController.ChangeDamageType(dd, chosenDT.FirstOrDefault().SelectedDamageType.Value, cardSource: GetCardSource());
+            if (base.UseUnityCoroutines)
+            {
+                yield return base.GameController.StartCoroutine(coroutine);
+            }
+            else
+            {
+                base.GameController.ExhaustCoroutine(coroutine);
+            }
+        }
+
+        private IEnumerator IncreaseNextOtherType(DealDamageAction dd) {
+            DamageType otherType = OtherDamageType(dd.DamageType);
+            IncreaseDamageStatusEffect idse = new IncreaseDamageStatusEffect(1);
+            idse.DamageTypeCriteria.AddType(otherType);
+            idse.TargetCriteria.IsSpecificCard = dd.Target;
+            idse.NumberOfUses = 1;
+
+            MakeDamageIrreducibleStatusEffect mdise = new MakeDamageIrreducibleStatusEffect();
+            mdise.DamageTypeCriteria.AddType(otherType);
+            mdise.TargetCriteria.IsSpecificCard = dd.Target;
+            mdise.NumberOfUses = 1;
+
+            IEnumerator coroutine = GameController.AddStatusEffectEx(idse, true, GetCardSource());
+            if (base.UseUnityCoroutines)
+            {
+                yield return base.GameController.StartCoroutine(coroutine);
+            }
+            else
+            {
+                base.GameController.ExhaustCoroutine(coroutine);
+            }
+            coroutine = GameController.AddStatusEffectEx(mdise, true, GetCardSource());
+            if (base.UseUnityCoroutines)
+            {
+                yield return base.GameController.StartCoroutine(coroutine);
+            }
+            else
+            {
+                base.GameController.ExhaustCoroutine(coroutine);
             }
         }
 

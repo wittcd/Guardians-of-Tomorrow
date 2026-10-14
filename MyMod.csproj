@@ -95,7 +95,7 @@
     <Compile Include="Arsenal\VolleyFireCardController.cs" />
     <Compile Include="Arsenal\CombatTrainingCardController.cs" />
     <Compile Include="Cathain\AethericLocusCardController.cs" />
-    <Compile Include="Cathain\AntipodeBlastCardController.cs" />
+    <Compile Include="Cathain\AntipodeCardController.cs" />
     <Compile Include="Cathain\ArcaneShieldingCardController.cs" />
     <Compile Include="Cathain\CathainCharacterCardController.cs" />
     <Compile Include="Cathain\ChokingAshCardController.cs" />
@@ -109,10 +109,15 @@
     <Compile Include="Cathain\MeltArmorCardController.cs" />
     <Compile Include="Cathain\OceanicLocusCardController.cs" />
     <Compile Include="Cathain\PyroclasmCardController.cs" />
+    <Compile Include="Cathain\RockShieldCardController.cs" />
+    <Compile Include="Cathain\ShillelaghDraiochtaCardController.cs" />
     <Compile Include="Cathain\SinkingMorassCardController.cs" />
     <Compile Include="Cathain\SiphonElementsCardController.cs" />
+    <Compile Include="Cathain\SoothingFlowCardController.cs" />
     <Compile Include="Cathain\TelluricLocusCardController.cs" />
+    <Compile Include="Cathain\TonguesOfFlameCardController.cs" />
     <Compile Include="Cathain\VolcanicLocusCardController.cs" />
+    <Compile Include="Cathain\WindGraspCardController.cs" />
     <Compile Include="Chance\ChanceBureauAgentCharacterCardController.cs" />
     <Compile Include="Chance\ChanceCharacterCardController.cs" />
     <Compile Include="Chance\ChanceCardController.cs" />
@@ -425,6 +430,10 @@
     <EmbeddedResource Include="DeckLists\DelugeDeckList.json" />
     <EmbeddedResource Include="DeckLists\CathainDeckList.json" />
     <EmbeddedResource Include="DeckLists\CastleVenburgDeckList.json" />
+    <EmbeddedResource Include="DeckLists\BlackHeartSpeakeasyDeckList.json" />
+    <EmbeddedResource Include="DeckLists\AgentHindsightDeckList.json" />
+    <EmbeddedResource Include="DeckLists\CharybdisDeckList.json" />
+    <None Include="DeckLists\GlimmeringDepthsDeckList.json" />
     <None Include="DeckLists\GreenCreekDeckList.json" />
     <EmbeddedResource Include="DeckLists\HeartbeatDeckList.json" />
     <EmbeddedResource Include="DeckLists\LegionDeckList.json" />
@@ -433,7 +442,9 @@
     <EmbeddedResource Include="DeckLists\LudramorDeckList.json" />
     <EmbeddedResource Include="DeckLists\NyctophobiaDeckList.json" />
     <EmbeddedResource Include="DeckLists\PriceDeckList.json" />
-    <None Include="DeckLists\SporeDeckList.json" />
+    <EmbeddedResource Include="DeckLists\GunslingerDeckList.json" />
+    <EmbeddedResource Include="DeckLists\LazarusDeckList.json" />
+    <EmbeddedResource Include="DeckLists\SporeDeckList.json" />
     <EmbeddedResource Include="DeckLists\TheLastMonsterHunterDeckList.json" />
     <EmbeddedResource Include="DeckLists\TheSmilerDeckList.json" />
   </ItemGroup>

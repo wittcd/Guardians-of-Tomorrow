@@ -21,7 +21,7 @@ namespace GuardiansOfTomorrow.Ninetails
 		public override void AddTriggers()
 		{
 			//first damage dealt each turn, redirect to ghost in play area.
-			AddFirstTimePerTurnRedirectTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard && dd.Amount > 0, "RedirectOpportunityPresented", TargetType.SelectTarget, (Card c) => GameController.DoesCardContainKeyword(c, "ghost") && c.IsAtLocationRecursive(base.CharacterCard.Location), 1, optional: false);
+			AddFirstTimePerTurnRedirectTrigger((DealDamageAction dd) => dd.Target == base.CharacterCard && dd.Amount > 0 && FindCardsWhere((Card c) => GameController.DoesCardContainKeyword(c, "ghost") && c.IsAtLocationRecursive(TurnTaker.PlayArea)).Count() >= 1, "RedirectOpportunityPresented", TargetType.SelectTarget, (Card c) => GameController.DoesCardContainKeyword(c, "ghost") && c.IsAtLocationRecursive(base.CharacterCard.Location), 1, optional: false);
 		}
 
 		public override IEnumerator UsePower(int index = 0)
